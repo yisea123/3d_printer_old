@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="e419f9fa1904fb29b9b0"/>
+  </project>
+  <file_info>
+    <file device="5CSEBA6U23I7" path="btn_led.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="hps_system:hps_system" name="hps_system">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME hps_system HAS_SOPCINFO 1 GENERATION_ID 1543601335"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>
