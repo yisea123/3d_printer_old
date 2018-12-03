@@ -67,13 +67,13 @@
  * boot image filename within a FAT partition to be used as
  * fatload payload.
  */
-#define CONFIG_PRELOADER_FAT_LOAD_PAYLOAD_NAME 	".img"
+#define CONFIG_PRELOADER_FAT_LOAD_PAYLOAD_NAME 	"u-boot.img"
 
 /*
  * Handoff files must provide user option whether to
  * enable watchdog during preloader execution phase
  */
-#define CONFIG_PRELOADER_WATCHDOG_ENABLE	(1)
+#define CONFIG_PRELOADER_WATCHDOG_ENABLE	(0)
 
 /*
  * Handoff files must provide user option whether to enable

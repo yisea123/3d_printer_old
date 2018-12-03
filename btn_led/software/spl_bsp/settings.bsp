@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>spl</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Nov 30, 2018 9:23:24 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1543602204542</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Dec 3, 2018 1:13:45 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1543828425187</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>.\</BspGeneratedLocation>
-        <BspSettingsFile>D:\Programms\intelFPGA_lite\18.1\Projects\btn_led\software\spl_bsp\settings.bsp</BspSettingsFile>
+        <BspSettingsFile>C:\Users\reconnect\Documents\GitHub\3d_printer\btn_led\software\spl_bsp\settings.bsp</BspSettingsFile>
         <HpsSettingsPath>..\..\hps_isw_handoff\hps_system_hps_0</HpsSettingsPath>
         <JdiFile>default</JdiFile>
         <Cpu xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -290,7 +290,7 @@
                 <SettingName>spl.boot.FAT_LOAD_PAYLOAD_NAME</SettingName>
                 <Identifier>none</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>.img</Value>
+                <Value>u-boot.img</Value>
                 <DefaultValue>u-boot.img</DefaultValue>
                 <DestinationFile>public_mk_define</DestinationFile>
                 <Description>When FAT partition supported is enabled, this specifies the boot image filename within a FAT partition to be used as fatload payload.</Description>
@@ -302,7 +302,7 @@
                 <SettingName>spl.boot.WATCHDOG_ENABLE</SettingName>
                 <Identifier>none</Identifier>
                 <Type>Boolean</Type>
-                <Value>1</Value>
+                <Value>0</Value>
                 <DefaultValue>1</DefaultValue>
                 <DestinationFile>public_mk_define</DestinationFile>
                 <Description>Enable watchdog during Preloader execution phase. Watchdog state remains after Preloader exits.</Description>

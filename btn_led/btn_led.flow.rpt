@@ -1,5 +1,5 @@
 Flow report for btn_led
-Fri Nov 30 21:20:02 2018
+Mon Dec 03 12:09:05 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Nov 30 21:18:06 2018       ;
+; Flow Status                     ; Successful - Mon Dec 03 12:08:00 2018       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; btn_led                                     ;
 ; Top-level Entity Name           ; btn_led                                     ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/30/2018 21:07:24 ;
+; Start date & time ; 12/03/2018 12:01:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; btn_led             ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                       ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +---------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 53447161791564.154360124318760         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 216075653482518.154382765906624        ; --            ; --          ; --         ;
 ; ECO_REGENERATE_REPORT                 ; On                                     ; Off           ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 100                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; -40                                    ; --            ; --          ; --         ;
@@ -96,11 +96,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:04:28     ; 1.0                     ; 5053 MB             ; 00:08:31                           ;
-; Fitter               ; 00:04:50     ; 1.1                     ; 7270 MB             ; 00:06:03                           ;
-; Assembler            ; 00:00:48     ; 1.0                     ; 4901 MB             ; 00:00:30                           ;
-; Timing Analyzer      ; 00:01:51     ; 1.1                     ; 5872 MB             ; 00:01:46                           ;
-; Total                ; 00:11:57     ; --                      ; --                  ; 00:16:50                           ;
+; Analysis & Synthesis ; 00:03:15     ; 1.0                     ; 5033 MB             ; 00:06:10                           ;
+; Fitter               ; 00:03:09     ; 1.0                     ; 6931 MB             ; 00:04:30                           ;
+; Assembler            ; 00:00:19     ; 1.0                     ; 4890 MB             ; 00:00:18                           ;
+; Timing Analyzer      ; 00:01:03     ; 1.1                     ; 5838 MB             ; 00:01:05                           ;
+; Total                ; 00:07:46     ; --                      ; --                  ; 00:12:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,10 +109,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Computer         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Computer         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Computer         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Computer         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
