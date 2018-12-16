@@ -1,0 +1,77 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst hps.HPS.scu -pg 1
+preplace inst hps.HPS.gpio0 -pg 1
+preplace inst hps.HPS.timer2 -pg 1
+preplace inst hps.HPS.arm_a9_1 -pg 1
+preplace inst hps.HPS.hps_io.border -pg 1
+preplace inst hps.HPS.fpga_interfaces -pg 1
+preplace inst hps.HPS.timer -pg 1
+preplace inst hps.HPS.l3regs -pg 1
+preplace inst hps.HPS.usb0 -pg 1
+preplace inst hps.HPS.spim0 -pg 1
+preplace inst hps.HPS.gpio1 -pg 1
+preplace inst hps.HPS.timer3 -pg 1
+preplace inst hps.HPS.fpgamgr -pg 1
+preplace inst hps.HPS.rstmgr -pg 1
+preplace inst hps.HPS.arm_gic_0 -pg 1
+preplace inst hps.HPS.bridges -pg 1
+preplace inst hps.HPS.usb1 -pg 1
+preplace inst hps.HPS.spim1 -pg 1
+preplace inst hps.HPS.gpio2 -pg 1
+preplace inst hps.led -pg 1 -lvl 4 -y 430
+preplace inst hps.Arduino_io -pg 1 -lvl 4 -y 30
+preplace inst hps.HPS.L2 -pg 1
+preplace inst hps.HPS.f2s_sdram_ref_clk -pg 1
+preplace inst hps.HPS -pg 1 -lvl 2 -y 150
+preplace inst hps.HPS.sdrctl -pg 1
+preplace inst hps.HPS.clkmgr -pg 1
+preplace inst hps.HPS.dma -pg 1
+preplace inst hps -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst hps.HPS.axi_ocram -pg 1
+preplace inst hps.HPS.gmac0 -pg 1
+preplace inst hps.HPS.sysmgr -pg 1
+preplace inst hps.HPS.clk_0 -pg 1
+preplace inst hps.HPS.gmac1 -pg 1
+preplace inst hps.HPS.wd_timer0 -pg 1
+preplace inst hps.HPS.i2c0 -pg 1
+preplace inst hps.HPS.wd_timer1 -pg 1
+preplace inst hps.HPS.eosc1 -pg 1
+preplace inst hps.HPS.hps_io -pg 1
+preplace inst hps.HPS.axi_sdram -pg 1
+preplace inst hps.HPS.i2c1 -pg 1
+preplace inst hps.HPS.uart0 -pg 1
+preplace inst hps.HPS.f2s_periph_ref_clk -pg 1
+preplace inst hps.HPS.eosc2 -pg 1
+preplace inst hps.HPS.nand0 -pg 1
+preplace inst hps.HPS.i2c2 -pg 1
+preplace inst hps.HPS.uart1 -pg 1
+preplace inst hps.sw -pg 1 -lvl 3 -y 430
+preplace inst hps.keys -pg 1 -lvl 4 -y 330
+preplace inst hps.gpio0 -pg 1 -lvl 4 -y 130
+preplace inst hps.HPS.dcan0 -pg 1
+preplace inst hps.HPS.qspi -pg 1
+preplace inst hps.HPS.i2c3 -pg 1
+preplace inst hps.HPS.timer0 -pg 1
+preplace inst hps.gpio1 -pg 1 -lvl 4 -y 230
+preplace inst hps.clk_0 -pg 1 -lvl 3 -y 310
+preplace inst hps.HPS.dcan1 -pg 1
+preplace inst hps.HPS.sdmmc -pg 1
+preplace inst hps.HPS.timer1 -pg 1
+preplace inst hps.HPS.arm_a9_0 -pg 1
+preplace netloc EXPORT<net_container>hps</net_container>(SLAVE)HPS.memory,(SLAVE)hps.memory) 1 0 2 NJ 260 NJ
+preplace netloc EXPORT<net_container>hps</net_container>(SLAVE)hps.led_external_connection,(SLAVE)led.external_connection) 1 0 4 NJ 420 NJ 420 NJ 420 NJ
+preplace netloc EXPORT<net_container>hps</net_container>(SLAVE)hps.hps_io,(SLAVE)HPS.hps_io) 1 0 2 NJ 200 NJ
+preplace netloc EXPORT<net_container>hps</net_container>(SLAVE)hps.gpio1_external_connection,(SLAVE)gpio1.external_connection) 1 0 4 NJ 110 NJ 110 NJ 260 NJ
+preplace netloc FAN_OUT<net_container>hps</net_container>(MASTER)clk_0.clk_reset,(SLAVE)gpio0.reset,(SLAVE)gpio1.reset,(SLAVE)sw.reset,(SLAVE)keys.reset,(SLAVE)led.reset) 1 2 2 700 560 940
+preplace netloc EXPORT<net_container>hps</net_container>(SLAVE)Arduino_io.external_connection,(SLAVE)hps.arduino_io_external_connection) 1 0 4 NJ 50 NJ 50 NJ 60 NJ
+preplace netloc EXPORT<net_container>hps</net_container>(SLAVE)hps.keys_external_connection,(SLAVE)keys.external_connection) 1 0 4 NJ 380 NJ 380 NJ 380 NJ
+preplace netloc EXPORT<net_container>hps</net_container>(SLAVE)Arduino_io.reset,(SLAVE)hps.arduino_io_reset) 1 0 4 NJ 70 NJ 70 NJ 80 NJ
+preplace netloc EXPORT<net_container>hps</net_container>(SLAVE)hps.gpio0_external_connection,(SLAVE)gpio0.external_connection) 1 0 4 NJ 90 NJ 90 NJ 160 NJ
+preplace netloc POINT_TO_POINT<net_container>hps</net_container>(MASTER)HPS.h2f_reset,(SLAVE)clk_0.clk_in_reset) 1 2 1 640
+preplace netloc FAN_OUT<net_container>hps</net_container>(SLAVE)keys.clk,(SLAVE)led.clk,(SLAVE)HPS.h2f_axi_clock,(SLAVE)Arduino_io.clk,(SLAVE)HPS.f2h_axi_clock,(SLAVE)sw.clk,(SLAVE)HPS.h2f_lw_axi_clock,(SLAVE)gpio0.clk,(SLAVE)gpio1.clk,(MASTER)clk_0.clk) 1 1 3 250 440 660 540 960
+preplace netloc EXPORT<net_container>hps</net_container>(SLAVE)hps.sw_external_connection,(SLAVE)sw.external_connection) 1 0 3 NJ 460 NJ 460 NJ
+preplace netloc EXPORT<net_container>hps</net_container>(SLAVE)clk_0.clk_in,(SLAVE)hps.clk) 1 0 3 NJ 320 NJ 320 NJ
+preplace netloc FAN_OUT<net_container>hps</net_container>(SLAVE)gpio0.s1,(MASTER)HPS.h2f_lw_axi_master,(SLAVE)keys.s1,(SLAVE)Arduino_io.s1,(SLAVE)led.s1,(SLAVE)gpio1.s1,(SLAVE)sw.s1) 1 2 2 620 580 1000
+levelinfo -pg 1 0 200 1190
+levelinfo -hier hps 210 230 430 750 1030 1180

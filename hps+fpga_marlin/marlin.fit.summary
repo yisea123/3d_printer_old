@@ -1,0 +1,20 @@
+Fitter Status : Failed - Sun Dec 16 21:04:28 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : marlin
+Top-level Entity Name : marlin
+Family : Cyclone V
+Device : 5CSEBA6U23I7
+Timing Models : Final
+Logic utilization (in ALMs) : 1,009 / 41,910 ( 2 % )
+Total registers : 1371
+Total pins : 226 / 314 ( 72 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 5,662,720 ( 0 % )
+Total RAM Blocks : 0 / 553 ( 0 % )
+Total DSP Blocks : 0 / 112 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 1 / 4 ( 25 % )
