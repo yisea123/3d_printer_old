@@ -1,0 +1,10 @@
+SDRAM 0x00100000 0x80000000
+{
+	APP_CODE +0
+	{
+		*(+RD,+RW,+ZI)
+	}
+	
+	ARM_LIB_STACKHEAP +) ENPTY 0x4000
+	{}
+{
