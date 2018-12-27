@@ -217,16 +217,16 @@ module soc_system (
 	wire    [1:0] mm_interconnect_1_x_max_pin_s1_address;                    // mm_interconnect_1:x_max_pin_s1_address -> x_max_pin:address
 	wire          mm_interconnect_1_x_max_pin_s1_write;                      // mm_interconnect_1:x_max_pin_s1_write -> x_max_pin:write_n
 	wire   [31:0] mm_interconnect_1_x_max_pin_s1_writedata;                  // mm_interconnect_1:x_max_pin_s1_writedata -> x_max_pin:writedata
-	wire          mm_interconnect_1_y_max_pin_s1_chipselect;                 // mm_interconnect_1:y_max_pin_s1_chipselect -> y_max_pin:chipselect
-	wire   [31:0] mm_interconnect_1_y_max_pin_s1_readdata;                   // y_max_pin:readdata -> mm_interconnect_1:y_max_pin_s1_readdata
-	wire    [1:0] mm_interconnect_1_y_max_pin_s1_address;                    // mm_interconnect_1:y_max_pin_s1_address -> y_max_pin:address
-	wire          mm_interconnect_1_y_max_pin_s1_write;                      // mm_interconnect_1:y_max_pin_s1_write -> y_max_pin:write_n
-	wire   [31:0] mm_interconnect_1_y_max_pin_s1_writedata;                  // mm_interconnect_1:y_max_pin_s1_writedata -> y_max_pin:writedata
 	wire          mm_interconnect_1_y_min_pin_s1_chipselect;                 // mm_interconnect_1:y_min_pin_s1_chipselect -> y_min_pin:chipselect
 	wire   [31:0] mm_interconnect_1_y_min_pin_s1_readdata;                   // y_min_pin:readdata -> mm_interconnect_1:y_min_pin_s1_readdata
 	wire    [1:0] mm_interconnect_1_y_min_pin_s1_address;                    // mm_interconnect_1:y_min_pin_s1_address -> y_min_pin:address
 	wire          mm_interconnect_1_y_min_pin_s1_write;                      // mm_interconnect_1:y_min_pin_s1_write -> y_min_pin:write_n
 	wire   [31:0] mm_interconnect_1_y_min_pin_s1_writedata;                  // mm_interconnect_1:y_min_pin_s1_writedata -> y_min_pin:writedata
+	wire          mm_interconnect_1_y_max_pin_s1_chipselect;                 // mm_interconnect_1:y_max_pin_s1_chipselect -> y_max_pin:chipselect
+	wire   [31:0] mm_interconnect_1_y_max_pin_s1_readdata;                   // y_max_pin:readdata -> mm_interconnect_1:y_max_pin_s1_readdata
+	wire    [1:0] mm_interconnect_1_y_max_pin_s1_address;                    // mm_interconnect_1:y_max_pin_s1_address -> y_max_pin:address
+	wire          mm_interconnect_1_y_max_pin_s1_write;                      // mm_interconnect_1:y_max_pin_s1_write -> y_max_pin:write_n
+	wire   [31:0] mm_interconnect_1_y_max_pin_s1_writedata;                  // mm_interconnect_1:y_max_pin_s1_writedata -> y_max_pin:writedata
 	wire          mm_interconnect_1_z_min_pin_s1_chipselect;                 // mm_interconnect_1:z_min_pin_s1_chipselect -> z_min_pin:chipselect
 	wire   [31:0] mm_interconnect_1_z_min_pin_s1_readdata;                   // z_min_pin:readdata -> mm_interconnect_1:z_min_pin_s1_readdata
 	wire    [1:0] mm_interconnect_1_z_min_pin_s1_address;                    // mm_interconnect_1:z_min_pin_s1_address -> z_min_pin:address

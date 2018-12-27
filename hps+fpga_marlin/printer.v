@@ -242,6 +242,7 @@ soc_system u0 (
 
 
 
+
 // Debounce logic to clean out glitches within 1ms
 debounce debounce_inst(
              .clk(fpga_clk_50),

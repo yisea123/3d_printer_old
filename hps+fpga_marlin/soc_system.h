@@ -38,7 +38,7 @@
 #define FPGA_ONLY_MASTER_SYSID_QSYS_SPAN 8
 #define FPGA_ONLY_MASTER_SYSID_QSYS_END 0x1007
 #define FPGA_ONLY_MASTER_SYSID_QSYS_ID 4294906626
-#define FPGA_ONLY_MASTER_SYSID_QSYS_TIMESTAMP 1545807684
+#define FPGA_ONLY_MASTER_SYSID_QSYS_TIMESTAMP 1545902027
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -505,7 +505,7 @@
 #define HPS_0_SYSID_QSYS_SPAN 8
 #define HPS_0_SYSID_QSYS_END 0x1007
 #define HPS_0_SYSID_QSYS_ID 4294906626
-#define HPS_0_SYSID_QSYS_TIMESTAMP 1545807684
+#define HPS_0_SYSID_QSYS_TIMESTAMP 1545902027
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -602,6 +602,356 @@
 #define HPS_0_DIPSW_PIO_RESET_VALUE 0
 
 /*
+ * Macros for device 'step_motor_x', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_STEP_MOTOR_X_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_STEP_MOTOR_X_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_STEP_MOTOR_X_COMPONENT_NAME step_motor_x
+#define HPS_0_STEP_MOTOR_X_BASE 0x4000
+#define HPS_0_STEP_MOTOR_X_SPAN 16
+#define HPS_0_STEP_MOTOR_X_END 0x400f
+#define HPS_0_STEP_MOTOR_X_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_STEP_MOTOR_X_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_STEP_MOTOR_X_CAPTURE 0
+#define HPS_0_STEP_MOTOR_X_DATA_WIDTH 3
+#define HPS_0_STEP_MOTOR_X_DO_TEST_BENCH_WIRING 0
+#define HPS_0_STEP_MOTOR_X_DRIVEN_SIM_VALUE 0
+#define HPS_0_STEP_MOTOR_X_EDGE_TYPE NONE
+#define HPS_0_STEP_MOTOR_X_FREQ 50000000
+#define HPS_0_STEP_MOTOR_X_HAS_IN 0
+#define HPS_0_STEP_MOTOR_X_HAS_OUT 1
+#define HPS_0_STEP_MOTOR_X_HAS_TRI 0
+#define HPS_0_STEP_MOTOR_X_IRQ_TYPE NONE
+#define HPS_0_STEP_MOTOR_X_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_y', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_STEP_MOTOR_Y_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_STEP_MOTOR_Y_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_STEP_MOTOR_Y_COMPONENT_NAME step_motor_y
+#define HPS_0_STEP_MOTOR_Y_BASE 0x4020
+#define HPS_0_STEP_MOTOR_Y_SPAN 16
+#define HPS_0_STEP_MOTOR_Y_END 0x402f
+#define HPS_0_STEP_MOTOR_Y_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_STEP_MOTOR_Y_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_STEP_MOTOR_Y_CAPTURE 0
+#define HPS_0_STEP_MOTOR_Y_DATA_WIDTH 3
+#define HPS_0_STEP_MOTOR_Y_DO_TEST_BENCH_WIRING 0
+#define HPS_0_STEP_MOTOR_Y_DRIVEN_SIM_VALUE 0
+#define HPS_0_STEP_MOTOR_Y_EDGE_TYPE NONE
+#define HPS_0_STEP_MOTOR_Y_FREQ 50000000
+#define HPS_0_STEP_MOTOR_Y_HAS_IN 0
+#define HPS_0_STEP_MOTOR_Y_HAS_OUT 1
+#define HPS_0_STEP_MOTOR_Y_HAS_TRI 0
+#define HPS_0_STEP_MOTOR_Y_IRQ_TYPE NONE
+#define HPS_0_STEP_MOTOR_Y_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_z', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_STEP_MOTOR_Z_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_STEP_MOTOR_Z_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_STEP_MOTOR_Z_COMPONENT_NAME step_motor_z
+#define HPS_0_STEP_MOTOR_Z_BASE 0x4040
+#define HPS_0_STEP_MOTOR_Z_SPAN 16
+#define HPS_0_STEP_MOTOR_Z_END 0x404f
+#define HPS_0_STEP_MOTOR_Z_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_STEP_MOTOR_Z_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_STEP_MOTOR_Z_CAPTURE 0
+#define HPS_0_STEP_MOTOR_Z_DATA_WIDTH 3
+#define HPS_0_STEP_MOTOR_Z_DO_TEST_BENCH_WIRING 0
+#define HPS_0_STEP_MOTOR_Z_DRIVEN_SIM_VALUE 0
+#define HPS_0_STEP_MOTOR_Z_EDGE_TYPE NONE
+#define HPS_0_STEP_MOTOR_Z_FREQ 50000000
+#define HPS_0_STEP_MOTOR_Z_HAS_IN 0
+#define HPS_0_STEP_MOTOR_Z_HAS_OUT 1
+#define HPS_0_STEP_MOTOR_Z_HAS_TRI 0
+#define HPS_0_STEP_MOTOR_Z_IRQ_TYPE NONE
+#define HPS_0_STEP_MOTOR_Z_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_e0', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_STEP_MOTOR_E0_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_STEP_MOTOR_E0_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_STEP_MOTOR_E0_COMPONENT_NAME step_motor_e0
+#define HPS_0_STEP_MOTOR_E0_BASE 0x4060
+#define HPS_0_STEP_MOTOR_E0_SPAN 16
+#define HPS_0_STEP_MOTOR_E0_END 0x406f
+#define HPS_0_STEP_MOTOR_E0_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_STEP_MOTOR_E0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_STEP_MOTOR_E0_CAPTURE 0
+#define HPS_0_STEP_MOTOR_E0_DATA_WIDTH 3
+#define HPS_0_STEP_MOTOR_E0_DO_TEST_BENCH_WIRING 0
+#define HPS_0_STEP_MOTOR_E0_DRIVEN_SIM_VALUE 0
+#define HPS_0_STEP_MOTOR_E0_EDGE_TYPE NONE
+#define HPS_0_STEP_MOTOR_E0_FREQ 50000000
+#define HPS_0_STEP_MOTOR_E0_HAS_IN 0
+#define HPS_0_STEP_MOTOR_E0_HAS_OUT 1
+#define HPS_0_STEP_MOTOR_E0_HAS_TRI 0
+#define HPS_0_STEP_MOTOR_E0_IRQ_TYPE NONE
+#define HPS_0_STEP_MOTOR_E0_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_e1', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_STEP_MOTOR_E1_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_STEP_MOTOR_E1_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_STEP_MOTOR_E1_COMPONENT_NAME step_motor_e1
+#define HPS_0_STEP_MOTOR_E1_BASE 0x4080
+#define HPS_0_STEP_MOTOR_E1_SPAN 16
+#define HPS_0_STEP_MOTOR_E1_END 0x408f
+#define HPS_0_STEP_MOTOR_E1_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_STEP_MOTOR_E1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_STEP_MOTOR_E1_CAPTURE 0
+#define HPS_0_STEP_MOTOR_E1_DATA_WIDTH 3
+#define HPS_0_STEP_MOTOR_E1_DO_TEST_BENCH_WIRING 0
+#define HPS_0_STEP_MOTOR_E1_DRIVEN_SIM_VALUE 0
+#define HPS_0_STEP_MOTOR_E1_EDGE_TYPE NONE
+#define HPS_0_STEP_MOTOR_E1_FREQ 50000000
+#define HPS_0_STEP_MOTOR_E1_HAS_IN 0
+#define HPS_0_STEP_MOTOR_E1_HAS_OUT 1
+#define HPS_0_STEP_MOTOR_E1_HAS_TRI 0
+#define HPS_0_STEP_MOTOR_E1_IRQ_TYPE NONE
+#define HPS_0_STEP_MOTOR_E1_RESET_VALUE 0
+
+/*
+ * Macros for device 'x_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_X_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_X_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_X_MIN_PIN_COMPONENT_NAME x_min_pin
+#define HPS_0_X_MIN_PIN_BASE 0x5000
+#define HPS_0_X_MIN_PIN_SPAN 16
+#define HPS_0_X_MIN_PIN_END 0x500f
+#define HPS_0_X_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_X_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_X_MIN_PIN_CAPTURE 0
+#define HPS_0_X_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_X_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_X_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_X_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_X_MIN_PIN_FREQ 50000000
+#define HPS_0_X_MIN_PIN_HAS_IN 0
+#define HPS_0_X_MIN_PIN_HAS_OUT 1
+#define HPS_0_X_MIN_PIN_HAS_TRI 0
+#define HPS_0_X_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_X_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'x_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_X_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_X_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_X_MAX_PIN_COMPONENT_NAME x_max_pin
+#define HPS_0_X_MAX_PIN_BASE 0x5020
+#define HPS_0_X_MAX_PIN_SPAN 16
+#define HPS_0_X_MAX_PIN_END 0x502f
+#define HPS_0_X_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_X_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_X_MAX_PIN_CAPTURE 0
+#define HPS_0_X_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_X_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_X_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_X_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_X_MAX_PIN_FREQ 50000000
+#define HPS_0_X_MAX_PIN_HAS_IN 0
+#define HPS_0_X_MAX_PIN_HAS_OUT 1
+#define HPS_0_X_MAX_PIN_HAS_TRI 0
+#define HPS_0_X_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_X_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'y_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_Y_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_Y_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_Y_MIN_PIN_COMPONENT_NAME y_min_pin
+#define HPS_0_Y_MIN_PIN_BASE 0x5040
+#define HPS_0_Y_MIN_PIN_SPAN 16
+#define HPS_0_Y_MIN_PIN_END 0x504f
+#define HPS_0_Y_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_Y_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_Y_MIN_PIN_CAPTURE 0
+#define HPS_0_Y_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_Y_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_Y_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_Y_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_Y_MIN_PIN_FREQ 50000000
+#define HPS_0_Y_MIN_PIN_HAS_IN 0
+#define HPS_0_Y_MIN_PIN_HAS_OUT 1
+#define HPS_0_Y_MIN_PIN_HAS_TRI 0
+#define HPS_0_Y_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_Y_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'y_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_Y_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_Y_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_Y_MAX_PIN_COMPONENT_NAME y_max_pin
+#define HPS_0_Y_MAX_PIN_BASE 0x5060
+#define HPS_0_Y_MAX_PIN_SPAN 16
+#define HPS_0_Y_MAX_PIN_END 0x506f
+#define HPS_0_Y_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_Y_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_Y_MAX_PIN_CAPTURE 0
+#define HPS_0_Y_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_Y_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_Y_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_Y_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_Y_MAX_PIN_FREQ 50000000
+#define HPS_0_Y_MAX_PIN_HAS_IN 0
+#define HPS_0_Y_MAX_PIN_HAS_OUT 1
+#define HPS_0_Y_MAX_PIN_HAS_TRI 0
+#define HPS_0_Y_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_Y_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'z_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_Z_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_Z_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_Z_MIN_PIN_COMPONENT_NAME z_min_pin
+#define HPS_0_Z_MIN_PIN_BASE 0x5080
+#define HPS_0_Z_MIN_PIN_SPAN 16
+#define HPS_0_Z_MIN_PIN_END 0x508f
+#define HPS_0_Z_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_Z_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_Z_MIN_PIN_CAPTURE 0
+#define HPS_0_Z_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_Z_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_Z_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_Z_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_Z_MIN_PIN_FREQ 50000000
+#define HPS_0_Z_MIN_PIN_HAS_IN 0
+#define HPS_0_Z_MIN_PIN_HAS_OUT 1
+#define HPS_0_Z_MIN_PIN_HAS_TRI 0
+#define HPS_0_Z_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_Z_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'z_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_Z_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_Z_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_Z_MAX_PIN_COMPONENT_NAME z_max_pin
+#define HPS_0_Z_MAX_PIN_BASE 0x50a0
+#define HPS_0_Z_MAX_PIN_SPAN 16
+#define HPS_0_Z_MAX_PIN_END 0x50af
+#define HPS_0_Z_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_Z_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_Z_MAX_PIN_CAPTURE 0
+#define HPS_0_Z_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_Z_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_Z_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_Z_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_Z_MAX_PIN_FREQ 50000000
+#define HPS_0_Z_MAX_PIN_HAS_IN 0
+#define HPS_0_Z_MAX_PIN_HAS_OUT 1
+#define HPS_0_Z_MAX_PIN_HAS_TRI 0
+#define HPS_0_Z_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_Z_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp_bed', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_TEMP_BED_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_TEMP_BED_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_TEMP_BED_COMPONENT_NAME temp_bed
+#define HPS_0_TEMP_BED_BASE 0x6000
+#define HPS_0_TEMP_BED_SPAN 16
+#define HPS_0_TEMP_BED_END 0x600f
+#define HPS_0_TEMP_BED_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_TEMP_BED_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_TEMP_BED_CAPTURE 0
+#define HPS_0_TEMP_BED_DATA_WIDTH 8
+#define HPS_0_TEMP_BED_DO_TEST_BENCH_WIRING 0
+#define HPS_0_TEMP_BED_DRIVEN_SIM_VALUE 0
+#define HPS_0_TEMP_BED_EDGE_TYPE NONE
+#define HPS_0_TEMP_BED_FREQ 50000000
+#define HPS_0_TEMP_BED_HAS_IN 0
+#define HPS_0_TEMP_BED_HAS_OUT 1
+#define HPS_0_TEMP_BED_HAS_TRI 0
+#define HPS_0_TEMP_BED_IRQ_TYPE NONE
+#define HPS_0_TEMP_BED_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp0', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_TEMP0_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_TEMP0_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_TEMP0_COMPONENT_NAME temp0
+#define HPS_0_TEMP0_BASE 0x6020
+#define HPS_0_TEMP0_SPAN 16
+#define HPS_0_TEMP0_END 0x602f
+#define HPS_0_TEMP0_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_TEMP0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_TEMP0_CAPTURE 0
+#define HPS_0_TEMP0_DATA_WIDTH 8
+#define HPS_0_TEMP0_DO_TEST_BENCH_WIRING 0
+#define HPS_0_TEMP0_DRIVEN_SIM_VALUE 0
+#define HPS_0_TEMP0_EDGE_TYPE NONE
+#define HPS_0_TEMP0_FREQ 50000000
+#define HPS_0_TEMP0_HAS_IN 0
+#define HPS_0_TEMP0_HAS_OUT 1
+#define HPS_0_TEMP0_HAS_TRI 0
+#define HPS_0_TEMP0_IRQ_TYPE NONE
+#define HPS_0_TEMP0_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp1', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0'.
+ * The macros are prefixed with 'HPS_0_TEMP1_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_TEMP1_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_TEMP1_COMPONENT_NAME temp1
+#define HPS_0_TEMP1_BASE 0x6040
+#define HPS_0_TEMP1_SPAN 16
+#define HPS_0_TEMP1_END 0x604f
+#define HPS_0_TEMP1_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_TEMP1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_TEMP1_CAPTURE 0
+#define HPS_0_TEMP1_DATA_WIDTH 8
+#define HPS_0_TEMP1_DO_TEST_BENCH_WIRING 0
+#define HPS_0_TEMP1_DRIVEN_SIM_VALUE 0
+#define HPS_0_TEMP1_EDGE_TYPE NONE
+#define HPS_0_TEMP1_FREQ 50000000
+#define HPS_0_TEMP1_HAS_IN 0
+#define HPS_0_TEMP1_HAS_OUT 1
+#define HPS_0_TEMP1_HAS_TRI 0
+#define HPS_0_TEMP1_IRQ_TYPE NONE
+#define HPS_0_TEMP1_RESET_VALUE 0
+
+/*
  * Macros for device 'ILC', class 'interrupt_latency_counter'
  * Path to the device is from the master group 'hps_0'.
  * The macros are prefixed with 'HPS_0_ILC_'.
@@ -643,7 +993,7 @@
 #define HPS_0_BRIDGES_SYSID_QSYS_SPAN 8
 #define HPS_0_BRIDGES_SYSID_QSYS_END 0x1007
 #define HPS_0_BRIDGES_SYSID_QSYS_ID 4294906626
-#define HPS_0_BRIDGES_SYSID_QSYS_TIMESTAMP 1545807684
+#define HPS_0_BRIDGES_SYSID_QSYS_TIMESTAMP 1545902027
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -735,6 +1085,356 @@
 #define HPS_0_BRIDGES_DIPSW_PIO_HAS_TRI 0
 #define HPS_0_BRIDGES_DIPSW_PIO_IRQ_TYPE EDGE
 #define HPS_0_BRIDGES_DIPSW_PIO_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_x', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_STEP_MOTOR_X_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_STEP_MOTOR_X_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_STEP_MOTOR_X_COMPONENT_NAME step_motor_x
+#define HPS_0_BRIDGES_STEP_MOTOR_X_BASE 0x4000
+#define HPS_0_BRIDGES_STEP_MOTOR_X_SPAN 16
+#define HPS_0_BRIDGES_STEP_MOTOR_X_END 0x400f
+#define HPS_0_BRIDGES_STEP_MOTOR_X_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_STEP_MOTOR_X_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_STEP_MOTOR_X_CAPTURE 0
+#define HPS_0_BRIDGES_STEP_MOTOR_X_DATA_WIDTH 3
+#define HPS_0_BRIDGES_STEP_MOTOR_X_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_STEP_MOTOR_X_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_STEP_MOTOR_X_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_STEP_MOTOR_X_FREQ 50000000
+#define HPS_0_BRIDGES_STEP_MOTOR_X_HAS_IN 0
+#define HPS_0_BRIDGES_STEP_MOTOR_X_HAS_OUT 1
+#define HPS_0_BRIDGES_STEP_MOTOR_X_HAS_TRI 0
+#define HPS_0_BRIDGES_STEP_MOTOR_X_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_STEP_MOTOR_X_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_y', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_STEP_MOTOR_Y_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_COMPONENT_NAME step_motor_y
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_BASE 0x4020
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_SPAN 16
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_END 0x402f
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_CAPTURE 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_DATA_WIDTH 3
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_FREQ 50000000
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_HAS_IN 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_HAS_OUT 1
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_HAS_TRI 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_STEP_MOTOR_Y_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_z', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_STEP_MOTOR_Z_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_COMPONENT_NAME step_motor_z
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_BASE 0x4040
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_SPAN 16
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_END 0x404f
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_CAPTURE 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_DATA_WIDTH 3
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_FREQ 50000000
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_HAS_IN 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_HAS_OUT 1
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_HAS_TRI 0
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_STEP_MOTOR_Z_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_e0', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_STEP_MOTOR_E0_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_COMPONENT_NAME step_motor_e0
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_BASE 0x4060
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_SPAN 16
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_END 0x406f
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_CAPTURE 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_DATA_WIDTH 3
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_FREQ 50000000
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_HAS_IN 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_HAS_OUT 1
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_HAS_TRI 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_STEP_MOTOR_E0_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_e1', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_STEP_MOTOR_E1_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_COMPONENT_NAME step_motor_e1
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_BASE 0x4080
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_SPAN 16
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_END 0x408f
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_CAPTURE 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_DATA_WIDTH 3
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_FREQ 50000000
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_HAS_IN 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_HAS_OUT 1
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_HAS_TRI 0
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_STEP_MOTOR_E1_RESET_VALUE 0
+
+/*
+ * Macros for device 'x_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_X_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_X_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_X_MIN_PIN_COMPONENT_NAME x_min_pin
+#define HPS_0_BRIDGES_X_MIN_PIN_BASE 0x5000
+#define HPS_0_BRIDGES_X_MIN_PIN_SPAN 16
+#define HPS_0_BRIDGES_X_MIN_PIN_END 0x500f
+#define HPS_0_BRIDGES_X_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_X_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_X_MIN_PIN_CAPTURE 0
+#define HPS_0_BRIDGES_X_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_BRIDGES_X_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_X_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_X_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_X_MIN_PIN_FREQ 50000000
+#define HPS_0_BRIDGES_X_MIN_PIN_HAS_IN 0
+#define HPS_0_BRIDGES_X_MIN_PIN_HAS_OUT 1
+#define HPS_0_BRIDGES_X_MIN_PIN_HAS_TRI 0
+#define HPS_0_BRIDGES_X_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_X_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'x_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_X_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_X_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_X_MAX_PIN_COMPONENT_NAME x_max_pin
+#define HPS_0_BRIDGES_X_MAX_PIN_BASE 0x5020
+#define HPS_0_BRIDGES_X_MAX_PIN_SPAN 16
+#define HPS_0_BRIDGES_X_MAX_PIN_END 0x502f
+#define HPS_0_BRIDGES_X_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_X_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_X_MAX_PIN_CAPTURE 0
+#define HPS_0_BRIDGES_X_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_BRIDGES_X_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_X_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_X_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_X_MAX_PIN_FREQ 50000000
+#define HPS_0_BRIDGES_X_MAX_PIN_HAS_IN 0
+#define HPS_0_BRIDGES_X_MAX_PIN_HAS_OUT 1
+#define HPS_0_BRIDGES_X_MAX_PIN_HAS_TRI 0
+#define HPS_0_BRIDGES_X_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_X_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'y_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_Y_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_Y_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_Y_MIN_PIN_COMPONENT_NAME y_min_pin
+#define HPS_0_BRIDGES_Y_MIN_PIN_BASE 0x5040
+#define HPS_0_BRIDGES_Y_MIN_PIN_SPAN 16
+#define HPS_0_BRIDGES_Y_MIN_PIN_END 0x504f
+#define HPS_0_BRIDGES_Y_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_Y_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_Y_MIN_PIN_CAPTURE 0
+#define HPS_0_BRIDGES_Y_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_BRIDGES_Y_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_Y_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_Y_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_Y_MIN_PIN_FREQ 50000000
+#define HPS_0_BRIDGES_Y_MIN_PIN_HAS_IN 0
+#define HPS_0_BRIDGES_Y_MIN_PIN_HAS_OUT 1
+#define HPS_0_BRIDGES_Y_MIN_PIN_HAS_TRI 0
+#define HPS_0_BRIDGES_Y_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_Y_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'y_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_Y_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_Y_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_Y_MAX_PIN_COMPONENT_NAME y_max_pin
+#define HPS_0_BRIDGES_Y_MAX_PIN_BASE 0x5060
+#define HPS_0_BRIDGES_Y_MAX_PIN_SPAN 16
+#define HPS_0_BRIDGES_Y_MAX_PIN_END 0x506f
+#define HPS_0_BRIDGES_Y_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_Y_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_Y_MAX_PIN_CAPTURE 0
+#define HPS_0_BRIDGES_Y_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_BRIDGES_Y_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_Y_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_Y_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_Y_MAX_PIN_FREQ 50000000
+#define HPS_0_BRIDGES_Y_MAX_PIN_HAS_IN 0
+#define HPS_0_BRIDGES_Y_MAX_PIN_HAS_OUT 1
+#define HPS_0_BRIDGES_Y_MAX_PIN_HAS_TRI 0
+#define HPS_0_BRIDGES_Y_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_Y_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'z_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_Z_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_Z_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_Z_MIN_PIN_COMPONENT_NAME z_min_pin
+#define HPS_0_BRIDGES_Z_MIN_PIN_BASE 0x5080
+#define HPS_0_BRIDGES_Z_MIN_PIN_SPAN 16
+#define HPS_0_BRIDGES_Z_MIN_PIN_END 0x508f
+#define HPS_0_BRIDGES_Z_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_Z_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_Z_MIN_PIN_CAPTURE 0
+#define HPS_0_BRIDGES_Z_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_BRIDGES_Z_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_Z_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_Z_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_Z_MIN_PIN_FREQ 50000000
+#define HPS_0_BRIDGES_Z_MIN_PIN_HAS_IN 0
+#define HPS_0_BRIDGES_Z_MIN_PIN_HAS_OUT 1
+#define HPS_0_BRIDGES_Z_MIN_PIN_HAS_TRI 0
+#define HPS_0_BRIDGES_Z_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_Z_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'z_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_Z_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_Z_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_Z_MAX_PIN_COMPONENT_NAME z_max_pin
+#define HPS_0_BRIDGES_Z_MAX_PIN_BASE 0x50a0
+#define HPS_0_BRIDGES_Z_MAX_PIN_SPAN 16
+#define HPS_0_BRIDGES_Z_MAX_PIN_END 0x50af
+#define HPS_0_BRIDGES_Z_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_Z_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_Z_MAX_PIN_CAPTURE 0
+#define HPS_0_BRIDGES_Z_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_BRIDGES_Z_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_Z_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_Z_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_Z_MAX_PIN_FREQ 50000000
+#define HPS_0_BRIDGES_Z_MAX_PIN_HAS_IN 0
+#define HPS_0_BRIDGES_Z_MAX_PIN_HAS_OUT 1
+#define HPS_0_BRIDGES_Z_MAX_PIN_HAS_TRI 0
+#define HPS_0_BRIDGES_Z_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_Z_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp_bed', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_TEMP_BED_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_TEMP_BED_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_TEMP_BED_COMPONENT_NAME temp_bed
+#define HPS_0_BRIDGES_TEMP_BED_BASE 0x6000
+#define HPS_0_BRIDGES_TEMP_BED_SPAN 16
+#define HPS_0_BRIDGES_TEMP_BED_END 0x600f
+#define HPS_0_BRIDGES_TEMP_BED_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_TEMP_BED_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_TEMP_BED_CAPTURE 0
+#define HPS_0_BRIDGES_TEMP_BED_DATA_WIDTH 8
+#define HPS_0_BRIDGES_TEMP_BED_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_TEMP_BED_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_TEMP_BED_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_TEMP_BED_FREQ 50000000
+#define HPS_0_BRIDGES_TEMP_BED_HAS_IN 0
+#define HPS_0_BRIDGES_TEMP_BED_HAS_OUT 1
+#define HPS_0_BRIDGES_TEMP_BED_HAS_TRI 0
+#define HPS_0_BRIDGES_TEMP_BED_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_TEMP_BED_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp0', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_TEMP0_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_TEMP0_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_TEMP0_COMPONENT_NAME temp0
+#define HPS_0_BRIDGES_TEMP0_BASE 0x6020
+#define HPS_0_BRIDGES_TEMP0_SPAN 16
+#define HPS_0_BRIDGES_TEMP0_END 0x602f
+#define HPS_0_BRIDGES_TEMP0_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_TEMP0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_TEMP0_CAPTURE 0
+#define HPS_0_BRIDGES_TEMP0_DATA_WIDTH 8
+#define HPS_0_BRIDGES_TEMP0_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_TEMP0_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_TEMP0_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_TEMP0_FREQ 50000000
+#define HPS_0_BRIDGES_TEMP0_HAS_IN 0
+#define HPS_0_BRIDGES_TEMP0_HAS_OUT 1
+#define HPS_0_BRIDGES_TEMP0_HAS_TRI 0
+#define HPS_0_BRIDGES_TEMP0_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_TEMP0_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp1', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_bridges'.
+ * The macros are prefixed with 'HPS_0_BRIDGES_TEMP1_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_BRIDGES_TEMP1_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_BRIDGES_TEMP1_COMPONENT_NAME temp1
+#define HPS_0_BRIDGES_TEMP1_BASE 0x6040
+#define HPS_0_BRIDGES_TEMP1_SPAN 16
+#define HPS_0_BRIDGES_TEMP1_END 0x604f
+#define HPS_0_BRIDGES_TEMP1_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_BRIDGES_TEMP1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_BRIDGES_TEMP1_CAPTURE 0
+#define HPS_0_BRIDGES_TEMP1_DATA_WIDTH 8
+#define HPS_0_BRIDGES_TEMP1_DO_TEST_BENCH_WIRING 0
+#define HPS_0_BRIDGES_TEMP1_DRIVEN_SIM_VALUE 0
+#define HPS_0_BRIDGES_TEMP1_EDGE_TYPE NONE
+#define HPS_0_BRIDGES_TEMP1_FREQ 50000000
+#define HPS_0_BRIDGES_TEMP1_HAS_IN 0
+#define HPS_0_BRIDGES_TEMP1_HAS_OUT 1
+#define HPS_0_BRIDGES_TEMP1_HAS_TRI 0
+#define HPS_0_BRIDGES_TEMP1_IRQ_TYPE NONE
+#define HPS_0_BRIDGES_TEMP1_RESET_VALUE 0
 
 /*
  * Macros for device 'ILC', class 'interrupt_latency_counter'
@@ -1214,7 +1914,7 @@
 #define HPS_0_ARM_A9_0_SYSID_QSYS_SPAN 8
 #define HPS_0_ARM_A9_0_SYSID_QSYS_END 0xff201007
 #define HPS_0_ARM_A9_0_SYSID_QSYS_ID 4294906626
-#define HPS_0_ARM_A9_0_SYSID_QSYS_TIMESTAMP 1545807684
+#define HPS_0_ARM_A9_0_SYSID_QSYS_TIMESTAMP 1545902027
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -1306,6 +2006,356 @@
 #define HPS_0_ARM_A9_0_DIPSW_PIO_HAS_TRI 0
 #define HPS_0_ARM_A9_0_DIPSW_PIO_IRQ_TYPE EDGE
 #define HPS_0_ARM_A9_0_DIPSW_PIO_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_x', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_STEP_MOTOR_X_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_COMPONENT_NAME step_motor_x
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_BASE 0xff204000
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_SPAN 16
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_END 0xff20400f
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_CAPTURE 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_DATA_WIDTH 3
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_FREQ 50000000
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_HAS_IN 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_HAS_OUT 1
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_HAS_TRI 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_STEP_MOTOR_X_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_y', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_STEP_MOTOR_Y_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_COMPONENT_NAME step_motor_y
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_BASE 0xff204020
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_SPAN 16
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_END 0xff20402f
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_CAPTURE 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_DATA_WIDTH 3
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_FREQ 50000000
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_HAS_IN 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_HAS_OUT 1
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_HAS_TRI 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Y_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_z', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_STEP_MOTOR_Z_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_COMPONENT_NAME step_motor_z
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_BASE 0xff204040
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_SPAN 16
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_END 0xff20404f
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_CAPTURE 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_DATA_WIDTH 3
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_FREQ 50000000
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_HAS_IN 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_HAS_OUT 1
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_HAS_TRI 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_STEP_MOTOR_Z_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_e0', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_STEP_MOTOR_E0_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_COMPONENT_NAME step_motor_e0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_BASE 0xff204060
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_SPAN 16
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_END 0xff20406f
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_CAPTURE 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_DATA_WIDTH 3
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_FREQ 50000000
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_HAS_IN 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_HAS_OUT 1
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_HAS_TRI 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E0_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_e1', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_STEP_MOTOR_E1_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_COMPONENT_NAME step_motor_e1
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_BASE 0xff204080
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_SPAN 16
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_END 0xff20408f
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_CAPTURE 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_DATA_WIDTH 3
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_FREQ 50000000
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_HAS_IN 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_HAS_OUT 1
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_HAS_TRI 0
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_STEP_MOTOR_E1_RESET_VALUE 0
+
+/*
+ * Macros for device 'x_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_X_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_X_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_X_MIN_PIN_COMPONENT_NAME x_min_pin
+#define HPS_0_ARM_A9_0_X_MIN_PIN_BASE 0xff205000
+#define HPS_0_ARM_A9_0_X_MIN_PIN_SPAN 16
+#define HPS_0_ARM_A9_0_X_MIN_PIN_END 0xff20500f
+#define HPS_0_ARM_A9_0_X_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_X_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_X_MIN_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_0_X_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_0_X_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_X_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_X_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_X_MIN_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_0_X_MIN_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_0_X_MIN_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_0_X_MIN_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_0_X_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_X_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'x_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_X_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_X_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_X_MAX_PIN_COMPONENT_NAME x_max_pin
+#define HPS_0_ARM_A9_0_X_MAX_PIN_BASE 0xff205020
+#define HPS_0_ARM_A9_0_X_MAX_PIN_SPAN 16
+#define HPS_0_ARM_A9_0_X_MAX_PIN_END 0xff20502f
+#define HPS_0_ARM_A9_0_X_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_X_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_X_MAX_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_0_X_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_0_X_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_X_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_X_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_X_MAX_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_0_X_MAX_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_0_X_MAX_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_0_X_MAX_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_0_X_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_X_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'y_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_Y_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_COMPONENT_NAME y_min_pin
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_BASE 0xff205040
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_SPAN 16
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_END 0xff20504f
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_Y_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'y_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_Y_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_COMPONENT_NAME y_max_pin
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_BASE 0xff205060
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_SPAN 16
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_END 0xff20506f
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_Y_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'z_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_Z_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_COMPONENT_NAME z_min_pin
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_BASE 0xff205080
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_SPAN 16
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_END 0xff20508f
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_Z_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'z_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_Z_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_COMPONENT_NAME z_max_pin
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_BASE 0xff2050a0
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_SPAN 16
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_END 0xff2050af
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_Z_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp_bed', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_TEMP_BED_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_TEMP_BED_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_TEMP_BED_COMPONENT_NAME temp_bed
+#define HPS_0_ARM_A9_0_TEMP_BED_BASE 0xff206000
+#define HPS_0_ARM_A9_0_TEMP_BED_SPAN 16
+#define HPS_0_ARM_A9_0_TEMP_BED_END 0xff20600f
+#define HPS_0_ARM_A9_0_TEMP_BED_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_TEMP_BED_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_TEMP_BED_CAPTURE 0
+#define HPS_0_ARM_A9_0_TEMP_BED_DATA_WIDTH 8
+#define HPS_0_ARM_A9_0_TEMP_BED_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_TEMP_BED_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_TEMP_BED_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_TEMP_BED_FREQ 50000000
+#define HPS_0_ARM_A9_0_TEMP_BED_HAS_IN 0
+#define HPS_0_ARM_A9_0_TEMP_BED_HAS_OUT 1
+#define HPS_0_ARM_A9_0_TEMP_BED_HAS_TRI 0
+#define HPS_0_ARM_A9_0_TEMP_BED_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_TEMP_BED_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp0', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_TEMP0_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_TEMP0_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_TEMP0_COMPONENT_NAME temp0
+#define HPS_0_ARM_A9_0_TEMP0_BASE 0xff206020
+#define HPS_0_ARM_A9_0_TEMP0_SPAN 16
+#define HPS_0_ARM_A9_0_TEMP0_END 0xff20602f
+#define HPS_0_ARM_A9_0_TEMP0_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_TEMP0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_TEMP0_CAPTURE 0
+#define HPS_0_ARM_A9_0_TEMP0_DATA_WIDTH 8
+#define HPS_0_ARM_A9_0_TEMP0_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_TEMP0_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_TEMP0_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_TEMP0_FREQ 50000000
+#define HPS_0_ARM_A9_0_TEMP0_HAS_IN 0
+#define HPS_0_ARM_A9_0_TEMP0_HAS_OUT 1
+#define HPS_0_ARM_A9_0_TEMP0_HAS_TRI 0
+#define HPS_0_ARM_A9_0_TEMP0_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_TEMP0_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp1', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_0'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_0_TEMP1_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_0_TEMP1_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_0_TEMP1_COMPONENT_NAME temp1
+#define HPS_0_ARM_A9_0_TEMP1_BASE 0xff206040
+#define HPS_0_ARM_A9_0_TEMP1_SPAN 16
+#define HPS_0_ARM_A9_0_TEMP1_END 0xff20604f
+#define HPS_0_ARM_A9_0_TEMP1_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_0_TEMP1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_0_TEMP1_CAPTURE 0
+#define HPS_0_ARM_A9_0_TEMP1_DATA_WIDTH 8
+#define HPS_0_ARM_A9_0_TEMP1_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_0_TEMP1_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_0_TEMP1_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_0_TEMP1_FREQ 50000000
+#define HPS_0_ARM_A9_0_TEMP1_HAS_IN 0
+#define HPS_0_ARM_A9_0_TEMP1_HAS_OUT 1
+#define HPS_0_ARM_A9_0_TEMP1_HAS_TRI 0
+#define HPS_0_ARM_A9_0_TEMP1_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_0_TEMP1_RESET_VALUE 0
 
 /*
  * Macros for device 'ILC', class 'interrupt_latency_counter'
@@ -1821,7 +2871,7 @@
 #define HPS_0_ARM_A9_1_SYSID_QSYS_SPAN 8
 #define HPS_0_ARM_A9_1_SYSID_QSYS_END 0xff201007
 #define HPS_0_ARM_A9_1_SYSID_QSYS_ID 4294906626
-#define HPS_0_ARM_A9_1_SYSID_QSYS_TIMESTAMP 1545807684
+#define HPS_0_ARM_A9_1_SYSID_QSYS_TIMESTAMP 1545902027
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -1913,6 +2963,356 @@
 #define HPS_0_ARM_A9_1_DIPSW_PIO_HAS_TRI 0
 #define HPS_0_ARM_A9_1_DIPSW_PIO_IRQ_TYPE EDGE
 #define HPS_0_ARM_A9_1_DIPSW_PIO_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_x', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_STEP_MOTOR_X_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_COMPONENT_NAME step_motor_x
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_BASE 0xff204000
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_SPAN 16
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_END 0xff20400f
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_CAPTURE 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_DATA_WIDTH 3
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_FREQ 50000000
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_HAS_IN 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_HAS_OUT 1
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_HAS_TRI 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_STEP_MOTOR_X_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_y', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_STEP_MOTOR_Y_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_COMPONENT_NAME step_motor_y
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_BASE 0xff204020
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_SPAN 16
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_END 0xff20402f
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_CAPTURE 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_DATA_WIDTH 3
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_FREQ 50000000
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_HAS_IN 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_HAS_OUT 1
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_HAS_TRI 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Y_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_z', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_STEP_MOTOR_Z_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_COMPONENT_NAME step_motor_z
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_BASE 0xff204040
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_SPAN 16
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_END 0xff20404f
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_CAPTURE 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_DATA_WIDTH 3
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_FREQ 50000000
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_HAS_IN 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_HAS_OUT 1
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_HAS_TRI 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_STEP_MOTOR_Z_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_e0', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_STEP_MOTOR_E0_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_COMPONENT_NAME step_motor_e0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_BASE 0xff204060
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_SPAN 16
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_END 0xff20406f
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_CAPTURE 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_DATA_WIDTH 3
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_FREQ 50000000
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_HAS_IN 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_HAS_OUT 1
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_HAS_TRI 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E0_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_e1', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_STEP_MOTOR_E1_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_COMPONENT_NAME step_motor_e1
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_BASE 0xff204080
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_SPAN 16
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_END 0xff20408f
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_CAPTURE 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_DATA_WIDTH 3
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_FREQ 50000000
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_HAS_IN 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_HAS_OUT 1
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_HAS_TRI 0
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_STEP_MOTOR_E1_RESET_VALUE 0
+
+/*
+ * Macros for device 'x_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_X_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_X_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_X_MIN_PIN_COMPONENT_NAME x_min_pin
+#define HPS_0_ARM_A9_1_X_MIN_PIN_BASE 0xff205000
+#define HPS_0_ARM_A9_1_X_MIN_PIN_SPAN 16
+#define HPS_0_ARM_A9_1_X_MIN_PIN_END 0xff20500f
+#define HPS_0_ARM_A9_1_X_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_X_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_X_MIN_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_1_X_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_1_X_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_X_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_X_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_X_MIN_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_1_X_MIN_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_1_X_MIN_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_1_X_MIN_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_1_X_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_X_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'x_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_X_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_X_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_X_MAX_PIN_COMPONENT_NAME x_max_pin
+#define HPS_0_ARM_A9_1_X_MAX_PIN_BASE 0xff205020
+#define HPS_0_ARM_A9_1_X_MAX_PIN_SPAN 16
+#define HPS_0_ARM_A9_1_X_MAX_PIN_END 0xff20502f
+#define HPS_0_ARM_A9_1_X_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_X_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_X_MAX_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_1_X_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_1_X_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_X_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_X_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_X_MAX_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_1_X_MAX_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_1_X_MAX_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_1_X_MAX_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_1_X_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_X_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'y_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_Y_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_COMPONENT_NAME y_min_pin
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_BASE 0xff205040
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_SPAN 16
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_END 0xff20504f
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_Y_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'y_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_Y_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_COMPONENT_NAME y_max_pin
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_BASE 0xff205060
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_SPAN 16
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_END 0xff20506f
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_Y_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'z_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_Z_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_COMPONENT_NAME z_min_pin
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_BASE 0xff205080
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_SPAN 16
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_END 0xff20508f
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_Z_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'z_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_Z_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_COMPONENT_NAME z_max_pin
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_BASE 0xff2050a0
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_SPAN 16
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_END 0xff2050af
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_CAPTURE 0
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_DATA_WIDTH 1
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_FREQ 50000000
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_HAS_IN 0
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_HAS_OUT 1
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_HAS_TRI 0
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_Z_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp_bed', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_TEMP_BED_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_TEMP_BED_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_TEMP_BED_COMPONENT_NAME temp_bed
+#define HPS_0_ARM_A9_1_TEMP_BED_BASE 0xff206000
+#define HPS_0_ARM_A9_1_TEMP_BED_SPAN 16
+#define HPS_0_ARM_A9_1_TEMP_BED_END 0xff20600f
+#define HPS_0_ARM_A9_1_TEMP_BED_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_TEMP_BED_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_TEMP_BED_CAPTURE 0
+#define HPS_0_ARM_A9_1_TEMP_BED_DATA_WIDTH 8
+#define HPS_0_ARM_A9_1_TEMP_BED_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_TEMP_BED_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_TEMP_BED_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_TEMP_BED_FREQ 50000000
+#define HPS_0_ARM_A9_1_TEMP_BED_HAS_IN 0
+#define HPS_0_ARM_A9_1_TEMP_BED_HAS_OUT 1
+#define HPS_0_ARM_A9_1_TEMP_BED_HAS_TRI 0
+#define HPS_0_ARM_A9_1_TEMP_BED_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_TEMP_BED_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp0', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_TEMP0_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_TEMP0_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_TEMP0_COMPONENT_NAME temp0
+#define HPS_0_ARM_A9_1_TEMP0_BASE 0xff206020
+#define HPS_0_ARM_A9_1_TEMP0_SPAN 16
+#define HPS_0_ARM_A9_1_TEMP0_END 0xff20602f
+#define HPS_0_ARM_A9_1_TEMP0_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_TEMP0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_TEMP0_CAPTURE 0
+#define HPS_0_ARM_A9_1_TEMP0_DATA_WIDTH 8
+#define HPS_0_ARM_A9_1_TEMP0_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_TEMP0_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_TEMP0_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_TEMP0_FREQ 50000000
+#define HPS_0_ARM_A9_1_TEMP0_HAS_IN 0
+#define HPS_0_ARM_A9_1_TEMP0_HAS_OUT 1
+#define HPS_0_ARM_A9_1_TEMP0_HAS_TRI 0
+#define HPS_0_ARM_A9_1_TEMP0_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_TEMP0_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp1', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'hps_0_arm_a9_1'.
+ * The macros are prefixed with 'HPS_0_ARM_A9_1_TEMP1_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define HPS_0_ARM_A9_1_TEMP1_COMPONENT_TYPE altera_avalon_pio
+#define HPS_0_ARM_A9_1_TEMP1_COMPONENT_NAME temp1
+#define HPS_0_ARM_A9_1_TEMP1_BASE 0xff206040
+#define HPS_0_ARM_A9_1_TEMP1_SPAN 16
+#define HPS_0_ARM_A9_1_TEMP1_END 0xff20604f
+#define HPS_0_ARM_A9_1_TEMP1_BIT_CLEARING_EDGE_REGISTER 0
+#define HPS_0_ARM_A9_1_TEMP1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HPS_0_ARM_A9_1_TEMP1_CAPTURE 0
+#define HPS_0_ARM_A9_1_TEMP1_DATA_WIDTH 8
+#define HPS_0_ARM_A9_1_TEMP1_DO_TEST_BENCH_WIRING 0
+#define HPS_0_ARM_A9_1_TEMP1_DRIVEN_SIM_VALUE 0
+#define HPS_0_ARM_A9_1_TEMP1_EDGE_TYPE NONE
+#define HPS_0_ARM_A9_1_TEMP1_FREQ 50000000
+#define HPS_0_ARM_A9_1_TEMP1_HAS_IN 0
+#define HPS_0_ARM_A9_1_TEMP1_HAS_OUT 1
+#define HPS_0_ARM_A9_1_TEMP1_HAS_TRI 0
+#define HPS_0_ARM_A9_1_TEMP1_IRQ_TYPE NONE
+#define HPS_0_ARM_A9_1_TEMP1_RESET_VALUE 0
 
 /*
  * Macros for device 'ILC', class 'interrupt_latency_counter'
@@ -2864,7 +4264,7 @@
 #define MM_BRIDGE_0_SYSID_QSYS_SPAN 8
 #define MM_BRIDGE_0_SYSID_QSYS_END 0x1007
 #define MM_BRIDGE_0_SYSID_QSYS_ID 4294906626
-#define MM_BRIDGE_0_SYSID_QSYS_TIMESTAMP 1545807684
+#define MM_BRIDGE_0_SYSID_QSYS_TIMESTAMP 1545902027
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -2956,6 +4356,356 @@
 #define MM_BRIDGE_0_DIPSW_PIO_HAS_TRI 0
 #define MM_BRIDGE_0_DIPSW_PIO_IRQ_TYPE EDGE
 #define MM_BRIDGE_0_DIPSW_PIO_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_x', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_STEP_MOTOR_X_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_STEP_MOTOR_X_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_STEP_MOTOR_X_COMPONENT_NAME step_motor_x
+#define MM_BRIDGE_0_STEP_MOTOR_X_BASE 0x4000
+#define MM_BRIDGE_0_STEP_MOTOR_X_SPAN 16
+#define MM_BRIDGE_0_STEP_MOTOR_X_END 0x400f
+#define MM_BRIDGE_0_STEP_MOTOR_X_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_STEP_MOTOR_X_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_STEP_MOTOR_X_CAPTURE 0
+#define MM_BRIDGE_0_STEP_MOTOR_X_DATA_WIDTH 3
+#define MM_BRIDGE_0_STEP_MOTOR_X_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_STEP_MOTOR_X_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_STEP_MOTOR_X_EDGE_TYPE NONE
+#define MM_BRIDGE_0_STEP_MOTOR_X_FREQ 50000000
+#define MM_BRIDGE_0_STEP_MOTOR_X_HAS_IN 0
+#define MM_BRIDGE_0_STEP_MOTOR_X_HAS_OUT 1
+#define MM_BRIDGE_0_STEP_MOTOR_X_HAS_TRI 0
+#define MM_BRIDGE_0_STEP_MOTOR_X_IRQ_TYPE NONE
+#define MM_BRIDGE_0_STEP_MOTOR_X_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_y', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_STEP_MOTOR_Y_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_STEP_MOTOR_Y_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_STEP_MOTOR_Y_COMPONENT_NAME step_motor_y
+#define MM_BRIDGE_0_STEP_MOTOR_Y_BASE 0x4020
+#define MM_BRIDGE_0_STEP_MOTOR_Y_SPAN 16
+#define MM_BRIDGE_0_STEP_MOTOR_Y_END 0x402f
+#define MM_BRIDGE_0_STEP_MOTOR_Y_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_STEP_MOTOR_Y_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_STEP_MOTOR_Y_CAPTURE 0
+#define MM_BRIDGE_0_STEP_MOTOR_Y_DATA_WIDTH 3
+#define MM_BRIDGE_0_STEP_MOTOR_Y_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_STEP_MOTOR_Y_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_STEP_MOTOR_Y_EDGE_TYPE NONE
+#define MM_BRIDGE_0_STEP_MOTOR_Y_FREQ 50000000
+#define MM_BRIDGE_0_STEP_MOTOR_Y_HAS_IN 0
+#define MM_BRIDGE_0_STEP_MOTOR_Y_HAS_OUT 1
+#define MM_BRIDGE_0_STEP_MOTOR_Y_HAS_TRI 0
+#define MM_BRIDGE_0_STEP_MOTOR_Y_IRQ_TYPE NONE
+#define MM_BRIDGE_0_STEP_MOTOR_Y_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_z', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_STEP_MOTOR_Z_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_STEP_MOTOR_Z_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_STEP_MOTOR_Z_COMPONENT_NAME step_motor_z
+#define MM_BRIDGE_0_STEP_MOTOR_Z_BASE 0x4040
+#define MM_BRIDGE_0_STEP_MOTOR_Z_SPAN 16
+#define MM_BRIDGE_0_STEP_MOTOR_Z_END 0x404f
+#define MM_BRIDGE_0_STEP_MOTOR_Z_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_STEP_MOTOR_Z_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_STEP_MOTOR_Z_CAPTURE 0
+#define MM_BRIDGE_0_STEP_MOTOR_Z_DATA_WIDTH 3
+#define MM_BRIDGE_0_STEP_MOTOR_Z_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_STEP_MOTOR_Z_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_STEP_MOTOR_Z_EDGE_TYPE NONE
+#define MM_BRIDGE_0_STEP_MOTOR_Z_FREQ 50000000
+#define MM_BRIDGE_0_STEP_MOTOR_Z_HAS_IN 0
+#define MM_BRIDGE_0_STEP_MOTOR_Z_HAS_OUT 1
+#define MM_BRIDGE_0_STEP_MOTOR_Z_HAS_TRI 0
+#define MM_BRIDGE_0_STEP_MOTOR_Z_IRQ_TYPE NONE
+#define MM_BRIDGE_0_STEP_MOTOR_Z_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_e0', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_STEP_MOTOR_E0_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_STEP_MOTOR_E0_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_STEP_MOTOR_E0_COMPONENT_NAME step_motor_e0
+#define MM_BRIDGE_0_STEP_MOTOR_E0_BASE 0x4060
+#define MM_BRIDGE_0_STEP_MOTOR_E0_SPAN 16
+#define MM_BRIDGE_0_STEP_MOTOR_E0_END 0x406f
+#define MM_BRIDGE_0_STEP_MOTOR_E0_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_STEP_MOTOR_E0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_STEP_MOTOR_E0_CAPTURE 0
+#define MM_BRIDGE_0_STEP_MOTOR_E0_DATA_WIDTH 3
+#define MM_BRIDGE_0_STEP_MOTOR_E0_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_STEP_MOTOR_E0_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_STEP_MOTOR_E0_EDGE_TYPE NONE
+#define MM_BRIDGE_0_STEP_MOTOR_E0_FREQ 50000000
+#define MM_BRIDGE_0_STEP_MOTOR_E0_HAS_IN 0
+#define MM_BRIDGE_0_STEP_MOTOR_E0_HAS_OUT 1
+#define MM_BRIDGE_0_STEP_MOTOR_E0_HAS_TRI 0
+#define MM_BRIDGE_0_STEP_MOTOR_E0_IRQ_TYPE NONE
+#define MM_BRIDGE_0_STEP_MOTOR_E0_RESET_VALUE 0
+
+/*
+ * Macros for device 'step_motor_e1', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_STEP_MOTOR_E1_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_STEP_MOTOR_E1_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_STEP_MOTOR_E1_COMPONENT_NAME step_motor_e1
+#define MM_BRIDGE_0_STEP_MOTOR_E1_BASE 0x4080
+#define MM_BRIDGE_0_STEP_MOTOR_E1_SPAN 16
+#define MM_BRIDGE_0_STEP_MOTOR_E1_END 0x408f
+#define MM_BRIDGE_0_STEP_MOTOR_E1_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_STEP_MOTOR_E1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_STEP_MOTOR_E1_CAPTURE 0
+#define MM_BRIDGE_0_STEP_MOTOR_E1_DATA_WIDTH 3
+#define MM_BRIDGE_0_STEP_MOTOR_E1_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_STEP_MOTOR_E1_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_STEP_MOTOR_E1_EDGE_TYPE NONE
+#define MM_BRIDGE_0_STEP_MOTOR_E1_FREQ 50000000
+#define MM_BRIDGE_0_STEP_MOTOR_E1_HAS_IN 0
+#define MM_BRIDGE_0_STEP_MOTOR_E1_HAS_OUT 1
+#define MM_BRIDGE_0_STEP_MOTOR_E1_HAS_TRI 0
+#define MM_BRIDGE_0_STEP_MOTOR_E1_IRQ_TYPE NONE
+#define MM_BRIDGE_0_STEP_MOTOR_E1_RESET_VALUE 0
+
+/*
+ * Macros for device 'x_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_X_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_X_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_X_MIN_PIN_COMPONENT_NAME x_min_pin
+#define MM_BRIDGE_0_X_MIN_PIN_BASE 0x5000
+#define MM_BRIDGE_0_X_MIN_PIN_SPAN 16
+#define MM_BRIDGE_0_X_MIN_PIN_END 0x500f
+#define MM_BRIDGE_0_X_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_X_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_X_MIN_PIN_CAPTURE 0
+#define MM_BRIDGE_0_X_MIN_PIN_DATA_WIDTH 1
+#define MM_BRIDGE_0_X_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_X_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_X_MIN_PIN_EDGE_TYPE NONE
+#define MM_BRIDGE_0_X_MIN_PIN_FREQ 50000000
+#define MM_BRIDGE_0_X_MIN_PIN_HAS_IN 0
+#define MM_BRIDGE_0_X_MIN_PIN_HAS_OUT 1
+#define MM_BRIDGE_0_X_MIN_PIN_HAS_TRI 0
+#define MM_BRIDGE_0_X_MIN_PIN_IRQ_TYPE NONE
+#define MM_BRIDGE_0_X_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'x_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_X_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_X_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_X_MAX_PIN_COMPONENT_NAME x_max_pin
+#define MM_BRIDGE_0_X_MAX_PIN_BASE 0x5020
+#define MM_BRIDGE_0_X_MAX_PIN_SPAN 16
+#define MM_BRIDGE_0_X_MAX_PIN_END 0x502f
+#define MM_BRIDGE_0_X_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_X_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_X_MAX_PIN_CAPTURE 0
+#define MM_BRIDGE_0_X_MAX_PIN_DATA_WIDTH 1
+#define MM_BRIDGE_0_X_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_X_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_X_MAX_PIN_EDGE_TYPE NONE
+#define MM_BRIDGE_0_X_MAX_PIN_FREQ 50000000
+#define MM_BRIDGE_0_X_MAX_PIN_HAS_IN 0
+#define MM_BRIDGE_0_X_MAX_PIN_HAS_OUT 1
+#define MM_BRIDGE_0_X_MAX_PIN_HAS_TRI 0
+#define MM_BRIDGE_0_X_MAX_PIN_IRQ_TYPE NONE
+#define MM_BRIDGE_0_X_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'y_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_Y_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_Y_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_Y_MIN_PIN_COMPONENT_NAME y_min_pin
+#define MM_BRIDGE_0_Y_MIN_PIN_BASE 0x5040
+#define MM_BRIDGE_0_Y_MIN_PIN_SPAN 16
+#define MM_BRIDGE_0_Y_MIN_PIN_END 0x504f
+#define MM_BRIDGE_0_Y_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_Y_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_Y_MIN_PIN_CAPTURE 0
+#define MM_BRIDGE_0_Y_MIN_PIN_DATA_WIDTH 1
+#define MM_BRIDGE_0_Y_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_Y_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_Y_MIN_PIN_EDGE_TYPE NONE
+#define MM_BRIDGE_0_Y_MIN_PIN_FREQ 50000000
+#define MM_BRIDGE_0_Y_MIN_PIN_HAS_IN 0
+#define MM_BRIDGE_0_Y_MIN_PIN_HAS_OUT 1
+#define MM_BRIDGE_0_Y_MIN_PIN_HAS_TRI 0
+#define MM_BRIDGE_0_Y_MIN_PIN_IRQ_TYPE NONE
+#define MM_BRIDGE_0_Y_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'y_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_Y_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_Y_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_Y_MAX_PIN_COMPONENT_NAME y_max_pin
+#define MM_BRIDGE_0_Y_MAX_PIN_BASE 0x5060
+#define MM_BRIDGE_0_Y_MAX_PIN_SPAN 16
+#define MM_BRIDGE_0_Y_MAX_PIN_END 0x506f
+#define MM_BRIDGE_0_Y_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_Y_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_Y_MAX_PIN_CAPTURE 0
+#define MM_BRIDGE_0_Y_MAX_PIN_DATA_WIDTH 1
+#define MM_BRIDGE_0_Y_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_Y_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_Y_MAX_PIN_EDGE_TYPE NONE
+#define MM_BRIDGE_0_Y_MAX_PIN_FREQ 50000000
+#define MM_BRIDGE_0_Y_MAX_PIN_HAS_IN 0
+#define MM_BRIDGE_0_Y_MAX_PIN_HAS_OUT 1
+#define MM_BRIDGE_0_Y_MAX_PIN_HAS_TRI 0
+#define MM_BRIDGE_0_Y_MAX_PIN_IRQ_TYPE NONE
+#define MM_BRIDGE_0_Y_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'z_min_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_Z_MIN_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_Z_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_Z_MIN_PIN_COMPONENT_NAME z_min_pin
+#define MM_BRIDGE_0_Z_MIN_PIN_BASE 0x5080
+#define MM_BRIDGE_0_Z_MIN_PIN_SPAN 16
+#define MM_BRIDGE_0_Z_MIN_PIN_END 0x508f
+#define MM_BRIDGE_0_Z_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_Z_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_Z_MIN_PIN_CAPTURE 0
+#define MM_BRIDGE_0_Z_MIN_PIN_DATA_WIDTH 1
+#define MM_BRIDGE_0_Z_MIN_PIN_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_Z_MIN_PIN_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_Z_MIN_PIN_EDGE_TYPE NONE
+#define MM_BRIDGE_0_Z_MIN_PIN_FREQ 50000000
+#define MM_BRIDGE_0_Z_MIN_PIN_HAS_IN 0
+#define MM_BRIDGE_0_Z_MIN_PIN_HAS_OUT 1
+#define MM_BRIDGE_0_Z_MIN_PIN_HAS_TRI 0
+#define MM_BRIDGE_0_Z_MIN_PIN_IRQ_TYPE NONE
+#define MM_BRIDGE_0_Z_MIN_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'z_max_pin', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_Z_MAX_PIN_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_Z_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_Z_MAX_PIN_COMPONENT_NAME z_max_pin
+#define MM_BRIDGE_0_Z_MAX_PIN_BASE 0x50a0
+#define MM_BRIDGE_0_Z_MAX_PIN_SPAN 16
+#define MM_BRIDGE_0_Z_MAX_PIN_END 0x50af
+#define MM_BRIDGE_0_Z_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_Z_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_Z_MAX_PIN_CAPTURE 0
+#define MM_BRIDGE_0_Z_MAX_PIN_DATA_WIDTH 1
+#define MM_BRIDGE_0_Z_MAX_PIN_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_Z_MAX_PIN_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_Z_MAX_PIN_EDGE_TYPE NONE
+#define MM_BRIDGE_0_Z_MAX_PIN_FREQ 50000000
+#define MM_BRIDGE_0_Z_MAX_PIN_HAS_IN 0
+#define MM_BRIDGE_0_Z_MAX_PIN_HAS_OUT 1
+#define MM_BRIDGE_0_Z_MAX_PIN_HAS_TRI 0
+#define MM_BRIDGE_0_Z_MAX_PIN_IRQ_TYPE NONE
+#define MM_BRIDGE_0_Z_MAX_PIN_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp_bed', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_TEMP_BED_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_TEMP_BED_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_TEMP_BED_COMPONENT_NAME temp_bed
+#define MM_BRIDGE_0_TEMP_BED_BASE 0x6000
+#define MM_BRIDGE_0_TEMP_BED_SPAN 16
+#define MM_BRIDGE_0_TEMP_BED_END 0x600f
+#define MM_BRIDGE_0_TEMP_BED_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_TEMP_BED_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_TEMP_BED_CAPTURE 0
+#define MM_BRIDGE_0_TEMP_BED_DATA_WIDTH 8
+#define MM_BRIDGE_0_TEMP_BED_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_TEMP_BED_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_TEMP_BED_EDGE_TYPE NONE
+#define MM_BRIDGE_0_TEMP_BED_FREQ 50000000
+#define MM_BRIDGE_0_TEMP_BED_HAS_IN 0
+#define MM_BRIDGE_0_TEMP_BED_HAS_OUT 1
+#define MM_BRIDGE_0_TEMP_BED_HAS_TRI 0
+#define MM_BRIDGE_0_TEMP_BED_IRQ_TYPE NONE
+#define MM_BRIDGE_0_TEMP_BED_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp0', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_TEMP0_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_TEMP0_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_TEMP0_COMPONENT_NAME temp0
+#define MM_BRIDGE_0_TEMP0_BASE 0x6020
+#define MM_BRIDGE_0_TEMP0_SPAN 16
+#define MM_BRIDGE_0_TEMP0_END 0x602f
+#define MM_BRIDGE_0_TEMP0_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_TEMP0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_TEMP0_CAPTURE 0
+#define MM_BRIDGE_0_TEMP0_DATA_WIDTH 8
+#define MM_BRIDGE_0_TEMP0_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_TEMP0_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_TEMP0_EDGE_TYPE NONE
+#define MM_BRIDGE_0_TEMP0_FREQ 50000000
+#define MM_BRIDGE_0_TEMP0_HAS_IN 0
+#define MM_BRIDGE_0_TEMP0_HAS_OUT 1
+#define MM_BRIDGE_0_TEMP0_HAS_TRI 0
+#define MM_BRIDGE_0_TEMP0_IRQ_TYPE NONE
+#define MM_BRIDGE_0_TEMP0_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp1', class 'altera_avalon_pio'
+ * Path to the device is from the master group 'mm_bridge_0'.
+ * The macros are prefixed with 'MM_BRIDGE_0_TEMP1_'.
+ * The prefix is the master group descriptor and the slave descriptor.
+ */
+#define MM_BRIDGE_0_TEMP1_COMPONENT_TYPE altera_avalon_pio
+#define MM_BRIDGE_0_TEMP1_COMPONENT_NAME temp1
+#define MM_BRIDGE_0_TEMP1_BASE 0x6040
+#define MM_BRIDGE_0_TEMP1_SPAN 16
+#define MM_BRIDGE_0_TEMP1_END 0x604f
+#define MM_BRIDGE_0_TEMP1_BIT_CLEARING_EDGE_REGISTER 0
+#define MM_BRIDGE_0_TEMP1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define MM_BRIDGE_0_TEMP1_CAPTURE 0
+#define MM_BRIDGE_0_TEMP1_DATA_WIDTH 8
+#define MM_BRIDGE_0_TEMP1_DO_TEST_BENCH_WIRING 0
+#define MM_BRIDGE_0_TEMP1_DRIVEN_SIM_VALUE 0
+#define MM_BRIDGE_0_TEMP1_EDGE_TYPE NONE
+#define MM_BRIDGE_0_TEMP1_FREQ 50000000
+#define MM_BRIDGE_0_TEMP1_HAS_IN 0
+#define MM_BRIDGE_0_TEMP1_HAS_OUT 1
+#define MM_BRIDGE_0_TEMP1_HAS_TRI 0
+#define MM_BRIDGE_0_TEMP1_IRQ_TYPE NONE
+#define MM_BRIDGE_0_TEMP1_RESET_VALUE 0
 
 /*
  * Macros for device 'ILC', class 'interrupt_latency_counter'
