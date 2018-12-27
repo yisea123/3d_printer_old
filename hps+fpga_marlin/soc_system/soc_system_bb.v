@@ -1,21 +1,62 @@
 
 module soc_system (
-	btn_external_connection_export,
+	button_pio_external_connection_export,
 	clk_clk,
+	dipsw_pio_external_connection_export,
 	hps_0_f2h_cold_reset_req_reset_n,
 	hps_0_f2h_debug_reset_req_reset_n,
 	hps_0_f2h_stm_hw_events_stm_hwevents,
 	hps_0_f2h_warm_reset_req_reset_n,
 	hps_0_h2f_reset_reset_n,
+	hps_0_hps_io_hps_io_emac1_inst_TX_CLK,
+	hps_0_hps_io_hps_io_emac1_inst_TXD0,
+	hps_0_hps_io_hps_io_emac1_inst_TXD1,
+	hps_0_hps_io_hps_io_emac1_inst_TXD2,
+	hps_0_hps_io_hps_io_emac1_inst_TXD3,
+	hps_0_hps_io_hps_io_emac1_inst_RXD0,
+	hps_0_hps_io_hps_io_emac1_inst_MDIO,
+	hps_0_hps_io_hps_io_emac1_inst_MDC,
+	hps_0_hps_io_hps_io_emac1_inst_RX_CTL,
+	hps_0_hps_io_hps_io_emac1_inst_TX_CTL,
+	hps_0_hps_io_hps_io_emac1_inst_RX_CLK,
+	hps_0_hps_io_hps_io_emac1_inst_RXD1,
+	hps_0_hps_io_hps_io_emac1_inst_RXD2,
+	hps_0_hps_io_hps_io_emac1_inst_RXD3,
 	hps_0_hps_io_hps_io_sdio_inst_CMD,
 	hps_0_hps_io_hps_io_sdio_inst_D0,
 	hps_0_hps_io_hps_io_sdio_inst_D1,
 	hps_0_hps_io_hps_io_sdio_inst_CLK,
 	hps_0_hps_io_hps_io_sdio_inst_D2,
 	hps_0_hps_io_hps_io_sdio_inst_D3,
+	hps_0_hps_io_hps_io_usb1_inst_D0,
+	hps_0_hps_io_hps_io_usb1_inst_D1,
+	hps_0_hps_io_hps_io_usb1_inst_D2,
+	hps_0_hps_io_hps_io_usb1_inst_D3,
+	hps_0_hps_io_hps_io_usb1_inst_D4,
+	hps_0_hps_io_hps_io_usb1_inst_D5,
+	hps_0_hps_io_hps_io_usb1_inst_D6,
+	hps_0_hps_io_hps_io_usb1_inst_D7,
+	hps_0_hps_io_hps_io_usb1_inst_CLK,
+	hps_0_hps_io_hps_io_usb1_inst_STP,
+	hps_0_hps_io_hps_io_usb1_inst_DIR,
+	hps_0_hps_io_hps_io_usb1_inst_NXT,
+	hps_0_hps_io_hps_io_spim1_inst_CLK,
+	hps_0_hps_io_hps_io_spim1_inst_MOSI,
+	hps_0_hps_io_hps_io_spim1_inst_MISO,
+	hps_0_hps_io_hps_io_spim1_inst_SS0,
 	hps_0_hps_io_hps_io_uart0_inst_RX,
 	hps_0_hps_io_hps_io_uart0_inst_TX,
-	led_external_connection_export,
+	hps_0_hps_io_hps_io_i2c0_inst_SDA,
+	hps_0_hps_io_hps_io_i2c0_inst_SCL,
+	hps_0_hps_io_hps_io_i2c1_inst_SDA,
+	hps_0_hps_io_hps_io_i2c1_inst_SCL,
+	hps_0_hps_io_hps_io_gpio_inst_GPIO09,
+	hps_0_hps_io_hps_io_gpio_inst_GPIO35,
+	hps_0_hps_io_hps_io_gpio_inst_GPIO40,
+	hps_0_hps_io_hps_io_gpio_inst_GPIO53,
+	hps_0_hps_io_hps_io_gpio_inst_GPIO54,
+	hps_0_hps_io_hps_io_gpio_inst_GPIO61,
+	led_pio_external_connection_export,
 	memory_mem_a,
 	memory_mem_ba,
 	memory_mem_ck,
@@ -32,24 +73,79 @@ module soc_system (
 	memory_mem_odt,
 	memory_mem_dm,
 	memory_oct_rzqin,
-	reset_reset_n);	
+	reset_reset_n,
+	step_motor_e0_connection_export,
+	step_motor_e1_external_connection_export,
+	step_motor_x_external_connection_export,
+	step_motor_y_external_connection_export,
+	step_motor_z_external_connection_export,
+	temp0_external_connection_export,
+	temp1_external_connection_export,
+	temp_bed_external_connection_export,
+	x_max_pin_external_connection_export,
+	x_min_pin_external_connection_export,
+	y_max_pin_external_connection_export,
+	y_min_pin_external_connection_export,
+	z_max_pin_external_connection_export,
+	z_min_pin_external_connection_export);	
 
-	input	[1:0]	btn_external_connection_export;
+	input	[1:0]	button_pio_external_connection_export;
 	input		clk_clk;
+	input	[3:0]	dipsw_pio_external_connection_export;
 	input		hps_0_f2h_cold_reset_req_reset_n;
 	input		hps_0_f2h_debug_reset_req_reset_n;
 	input	[27:0]	hps_0_f2h_stm_hw_events_stm_hwevents;
 	input		hps_0_f2h_warm_reset_req_reset_n;
 	output		hps_0_h2f_reset_reset_n;
+	output		hps_0_hps_io_hps_io_emac1_inst_TX_CLK;
+	output		hps_0_hps_io_hps_io_emac1_inst_TXD0;
+	output		hps_0_hps_io_hps_io_emac1_inst_TXD1;
+	output		hps_0_hps_io_hps_io_emac1_inst_TXD2;
+	output		hps_0_hps_io_hps_io_emac1_inst_TXD3;
+	input		hps_0_hps_io_hps_io_emac1_inst_RXD0;
+	inout		hps_0_hps_io_hps_io_emac1_inst_MDIO;
+	output		hps_0_hps_io_hps_io_emac1_inst_MDC;
+	input		hps_0_hps_io_hps_io_emac1_inst_RX_CTL;
+	output		hps_0_hps_io_hps_io_emac1_inst_TX_CTL;
+	input		hps_0_hps_io_hps_io_emac1_inst_RX_CLK;
+	input		hps_0_hps_io_hps_io_emac1_inst_RXD1;
+	input		hps_0_hps_io_hps_io_emac1_inst_RXD2;
+	input		hps_0_hps_io_hps_io_emac1_inst_RXD3;
 	inout		hps_0_hps_io_hps_io_sdio_inst_CMD;
 	inout		hps_0_hps_io_hps_io_sdio_inst_D0;
 	inout		hps_0_hps_io_hps_io_sdio_inst_D1;
 	output		hps_0_hps_io_hps_io_sdio_inst_CLK;
 	inout		hps_0_hps_io_hps_io_sdio_inst_D2;
 	inout		hps_0_hps_io_hps_io_sdio_inst_D3;
+	inout		hps_0_hps_io_hps_io_usb1_inst_D0;
+	inout		hps_0_hps_io_hps_io_usb1_inst_D1;
+	inout		hps_0_hps_io_hps_io_usb1_inst_D2;
+	inout		hps_0_hps_io_hps_io_usb1_inst_D3;
+	inout		hps_0_hps_io_hps_io_usb1_inst_D4;
+	inout		hps_0_hps_io_hps_io_usb1_inst_D5;
+	inout		hps_0_hps_io_hps_io_usb1_inst_D6;
+	inout		hps_0_hps_io_hps_io_usb1_inst_D7;
+	input		hps_0_hps_io_hps_io_usb1_inst_CLK;
+	output		hps_0_hps_io_hps_io_usb1_inst_STP;
+	input		hps_0_hps_io_hps_io_usb1_inst_DIR;
+	input		hps_0_hps_io_hps_io_usb1_inst_NXT;
+	output		hps_0_hps_io_hps_io_spim1_inst_CLK;
+	output		hps_0_hps_io_hps_io_spim1_inst_MOSI;
+	input		hps_0_hps_io_hps_io_spim1_inst_MISO;
+	output		hps_0_hps_io_hps_io_spim1_inst_SS0;
 	input		hps_0_hps_io_hps_io_uart0_inst_RX;
 	output		hps_0_hps_io_hps_io_uart0_inst_TX;
-	output	[7:0]	led_external_connection_export;
+	inout		hps_0_hps_io_hps_io_i2c0_inst_SDA;
+	inout		hps_0_hps_io_hps_io_i2c0_inst_SCL;
+	inout		hps_0_hps_io_hps_io_i2c1_inst_SDA;
+	inout		hps_0_hps_io_hps_io_i2c1_inst_SCL;
+	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO09;
+	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO35;
+	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO40;
+	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO53;
+	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO54;
+	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO61;
+	output	[6:0]	led_pio_external_connection_export;
 	output	[14:0]	memory_mem_a;
 	output	[2:0]	memory_mem_ba;
 	output		memory_mem_ck;
@@ -67,4 +163,18 @@ module soc_system (
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
 	input		reset_reset_n;
+	output	[2:0]	step_motor_e0_connection_export;
+	output	[2:0]	step_motor_e1_external_connection_export;
+	output	[2:0]	step_motor_x_external_connection_export;
+	output	[2:0]	step_motor_y_external_connection_export;
+	output	[2:0]	step_motor_z_external_connection_export;
+	output	[7:0]	temp0_external_connection_export;
+	output	[7:0]	temp1_external_connection_export;
+	output	[7:0]	temp_bed_external_connection_export;
+	output		x_max_pin_external_connection_export;
+	output		x_min_pin_external_connection_export;
+	output		y_max_pin_external_connection_export;
+	output		y_min_pin_external_connection_export;
+	output		z_max_pin_external_connection_export;
+	output		z_min_pin_external_connection_export;
 endmodule
