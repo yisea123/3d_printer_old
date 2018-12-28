@@ -1,5 +1,6 @@
 #include <gcode.h>
 #include <stdio.h>
+#include <unistd.h>
 
 gcode::gcode(bool debug){
     is_debug = debug;
@@ -22,14 +23,14 @@ bool gcode::gcode_G1(float x, float y, float z, float e){
         return true;
 }
 
-bool gcode::gcode_G4(int s, char c){
+bool gcode::gcode_G4(unsigned int s, char c){
         #if is_debug
             printf("gcode G4 is running\n");
         #endif
         if (c=='S' or c=='s')
-            sleep(s*1000)
-        else if (c=='P' or c=='p')\
-            sleep(s);
+            usleep(1000*s);
+        else if (c=='P' or c=='p')
+            usleep(s);
         else
             return false;
         return true;
