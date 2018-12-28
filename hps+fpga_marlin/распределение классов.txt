@@ -1,0 +1,15 @@
+temperature
+addreses
+vector_3
+nozzle
+
+
+//Ишхан
+stepper
+endstop
+
+//Володя
+gcode
+heater
+temperature
+addreses

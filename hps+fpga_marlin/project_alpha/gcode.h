@@ -10,7 +10,7 @@ public:
 
     bool gcode_G0(float x, float y, float z, float e);
     bool gcode_G1(float x, float y, float z, float e);
-    bool gcode_G4(int s, char );
+    bool gcode_G4(unsigned int s, char c);
     bool gcode_G5(float x, float y, float z, float e);
     bool gcode_G6();
     bool gcode_G10();

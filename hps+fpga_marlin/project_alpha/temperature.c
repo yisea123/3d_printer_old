@@ -1,4 +1,4 @@
-#include "temperature.h"
+#include <temperature.h>
 
 temperature::temperature()
 {
