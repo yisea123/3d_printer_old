@@ -1,18 +1,16 @@
-#include <addresses>
+#include <addresses.h>
+#include <string.h>
 
-class temperature{
+class endstop{
 
 public:
 	endstop();
+	bool status(char endstop_name); //мб имеет смысл переименовать дифайны
 	bool update();
 
 protected:
-	float target_temperature;
-	float current_temperature;
-	
+	char endstop_name[];
 private:
-	float correction;
-
 }
 
 /*
