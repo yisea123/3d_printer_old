@@ -29,10 +29,17 @@ addreses::init()
 	}
 	
 	leds = virtual_base + ((unsigned long)(ALT_LWFPGASLVS_OFST + LED_PIO_BASE) & (unsigned long)(HW_REGS_MASK));
+	btns = virtual_base + ((unsigned long)(ALT_LWFPGASLVS_OFST + BUTTON_PIO_BASE) & (unsigned long)(HW_REGS_MASK));
+
 
 }
 
 void* addreses::get_leds()
 {
 	return leds;
+}
+
+void* addreses::get_btns()
+{
+	return btns;
 }

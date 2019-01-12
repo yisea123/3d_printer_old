@@ -49,7 +49,7 @@
 #define SYSID_QSYS_SPAN 8
 #define SYSID_QSYS_END 0x1007
 #define SYSID_QSYS_ID 4294906626
-#define SYSID_QSYS_TIMESTAMP 1545902027
+#define SYSID_QSYS_TIMESTAMP 1547324914
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -139,268 +139,340 @@
 #define DIPSW_PIO_RESET_VALUE 0
 
 /*
- * Macros for device 'step_motor_x', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEP_MOTOR_X_'.
+ * Macros for device 'fans', class 'altera_avalon_pio'
+ * The macros are prefixed with 'FANS_'.
  * The prefix is the slave descriptor.
  */
-#define STEP_MOTOR_X_COMPONENT_TYPE altera_avalon_pio
-#define STEP_MOTOR_X_COMPONENT_NAME step_motor_x
-#define STEP_MOTOR_X_BASE 0x4000
-#define STEP_MOTOR_X_SPAN 16
-#define STEP_MOTOR_X_END 0x400f
-#define STEP_MOTOR_X_BIT_CLEARING_EDGE_REGISTER 0
-#define STEP_MOTOR_X_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEP_MOTOR_X_CAPTURE 0
-#define STEP_MOTOR_X_DATA_WIDTH 3
-#define STEP_MOTOR_X_DO_TEST_BENCH_WIRING 0
-#define STEP_MOTOR_X_DRIVEN_SIM_VALUE 0
-#define STEP_MOTOR_X_EDGE_TYPE NONE
-#define STEP_MOTOR_X_FREQ 50000000
-#define STEP_MOTOR_X_HAS_IN 0
-#define STEP_MOTOR_X_HAS_OUT 1
-#define STEP_MOTOR_X_HAS_TRI 0
-#define STEP_MOTOR_X_IRQ_TYPE NONE
-#define STEP_MOTOR_X_RESET_VALUE 0
+#define FANS_COMPONENT_TYPE altera_avalon_pio
+#define FANS_COMPONENT_NAME fans
+#define FANS_BASE 0x40a0
+#define FANS_SPAN 16
+#define FANS_END 0x40af
+#define FANS_BIT_CLEARING_EDGE_REGISTER 0
+#define FANS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define FANS_CAPTURE 0
+#define FANS_DATA_WIDTH 2
+#define FANS_DO_TEST_BENCH_WIRING 0
+#define FANS_DRIVEN_SIM_VALUE 0
+#define FANS_EDGE_TYPE NONE
+#define FANS_FREQ 50000000
+#define FANS_HAS_IN 0
+#define FANS_HAS_OUT 1
+#define FANS_HAS_TRI 0
+#define FANS_IRQ_TYPE NONE
+#define FANS_RESET_VALUE 0
 
 /*
- * Macros for device 'step_motor_y', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEP_MOTOR_Y_'.
+ * Macros for device 'heaters', class 'altera_avalon_pio'
+ * The macros are prefixed with 'HEATERS_'.
  * The prefix is the slave descriptor.
  */
-#define STEP_MOTOR_Y_COMPONENT_TYPE altera_avalon_pio
-#define STEP_MOTOR_Y_COMPONENT_NAME step_motor_y
-#define STEP_MOTOR_Y_BASE 0x4020
-#define STEP_MOTOR_Y_SPAN 16
-#define STEP_MOTOR_Y_END 0x402f
-#define STEP_MOTOR_Y_BIT_CLEARING_EDGE_REGISTER 0
-#define STEP_MOTOR_Y_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEP_MOTOR_Y_CAPTURE 0
-#define STEP_MOTOR_Y_DATA_WIDTH 3
-#define STEP_MOTOR_Y_DO_TEST_BENCH_WIRING 0
-#define STEP_MOTOR_Y_DRIVEN_SIM_VALUE 0
-#define STEP_MOTOR_Y_EDGE_TYPE NONE
-#define STEP_MOTOR_Y_FREQ 50000000
-#define STEP_MOTOR_Y_HAS_IN 0
-#define STEP_MOTOR_Y_HAS_OUT 1
-#define STEP_MOTOR_Y_HAS_TRI 0
-#define STEP_MOTOR_Y_IRQ_TYPE NONE
-#define STEP_MOTOR_Y_RESET_VALUE 0
+#define HEATERS_COMPONENT_TYPE altera_avalon_pio
+#define HEATERS_COMPONENT_NAME heaters
+#define HEATERS_BASE 0x40c0
+#define HEATERS_SPAN 16
+#define HEATERS_END 0x40cf
+#define HEATERS_BIT_CLEARING_EDGE_REGISTER 0
+#define HEATERS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define HEATERS_CAPTURE 0
+#define HEATERS_DATA_WIDTH 2
+#define HEATERS_DO_TEST_BENCH_WIRING 0
+#define HEATERS_DRIVEN_SIM_VALUE 0
+#define HEATERS_EDGE_TYPE NONE
+#define HEATERS_FREQ 50000000
+#define HEATERS_HAS_IN 0
+#define HEATERS_HAS_OUT 1
+#define HEATERS_HAS_TRI 0
+#define HEATERS_IRQ_TYPE NONE
+#define HEATERS_RESET_VALUE 0
 
 /*
- * Macros for device 'step_motor_z', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEP_MOTOR_Z_'.
+ * Macros for device 'flags', class 'altera_avalon_pio'
+ * The macros are prefixed with 'FLAGS_'.
  * The prefix is the slave descriptor.
  */
-#define STEP_MOTOR_Z_COMPONENT_TYPE altera_avalon_pio
-#define STEP_MOTOR_Z_COMPONENT_NAME step_motor_z
-#define STEP_MOTOR_Z_BASE 0x4040
-#define STEP_MOTOR_Z_SPAN 16
-#define STEP_MOTOR_Z_END 0x404f
-#define STEP_MOTOR_Z_BIT_CLEARING_EDGE_REGISTER 0
-#define STEP_MOTOR_Z_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEP_MOTOR_Z_CAPTURE 0
-#define STEP_MOTOR_Z_DATA_WIDTH 3
-#define STEP_MOTOR_Z_DO_TEST_BENCH_WIRING 0
-#define STEP_MOTOR_Z_DRIVEN_SIM_VALUE 0
-#define STEP_MOTOR_Z_EDGE_TYPE NONE
-#define STEP_MOTOR_Z_FREQ 50000000
-#define STEP_MOTOR_Z_HAS_IN 0
-#define STEP_MOTOR_Z_HAS_OUT 1
-#define STEP_MOTOR_Z_HAS_TRI 0
-#define STEP_MOTOR_Z_IRQ_TYPE NONE
-#define STEP_MOTOR_Z_RESET_VALUE 0
+#define FLAGS_COMPONENT_TYPE altera_avalon_pio
+#define FLAGS_COMPONENT_NAME flags
+#define FLAGS_BASE 0x40e0
+#define FLAGS_SPAN 16
+#define FLAGS_END 0x40ef
+#define FLAGS_BIT_CLEARING_EDGE_REGISTER 0
+#define FLAGS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define FLAGS_CAPTURE 0
+#define FLAGS_DATA_WIDTH 32
+#define FLAGS_DO_TEST_BENCH_WIRING 0
+#define FLAGS_DRIVEN_SIM_VALUE 0
+#define FLAGS_EDGE_TYPE NONE
+#define FLAGS_FREQ 50000000
+#define FLAGS_HAS_IN 1
+#define FLAGS_HAS_OUT 1
+#define FLAGS_HAS_TRI 0
+#define FLAGS_IRQ_TYPE NONE
+#define FLAGS_RESET_VALUE 0
 
 /*
- * Macros for device 'step_motor_e0', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEP_MOTOR_E0_'.
+ * Macros for device 'stepper_1_speed', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_1_SPEED_'.
  * The prefix is the slave descriptor.
  */
-#define STEP_MOTOR_E0_COMPONENT_TYPE altera_avalon_pio
-#define STEP_MOTOR_E0_COMPONENT_NAME step_motor_e0
-#define STEP_MOTOR_E0_BASE 0x4060
-#define STEP_MOTOR_E0_SPAN 16
-#define STEP_MOTOR_E0_END 0x406f
-#define STEP_MOTOR_E0_BIT_CLEARING_EDGE_REGISTER 0
-#define STEP_MOTOR_E0_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEP_MOTOR_E0_CAPTURE 0
-#define STEP_MOTOR_E0_DATA_WIDTH 3
-#define STEP_MOTOR_E0_DO_TEST_BENCH_WIRING 0
-#define STEP_MOTOR_E0_DRIVEN_SIM_VALUE 0
-#define STEP_MOTOR_E0_EDGE_TYPE NONE
-#define STEP_MOTOR_E0_FREQ 50000000
-#define STEP_MOTOR_E0_HAS_IN 0
-#define STEP_MOTOR_E0_HAS_OUT 1
-#define STEP_MOTOR_E0_HAS_TRI 0
-#define STEP_MOTOR_E0_IRQ_TYPE NONE
-#define STEP_MOTOR_E0_RESET_VALUE 0
+#define STEPPER_1_SPEED_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_1_SPEED_COMPONENT_NAME stepper_1_speed
+#define STEPPER_1_SPEED_BASE 0x5000
+#define STEPPER_1_SPEED_SPAN 16
+#define STEPPER_1_SPEED_END 0x500f
+#define STEPPER_1_SPEED_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_1_SPEED_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_1_SPEED_CAPTURE 0
+#define STEPPER_1_SPEED_DATA_WIDTH 32
+#define STEPPER_1_SPEED_DO_TEST_BENCH_WIRING 0
+#define STEPPER_1_SPEED_DRIVEN_SIM_VALUE 0
+#define STEPPER_1_SPEED_EDGE_TYPE NONE
+#define STEPPER_1_SPEED_FREQ 50000000
+#define STEPPER_1_SPEED_HAS_IN 0
+#define STEPPER_1_SPEED_HAS_OUT 1
+#define STEPPER_1_SPEED_HAS_TRI 0
+#define STEPPER_1_SPEED_IRQ_TYPE NONE
+#define STEPPER_1_SPEED_RESET_VALUE 0
 
 /*
- * Macros for device 'step_motor_e1', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEP_MOTOR_E1_'.
+ * Macros for device 'stepper_1_steps', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_1_STEPS_'.
  * The prefix is the slave descriptor.
  */
-#define STEP_MOTOR_E1_COMPONENT_TYPE altera_avalon_pio
-#define STEP_MOTOR_E1_COMPONENT_NAME step_motor_e1
-#define STEP_MOTOR_E1_BASE 0x4080
-#define STEP_MOTOR_E1_SPAN 16
-#define STEP_MOTOR_E1_END 0x408f
-#define STEP_MOTOR_E1_BIT_CLEARING_EDGE_REGISTER 0
-#define STEP_MOTOR_E1_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEP_MOTOR_E1_CAPTURE 0
-#define STEP_MOTOR_E1_DATA_WIDTH 3
-#define STEP_MOTOR_E1_DO_TEST_BENCH_WIRING 0
-#define STEP_MOTOR_E1_DRIVEN_SIM_VALUE 0
-#define STEP_MOTOR_E1_EDGE_TYPE NONE
-#define STEP_MOTOR_E1_FREQ 50000000
-#define STEP_MOTOR_E1_HAS_IN 0
-#define STEP_MOTOR_E1_HAS_OUT 1
-#define STEP_MOTOR_E1_HAS_TRI 0
-#define STEP_MOTOR_E1_IRQ_TYPE NONE
-#define STEP_MOTOR_E1_RESET_VALUE 0
+#define STEPPER_1_STEPS_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_1_STEPS_COMPONENT_NAME stepper_1_steps
+#define STEPPER_1_STEPS_BASE 0x5020
+#define STEPPER_1_STEPS_SPAN 16
+#define STEPPER_1_STEPS_END 0x502f
+#define STEPPER_1_STEPS_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_1_STEPS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_1_STEPS_CAPTURE 0
+#define STEPPER_1_STEPS_DATA_WIDTH 32
+#define STEPPER_1_STEPS_DO_TEST_BENCH_WIRING 0
+#define STEPPER_1_STEPS_DRIVEN_SIM_VALUE 0
+#define STEPPER_1_STEPS_EDGE_TYPE NONE
+#define STEPPER_1_STEPS_FREQ 50000000
+#define STEPPER_1_STEPS_HAS_IN 1
+#define STEPPER_1_STEPS_HAS_OUT 1
+#define STEPPER_1_STEPS_HAS_TRI 0
+#define STEPPER_1_STEPS_IRQ_TYPE NONE
+#define STEPPER_1_STEPS_RESET_VALUE 0
 
 /*
- * Macros for device 'x_min_pin', class 'altera_avalon_pio'
- * The macros are prefixed with 'X_MIN_PIN_'.
+ * Macros for device 'stepper_2_speed', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_2_SPEED_'.
  * The prefix is the slave descriptor.
  */
-#define X_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
-#define X_MIN_PIN_COMPONENT_NAME x_min_pin
-#define X_MIN_PIN_BASE 0x5000
-#define X_MIN_PIN_SPAN 16
-#define X_MIN_PIN_END 0x500f
-#define X_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
-#define X_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define X_MIN_PIN_CAPTURE 0
-#define X_MIN_PIN_DATA_WIDTH 1
-#define X_MIN_PIN_DO_TEST_BENCH_WIRING 0
-#define X_MIN_PIN_DRIVEN_SIM_VALUE 0
-#define X_MIN_PIN_EDGE_TYPE NONE
-#define X_MIN_PIN_FREQ 50000000
-#define X_MIN_PIN_HAS_IN 0
-#define X_MIN_PIN_HAS_OUT 1
-#define X_MIN_PIN_HAS_TRI 0
-#define X_MIN_PIN_IRQ_TYPE NONE
-#define X_MIN_PIN_RESET_VALUE 0
+#define STEPPER_2_SPEED_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_2_SPEED_COMPONENT_NAME stepper_2_speed
+#define STEPPER_2_SPEED_BASE 0x5040
+#define STEPPER_2_SPEED_SPAN 16
+#define STEPPER_2_SPEED_END 0x504f
+#define STEPPER_2_SPEED_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_2_SPEED_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_2_SPEED_CAPTURE 0
+#define STEPPER_2_SPEED_DATA_WIDTH 32
+#define STEPPER_2_SPEED_DO_TEST_BENCH_WIRING 0
+#define STEPPER_2_SPEED_DRIVEN_SIM_VALUE 0
+#define STEPPER_2_SPEED_EDGE_TYPE NONE
+#define STEPPER_2_SPEED_FREQ 50000000
+#define STEPPER_2_SPEED_HAS_IN 0
+#define STEPPER_2_SPEED_HAS_OUT 1
+#define STEPPER_2_SPEED_HAS_TRI 0
+#define STEPPER_2_SPEED_IRQ_TYPE NONE
+#define STEPPER_2_SPEED_RESET_VALUE 0
 
 /*
- * Macros for device 'x_max_pin', class 'altera_avalon_pio'
- * The macros are prefixed with 'X_MAX_PIN_'.
+ * Macros for device 'stepper_2_steps', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_2_STEPS_'.
  * The prefix is the slave descriptor.
  */
-#define X_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
-#define X_MAX_PIN_COMPONENT_NAME x_max_pin
-#define X_MAX_PIN_BASE 0x5020
-#define X_MAX_PIN_SPAN 16
-#define X_MAX_PIN_END 0x502f
-#define X_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
-#define X_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define X_MAX_PIN_CAPTURE 0
-#define X_MAX_PIN_DATA_WIDTH 1
-#define X_MAX_PIN_DO_TEST_BENCH_WIRING 0
-#define X_MAX_PIN_DRIVEN_SIM_VALUE 0
-#define X_MAX_PIN_EDGE_TYPE NONE
-#define X_MAX_PIN_FREQ 50000000
-#define X_MAX_PIN_HAS_IN 0
-#define X_MAX_PIN_HAS_OUT 1
-#define X_MAX_PIN_HAS_TRI 0
-#define X_MAX_PIN_IRQ_TYPE NONE
-#define X_MAX_PIN_RESET_VALUE 0
+#define STEPPER_2_STEPS_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_2_STEPS_COMPONENT_NAME stepper_2_steps
+#define STEPPER_2_STEPS_BASE 0x5060
+#define STEPPER_2_STEPS_SPAN 16
+#define STEPPER_2_STEPS_END 0x506f
+#define STEPPER_2_STEPS_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_2_STEPS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_2_STEPS_CAPTURE 0
+#define STEPPER_2_STEPS_DATA_WIDTH 32
+#define STEPPER_2_STEPS_DO_TEST_BENCH_WIRING 0
+#define STEPPER_2_STEPS_DRIVEN_SIM_VALUE 0
+#define STEPPER_2_STEPS_EDGE_TYPE NONE
+#define STEPPER_2_STEPS_FREQ 50000000
+#define STEPPER_2_STEPS_HAS_IN 1
+#define STEPPER_2_STEPS_HAS_OUT 1
+#define STEPPER_2_STEPS_HAS_TRI 0
+#define STEPPER_2_STEPS_IRQ_TYPE NONE
+#define STEPPER_2_STEPS_RESET_VALUE 0
 
 /*
- * Macros for device 'y_min_pin', class 'altera_avalon_pio'
- * The macros are prefixed with 'Y_MIN_PIN_'.
+ * Macros for device 'stepper_3_speed', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_3_SPEED_'.
  * The prefix is the slave descriptor.
  */
-#define Y_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
-#define Y_MIN_PIN_COMPONENT_NAME y_min_pin
-#define Y_MIN_PIN_BASE 0x5040
-#define Y_MIN_PIN_SPAN 16
-#define Y_MIN_PIN_END 0x504f
-#define Y_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
-#define Y_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define Y_MIN_PIN_CAPTURE 0
-#define Y_MIN_PIN_DATA_WIDTH 1
-#define Y_MIN_PIN_DO_TEST_BENCH_WIRING 0
-#define Y_MIN_PIN_DRIVEN_SIM_VALUE 0
-#define Y_MIN_PIN_EDGE_TYPE NONE
-#define Y_MIN_PIN_FREQ 50000000
-#define Y_MIN_PIN_HAS_IN 0
-#define Y_MIN_PIN_HAS_OUT 1
-#define Y_MIN_PIN_HAS_TRI 0
-#define Y_MIN_PIN_IRQ_TYPE NONE
-#define Y_MIN_PIN_RESET_VALUE 0
+#define STEPPER_3_SPEED_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_3_SPEED_COMPONENT_NAME stepper_3_speed
+#define STEPPER_3_SPEED_BASE 0x5080
+#define STEPPER_3_SPEED_SPAN 16
+#define STEPPER_3_SPEED_END 0x508f
+#define STEPPER_3_SPEED_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_3_SPEED_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_3_SPEED_CAPTURE 0
+#define STEPPER_3_SPEED_DATA_WIDTH 32
+#define STEPPER_3_SPEED_DO_TEST_BENCH_WIRING 0
+#define STEPPER_3_SPEED_DRIVEN_SIM_VALUE 0
+#define STEPPER_3_SPEED_EDGE_TYPE NONE
+#define STEPPER_3_SPEED_FREQ 50000000
+#define STEPPER_3_SPEED_HAS_IN 0
+#define STEPPER_3_SPEED_HAS_OUT 1
+#define STEPPER_3_SPEED_HAS_TRI 0
+#define STEPPER_3_SPEED_IRQ_TYPE NONE
+#define STEPPER_3_SPEED_RESET_VALUE 0
 
 /*
- * Macros for device 'y_max_pin', class 'altera_avalon_pio'
- * The macros are prefixed with 'Y_MAX_PIN_'.
+ * Macros for device 'stepper_3_steps', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_3_STEPS_'.
  * The prefix is the slave descriptor.
  */
-#define Y_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
-#define Y_MAX_PIN_COMPONENT_NAME y_max_pin
-#define Y_MAX_PIN_BASE 0x5060
-#define Y_MAX_PIN_SPAN 16
-#define Y_MAX_PIN_END 0x506f
-#define Y_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
-#define Y_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define Y_MAX_PIN_CAPTURE 0
-#define Y_MAX_PIN_DATA_WIDTH 1
-#define Y_MAX_PIN_DO_TEST_BENCH_WIRING 0
-#define Y_MAX_PIN_DRIVEN_SIM_VALUE 0
-#define Y_MAX_PIN_EDGE_TYPE NONE
-#define Y_MAX_PIN_FREQ 50000000
-#define Y_MAX_PIN_HAS_IN 0
-#define Y_MAX_PIN_HAS_OUT 1
-#define Y_MAX_PIN_HAS_TRI 0
-#define Y_MAX_PIN_IRQ_TYPE NONE
-#define Y_MAX_PIN_RESET_VALUE 0
+#define STEPPER_3_STEPS_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_3_STEPS_COMPONENT_NAME stepper_3_steps
+#define STEPPER_3_STEPS_BASE 0x50a0
+#define STEPPER_3_STEPS_SPAN 16
+#define STEPPER_3_STEPS_END 0x50af
+#define STEPPER_3_STEPS_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_3_STEPS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_3_STEPS_CAPTURE 0
+#define STEPPER_3_STEPS_DATA_WIDTH 32
+#define STEPPER_3_STEPS_DO_TEST_BENCH_WIRING 0
+#define STEPPER_3_STEPS_DRIVEN_SIM_VALUE 0
+#define STEPPER_3_STEPS_EDGE_TYPE NONE
+#define STEPPER_3_STEPS_FREQ 50000000
+#define STEPPER_3_STEPS_HAS_IN 1
+#define STEPPER_3_STEPS_HAS_OUT 1
+#define STEPPER_3_STEPS_HAS_TRI 0
+#define STEPPER_3_STEPS_IRQ_TYPE NONE
+#define STEPPER_3_STEPS_RESET_VALUE 0
 
 /*
- * Macros for device 'z_min_pin', class 'altera_avalon_pio'
- * The macros are prefixed with 'Z_MIN_PIN_'.
+ * Macros for device 'stepper_4_speed', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_4_SPEED_'.
  * The prefix is the slave descriptor.
  */
-#define Z_MIN_PIN_COMPONENT_TYPE altera_avalon_pio
-#define Z_MIN_PIN_COMPONENT_NAME z_min_pin
-#define Z_MIN_PIN_BASE 0x5080
-#define Z_MIN_PIN_SPAN 16
-#define Z_MIN_PIN_END 0x508f
-#define Z_MIN_PIN_BIT_CLEARING_EDGE_REGISTER 0
-#define Z_MIN_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define Z_MIN_PIN_CAPTURE 0
-#define Z_MIN_PIN_DATA_WIDTH 1
-#define Z_MIN_PIN_DO_TEST_BENCH_WIRING 0
-#define Z_MIN_PIN_DRIVEN_SIM_VALUE 0
-#define Z_MIN_PIN_EDGE_TYPE NONE
-#define Z_MIN_PIN_FREQ 50000000
-#define Z_MIN_PIN_HAS_IN 0
-#define Z_MIN_PIN_HAS_OUT 1
-#define Z_MIN_PIN_HAS_TRI 0
-#define Z_MIN_PIN_IRQ_TYPE NONE
-#define Z_MIN_PIN_RESET_VALUE 0
+#define STEPPER_4_SPEED_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_4_SPEED_COMPONENT_NAME stepper_4_speed
+#define STEPPER_4_SPEED_BASE 0x50c0
+#define STEPPER_4_SPEED_SPAN 16
+#define STEPPER_4_SPEED_END 0x50cf
+#define STEPPER_4_SPEED_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_4_SPEED_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_4_SPEED_CAPTURE 0
+#define STEPPER_4_SPEED_DATA_WIDTH 32
+#define STEPPER_4_SPEED_DO_TEST_BENCH_WIRING 0
+#define STEPPER_4_SPEED_DRIVEN_SIM_VALUE 0
+#define STEPPER_4_SPEED_EDGE_TYPE NONE
+#define STEPPER_4_SPEED_FREQ 50000000
+#define STEPPER_4_SPEED_HAS_IN 0
+#define STEPPER_4_SPEED_HAS_OUT 1
+#define STEPPER_4_SPEED_HAS_TRI 0
+#define STEPPER_4_SPEED_IRQ_TYPE NONE
+#define STEPPER_4_SPEED_RESET_VALUE 0
 
 /*
- * Macros for device 'z_max_pin', class 'altera_avalon_pio'
- * The macros are prefixed with 'Z_MAX_PIN_'.
+ * Macros for device 'stepper_4_steps', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_4_STEPS_'.
  * The prefix is the slave descriptor.
  */
-#define Z_MAX_PIN_COMPONENT_TYPE altera_avalon_pio
-#define Z_MAX_PIN_COMPONENT_NAME z_max_pin
-#define Z_MAX_PIN_BASE 0x50a0
-#define Z_MAX_PIN_SPAN 16
-#define Z_MAX_PIN_END 0x50af
-#define Z_MAX_PIN_BIT_CLEARING_EDGE_REGISTER 0
-#define Z_MAX_PIN_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define Z_MAX_PIN_CAPTURE 0
-#define Z_MAX_PIN_DATA_WIDTH 1
-#define Z_MAX_PIN_DO_TEST_BENCH_WIRING 0
-#define Z_MAX_PIN_DRIVEN_SIM_VALUE 0
-#define Z_MAX_PIN_EDGE_TYPE NONE
-#define Z_MAX_PIN_FREQ 50000000
-#define Z_MAX_PIN_HAS_IN 0
-#define Z_MAX_PIN_HAS_OUT 1
-#define Z_MAX_PIN_HAS_TRI 0
-#define Z_MAX_PIN_IRQ_TYPE NONE
-#define Z_MAX_PIN_RESET_VALUE 0
+#define STEPPER_4_STEPS_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_4_STEPS_COMPONENT_NAME stepper_4_steps
+#define STEPPER_4_STEPS_BASE 0x50e0
+#define STEPPER_4_STEPS_SPAN 16
+#define STEPPER_4_STEPS_END 0x50ef
+#define STEPPER_4_STEPS_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_4_STEPS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_4_STEPS_CAPTURE 0
+#define STEPPER_4_STEPS_DATA_WIDTH 32
+#define STEPPER_4_STEPS_DO_TEST_BENCH_WIRING 0
+#define STEPPER_4_STEPS_DRIVEN_SIM_VALUE 0
+#define STEPPER_4_STEPS_EDGE_TYPE NONE
+#define STEPPER_4_STEPS_FREQ 50000000
+#define STEPPER_4_STEPS_HAS_IN 1
+#define STEPPER_4_STEPS_HAS_OUT 1
+#define STEPPER_4_STEPS_HAS_TRI 0
+#define STEPPER_4_STEPS_IRQ_TYPE NONE
+#define STEPPER_4_STEPS_RESET_VALUE 0
+
+/*
+ * Macros for device 'stepper_5_speed', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_5_SPEED_'.
+ * The prefix is the slave descriptor.
+ */
+#define STEPPER_5_SPEED_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_5_SPEED_COMPONENT_NAME stepper_5_speed
+#define STEPPER_5_SPEED_BASE 0x5100
+#define STEPPER_5_SPEED_SPAN 16
+#define STEPPER_5_SPEED_END 0x510f
+#define STEPPER_5_SPEED_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_5_SPEED_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_5_SPEED_CAPTURE 0
+#define STEPPER_5_SPEED_DATA_WIDTH 32
+#define STEPPER_5_SPEED_DO_TEST_BENCH_WIRING 0
+#define STEPPER_5_SPEED_DRIVEN_SIM_VALUE 0
+#define STEPPER_5_SPEED_EDGE_TYPE NONE
+#define STEPPER_5_SPEED_FREQ 50000000
+#define STEPPER_5_SPEED_HAS_IN 0
+#define STEPPER_5_SPEED_HAS_OUT 1
+#define STEPPER_5_SPEED_HAS_TRI 0
+#define STEPPER_5_SPEED_IRQ_TYPE NONE
+#define STEPPER_5_SPEED_RESET_VALUE 0
+
+/*
+ * Macros for device 'stepper_5_steps', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_5_STEPS_'.
+ * The prefix is the slave descriptor.
+ */
+#define STEPPER_5_STEPS_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_5_STEPS_COMPONENT_NAME stepper_5_steps
+#define STEPPER_5_STEPS_BASE 0x5120
+#define STEPPER_5_STEPS_SPAN 16
+#define STEPPER_5_STEPS_END 0x512f
+#define STEPPER_5_STEPS_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_5_STEPS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_5_STEPS_CAPTURE 0
+#define STEPPER_5_STEPS_DATA_WIDTH 32
+#define STEPPER_5_STEPS_DO_TEST_BENCH_WIRING 0
+#define STEPPER_5_STEPS_DRIVEN_SIM_VALUE 0
+#define STEPPER_5_STEPS_EDGE_TYPE NONE
+#define STEPPER_5_STEPS_FREQ 50000000
+#define STEPPER_5_STEPS_HAS_IN 1
+#define STEPPER_5_STEPS_HAS_OUT 1
+#define STEPPER_5_STEPS_HAS_TRI 0
+#define STEPPER_5_STEPS_IRQ_TYPE NONE
+#define STEPPER_5_STEPS_RESET_VALUE 0
+
+/*
+ * Macros for device 'endstops', class 'altera_avalon_pio'
+ * The macros are prefixed with 'ENDSTOPS_'.
+ * The prefix is the slave descriptor.
+ */
+#define ENDSTOPS_COMPONENT_TYPE altera_avalon_pio
+#define ENDSTOPS_COMPONENT_NAME endstops
+#define ENDSTOPS_BASE 0x5200
+#define ENDSTOPS_SPAN 16
+#define ENDSTOPS_END 0x520f
+#define ENDSTOPS_BIT_CLEARING_EDGE_REGISTER 0
+#define ENDSTOPS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define ENDSTOPS_CAPTURE 0
+#define ENDSTOPS_DATA_WIDTH 6
+#define ENDSTOPS_DO_TEST_BENCH_WIRING 0
+#define ENDSTOPS_DRIVEN_SIM_VALUE 0
+#define ENDSTOPS_EDGE_TYPE NONE
+#define ENDSTOPS_FREQ 50000000
+#define ENDSTOPS_HAS_IN 1
+#define ENDSTOPS_HAS_OUT 0
+#define ENDSTOPS_HAS_TRI 0
+#define ENDSTOPS_IRQ_TYPE NONE
+#define ENDSTOPS_RESET_VALUE 0
 
 /*
  * Macros for device 'temp_bed', class 'altera_avalon_pio'

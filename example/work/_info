@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Programms/intelFPGA/18.1
+vclk_gen
+!s110 1546975959
+!i10b 1
+!s100 5jK`6n^Ocn7Wd9ncA;VIm1
+II[aDMdT1c?i5hOO1]jPC22
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dD:/GitHub/3d_printer/example
+w1546975952
+8D:/GitHub/3d_printer/example/clk_gen.v
+FD:/GitHub/3d_printer/example/clk_gen.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1546975959.000000
+!s107 D:/GitHub/3d_printer/example/clk_gen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/GitHub/3d_printer/example/clk_gen.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+vexample
+!s110 1547026344
+!i10b 1
+!s100 oCEB>Glbfi:oLoXM72S<G1
+IJg]?jG4_bMf?405U58<[R0
+R0
+R1
+w1547026341
+8D:\GitHub\3d_printer\example\example.v
+FD:\GitHub\3d_printer\example\example.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1547026344.000000
+!s107 D:\GitHub\3d_printer\example\example.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\GitHub\3d_printer\example\example.v|
+!i113 1
+R3
+R4
+vgenarator
+!s110 1546960093
+!i10b 1
+!s100 >AFiL9>^zQRc[`Gni@XZO3
+IVo2mlGKbG]@SGLoa5b^GU0
+R0
+R1
+w1546960086
+8D:\GitHub\3d_printer\example\genarator.v
+FD:\GitHub\3d_printer\example\genarator.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1546960093.000000
+!s107 D:\GitHub\3d_printer\example\genarator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\GitHub\3d_printer\example\genarator.v|
+!i113 1
+R3
+R4

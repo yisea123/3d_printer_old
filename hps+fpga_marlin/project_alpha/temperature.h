@@ -4,14 +4,17 @@ class temperature{
 
 public:
 	temperature();
+	void init(void *addr);
 	bool update();
+	float get_temp();
 
 protected:
 	float target_temperature;
 	float current_temperature;
 	
 private:
-	float correction;
+	float correction = 1.0;
+	void *addr;
 
 }
 

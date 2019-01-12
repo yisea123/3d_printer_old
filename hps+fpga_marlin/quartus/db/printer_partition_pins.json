@@ -8,10 +8,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LED[1]",
-					"strict" : false
-				},
-				{
 					"name" : "LED[2]",
 					"strict" : false
 				},
@@ -36,11 +32,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[0]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[1]",
+					"name" : "LED[1]",
 					"strict" : false
 				},
 				{
@@ -48,23 +40,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[3]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[4]",
-					"strict" : false
-				},
-				{
 					"name" : "gpio0GPIO[5]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[6]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[7]",
 					"strict" : false
 				},
 				{
@@ -76,10 +52,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[10]",
-					"strict" : false
-				},
-				{
 					"name" : "gpio0GPIO[11]",
 					"strict" : false
 				},
@@ -88,135 +60,47 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[13]",
-					"strict" : false
-				},
-				{
 					"name" : "gpio0GPIO[14]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[24]",
+					"name" : "gpio0GPIO[0]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[25]",
+					"name" : "gpio0GPIO[3]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[26]",
+					"name" : "gpio0GPIO[6]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[27]",
+					"name" : "gpio1GPIO[29]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[28]",
+					"name" : "gpio0GPIO[1]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[29]",
+					"name" : "gpio1GPIO[28]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[0]",
+					"name" : "gpio1GPIO[24]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[1]",
+					"name" : "gpio1GPIO[25]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[2]",
+					"name" : "gpio1GPIO[26]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[3]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[4]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[5]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[6]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[7]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[8]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[9]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[10]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[11]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[12]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[13]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[14]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[15]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[16]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[17]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[18]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[19]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[20]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[21]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[22]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[23]",
-					"strict" : false
-				},
-				{
-					"name" : "FPGA_CLK1_50",
+					"name" : "gpio1GPIO[27]",
 					"strict" : false
 				},
 				{
@@ -233,6 +117,10 @@
 				},
 				{
 					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_CLK1_50",
 					"strict" : false
 				},
 				{

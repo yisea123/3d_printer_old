@@ -3,6 +3,11 @@ module soc_system (
 	button_pio_external_connection_export,
 	clk_clk,
 	dipsw_pio_external_connection_export,
+	endstops_external_connection_export,
+	fans_external_connection_export,
+	flags_external_connection_in_port,
+	flags_external_connection_out_port,
+	heaters_external_connection_export,
 	hps_0_f2h_cold_reset_req_reset_n,
 	hps_0_f2h_debug_reset_req_reset_n,
 	hps_0_f2h_stm_hw_events_stm_hwevents,
@@ -74,24 +79,33 @@ module soc_system (
 	memory_mem_dm,
 	memory_oct_rzqin,
 	reset_reset_n,
-	step_motor_e0_connection_export,
-	step_motor_e1_external_connection_export,
-	step_motor_x_external_connection_export,
-	step_motor_y_external_connection_export,
-	step_motor_z_external_connection_export,
+	stepper_1_speed_external_connection_export,
+	stepper_1_steps_external_connection_in_port,
+	stepper_1_steps_external_connection_out_port,
+	stepper_2_speed_external_connection_export,
+	stepper_2_steps_external_connection_in_port,
+	stepper_2_steps_external_connection_out_port,
+	stepper_3_speed_external_connection_export,
+	stepper_3_steps_external_connection_in_port,
+	stepper_3_steps_external_connection_out_port,
+	stepper_4_speed_external_connection_export,
+	stepper_4_steps_external_connection_in_port,
+	stepper_4_steps_external_connection_out_port,
+	stepper_5_speed_external_connection_export,
+	stepper_5_steps_external_connection_in_port,
+	stepper_5_steps_external_connection_out_port,
 	temp0_external_connection_export,
 	temp1_external_connection_export,
-	temp_bed_external_connection_export,
-	x_max_pin_external_connection_export,
-	x_min_pin_external_connection_export,
-	y_max_pin_external_connection_export,
-	y_min_pin_external_connection_export,
-	z_max_pin_external_connection_export,
-	z_min_pin_external_connection_export);	
+	temp_bed_external_connection_export);	
 
 	input	[1:0]	button_pio_external_connection_export;
 	input		clk_clk;
 	input	[3:0]	dipsw_pio_external_connection_export;
+	input	[5:0]	endstops_external_connection_export;
+	output	[1:0]	fans_external_connection_export;
+	input	[31:0]	flags_external_connection_in_port;
+	output	[31:0]	flags_external_connection_out_port;
+	output	[1:0]	heaters_external_connection_export;
 	input		hps_0_f2h_cold_reset_req_reset_n;
 	input		hps_0_f2h_debug_reset_req_reset_n;
 	input	[27:0]	hps_0_f2h_stm_hw_events_stm_hwevents;
@@ -163,18 +177,22 @@ module soc_system (
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
 	input		reset_reset_n;
-	output	[2:0]	step_motor_e0_connection_export;
-	output	[2:0]	step_motor_e1_external_connection_export;
-	output	[2:0]	step_motor_x_external_connection_export;
-	output	[2:0]	step_motor_y_external_connection_export;
-	output	[2:0]	step_motor_z_external_connection_export;
+	output	[31:0]	stepper_1_speed_external_connection_export;
+	input	[31:0]	stepper_1_steps_external_connection_in_port;
+	output	[31:0]	stepper_1_steps_external_connection_out_port;
+	output	[31:0]	stepper_2_speed_external_connection_export;
+	input	[31:0]	stepper_2_steps_external_connection_in_port;
+	output	[31:0]	stepper_2_steps_external_connection_out_port;
+	output	[31:0]	stepper_3_speed_external_connection_export;
+	input	[31:0]	stepper_3_steps_external_connection_in_port;
+	output	[31:0]	stepper_3_steps_external_connection_out_port;
+	output	[31:0]	stepper_4_speed_external_connection_export;
+	input	[31:0]	stepper_4_steps_external_connection_in_port;
+	output	[31:0]	stepper_4_steps_external_connection_out_port;
+	output	[31:0]	stepper_5_speed_external_connection_export;
+	input	[31:0]	stepper_5_steps_external_connection_in_port;
+	output	[31:0]	stepper_5_steps_external_connection_out_port;
 	output	[7:0]	temp0_external_connection_export;
 	output	[7:0]	temp1_external_connection_export;
 	output	[7:0]	temp_bed_external_connection_export;
-	output		x_max_pin_external_connection_export;
-	output		x_min_pin_external_connection_export;
-	output		y_max_pin_external_connection_export;
-	output		y_min_pin_external_connection_export;
-	output		z_max_pin_external_connection_export;
-	output		z_min_pin_external_connection_export;
 endmodule

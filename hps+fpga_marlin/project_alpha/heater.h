@@ -1,10 +1,14 @@
 #include <temperature.h>
 
-class heater:temperature{
+class heater{
 
 public:
-	heater() : temperature();
+	heater();
+	bool init(void *addr_heater; temperature temp);
+	bool update();
+	int heat();
 private:
+	temperature temp();
 	
 
 }

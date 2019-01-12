@@ -6,14 +6,17 @@
 gcode::gcode(){
 }
 
-bool gcode::gcode_G0(float x, float y, float z, float e){
+bool gcode::gcode_G0(float x, float y, float z, float e)
+{
         #if DEBUG
             printf("gcode G0 is running\n");
         #endif
+
         return gcode_G1(x, y, z, e);
 }
 
-bool gcode::gcode_G1(float x, float y, float z, float e){
+bool gcode::gcode_G1(float x, float y, float z, float e)
+{
         #if DEBUG
             printf("gcode G1 is running\n");
         #endif
@@ -24,7 +27,8 @@ bool gcode::gcode_G1(float x, float y, float z, float e){
         return true;
 }
 
-bool gcode::gcode_G4(unsigned int s, char c){
+bool gcode::gcode_G4(unsigned int s, char c)
+{
         #if DEBUG
             printf("gcode G4 is running\n");
         #endif
@@ -37,7 +41,8 @@ bool gcode::gcode_G4(unsigned int s, char c){
         return true;
 }
 
-bool gcode::gcode_G5(float x, float y, float z, float e){
+bool gcode::gcode_G5(float x, float y, float z, float e)
+{
         #if DEBUG
             printf("gcode G5 is running\n");
         #endif
