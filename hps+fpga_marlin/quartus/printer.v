@@ -399,9 +399,10 @@ assign flags_in = flags;
  
 always @(FPGA_CLK1_50)
 begin
+	reset_step[0] = 1'b0;
 	if (flags_out[1] == 1'b0)
 	begin
-		if (stepper_1_step_out > 0)
+		if (stepper_1_step_out != 0)
 		begin
 			flags[1] = 1'b1;
 			reset_step[0] = 1'b1;			
