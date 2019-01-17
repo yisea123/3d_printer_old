@@ -7,12 +7,12 @@ stepper::init()
 	//создание пустого двигателя
 };
 
-bool stepper::move(float target_x, float target_y, float target_z,
-	float current_x, float current_y, float current_z,
-	bool direction_x, bool direction_y,	bool direction_z,
+bool stepper::move(bool direction,
 	int microsteps, float stepper_speed)
 {
-
+	//при каждом маленьком шаге проверять концевик
+	//мб сделать его инт чтобы возвращать коды ошибок
+	//не писать отдельно инит а сделать несколько конструкторов
 	#if DEBUG
 		printf("stepper::move is running, current pos: %f, %f, %f (x, y, z)\n", x, y, z);
     #endif

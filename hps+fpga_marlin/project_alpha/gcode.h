@@ -5,7 +5,14 @@ class gcode
 {
 private:
     bool is_debug;
+    int32_t *a_numofmicrosteps;
+    int32_t *b_numofmicrosteps;
+    uint32_t *a_microsteppulse;
+    uint32_t *b_microsteppulse;
+
 public:
+    int stepcounter(float x, float y, float x1, float y1);
+
     gcode(bool debug);
 
     bool gcode_G0(float x, float y, float z, float e);
