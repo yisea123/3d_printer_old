@@ -1,0 +1,2 @@
+force fpga_clk 0 0ps, 1 {10ps} -repeat 20ps;
+force flags_out 0 0ps;
