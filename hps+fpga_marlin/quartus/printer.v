@@ -125,6 +125,30 @@ assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_button
 //  MAIN WIRES
 //=======================================================
 
+//Flags
+//=======================================================
+//	Описание битов флагов
+//	flags[0]: вкл/выкл stepper (1 - двигатель выключен, 0 - двигатель включен)
+//	
+//	flags[1]: работа stepper1 (0 - двигатель стоит, 1 - выполняется повор)
+//	flags[2]: работа stepper2 (0 - двигатель стоит, 1 - выполняется повор)
+//	flags[3]: работа stepper3 (0 - двигатель стоит, 1 - выполняется повор)
+//	flags[4]: работа stepper4 (0 - двигатель стоит, 1 - выполняется повор)
+//	flags[5]: работа stepper5 (0 - двигатель стоит, 1 - выполняется повор)
+
+//	flags[10]: 
+//	flags[11]: 
+//	flags[12]: 
+//	flags[13]: 
+//	flags[14]: 
+//	flags[15]: 
+//=======================================================
+wire	[31:0]	flags_in; 
+wire	[31:0]	flags_out;
+reg 	[31:0] 	flags;
+
+assign flags_in = flags;
+
 //Steppers
 wire	[2:0]	stepper1; //{enable, step, dir}
 wire	[2:0]	stepper2; //{enable, step, dir}
@@ -135,34 +159,6 @@ wire	[2:0]	stepper5; //{enable, step, dir}
 wire 	[4:0] step_signal;
 
 reg 	[4:0]	reset_step = 5'b00000;
-
-assign stepper1[2] = flags_out[0];
-assign stepper2[2] = flags_out[0];
-assign stepper3[2] = flags_out[0];
-assign stepper4[2] = flags_out[0];
-assign stepper5[2] = flags_out[0];
-
-assign stepper1[1] = step_signal[0];
-assign stepper2[1] = step_signal[1];
-assign stepper3[1] = step_signal[2];
-assign stepper4[1] = step_signal[3];
-assign stepper5[1] = step_signal[4];
-
-
-assign LED[1] = stepper1[1];
-
-
-assign stepper1[0] = stepper_1_step_out[31];
-assign stepper2[0] = stepper_2_step_out[31];
-assign stepper3[0] = stepper_3_step_out[31];
-assign stepper4[0] = stepper_4_step_out[31];
-assign stepper5[0] = stepper_5_step_out[31];
-
-assign gpio0GPIO[2:0] 	= stepper1;
-assign gpio0GPIO[5:3] 	= stepper2;
-assign gpio0GPIO[8:6] 	= stepper3;
-assign gpio0GPIO[11:9] 	= stepper4;
-assign gpio0GPIO[14:12] = stepper5;
 
 wire 	[31:0] 	stepper_1_speed;
 wire 	[31:0] 	stepper_2_speed;
@@ -182,7 +178,33 @@ wire 	[31:0] 	stepper_4_step_out;
 wire 	[31:0] 	stepper_5_step_in;
 wire 	[31:0] 	stepper_5_step_out;
 
-reg 	[4:0] 	stepper_step = 5'b00000;
+reg 	[31:0] 	stepper_step [4:0];
+
+assign stepper1[2] = flags_out[0];
+assign stepper2[2] = flags_out[0];
+assign stepper3[2] = flags_out[0];
+assign stepper4[2] = flags_out[0];
+assign stepper5[2] = flags_out[0];
+
+assign stepper1[1] = step_signal[0];
+assign stepper2[1] = step_signal[1];
+assign stepper3[1] = step_signal[2];
+assign stepper4[1] = step_signal[3];
+assign stepper5[1] = step_signal[4];
+
+assign LED[1] = stepper1[1];
+
+assign stepper1[0] = stepper_1_step_out[31];
+assign stepper2[0] = stepper_2_step_out[31];
+assign stepper3[0] = stepper_3_step_out[31];
+assign stepper4[0] = stepper_4_step_out[31];
+assign stepper5[0] = stepper_5_step_out[31];
+
+assign gpio0GPIO[2:0] 	= stepper1;
+assign gpio0GPIO[5:3] 	= stepper2;
+assign gpio0GPIO[8:6] 	= stepper3;
+assign gpio0GPIO[11:9] 	= stepper4;
+assign gpio0GPIO[14:12] = stepper5;
 
 assign stepper_1_step_in = stepper_step[0];
 assign stepper_2_step_in = stepper_step[1];
@@ -224,30 +246,6 @@ wire	[5:0] end_stop;
 
 assign end_stop = gpio1GPIO[29:24];
 
-
-//Flags
-//=======================================================
-//	Описание битов флагов
-//	flags[0]: вкл/выкл stepper (1 - двигатель выключен, 0 - двигатель включен)
-//	
-//	flags[1]: работа stepper1 (0 - двигатель стоит, 1 - выполняется повор)
-//	flags[2]: работа stepper2 (0 - двигатель стоит, 1 - выполняется повор)
-//	flags[3]: работа stepper3 (0 - двигатель стоит, 1 - выполняется повор)
-//	flags[4]: работа stepper4 (0 - двигатель стоит, 1 - выполняется повор)
-//	flags[5]: работа stepper5 (0 - двигатель стоит, 1 - выполняется повор)
-
-//	flags[10]: 
-//	flags[11]: 
-//	flags[12]: 
-//	flags[13]: 
-//	flags[14]: 
-//	flags[15]: 
-//=======================================================
-wire	[31:0]	flags_in; 
-wire	[31:0]	flags_out;
-reg 	[31:0] 	flags;
-
-assign flags_in = flags;
 
 //=======================================================
 //  Structural coding
@@ -397,10 +395,10 @@ assign flags_in = flags;
 							.finish 		(fin[0])
 						);		
  
-always @(FPGA_CLK1_50)
+always @(posedge FPGA_CLK1_50)
 begin
 	reset_step[0] = 1'b0;
-	if (flags_out[1] == 1'b0)
+	if (flags[1] == 1'b0)
 	begin
 		if (stepper_1_step_out != 0)
 		begin
@@ -412,7 +410,7 @@ begin
 	begin
 		if (fin[0] == 1'b1)
 		begin	
-			stepper_step[0] = 1'b0;
+			stepper_step[0] = 0;
 			flags[1] = 1'b0;
 			reset_step[0] = 1'b0;
 		end

@@ -1,4 +1,4 @@
-module clk_gen(
+ module clk_gen(
 	input 	wire 				clk, 
 	input		wire	[31:0]	reduction,
 	input 	wire 	[30:0] 	count,
