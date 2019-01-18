@@ -116,7 +116,7 @@ wire                hps_debug_reset;
 wire     [27: 0]    stm_hw_events;
 wire                fpga_clk_50;
 // connection of internal logics
-assign LED[7: 2] = fpga_led_internal;
+assign LED[7: 6] = fpga_led_internal;
 assign fpga_clk_50 = FPGA_CLK1_50;
 assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_buttons};
 
@@ -192,13 +192,17 @@ assign stepper3[1] = step_signal[2];
 assign stepper4[1] = step_signal[3];
 assign stepper5[1] = step_signal[4];
 
-assign LED[1] = stepper1[1];
-
 assign stepper1[0] = stepper_1_step_out[31];
 assign stepper2[0] = stepper_2_step_out[31];
 assign stepper3[0] = stepper_3_step_out[31];
 assign stepper4[0] = stepper_4_step_out[31];
 assign stepper5[0] = stepper_5_step_out[31];
+
+assign LED[1] = stepper1[2];
+assign LED[2] = stepper1[1];
+assign LED[3] = stepper1[0];
+assign LED[4] = reset_step[0];
+assign LED[5] = flags[1];
 
 assign gpio0GPIO[2:0] 	= stepper1;
 assign gpio0GPIO[5:3] 	= stepper2;
@@ -397,7 +401,7 @@ assign end_stop = gpio1GPIO[29:24];
  
 always @(posedge FPGA_CLK1_50)
 begin
-	reset_step[0] = 1'b0;
+	
 	if (flags[1] == 1'b0)
 	begin
 		if (stepper_1_step_out != 0)

@@ -8,7 +8,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "LED[2]",
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
 					"strict" : false
 				},
 				{
@@ -16,11 +20,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "LED[4]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[5]",
+					"name" : "LED[1]",
 					"strict" : false
 				},
 				{
@@ -32,7 +32,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "LED[1]",
+					"name" : "LED[2]",
 					"strict" : false
 				},
 				{
@@ -76,6 +76,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpio1GPIO[25]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[26]",
+					"strict" : false
+				},
+				{
 					"name" : "gpio1GPIO[27]",
 					"strict" : false
 				},
@@ -93,14 +101,6 @@
 				},
 				{
 					"name" : "gpio1GPIO[24]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[25]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[26]",
 					"strict" : false
 				},
 				{
