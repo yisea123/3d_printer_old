@@ -76,14 +76,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[25]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio1GPIO[26]",
-					"strict" : false
-				},
-				{
 					"name" : "gpio1GPIO[27]",
 					"strict" : false
 				},
@@ -93,6 +85,14 @@
 				},
 				{
 					"name" : "gpio1GPIO[29]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[25]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[26]",
 					"strict" : false
 				},
 				{

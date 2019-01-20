@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulation/qsim
+vprinter
+Z1 !s110 1547991763
+!i10b 1
+!s100 c`dBNWQ6k8N[cezE<KKSN3
+IXzV_I=U:UmR8U:D_DLPgH3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1547991753
+8printer.vo
+Fprinter.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1547991757.000000
+!s107 printer.vo|
+!s90 -work|work|printer.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vprinter_vlg_vec_tst
+R1
+!i10b 1
+!s100 6n4AQ814lPM<GAgFK[7OF0
+ISbWAXJZ17LheB=eUO;W`i0
+R2
+R0
+w1547991740
+8printer.vwf.vt
+Fprinter.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1547991763.000000
+!s107 printer.vwf.vt|
+!s90 -work|work|printer.vwf.vt|
+!i113 1
+R4
+R5
