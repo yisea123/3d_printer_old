@@ -397,8 +397,8 @@ assign end_stop = gpio1GPIO[29:24];
 							//output
 							.clk_out 	(step_signal[0]),
 							.finish 		(fin[0])
-						);		
- 
+						);	
+
 always @(posedge FPGA_CLK1_50)
 begin
 	

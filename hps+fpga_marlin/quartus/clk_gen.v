@@ -20,10 +20,10 @@
 	assign finish = fin;
 	
 	
-	always @(posedge clk or posedge reset)
+	always @(posedge clk)
 	begin
 		
-		if (reset)
+		if (reset == 1'b1)
 		begin
 			if (fin == 1'b1)
 			begin

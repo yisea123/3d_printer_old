@@ -1,26 +1,25 @@
 # do printer.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:42:37 on Jan 20,2019
+# Start time: 20:07:16 on Jan 21,2019
 # vlog -work work printer.vo 
-# -- Compiling module printer
-# ** Warning: printer.vo(31): (vlog-13233) Design unit "printer" already exists and will be overwritten. Overwriting a VHDL entity with a Verilog module.
+# -- Compiling module clk_gen
 # 
 # Top level modules:
-# 	printer
-# End time: 16:42:43 on Jan 20,2019, Elapsed time: 0:00:06
-# Errors: 0, Warnings: 1
+# 	clk_gen
+# End time: 20:07:16 on Jan 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:42:43 on Jan 20,2019
+# Start time: 20:07:16 on Jan 21,2019
 # vlog -work work printer.vwf.vt 
-# -- Compiling module printer_vlg_vec_tst
+# -- Compiling module clk_gen_vlg_vec_tst
 # 
 # Top level modules:
-# 	printer_vlg_vec_tst
-# End time: 16:42:43 on Jan 20,2019, Elapsed time: 0:00:00
+# 	clk_gen_vlg_vec_tst
+# End time: 20:07:16 on Jan 21,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.printer_vlg_vec_tst 
-# Start time: 16:42:44 on Jan 20,2019
+# Start time: 20:07:17 on Jan 21,2019
 # Loading work.printer_vlg_vec_tst
 # Loading work.printer
 # Loading cyclonev_ver.cyclonev_io_obuf
@@ -249,5 +248,5 @@
 #             D:/Programms/intelFPGA/18.1/modelsim_ase/altera/verilog/altera_lnsim
 #             D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulation/qsim/work
 # Error loading design
-# End time: 16:42:49 on Jan 20,2019, Elapsed time: 0:00:05
+# End time: 20:07:22 on Jan 21,2019, Elapsed time: 0:00:05
 # Errors: 19, Warnings: 0

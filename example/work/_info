@@ -9,28 +9,28 @@ z2
 cModel Technology
 Z0 dD:/GitHub/3d_printer/example
 vclk_gen
-Z1 !s110 1547741297
+Z1 !s110 1548090995
 !i10b 1
 !s100 L`OYfi0eKY0[5AB``bXRE0
-Ih[G2@VoXj<>GL3b3`EIA^0
+IBg?`jMkD:h`jd6dBG4BnE2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1547741134
-8D:\GitHub\3d_printer\example\clk_gen.v
-FD:\GitHub\3d_printer\example\clk_gen.v
+8D:/GitHub/3d_printer/example/clk_gen.v
+FD:/GitHub/3d_printer/example/clk_gen.v
 L0 2
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1547741297.000000
-!s107 D:\GitHub\3d_printer\example\clk_gen.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:\GitHub\3d_printer\example\clk_gen.v|
+!s108 1548090994.000000
+!s107 D:/GitHub/3d_printer/example/clk_gen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/GitHub/3d_printer/example/clk_gen.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z4 o-work work
+Z5 tCvgOpt 0
 vexample
-R1
+!s110 1547741297
 !i10b 1
 !s100 oCEB>Glbfi:oLoXM72S<G1
 ITYVmcINm43lWTo>6gL:N31
@@ -44,51 +44,51 @@ R3
 r1
 !s85 0
 31
-R4
+!s108 1547741297.000000
 !s107 D:/GitHub/3d_printer/example/example.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/GitHub/3d_printer/example/example.v|
 !i113 1
+R4
 R5
-R6
 vgenarator
-!s110 1547741298
+R1
 !i10b 1
 !s100 >AFiL9>^zQRc[`Gni@XZO3
-IVo2mlGKbG]@SGLoa5b^GU0
+I:al=GWY`do[Bn^OA;<JeY0
 R2
 R0
 w1546960086
-8D:\GitHub\3d_printer\example\genarator.v
-FD:\GitHub\3d_printer\example\genarator.v
+8D:/GitHub/3d_printer/example/genarator.v
+FD:/GitHub/3d_printer/example/genarator.v
 L0 3
 R3
 r1
 !s85 0
 31
-!s108 1547741298.000000
-!s107 D:\GitHub\3d_printer\example\genarator.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:\GitHub\3d_printer\example\genarator.v|
+!s108 1548090995.000000
+!s107 D:/GitHub/3d_printer/example/genarator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/GitHub/3d_printer/example/genarator.v|
 !i113 1
+R4
 R5
-R6
 vstepper_control
-!s110 1547742345
+!s110 1548092040
 !i10b 1
 !s100 VcG6Z;fX5CI;Di`e0XKm`1
-I`G2jzIkNBk[`TfZ:i=H5o0
+ICTLnY1g0:P^Jb?X6@ZD`m0
 R2
 R0
 w1547742327
-8D:\GitHub\3d_printer\example\stepper_control.v
-FD:\GitHub\3d_printer\example\stepper_control.v
+8D:/GitHub/3d_printer/example/stepper_control.v
+FD:/GitHub/3d_printer/example/stepper_control.v
 L0 1
 R3
 r1
 !s85 0
 31
-!s108 1547742345.000000
-!s107 D:\GitHub\3d_printer\example\stepper_control.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:\GitHub\3d_printer\example\stepper_control.v|
+!s108 1548092040.000000
+!s107 D:/GitHub/3d_printer/example/stepper_control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/GitHub/3d_printer/example/stepper_control.v|
 !i113 1
+R4
 R5
-R6

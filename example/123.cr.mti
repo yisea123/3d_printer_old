@@ -1,15 +1,22 @@
-D:/GitHub/3d_printer/example/genarator.v {1 {vlog -work work -stats=none {D:\GitHub\3d_printer\example\genarator.v}
+D:/GitHub/3d_printer/example/stepper_control.v {1 {vlog -work work -stats=none D:/GitHub/3d_printer/example/stepper_control.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module genarator
+-- Compiling module stepper_control
 
 Top level modules:
-	genarator
+	stepper_control
 
-} {} {}} D:/GitHub/3d_printer/example/clk_gen.v {1 {vlog -work work -stats=none {D:\GitHub\3d_printer\example\clk_gen.v}
+} {} {}} D:/GitHub/3d_printer/example/clk_gen.v {1 {vlog -work work -stats=none D:/GitHub/3d_printer/example/clk_gen.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module clk_gen
 
 Top level modules:
 	clk_gen
+
+} {} {}} D:/GitHub/3d_printer/example/genarator.v {1 {vlog -work work -stats=none D:/GitHub/3d_printer/example/genarator.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module genarator
+
+Top level modules:
+	genarator
 
 } {} {}}
