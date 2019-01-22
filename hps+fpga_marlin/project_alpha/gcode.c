@@ -3,39 +3,33 @@
 #include <unistd.h>
 #include "configuration.h"
 
-gcode::stepcounter(float х, float у, float х1, float х2)
+int gcode::stepcounter(float х, float у, float х1, float х2, float speed)
 {
-/*И записывается направление движения и время одного микрошага для обоих движков (4 переменные). 
-Направление учесть (то есть знак да и дб) - если в дифайне тру на инвертинге, то инвертировать результат
+/*
+* Метод рассчитывает необходимые для движения двигателей количество микрошагов и время импульса на один микрошаг 
+* и передает эти параметры в верилог
 */
-    float k, a, b;
-    int rotlength = 40, stepsperrot = 200, microsteps= 16; //количество мм на оборот шкива; количество шагов на оборот двигателя;количество микрошагов на шаг 
-    float numofrotations, numofsteps;
-    //Int numofmicrosteps; //необходимое для передвижения количество оборотов, шагов, микрошагов 
-    int maxspeed = 133; // mm/s ~ 8000 mm/min
-    int frequency = 50000000; //тактовая частота двигателя ?????
-    float diag; //гипотенуза, относительно которой и высчитывается скорость
-    float tdiag, ta, tb; 
+    float a, b;
+    float diag; //гипотенуза, относительно которой высчитывается общее время
     float dx = х1-х;
     float dy = у1-у;
     float da = dx + dу; //first stepper work in mm 
     float db = dx - dу; //second stepper work in mm
 
     diag = sqrt(dx*dx + dy*dy);
-    t = trunc(diag/maxspeed/20^(-12))*20^(-12); //считаем время движения при максимальной скорости для гипотенузы в с, применив принудительное округление до кратности 20пикасекундам
-    
-    //Зная время, da и db считаем скорость для da, а потом для db. 
-    //число оборотов умножаем на количество микрошагов на оборот - получаем количество микрошагов для движения 
-    int a_numofmicrosteps = da/rotlength*stepsperrot*microsteps;
-    int b_numofmicrosteps = db/rotlength*stepsperrot*microsteps;
+    //рассчет общего времени движения в секундах
+    //за пройденное расстояние принимается гипотенуза 
+    float t = diag/speed;
+
+    //Необходимое для движения количество микрошагов = число оборотов * количество микрошагов на оборот
+    *a_numofmicrosteps = da/rotlength*stepsperrot*microsteps;
+    *b_numofmicrosteps = db/rotlength*stepsperrot*microsteps;
+
     //скорость в микрошагах/с (a_speed, b_speed)
-    int a_speed = a_numofmicrosteps/t;
-    int b_speed = b_numofmicrosteps/t;
+    float a_speed = *a_numofmicrosteps/t; 
+    float b_speed = *b_numofmicrosteps/t;
 
-    //как понять какой двигатель а а какой б? Просто определить их дефолтный порядок следования или добавить сменщик двигателей через дифайн. 
-
-    //передача кол-ва микрошагов в верилог с инверсией направления двигателя (знака перед количеством шагов) при необходимости
-
+    //передача колИчества микрошагов в верилог с инверсией направления двигателя при необходимости
     *a_numofmicrosteps = da;
     if X_STEPPER_INVERTING
         *a_numofmicrosteps = - *a_numofmicrosteps;
@@ -44,10 +38,24 @@ gcode::stepcounter(float х, float у, float х1, float х2)
     if X_STEPPER_INVERTING
         *b_numofmicrosteps = - *b_numofmicrosteps;
 
-    //определяем длительность импульса для одного микрошага, поделив частоту 50 МГц (ЛУЧШЕ ЗАДАТЬ ЕЕ ДИФАЙНОМ) на количество микрошагов
-    *a_microsteppulse = frequency/a_numofmicrosteps;
-    *b_microsteppulse = frequency/b_numofmicrosteps;
+    //подсчет параметров коррекции для двигателя a
+    *a_microsteppulse = roundup(frequency/a_speed);// коэффициент коррекции тактовой частоты, равный количеству необходимых для движения импульсов  
+    float a_new_speed = frequency/k; // частота после коррекции
+    float a_new_t = *a_numofmicrosteps/a_new_speed; // ранее за время принималась рассчитанная для диагонали величина
 
+    //подсчет параметров коррекции для двигателя b  
+    *b_microsteppulse = roundup(frequency/b_speed); // коэффициент коррекции тактовой частоты, равный количеству необходимых для движения импульсов 
+    float b_new_speed = frequency/k; // частота после коррекции
+    float b_new_t = *b_numofmicrosteps/b_new_speed; // ранее за время принималась рассчитанная для диагонали величина
+
+    //проверка величины корреляции a_new_t и b_new_t для опеределения ошибочных случаев
+    //проверка величины корреляции a_new_t с t и b_new_t с t для опеределения ошибочных случаев
+    //тк при несовпадении времени один из двигателей производит движение по диагонали 
+    //при необходимости произвести коррекцию *a_microsteppulse и *b_microsteppulse
+
+
+    // проверить все действия с прайвет переменными на необходимость приведения типов, 
+    //см main.c в soc/embedded: *(uint32_t *)
 }
 
 gcode::gcode(){
