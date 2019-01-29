@@ -30,7 +30,7 @@
 #define SYSID_QSYS_SPAN 8
 #define SYSID_QSYS_END 0x1007
 #define SYSID_QSYS_ID 4294906626
-#define SYSID_QSYS_TIMESTAMP 1547324914
+#define SYSID_QSYS_TIMESTAMP 1548098130
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'

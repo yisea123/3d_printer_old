@@ -1,5 +1,5 @@
 Flow report for simulat
-Mon Jan 21 21:09:09 2019
+Tue Jan 22 22:06:20 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Jan 21 21:09:09 2019       ;
+; Flow Status                     ; Successful - Tue Jan 22 22:06:20 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; simulat                                     ;
-; Top-level Entity Name           ; clk_gen                                     ;
+; Top-level Entity Name           ; driver_stepper                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 66                                          ;
-; Total pins                      ; 67                                          ;
+; Total registers                 ; 99                                          ;
+; Total pins                      ; 108                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -67,31 +67,31 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/21/2019 21:04:04 ;
+; Start date & time ; 01/22/2019 22:05:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; simulat             ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 53447161791564.154809384311320         ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; clk_gen     ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; clk_gen     ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; clk_gen     ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; clk_gen                                ; simulat       ; --          ; --             ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++-------------------------------------+----------------------------------------+---------------+----------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 53447161791564.154818390207800         ; --            ; --             ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --             ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --             ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --             ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; driver_stepper ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; driver_stepper ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; driver_stepper ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --             ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --             ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --             ; --             ;
+; TOP_LEVEL_ENTITY                    ; driver_stepper                         ; simulat       ; --             ; --             ;
++-------------------------------------+----------------------------------------+---------------+----------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -99,16 +99,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4849 MB             ; 00:00:57                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4734 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4852 MB             ; 00:01:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4736 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4735 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4735 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4735 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:02                           ;
-; Total                ; 00:00:39     ; --                      ; --                  ; 00:01:13                           ;
+; Total                ; 00:00:29     ; --                      ; --                  ; 00:01:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,12 +114,6 @@ refer to the applicable agreement for further details.
 ; Analysis & Synthesis ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -133,13 +121,7 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off simulat -c simulat
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/printer.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/printer.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/printer.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/printer.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/printer.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/printer.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/printer.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/printer.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/driver_stepper.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
 
 

@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Jan 21 21:04:27 2019
+Analysis & Synthesis Status : Successful - Tue Jan 22 22:05:26 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : simulat
-Top-level Entity Name : clk_gen
+Top-level Entity Name : driver_stepper
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 66
-Total pins : 67
+Total registers : 99
+Total pins : 108
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

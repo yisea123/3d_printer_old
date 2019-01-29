@@ -4,271 +4,407 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "clk_out",
+					"name" : "stepper_1_step_in[0]",
 					"strict" : false
 				},
 				{
-					"name" : "finish",
+					"name" : "stepper_1_step_in[1]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "stepper_1_step_in[2]",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "stepper_1_step_in[3]",
 					"strict" : false
 				},
 				{
-					"name" : "count[28]",
+					"name" : "stepper_1_step_in[4]",
 					"strict" : false
 				},
 				{
-					"name" : "count[22]",
+					"name" : "stepper_1_step_in[5]",
 					"strict" : false
 				},
 				{
-					"name" : "count[23]",
+					"name" : "stepper_1_step_in[6]",
 					"strict" : false
 				},
 				{
-					"name" : "count[24]",
+					"name" : "stepper_1_step_in[7]",
 					"strict" : false
 				},
 				{
-					"name" : "count[25]",
+					"name" : "stepper_1_step_in[8]",
 					"strict" : false
 				},
 				{
-					"name" : "count[26]",
+					"name" : "stepper_1_step_in[9]",
 					"strict" : false
 				},
 				{
-					"name" : "count[27]",
+					"name" : "stepper_1_step_in[10]",
 					"strict" : false
 				},
 				{
-					"name" : "count[16]",
+					"name" : "stepper_1_step_in[11]",
 					"strict" : false
 				},
 				{
-					"name" : "count[17]",
+					"name" : "stepper_1_step_in[12]",
 					"strict" : false
 				},
 				{
-					"name" : "count[18]",
+					"name" : "stepper_1_step_in[13]",
 					"strict" : false
 				},
 				{
-					"name" : "count[19]",
+					"name" : "stepper_1_step_in[14]",
 					"strict" : false
 				},
 				{
-					"name" : "count[20]",
+					"name" : "stepper_1_step_in[15]",
 					"strict" : false
 				},
 				{
-					"name" : "count[21]",
+					"name" : "stepper_1_step_in[16]",
 					"strict" : false
 				},
 				{
-					"name" : "count[10]",
+					"name" : "stepper_1_step_in[17]",
 					"strict" : false
 				},
 				{
-					"name" : "count[11]",
+					"name" : "stepper_1_step_in[18]",
 					"strict" : false
 				},
 				{
-					"name" : "count[12]",
+					"name" : "stepper_1_step_in[19]",
 					"strict" : false
 				},
 				{
-					"name" : "count[13]",
+					"name" : "stepper_1_step_in[20]",
 					"strict" : false
 				},
 				{
-					"name" : "count[30]",
+					"name" : "stepper_1_step_in[21]",
 					"strict" : false
 				},
 				{
-					"name" : "count[15]",
+					"name" : "stepper_1_step_in[22]",
 					"strict" : false
 				},
 				{
-					"name" : "count[14]",
+					"name" : "stepper_1_step_in[23]",
 					"strict" : false
 				},
 				{
-					"name" : "count[29]",
+					"name" : "stepper_1_step_in[24]",
 					"strict" : false
 				},
 				{
-					"name" : "count[0]",
+					"name" : "stepper_1_step_in[25]",
 					"strict" : false
 				},
 				{
-					"name" : "count[1]",
+					"name" : "stepper_1_step_in[26]",
 					"strict" : false
 				},
 				{
-					"name" : "count[2]",
+					"name" : "stepper_1_step_in[27]",
 					"strict" : false
 				},
 				{
-					"name" : "count[3]",
+					"name" : "stepper_1_step_in[28]",
 					"strict" : false
 				},
 				{
-					"name" : "count[4]",
+					"name" : "stepper_1_step_in[29]",
 					"strict" : false
 				},
 				{
-					"name" : "count[5]",
+					"name" : "stepper_1_step_in[30]",
 					"strict" : false
 				},
 				{
-					"name" : "count[6]",
+					"name" : "stepper_1_step_in[31]",
 					"strict" : false
 				},
 				{
-					"name" : "count[7]",
+					"name" : "flags1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "count[8]",
+					"name" : "reset_step1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "count[9]",
+					"name" : "fin[0]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[30]",
+					"name" : "step_signal",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[31]",
+					"name" : "FPGA_CLK1_50",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[24]",
+					"name" : "stepper_1_step_out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[25]",
+					"name" : "stepper_1_step_out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[26]",
+					"name" : "stepper_1_step_out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[27]",
+					"name" : "stepper_1_step_out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[28]",
+					"name" : "stepper_1_step_out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[29]",
+					"name" : "stepper_1_step_out[5]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[18]",
+					"name" : "stepper_1_step_out[6]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[19]",
+					"name" : "stepper_1_step_out[7]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[20]",
+					"name" : "stepper_1_step_out[8]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[21]",
+					"name" : "stepper_1_step_out[9]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[22]",
+					"name" : "stepper_1_step_out[10]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[23]",
+					"name" : "stepper_1_step_out[11]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[12]",
+					"name" : "stepper_1_step_out[12]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[13]",
+					"name" : "stepper_1_step_out[13]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[14]",
+					"name" : "stepper_1_step_out[14]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[15]",
+					"name" : "stepper_1_step_out[15]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[16]",
+					"name" : "stepper_1_step_out[16]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[17]",
+					"name" : "stepper_1_step_out[17]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[7]",
+					"name" : "stepper_1_step_out[18]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[6]",
+					"name" : "stepper_1_step_out[19]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[5]",
+					"name" : "stepper_1_step_out[20]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[4]",
+					"name" : "stepper_1_step_out[21]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[3]",
+					"name" : "stepper_1_step_out[22]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[2]",
+					"name" : "stepper_1_step_out[23]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[1]",
+					"name" : "stepper_1_step_out[24]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[0]",
+					"name" : "stepper_1_step_out[25]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[8]",
+					"name" : "stepper_1_step_out[26]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[9]",
+					"name" : "stepper_1_step_out[27]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[10]",
+					"name" : "stepper_1_step_out[28]",
 					"strict" : false
 				},
 				{
-					"name" : "reduction[11]",
+					"name" : "stepper_1_step_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_step_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_step_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[30]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[31]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[24]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[25]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[26]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[27]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[28]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[29]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[18]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[19]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[20]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[21]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[22]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[23]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[12]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[13]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[14]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[15]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[16]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[17]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[7]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[6]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[5]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[4]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[3]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[2]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[1]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[0]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[8]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[9]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[10]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_1_speed[11]",
 					"strict" : false
 				}
 			]

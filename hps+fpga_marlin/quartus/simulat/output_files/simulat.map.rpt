@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simulat
-Mon Jan 21 21:04:27 2019
+Tue Jan 22 22:05:26 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,12 +13,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +45,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jan 21 21:04:27 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jan 22 22:05:26 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; simulat                                     ;
-; Top-level Entity Name           ; clk_gen                                     ;
+; Top-level Entity Name           ; driver_stepper                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 66                                          ;
-; Total pins                      ; 67                                          ;
+; Total registers                 ; 99                                          ;
+; Total pins                      ; 108                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -70,7 +71,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; clk_gen            ; simulat            ;
+; Top-level entity name                                                           ; driver_stepper     ; simulat            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -168,50 +169,62 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
-; clk_gen.v                        ; yes             ; User Verilog HDL File  ; D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/clk_gen.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; clk_gen.v                        ; yes             ; User Verilog HDL File  ; D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/clk_gen.v        ;         ;
+; driver_stepper.v                 ; yes             ; User Verilog HDL File  ; D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 64        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 115       ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 12        ;
-;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 3         ;
-;     -- <=3 input functions                  ; 100       ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 66        ;
-;                                             ;           ;
-; I/O pins                                    ; 67        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 66        ;
-; Total fan-out                               ; 676       ;
-; Average fan-out                             ; 2.15      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimate of Logic utilization (ALMs needed) ; 73                 ;
+;                                             ;                    ;
+; Combinational ALUT usage for logic          ; 123                ;
+;     -- 7 input functions                    ; 0                  ;
+;     -- 6 input functions                    ; 17                 ;
+;     -- 5 input functions                    ; 2                  ;
+;     -- 4 input functions                    ; 3                  ;
+;     -- <=3 input functions                  ; 101                ;
+;                                             ;                    ;
+; Dedicated logic registers                   ; 99                 ;
+;                                             ;                    ;
+; I/O pins                                    ; 108                ;
+;                                             ;                    ;
+; Total DSP Blocks                            ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; FPGA_CLK1_50~input ;
+; Maximum fan-out                             ; 99                 ;
+; Total fan-out                               ; 891                ;
+; Average fan-out                             ; 2.03               ;
++---------------------------------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |clk_gen                   ; 115 (115)           ; 66 (66)                   ; 0                 ; 0          ; 67   ; 0            ; |clk_gen            ; clk_gen     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+----------------+--------------+
+; |driver_stepper            ; 123 (8)             ; 99 (33)                   ; 0                 ; 0          ; 108  ; 0            ; |driver_stepper                  ; driver_stepper ; work         ;
+;    |clk_gen:clk_gen1|      ; 115 (115)           ; 66 (66)                   ; 0                 ; 0          ; 0    ; 0            ; |driver_stepper|clk_gen:clk_gen1 ; clk_gen        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------+
+; Registers Removed During Synthesis                           ;
++---------------------------------------+----------------------+
+; Register name                         ; Reason for Removal   ;
++---------------------------------------+----------------------+
+; reset_step[0]                         ; Merged with flags[1] ;
+; Total Number of Removed Registers = 1 ;                      ;
++---------------------------------------+----------------------+
 
 
 +------------------------------------------------------+
@@ -219,8 +232,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 66    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 99    ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 64    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -234,19 +247,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; signal                                 ; 2       ;
-; fin                                    ; 37      ;
+; clk_gen:clk_gen1|fin                   ; 39      ;
+; clk_gen:clk_gen1|signal                ; 2       ;
 ; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |clk_gen|n[15]             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |driver_stepper|clk_gen:clk_gen1|n[31] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -254,22 +267,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 66                          ;
+; arriav_ff             ; 99                          ;
 ;     ENA               ; 2                           ;
 ;     ENA SLD           ; 64                          ;
-; arriav_lcell_comb     ; 117                         ;
+;     SCLR              ; 32                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 126                         ;
 ;     arith             ; 96                          ;
 ;         1 data inputs ; 96                          ;
-;     normal            ; 21                          ;
+;     normal            ; 30                          ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 3                           ;
+;         2 data inputs ; 4                           ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 3                           ;
-;         6 data inputs ; 12                          ;
-; boundary_port         ; 67                          ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 17                          ;
+; boundary_port         ; 108                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.86                        ;
+; Average LUT depth     ; 2.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -288,25 +305,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Jan 21 21:04:02 2019
+    Info: Processing started: Tue Jan 22 22:05:01 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simulat -c simulat
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file clk_gen.v
     Info (12023): Found entity 1: clk_gen File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/clk_gen.v Line: 1
-Info (12127): Elaborating entity "clk_gen" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file driver_stepper.v
+    Info (12023): Found entity 1: driver_stepper File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 1
+Info (12127): Elaborating entity "driver_stepper" for the top level hierarchy
+Warning (10034): Output port "fin[4..1]" at driver_stepper.v(9) has no driver File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 9
+Info (12128): Elaborating entity "clk_gen" for hierarchy "clk_gen:clk_gen1" File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 29
 Warning (10036): Verilog HDL or VHDL warning at clk_gen.v(15): object "check" assigned a value but never read File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/clk_gen.v Line: 15
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "flags1[0]" is stuck at GND File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 7
+    Warning (13410): Pin "flags1[2]" is stuck at GND File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 7
+    Warning (13410): Pin "reset_step1[1]" is stuck at GND File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 8
+    Warning (13410): Pin "fin[1]" is stuck at GND File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 9
+    Warning (13410): Pin "fin[2]" is stuck at GND File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 9
+    Warning (13410): Pin "fin[3]" is stuck at GND File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 9
+    Warning (13410): Pin "fin[4]" is stuck at GND File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 182 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 263 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 65 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 115 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Mon Jan 21 21:04:27 2019
+    Info (21059): Implemented 43 output pins
+    Info (21061): Implemented 155 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Tue Jan 22 22:05:26 2019
     Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:57
+    Info: Total CPU time (on all processors): 00:01:01
 
 

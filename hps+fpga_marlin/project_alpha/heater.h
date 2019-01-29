@@ -3,12 +3,11 @@
 class heater{
 
 public:
-	heater();
-	bool init(void *addr_heater; temperature temp);
-	bool update();
+	heater(void *addr_heater; temperature temp);
 	int heat();
+	bool shutdown();
 private:
-	temperature temp();
+	temperature temp = new temperature();
 	
 
 }

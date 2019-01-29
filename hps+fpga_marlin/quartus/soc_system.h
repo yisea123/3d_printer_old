@@ -38,7 +38,7 @@
 #define FPGA_ONLY_MASTER_SYSID_QSYS_SPAN 8
 #define FPGA_ONLY_MASTER_SYSID_QSYS_END 0x1007
 #define FPGA_ONLY_MASTER_SYSID_QSYS_ID 4294906626
-#define FPGA_ONLY_MASTER_SYSID_QSYS_TIMESTAMP 1547324914
+#define FPGA_ONLY_MASTER_SYSID_QSYS_TIMESTAMP 1548098130
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -580,7 +580,7 @@
 #define HPS_0_SYSID_QSYS_SPAN 8
 #define HPS_0_SYSID_QSYS_END 0x1007
 #define HPS_0_SYSID_QSYS_ID 4294906626
-#define HPS_0_SYSID_QSYS_TIMESTAMP 1547324914
+#define HPS_0_SYSID_QSYS_TIMESTAMP 1548098130
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -1143,7 +1143,7 @@
 #define HPS_0_BRIDGES_SYSID_QSYS_SPAN 8
 #define HPS_0_BRIDGES_SYSID_QSYS_END 0x1007
 #define HPS_0_BRIDGES_SYSID_QSYS_ID 4294906626
-#define HPS_0_BRIDGES_SYSID_QSYS_TIMESTAMP 1547324914
+#define HPS_0_BRIDGES_SYSID_QSYS_TIMESTAMP 1548098130
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -2139,7 +2139,7 @@
 #define HPS_0_ARM_A9_0_SYSID_QSYS_SPAN 8
 #define HPS_0_ARM_A9_0_SYSID_QSYS_END 0xff201007
 #define HPS_0_ARM_A9_0_SYSID_QSYS_ID 4294906626
-#define HPS_0_ARM_A9_0_SYSID_QSYS_TIMESTAMP 1547324914
+#define HPS_0_ARM_A9_0_SYSID_QSYS_TIMESTAMP 1548098130
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -3171,7 +3171,7 @@
 #define HPS_0_ARM_A9_1_SYSID_QSYS_SPAN 8
 #define HPS_0_ARM_A9_1_SYSID_QSYS_END 0xff201007
 #define HPS_0_ARM_A9_1_SYSID_QSYS_ID 4294906626
-#define HPS_0_ARM_A9_1_SYSID_QSYS_TIMESTAMP 1547324914
+#define HPS_0_ARM_A9_1_SYSID_QSYS_TIMESTAMP 1548098130
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -4639,7 +4639,7 @@
 #define MM_BRIDGE_0_SYSID_QSYS_SPAN 8
 #define MM_BRIDGE_0_SYSID_QSYS_END 0x1007
 #define MM_BRIDGE_0_SYSID_QSYS_ID 4294906626
-#define MM_BRIDGE_0_SYSID_QSYS_TIMESTAMP 1547324914
+#define MM_BRIDGE_0_SYSID_QSYS_TIMESTAMP 1548098130
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'

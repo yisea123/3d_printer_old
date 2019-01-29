@@ -3,13 +3,11 @@
 class temperature{
 
 public:
-	temperature();
-	void init(void *addr);
+	temperature(void *addr);
 	bool update();
 	float get_temp();
 
 protected:
-	float target_temperature;
 	float current_temperature;
 	
 private:
