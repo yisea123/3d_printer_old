@@ -125,20 +125,11 @@ module soc_system_mm_interconnect_1 (
 		output wire [0:0]  sysid_qsys_control_slave_address,                       //                         sysid_qsys_control_slave.address
 		input  wire [31:0] sysid_qsys_control_slave_readdata,                      //                                                 .readdata
 		output wire [1:0]  temp0_s1_address,                                       //                                         temp0_s1.address
-		output wire        temp0_s1_write,                                         //                                                 .write
 		input  wire [31:0] temp0_s1_readdata,                                      //                                                 .readdata
-		output wire [31:0] temp0_s1_writedata,                                     //                                                 .writedata
-		output wire        temp0_s1_chipselect,                                    //                                                 .chipselect
 		output wire [1:0]  temp1_s1_address,                                       //                                         temp1_s1.address
-		output wire        temp1_s1_write,                                         //                                                 .write
 		input  wire [31:0] temp1_s1_readdata,                                      //                                                 .readdata
-		output wire [31:0] temp1_s1_writedata,                                     //                                                 .writedata
-		output wire        temp1_s1_chipselect,                                    //                                                 .chipselect
 		output wire [1:0]  temp_bed_s1_address,                                    //                                      temp_bed_s1.address
-		output wire        temp_bed_s1_write,                                      //                                                 .write
-		input  wire [31:0] temp_bed_s1_readdata,                                   //                                                 .readdata
-		output wire [31:0] temp_bed_s1_writedata,                                  //                                                 .writedata
-		output wire        temp_bed_s1_chipselect                                  //                                                 .chipselect
+		input  wire [31:0] temp_bed_s1_readdata                                    //                                                 .readdata
 	);
 
 	wire          mm_bridge_0_m0_translator_avalon_universal_master_0_waitrequest;            // mm_bridge_0_m0_agent:av_waitrequest -> mm_bridge_0_m0_translator:uav_waitrequest
@@ -2418,11 +2409,10 @@ module soc_system_mm_interconnect_1 (
 		.uav_lock               (temp_bed_s1_agent_m0_lock),                     //                         .lock
 		.uav_debugaccess        (temp_bed_s1_agent_m0_debugaccess),              //                         .debugaccess
 		.av_address             (temp_bed_s1_address),                           //      avalon_anti_slave_0.address
-		.av_write               (temp_bed_s1_write),                             //                         .write
 		.av_readdata            (temp_bed_s1_readdata),                          //                         .readdata
-		.av_writedata           (temp_bed_s1_writedata),                         //                         .writedata
-		.av_chipselect          (temp_bed_s1_chipselect),                        //                         .chipselect
+		.av_write               (),                                              //              (terminated)
 		.av_read                (),                                              //              (terminated)
+		.av_writedata           (),                                              //              (terminated)
 		.av_begintransfer       (),                                              //              (terminated)
 		.av_beginbursttransfer  (),                                              //              (terminated)
 		.av_burstcount          (),                                              //              (terminated)
@@ -2431,6 +2421,7 @@ module soc_system_mm_interconnect_1 (
 		.av_waitrequest         (1'b0),                                          //              (terminated)
 		.av_writebyteenable     (),                                              //              (terminated)
 		.av_lock                (),                                              //              (terminated)
+		.av_chipselect          (),                                              //              (terminated)
 		.av_clken               (),                                              //              (terminated)
 		.uav_clken              (1'b0),                                          //              (terminated)
 		.av_debugaccess         (),                                              //              (terminated)
@@ -2482,11 +2473,10 @@ module soc_system_mm_interconnect_1 (
 		.uav_lock               (temp0_s1_agent_m0_lock),                        //                         .lock
 		.uav_debugaccess        (temp0_s1_agent_m0_debugaccess),                 //                         .debugaccess
 		.av_address             (temp0_s1_address),                              //      avalon_anti_slave_0.address
-		.av_write               (temp0_s1_write),                                //                         .write
 		.av_readdata            (temp0_s1_readdata),                             //                         .readdata
-		.av_writedata           (temp0_s1_writedata),                            //                         .writedata
-		.av_chipselect          (temp0_s1_chipselect),                           //                         .chipselect
+		.av_write               (),                                              //              (terminated)
 		.av_read                (),                                              //              (terminated)
+		.av_writedata           (),                                              //              (terminated)
 		.av_begintransfer       (),                                              //              (terminated)
 		.av_beginbursttransfer  (),                                              //              (terminated)
 		.av_burstcount          (),                                              //              (terminated)
@@ -2495,6 +2485,7 @@ module soc_system_mm_interconnect_1 (
 		.av_waitrequest         (1'b0),                                          //              (terminated)
 		.av_writebyteenable     (),                                              //              (terminated)
 		.av_lock                (),                                              //              (terminated)
+		.av_chipselect          (),                                              //              (terminated)
 		.av_clken               (),                                              //              (terminated)
 		.uav_clken              (1'b0),                                          //              (terminated)
 		.av_debugaccess         (),                                              //              (terminated)
@@ -2546,11 +2537,10 @@ module soc_system_mm_interconnect_1 (
 		.uav_lock               (temp1_s1_agent_m0_lock),                        //                         .lock
 		.uav_debugaccess        (temp1_s1_agent_m0_debugaccess),                 //                         .debugaccess
 		.av_address             (temp1_s1_address),                              //      avalon_anti_slave_0.address
-		.av_write               (temp1_s1_write),                                //                         .write
 		.av_readdata            (temp1_s1_readdata),                             //                         .readdata
-		.av_writedata           (temp1_s1_writedata),                            //                         .writedata
-		.av_chipselect          (temp1_s1_chipselect),                           //                         .chipselect
+		.av_write               (),                                              //              (terminated)
 		.av_read                (),                                              //              (terminated)
+		.av_writedata           (),                                              //              (terminated)
 		.av_begintransfer       (),                                              //              (terminated)
 		.av_beginbursttransfer  (),                                              //              (terminated)
 		.av_burstcount          (),                                              //              (terminated)
@@ -2559,6 +2549,7 @@ module soc_system_mm_interconnect_1 (
 		.av_waitrequest         (1'b0),                                          //              (terminated)
 		.av_writebyteenable     (),                                              //              (terminated)
 		.av_lock                (),                                              //              (terminated)
+		.av_chipselect          (),                                              //              (terminated)
 		.av_clken               (),                                              //              (terminated)
 		.uav_clken              (1'b0),                                          //              (terminated)
 		.av_debugaccess         (),                                              //              (terminated)

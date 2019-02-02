@@ -330,19 +330,19 @@ module soc_system_mm_interconnect_1_router
     end
 
     // ( 0x6000 .. 0x6010 )
-    if ( {address[RG:PAD19],{PAD19{1'b0}}} == 18'h6000   ) begin
+    if ( {address[RG:PAD19],{PAD19{1'b0}}} == 18'h6000  && read_transaction  ) begin
             src_channel = 23'b00000000000000010000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 22;
     end
 
     // ( 0x6020 .. 0x6030 )
-    if ( {address[RG:PAD20],{PAD20{1'b0}}} == 18'h6020   ) begin
+    if ( {address[RG:PAD20],{PAD20{1'b0}}} == 18'h6020  && read_transaction  ) begin
             src_channel = 23'b00000000000000100000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 20;
     end
 
     // ( 0x6040 .. 0x6050 )
-    if ( {address[RG:PAD21],{PAD21{1'b0}}} == 18'h6040   ) begin
+    if ( {address[RG:PAD21],{PAD21{1'b0}}} == 18'h6040  && read_transaction  ) begin
             src_channel = 23'b00000000000001000000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 21;
     end
