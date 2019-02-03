@@ -1,13 +1,13 @@
-#include <addresses.h>
+#include "addresses.h"
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/mman.h>
-#include "hwlib.h"
-#include "socal/socal.h"
-#include "socal/hps.h"
-#include "socal/alt_gpio.h"
-#include "hps_0.h"
+#include "include/hwlib.h"
+#include "include/socal/socal.h"
+#include "include/socal/hps.h"
+#include "include/socal/alt_gpio.h"
+#include "include/hps_0.h"
 
 #define HW_REGS_BASE (ALT_STM_OFST)
 #define HW_REGS_SPAN (0x04000000)
@@ -18,8 +18,32 @@ addresses::addreses()
 
 }
 
-bool addreses::init()
+bool init()
 {
+	int fd;
+	void *virtual_base;
+	void *leds;
+	void *btns;
+	void *fans;
+	void *heaters;
+	void *flags;
+	void *endstops;
+	void *temp_bed;
+	void *temp0;
+	void *temp1;
+
+	void *stepper_1_speed;
+	void *stepper_2_speed;
+	void *stepper_3_speed;
+	void *stepper_4_speed;
+	void *stepper_5_speed;
+
+	void *stepper_1_steps;
+	void *stepper_2_steps;
+	void *stepper_3_steps;
+	void *stepper_4_steps;
+	void *stepper_5_steps;
+
 	if( ( fd = open( "/dev/mem", ( O_RDWR | O_SYNC ) ) ) == -1 ) {
 		printf("ERROR: could not open \"/dev/mem\"...\n");
 		return false;

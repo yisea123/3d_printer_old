@@ -1,5 +1,3 @@
-
-
 class addresses{
 
 public:
@@ -31,6 +29,9 @@ public:
 protected:
 
 private:
+
+	int fd;
+
 	void* virtual_base;
 	void* leds;
 	void* btns;
@@ -56,4 +57,4 @@ private:
 	void* stepper_4_steps;
 	void* stepper_5_steps;
 
-}
+};
