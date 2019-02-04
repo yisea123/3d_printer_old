@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "configuration.h"
+#include "addresses.h"
 
 int gcode::stepcounter(float х, float у, float х1, float х2, float speed)
 {
@@ -21,7 +22,7 @@ int gcode::stepcounter(float х, float у, float х1, float х2, float speed)
     //за пройденное расстояние принимается гипотенуза 
     float t = diag/speed;
 
-    //Необходимое для движения количество микрошагов = число оборотов * количество микрошагов на оборот
+    //Необходимое для движения количество микрошагов = число оборотов * количество микрошагов за оборот
     *a_numofmicrosteps = da/rotlength*stepsperrot*microsteps;
     *b_numofmicrosteps = db/rotlength*stepsperrot*microsteps;
 
@@ -40,25 +41,31 @@ int gcode::stepcounter(float х, float у, float х1, float х2, float speed)
 
     //подсчет параметров коррекции для двигателя a
     *a_microsteppulse = roundup(frequency/a_speed);// коэффициент коррекции тактовой частоты, равный количеству необходимых для движения импульсов  
-    float a_new_speed = frequency/k; // частота после коррекции
-    float a_new_t = *a_numofmicrosteps/a_new_speed; // ранее за время принималась рассчитанная для диагонали величина
+    float a_new_speed = frequency/(*a_microsteppulse); // частота после коррекции
+    float a_new_t = abs(*a_numofmicrosteps/a_new_speed); // ранее за время принималась рассчитанная для диагонали величина
 
     //подсчет параметров коррекции для двигателя b  
     *b_microsteppulse = roundup(frequency/b_speed); // коэффициент коррекции тактовой частоты, равный количеству необходимых для движения импульсов 
-    float b_new_speed = frequency/k; // частота после коррекции
-    float b_new_t = *b_numofmicrosteps/b_new_speed; // ранее за время принималась рассчитанная для диагонали величина
+    float b_new_speed = frequency/(*b_microsteppulse); // частота после коррекции
+    float b_new_t = abs(*b_numofmicrosteps/b_new_speed); // ранее за время принималась рассчитанная для диагонали величина
 
     //проверка величины корреляции a_new_t и b_new_t для опеределения ошибочных случаев
     //проверка величины корреляции a_new_t с t и b_new_t с t для опеределения ошибочных случаев
     //тк при несовпадении времени один из двигателей производит движение по диагонали 
     //при необходимости произвести коррекцию *a_microsteppulse и *b_microsteppulse
 
+    addr.get_stepper_1_speed() = *a_microsteppulse; //передается количество 20нс импульсов, необходимых для движения
+    addr.get_stepper_2_speed() = *b_microsteppulse; //передается количество 20нс импульсов, необходимых для движения
+    addr.get_stepper_1_steps() = *a_numofmicrosteps; //передается количество микрошагов, необходимых для движения
+    addr.get_stepper_2_steps() = *b_numofmicrosteps; //передается количество микрошагов, необходимых для движения
 
-    // проверить все действия с прайвет переменными на необходимость приведения типов, 
+    // приведение типов из инт32 и юинт32 в воид*, 
     //см main.c в soc/embedded: *(uint32_t *)
 }
 
-gcode::gcode(){
+gcode::gcode(bool debug, addresses addr){
+    this.debug = debug;
+    this.addr = addr;
 }
 
 bool gcode::gcode_G0(float x, float y, float z, float e)

@@ -1,5 +1,6 @@
 #ifndef gcode_H
 #define gcode_H
+#include <addresses.h>
 
 class gcode
 {
@@ -9,11 +10,13 @@ private:
     int32_t *b_numofmicrosteps;
     uint32_t *a_microsteppulse;
     uint32_t *b_microsteppulse;
+    addresses addr;
+    bool debug;
 
 public:
-    int stepcounter(float x, float y, float x1, float y1);
+    int stepcounter(float x, float y, float x1, float y1, float speed);
 
-    gcode(bool debug);
+    gcode(bool debug, addresses addr);
 
     bool gcode_G0(float x, float y, float z, float e);
     bool gcode_G1(float x, float y, float z, float e);
