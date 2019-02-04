@@ -101,7 +101,6 @@ module printer(
 );
 
 
-
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
@@ -124,6 +123,16 @@ assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_button
 //=======================================================
 //  MAIN WIRES
 //=======================================================
+
+//Clocks
+wire CLK_100;
+wire CLK_10;
+wire CLK_5;
+wire CLK_1;
+
+
+//ADC
+wire [11:0] analog [7:0];
 
 //Flags
 //=======================================================
@@ -220,13 +229,13 @@ wire	[4:0] 	fin;
 
 
 //Tempersature sensors
-wire	[7:0]	temp1;
-wire	[7:0]	temp2;
-wire	[7:0]	temp3;
+wire	[11:0]	temp1; //bed
+wire	[11:0]	temp2;
+wire	[11:0]	temp3;
 
-assign temp1 = gpio1GPIO[7:0];
-assign temp2 = gpio1GPIO[15:8];
-assign temp3 = gpio1GPIO[23:16];
+assign temp1 = analog[0];
+assign temp2 = analog[1];
+assign temp3 = analog[2];
 
 
 //Heaters
@@ -248,7 +257,7 @@ assign gpio0GPIO[18] = fan2;
 //End stops
 wire	[5:0] end_stop;
 
-assign end_stop = gpio1GPIO[29:24];
+assign end_stop = gpio0GPIO[24:19];
 
 
 //=======================================================
@@ -256,9 +265,33 @@ assign end_stop = gpio1GPIO[29:24];
 //=======================================================
 
 
+ adc_control adc0(
+		.CLOCK		(FPGA_CLK1_50),    //                clk.clk
+		.ADC_SCLK	(ADC_SCK), // external_interface.SCLK
+		.ADC_CS_N	(ADC_CONVST), //                   .CS_N
+		.ADC_DOUT	(ADC_SDO), //                   .DOUT
+		.ADC_DIN		(ADC_SDI),  //                   .DIN
+		.CH0			(analog[0]),      //           readings.CH0
+		.CH1			(analog[1]),      //                   .CH1
+		.CH2			(analog[2]),      //                   .CH2
+		.CH3			(analog[3]),      //                   .CH3
+		.CH4			(analog[4]),      //                   .CH4
+		.CH5			(analog[5]),      //                   .CH5
+		.CH6			(analog[6]),      //                   .CH6
+		.CH7			(analog[7]),      //                   .CH7
+		.RESET		(!KEY[0])     //              reset.reset
+	);
+
+
  soc_system u0 (
 	//Clock&Reset
 	.clk_clk(FPGA_CLK1_50),                                      //                            clk.clk
+	
+	.pll_sys_outclk100mhz_clk                     (CLK_100),                     //                pll_sys_outclk100mhz.clk
+	.pll_sys_outclk10mhz_clk                      (CLK_10),                      //                 pll_sys_outclk10mhz.clk
+	.pll_sys_outclk5mhz_clk                       (CLK_5),                       //                  pll_sys_outclk5mhz.clk
+	.pll_sys_outclk1mhz_clk                       (CLK_1),                       
+	
 	.reset_reset_n(hps_fpga_reset_n),
 
 	.hps_0_h2f_reset_reset_n(hps_fpga_reset_n),                  //                hps_0_h2f_reset.reset_n
@@ -354,9 +387,9 @@ assign end_stop = gpio1GPIO[29:24];
 	.dipsw_pio_external_connection_export(SW),                   //  dipsw_pio_external_connection.export
 	.button_pio_external_connection_export(fpga_debounced_buttons),
 
-	.temp0_external_connection_export      (temp1),         //         temp0_external_connection.export
-	.temp1_external_connection_export      (temp2),         //         temp1_external_connection.export
-	.temp_bed_external_connection_export   (temp3),      //      temp_bed_external_connection.export
+	.temp0_external_connection_export      (temp2),         //         temp0_external_connection.export
+	.temp1_external_connection_export      (temp3),         //         temp1_external_connection.export
+	.temp_bed_external_connection_export   (temp1),      //      temp_bed_external_connection.export
 
 	.endstops_external_connection_export   (end_stop),   //   endstops_external_connection.export
 	.fans_external_connection_export       (fans),       //       fans_external_connection.export
@@ -388,6 +421,9 @@ assign end_stop = gpio1GPIO[29:24];
 
 
  
+ 
+
+  
  clk_gen clk_gen1	(	//input
 							.clk 			(FPGA_CLK1_50), 
 							.reduction 	(stepper_1_speed),
@@ -399,7 +435,7 @@ assign end_stop = gpio1GPIO[29:24];
 							.finish 		(fin[0])
 						);	
 
-always @(posedge FPGA_CLK1_50)
+always @(posedge CLK_5)
 begin
 	
 	if (flags[1] == 1'b0)

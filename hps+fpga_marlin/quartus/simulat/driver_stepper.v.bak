@@ -1,0 +1,36 @@
+ module driver_stepper();
+ 
+ clk_gen clk_gen1	(	//input
+							.clk 			(FPGA_CLK1_50), 
+							.reduction 	(stepper_1_speed),
+							.count 		(stepper_1_step_out[30:0]),
+							.reset 		(reset_step[0]),
+							
+							//output
+							.clk_out 	(step_signal[0]),
+							.finish 		(fin[0])
+						);	
+
+always @(posedge FPGA_CLK1_50)
+begin
+	
+	if (flags[1] == 1'b0)
+	begin
+		if (stepper_1_step_out != 0)
+		begin
+			flags[1] = 1'b1;
+			reset_step[0] = 1'b1;			
+		end
+	end
+	else
+	begin
+		if (fin[0] == 1'b1)
+		begin	
+			stepper_step[0] = 0;
+			flags[1] = 1'b0;
+			reset_step[0] = 1'b0;
+		end
+	end
+end
+
+endmodule

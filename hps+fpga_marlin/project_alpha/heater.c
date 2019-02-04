@@ -7,9 +7,9 @@ heater::heater(void *addr_heater; temperature temp)
 }
 
 
-int heater::heat()
+int heater::heat(float target_temperature)
 {
-
+	
 };
 
 bool heater::shutdown()
