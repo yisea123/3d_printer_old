@@ -54,13 +54,13 @@ int gcode::stepcounter(float х, float у, float х1, float х2, float speed)
     //тк при несовпадении времени один из двигателей производит движение по диагонали 
     //при необходимости произвести коррекцию *a_microsteppulse и *b_microsteppulse
 
-    addr.get_stepper_1_speed() = *a_microsteppulse; //передается количество 20нс импульсов, необходимых для движения
-    addr.get_stepper_2_speed() = *b_microsteppulse; //передается количество 20нс импульсов, необходимых для движения
-    addr.get_stepper_1_steps() = *a_numofmicrosteps; //передается количество микрошагов, необходимых для движения
-    addr.get_stepper_2_steps() = *b_numofmicrosteps; //передается количество микрошагов, необходимых для движения
+    // приведение типов в воид*
+    addr.get_stepper_1_speed() = static_cast<void*>(*a_microsteppulse); //передается количество 20нс импульсов, необходимых для движения
+    addr.get_stepper_2_speed() = static_cast<void*>(*b_microsteppulse); //передается количество 20нс импульсов, необходимых для движения
+    addr.get_stepper_1_steps() = static_cast<void*>(*a_numofmicrosteps); //передается количество микрошагов, необходимых для движения
+    addr.get_stepper_2_steps() = static_cast<void*>(*b_numofmicrosteps); //передается количество микрошагов, необходимых для движения
 
-    // приведение типов из инт32 и юинт32 в воид*, 
-    //см main.c в soc/embedded: *(uint32_t *)
+
 }
 
 gcode::gcode(bool debug, addresses addr){
