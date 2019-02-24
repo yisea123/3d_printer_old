@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/21/2019 20:56:27"
+// Generated on "02/15/2019 18:00:17"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          clk_gen
 // 
@@ -36,6 +36,7 @@ reg reset;
 // wires                                               
 wire clk_out;
 wire finish;
+wire [30:0] remainder;
 
 // assign statements (if any)                          
 clk_gen i1 (
@@ -45,27 +46,20 @@ clk_gen i1 (
 	.count(count),
 	.finish(finish),
 	.reduction(reduction),
+	.remainder(remainder),
 	.reset(reset)
 );
 initial 
 begin 
-#100000 $finish;
+#10000000 $finish;
 end 
 
 // clk
-initial
+always
 begin
 	clk = 1'b0;
 	clk = #10000 1'b1;
-	# 10000;
-	repeat(3)
-	begin
-		clk = 1'b0;
-		clk = #10000 1'b1;
-		# 10000;
-	end
-	clk = 1'b0;
-	clk = #10000 1'b1;
+	#10000;
 end 
 // count[ 30 ]
 initial
@@ -375,18 +369,26 @@ end
 // reduction[ 1 ]
 initial
 begin
-	reduction[1] = 1'b1;
+	reduction[1] = 1'b0;
 end 
 // reduction[ 0 ]
 initial
 begin
-	reduction[0] = 1'b0;
+	reduction[0] = 1'b1;
 end 
 
 // reset
 initial
 begin
 	reset = 1'b1;
+	# 250000;
+	repeat(19)
+	begin
+		reset = 1'b0;
+		reset = #250000 1'b1;
+		# 250000;
+	end
+	reset = 1'b0;
 end 
 endmodule
 

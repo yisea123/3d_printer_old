@@ -1,53 +1,47 @@
 # do simulat.do
 # ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:06:22 on Jan 22,2019
-# vcom -work work simulat.vho 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Loading package altera_lnsim_components
-# -- Loading package cyclonev_atom_pack
-# -- Loading package cyclonev_components
-# -- Compiling entity driver_stepper
-# -- Compiling architecture structure of driver_stepper
-# End time: 22:06:22 on Jan 22,2019, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:38:10 on Feb 24,2019
+# vlog -work work simulat.vo 
+# -- Compiling module stepper_corexy
+# 
+# Top level modules:
+# 	stepper_corexy
+# End time: 09:38:11 on Feb 24,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:06:22 on Jan 22,2019
-# vcom -work work driver_stepper.vwf.vht 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity driver_stepper_vhd_vec_tst
-# -- Compiling architecture driver_stepper_arch of driver_stepper_vhd_vec_tst
-# End time: 22:06:22 on Jan 22,2019, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:38:11 on Feb 24,2019
+# vlog -work work stepper_corexy.vwf.vt 
+# -- Compiling module stepper_corexy_vlg_vec_tst
+# 
+# Top level modules:
+# 	stepper_corexy_vlg_vec_tst
+# End time: 09:38:12 on Feb 24,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.driver_stepper_vhd_vec_tst 
-# Start time: 22:06:23 on Jan 22,2019
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.driver_stepper_vhd_vec_tst(driver_stepper_arch)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading altera.dffeas_pack
-# Loading altera.altera_primitives_components
-# Loading altera_lnsim.altera_lnsim_components
-# Loading cyclonev.cyclonev_atom_pack(body)
-# Loading cyclonev.cyclonev_components
-# Loading work.driver_stepper(structure)
-# Loading ieee.std_logic_arith(body)
-# Loading cyclonev.cyclonev_io_obuf(arch)
-# Loading cyclonev.cyclonev_io_ibuf(arch)
-# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
-# Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 51003 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.stepper_corexy_vlg_vec_tst 
+# Start time: 09:38:13 on Feb 24,2019
+# Loading work.stepper_corexy_vlg_vec_tst
+# Loading work.stepper_corexy
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: Design size of 14629 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
-# after#34
-# End time: 22:06:25 on Jan 22,2019, Elapsed time: 0:00:02
+# after#25
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 0 ps
+# Simulation time: 2190000 ps
+# Simulation time: 2190000 ps
+# Simulation time: 2190000 ps
+# ** Note: $finish    : stepper_corexy.vwf.vt(84)
+#    Time: 3 us  Iteration: 0  Instance: /stepper_corexy_vlg_vec_tst
+# End time: 09:38:43 on Feb 24,2019, Elapsed time: 0:00:30
 # Errors: 0, Warnings: 1

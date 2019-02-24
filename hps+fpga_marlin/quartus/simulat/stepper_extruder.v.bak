@@ -1,0 +1,113 @@
+ module stepper_extruder(
+						input 	wire 				clk, 
+						input		wire	[31:0]	stepper_step_in,						
+						input		wire	[31:0]	stepper_speed,
+						input		wire				stepper_enable,
+						
+						output 	wire 				step_signal, //Максимально 25 MHz при reduction = 1
+						output 	wire 				enable,
+						output	wire				dir,
+						output	wire				stepper_driving,
+						output 	wire 	[31:0] 	stepper_step_out);
+	
+	
+	assign enable = ~stepper_enable;
+	assign dir = stepper_step_in[31]
+	
+	
+	
+	reg [31:0] 	m		 	= 0;
+
+	reg 			signal 	= 1'b0;
+	
+	reg [30:0] 	n		 	= 0;
+	
+	reg 			check	 	= 1'b1;
+	
+	reg 			fin 		= 1'b1;
+	
+	reg [4:0] 	delay 	= 0;
+	
+	reg			stepper_driving_reg = 0;
+	
+	assign stepper_driving = stepper_driving_reg;
+	
+	assign clk_out = signal;
+	assign finish = fin;
+	assign remainder = n;
+	
+	
+	always @(posedge clk)
+	begin		
+		if (delay == 0)
+		begin
+			if (reset == 1'b1)
+			begin
+				if (fin == 1'b1)
+				begin
+					fin 	= 1'b0;
+					signal 	= 1'b1;
+					n = count;
+					m = reduction - 1;
+				end		
+				else
+				begin
+					if (n != 0)
+					begin
+						if (m != 0)
+							m = m - 1;
+						else
+							begin
+								signal = ~signal;
+								m = reduction - 1;
+								if (signal == 0)
+									n = n - 1;
+							end
+					end
+					else
+					begin
+						signal = 1'b0;
+						fin = 1'b1;
+						delay = 5;
+					end
+				end
+			end
+			else
+			begin
+				if (signal == 1)
+					n = n - 1;
+				signal = 1'b0;
+				fin = 1'b1;
+			end
+		end
+		else
+		begin
+			delay = delay - 1;
+		end
+		
+		
+		
+		if (stepper_driving_reg == 1'b0)
+		begin
+			if (stepper_step_out[0] != 0)
+			begin
+				stepper_driving_reg = 1'b1;
+				reset_step[0] = 1'b1;
+				stepper_step_in[0] = stepper_step_out[0];
+			end
+		end
+		else
+		begin
+			if (fin[0] == 1'b1)
+			begin	
+				stepper_step_in[0] = stepper_remainder[0];
+				stepper_driving_reg = 1'b0;
+				reset_step[0] = 1'b0;
+			end
+		end
+	
+	end
+	
+	
+	
+endmodule

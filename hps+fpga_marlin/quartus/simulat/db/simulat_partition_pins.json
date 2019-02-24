@@ -4,407 +4,835 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "stepper_1_step_in[0]",
+					"name" : "step_signal_1",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[1]",
+					"name" : "enable_1",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[2]",
+					"name" : "dir_1",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[3]",
+					"name" : "step_signal_2",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[4]",
+					"name" : "enable_2",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[5]",
+					"name" : "dir_2",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[6]",
+					"name" : "steppers_driving",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[7]",
+					"name" : "correction_x",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[8]",
+					"name" : "correction_y",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[9]",
+					"name" : "stepper_step_out_1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[10]",
+					"name" : "stepper_step_out_1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[11]",
+					"name" : "stepper_step_out_1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[12]",
+					"name" : "stepper_step_out_1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[13]",
+					"name" : "stepper_step_out_1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[14]",
+					"name" : "stepper_step_out_1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[15]",
+					"name" : "stepper_step_out_1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[16]",
+					"name" : "stepper_step_out_1[7]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[17]",
+					"name" : "stepper_step_out_1[8]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[18]",
+					"name" : "stepper_step_out_1[9]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[19]",
+					"name" : "stepper_step_out_1[10]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[20]",
+					"name" : "stepper_step_out_1[11]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[21]",
+					"name" : "stepper_step_out_1[12]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[22]",
+					"name" : "stepper_step_out_1[13]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[23]",
+					"name" : "stepper_step_out_1[14]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[24]",
+					"name" : "stepper_step_out_1[15]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[25]",
+					"name" : "stepper_step_out_1[16]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[26]",
+					"name" : "stepper_step_out_1[17]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[27]",
+					"name" : "stepper_step_out_1[18]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[28]",
+					"name" : "stepper_step_out_1[19]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[29]",
+					"name" : "stepper_step_out_1[20]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[30]",
+					"name" : "stepper_step_out_1[21]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_in[31]",
+					"name" : "stepper_step_out_1[22]",
 					"strict" : false
 				},
 				{
-					"name" : "flags1[1]",
+					"name" : "stepper_step_out_1[23]",
 					"strict" : false
 				},
 				{
-					"name" : "reset_step1[0]",
+					"name" : "stepper_step_out_1[24]",
 					"strict" : false
 				},
 				{
-					"name" : "fin[0]",
+					"name" : "stepper_step_out_1[25]",
 					"strict" : false
 				},
 				{
-					"name" : "step_signal",
+					"name" : "stepper_step_out_1[26]",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_CLK1_50",
+					"name" : "stepper_step_out_1[27]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[0]",
+					"name" : "stepper_step_out_1[28]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[1]",
+					"name" : "stepper_step_out_1[29]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[2]",
+					"name" : "stepper_step_out_1[30]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[3]",
+					"name" : "stepper_step_out_1[31]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[4]",
+					"name" : "stepper_step_out_2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[5]",
+					"name" : "stepper_step_out_2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[6]",
+					"name" : "stepper_step_out_2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[7]",
+					"name" : "stepper_step_out_2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[8]",
+					"name" : "stepper_step_out_2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[9]",
+					"name" : "stepper_step_out_2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[10]",
+					"name" : "stepper_step_out_2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[11]",
+					"name" : "stepper_step_out_2[7]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[12]",
+					"name" : "stepper_step_out_2[8]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[13]",
+					"name" : "stepper_step_out_2[9]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[14]",
+					"name" : "stepper_step_out_2[10]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[15]",
+					"name" : "stepper_step_out_2[11]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[16]",
+					"name" : "stepper_step_out_2[12]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[17]",
+					"name" : "stepper_step_out_2[13]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[18]",
+					"name" : "stepper_step_out_2[14]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[19]",
+					"name" : "stepper_step_out_2[15]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[20]",
+					"name" : "stepper_step_out_2[16]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[21]",
+					"name" : "stepper_step_out_2[17]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[22]",
+					"name" : "stepper_step_out_2[18]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[23]",
+					"name" : "stepper_step_out_2[19]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[24]",
+					"name" : "stepper_step_out_2[20]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[25]",
+					"name" : "stepper_step_out_2[21]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[26]",
+					"name" : "stepper_step_out_2[22]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[27]",
+					"name" : "stepper_step_out_2[23]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[28]",
+					"name" : "stepper_step_out_2[24]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[29]",
+					"name" : "stepper_step_out_2[25]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[30]",
+					"name" : "stepper_step_out_2[26]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_step_out[31]",
+					"name" : "stepper_step_out_2[27]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[30]",
+					"name" : "stepper_step_out_2[28]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[31]",
+					"name" : "stepper_step_out_2[29]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[24]",
+					"name" : "stepper_step_out_2[30]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[25]",
+					"name" : "stepper_step_out_2[31]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[26]",
+					"name" : "stepper_enable",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[27]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[28]",
+					"name" : "xmin",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[29]",
+					"name" : "xmax",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[18]",
+					"name" : "ymin",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[19]",
+					"name" : "ymax",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[20]",
+					"name" : "start_driving",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[21]",
+					"name" : "stepper_step_in_1[30]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[22]",
+					"name" : "stepper_step_in_2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[23]",
+					"name" : "stepper_step_in_2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[12]",
+					"name" : "stepper_step_in_2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[13]",
+					"name" : "stepper_step_in_2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[14]",
+					"name" : "stepper_step_in_2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[15]",
+					"name" : "stepper_step_in_1[11]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[16]",
+					"name" : "stepper_step_in_1[24]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[17]",
+					"name" : "stepper_step_in_1[25]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[7]",
+					"name" : "stepper_step_in_1[26]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[6]",
+					"name" : "stepper_step_in_1[27]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[5]",
+					"name" : "stepper_step_in_1[28]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[4]",
+					"name" : "stepper_step_in_1[29]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[3]",
+					"name" : "stepper_step_in_1[18]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[2]",
+					"name" : "stepper_step_in_1[19]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[1]",
+					"name" : "stepper_step_in_1[20]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[0]",
+					"name" : "stepper_step_in_1[21]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[8]",
+					"name" : "stepper_step_in_1[22]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[9]",
+					"name" : "stepper_step_in_1[23]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[10]",
+					"name" : "stepper_step_in_1[12]",
 					"strict" : false
 				},
 				{
-					"name" : "stepper_1_speed[11]",
+					"name" : "stepper_step_in_1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[16]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[17]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[29]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[30]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[23]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[24]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[25]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[26]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[27]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[28]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[17]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[18]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[19]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[20]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[21]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[22]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[15]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[16]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_1[31]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_step_in_2[31]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[30]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[31]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[24]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[25]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[26]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[27]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[28]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[29]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[18]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[19]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[20]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[21]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[22]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[23]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[16]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[17]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[15]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[16]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[17]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[18]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[19]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[20]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[21]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[22]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[23]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[25]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[24]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[30]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[31]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[26]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[27]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[28]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[29]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_speed_2[1]",
 					"strict" : false
 				}
 			]

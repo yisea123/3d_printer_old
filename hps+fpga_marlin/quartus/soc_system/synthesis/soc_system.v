@@ -4,107 +4,107 @@
 
 `timescale 1 ps / 1 ps
 module soc_system (
-		input  wire [1:0]  button_pio_external_connection_export,        //      button_pio_external_connection.export
-		input  wire        clk_clk,                                      //                                 clk.clk
-		input  wire [3:0]  dipsw_pio_external_connection_export,         //       dipsw_pio_external_connection.export
-		input  wire [5:0]  endstops_external_connection_export,          //        endstops_external_connection.export
-		output wire [1:0]  fans_external_connection_export,              //            fans_external_connection.export
-		input  wire [31:0] flags_external_connection_in_port,            //           flags_external_connection.in_port
-		output wire [31:0] flags_external_connection_out_port,           //                                    .out_port
-		output wire [1:0]  heaters_external_connection_export,           //         heaters_external_connection.export
-		input  wire        hps_0_f2h_cold_reset_req_reset_n,             //            hps_0_f2h_cold_reset_req.reset_n
-		input  wire        hps_0_f2h_debug_reset_req_reset_n,            //           hps_0_f2h_debug_reset_req.reset_n
-		input  wire [27:0] hps_0_f2h_stm_hw_events_stm_hwevents,         //             hps_0_f2h_stm_hw_events.stm_hwevents
-		input  wire        hps_0_f2h_warm_reset_req_reset_n,             //            hps_0_f2h_warm_reset_req.reset_n
-		output wire        hps_0_h2f_reset_reset_n,                      //                     hps_0_h2f_reset.reset_n
-		output wire        hps_0_hps_io_hps_io_emac1_inst_TX_CLK,        //                        hps_0_hps_io.hps_io_emac1_inst_TX_CLK
-		output wire        hps_0_hps_io_hps_io_emac1_inst_TXD0,          //                                    .hps_io_emac1_inst_TXD0
-		output wire        hps_0_hps_io_hps_io_emac1_inst_TXD1,          //                                    .hps_io_emac1_inst_TXD1
-		output wire        hps_0_hps_io_hps_io_emac1_inst_TXD2,          //                                    .hps_io_emac1_inst_TXD2
-		output wire        hps_0_hps_io_hps_io_emac1_inst_TXD3,          //                                    .hps_io_emac1_inst_TXD3
-		input  wire        hps_0_hps_io_hps_io_emac1_inst_RXD0,          //                                    .hps_io_emac1_inst_RXD0
-		inout  wire        hps_0_hps_io_hps_io_emac1_inst_MDIO,          //                                    .hps_io_emac1_inst_MDIO
-		output wire        hps_0_hps_io_hps_io_emac1_inst_MDC,           //                                    .hps_io_emac1_inst_MDC
-		input  wire        hps_0_hps_io_hps_io_emac1_inst_RX_CTL,        //                                    .hps_io_emac1_inst_RX_CTL
-		output wire        hps_0_hps_io_hps_io_emac1_inst_TX_CTL,        //                                    .hps_io_emac1_inst_TX_CTL
-		input  wire        hps_0_hps_io_hps_io_emac1_inst_RX_CLK,        //                                    .hps_io_emac1_inst_RX_CLK
-		input  wire        hps_0_hps_io_hps_io_emac1_inst_RXD1,          //                                    .hps_io_emac1_inst_RXD1
-		input  wire        hps_0_hps_io_hps_io_emac1_inst_RXD2,          //                                    .hps_io_emac1_inst_RXD2
-		input  wire        hps_0_hps_io_hps_io_emac1_inst_RXD3,          //                                    .hps_io_emac1_inst_RXD3
-		inout  wire        hps_0_hps_io_hps_io_sdio_inst_CMD,            //                                    .hps_io_sdio_inst_CMD
-		inout  wire        hps_0_hps_io_hps_io_sdio_inst_D0,             //                                    .hps_io_sdio_inst_D0
-		inout  wire        hps_0_hps_io_hps_io_sdio_inst_D1,             //                                    .hps_io_sdio_inst_D1
-		output wire        hps_0_hps_io_hps_io_sdio_inst_CLK,            //                                    .hps_io_sdio_inst_CLK
-		inout  wire        hps_0_hps_io_hps_io_sdio_inst_D2,             //                                    .hps_io_sdio_inst_D2
-		inout  wire        hps_0_hps_io_hps_io_sdio_inst_D3,             //                                    .hps_io_sdio_inst_D3
-		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D0,             //                                    .hps_io_usb1_inst_D0
-		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D1,             //                                    .hps_io_usb1_inst_D1
-		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D2,             //                                    .hps_io_usb1_inst_D2
-		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D3,             //                                    .hps_io_usb1_inst_D3
-		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D4,             //                                    .hps_io_usb1_inst_D4
-		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D5,             //                                    .hps_io_usb1_inst_D5
-		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D6,             //                                    .hps_io_usb1_inst_D6
-		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D7,             //                                    .hps_io_usb1_inst_D7
-		input  wire        hps_0_hps_io_hps_io_usb1_inst_CLK,            //                                    .hps_io_usb1_inst_CLK
-		output wire        hps_0_hps_io_hps_io_usb1_inst_STP,            //                                    .hps_io_usb1_inst_STP
-		input  wire        hps_0_hps_io_hps_io_usb1_inst_DIR,            //                                    .hps_io_usb1_inst_DIR
-		input  wire        hps_0_hps_io_hps_io_usb1_inst_NXT,            //                                    .hps_io_usb1_inst_NXT
-		output wire        hps_0_hps_io_hps_io_spim1_inst_CLK,           //                                    .hps_io_spim1_inst_CLK
-		output wire        hps_0_hps_io_hps_io_spim1_inst_MOSI,          //                                    .hps_io_spim1_inst_MOSI
-		input  wire        hps_0_hps_io_hps_io_spim1_inst_MISO,          //                                    .hps_io_spim1_inst_MISO
-		output wire        hps_0_hps_io_hps_io_spim1_inst_SS0,           //                                    .hps_io_spim1_inst_SS0
-		input  wire        hps_0_hps_io_hps_io_uart0_inst_RX,            //                                    .hps_io_uart0_inst_RX
-		output wire        hps_0_hps_io_hps_io_uart0_inst_TX,            //                                    .hps_io_uart0_inst_TX
-		inout  wire        hps_0_hps_io_hps_io_i2c0_inst_SDA,            //                                    .hps_io_i2c0_inst_SDA
-		inout  wire        hps_0_hps_io_hps_io_i2c0_inst_SCL,            //                                    .hps_io_i2c0_inst_SCL
-		inout  wire        hps_0_hps_io_hps_io_i2c1_inst_SDA,            //                                    .hps_io_i2c1_inst_SDA
-		inout  wire        hps_0_hps_io_hps_io_i2c1_inst_SCL,            //                                    .hps_io_i2c1_inst_SCL
-		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO09,         //                                    .hps_io_gpio_inst_GPIO09
-		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO35,         //                                    .hps_io_gpio_inst_GPIO35
-		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO40,         //                                    .hps_io_gpio_inst_GPIO40
-		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO53,         //                                    .hps_io_gpio_inst_GPIO53
-		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO54,         //                                    .hps_io_gpio_inst_GPIO54
-		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO61,         //                                    .hps_io_gpio_inst_GPIO61
-		output wire [6:0]  led_pio_external_connection_export,           //         led_pio_external_connection.export
-		output wire [14:0] memory_mem_a,                                 //                              memory.mem_a
-		output wire [2:0]  memory_mem_ba,                                //                                    .mem_ba
-		output wire        memory_mem_ck,                                //                                    .mem_ck
-		output wire        memory_mem_ck_n,                              //                                    .mem_ck_n
-		output wire        memory_mem_cke,                               //                                    .mem_cke
-		output wire        memory_mem_cs_n,                              //                                    .mem_cs_n
-		output wire        memory_mem_ras_n,                             //                                    .mem_ras_n
-		output wire        memory_mem_cas_n,                             //                                    .mem_cas_n
-		output wire        memory_mem_we_n,                              //                                    .mem_we_n
-		output wire        memory_mem_reset_n,                           //                                    .mem_reset_n
-		inout  wire [31:0] memory_mem_dq,                                //                                    .mem_dq
-		inout  wire [3:0]  memory_mem_dqs,                               //                                    .mem_dqs
-		inout  wire [3:0]  memory_mem_dqs_n,                             //                                    .mem_dqs_n
-		output wire        memory_mem_odt,                               //                                    .mem_odt
-		output wire [3:0]  memory_mem_dm,                                //                                    .mem_dm
-		input  wire        memory_oct_rzqin,                             //                                    .oct_rzqin
-		output wire        pll_sys_outclk100mhz_clk,                     //                pll_sys_outclk100mhz.clk
-		output wire        pll_sys_outclk10mhz_clk,                      //                 pll_sys_outclk10mhz.clk
-		output wire        pll_sys_outclk1mhz_clk,                       //                  pll_sys_outclk1mhz.clk
-		output wire        pll_sys_outclk5mhz_clk,                       //                  pll_sys_outclk5mhz.clk
-		input  wire        reset_reset_n,                                //                               reset.reset_n
-		output wire [31:0] stepper_1_speed_external_connection_export,   // stepper_1_speed_external_connection.export
-		input  wire [31:0] stepper_1_steps_external_connection_in_port,  // stepper_1_steps_external_connection.in_port
-		output wire [31:0] stepper_1_steps_external_connection_out_port, //                                    .out_port
-		output wire [31:0] stepper_2_speed_external_connection_export,   // stepper_2_speed_external_connection.export
-		input  wire [31:0] stepper_2_steps_external_connection_in_port,  // stepper_2_steps_external_connection.in_port
-		output wire [31:0] stepper_2_steps_external_connection_out_port, //                                    .out_port
-		output wire [31:0] stepper_3_speed_external_connection_export,   // stepper_3_speed_external_connection.export
-		input  wire [31:0] stepper_3_steps_external_connection_in_port,  // stepper_3_steps_external_connection.in_port
-		output wire [31:0] stepper_3_steps_external_connection_out_port, //                                    .out_port
-		output wire [31:0] stepper_4_speed_external_connection_export,   // stepper_4_speed_external_connection.export
-		input  wire [31:0] stepper_4_steps_external_connection_in_port,  // stepper_4_steps_external_connection.in_port
-		output wire [31:0] stepper_4_steps_external_connection_out_port, //                                    .out_port
-		output wire [31:0] stepper_5_speed_external_connection_export,   // stepper_5_speed_external_connection.export
-		input  wire [31:0] stepper_5_steps_external_connection_in_port,  // stepper_5_steps_external_connection.in_port
-		output wire [31:0] stepper_5_steps_external_connection_out_port, //                                    .out_port
-		input  wire [11:0] temp0_external_connection_export,             //           temp0_external_connection.export
-		input  wire [11:0] temp1_external_connection_export,             //           temp1_external_connection.export
-		input  wire [11:0] temp_bed_external_connection_export           //        temp_bed_external_connection.export
+		input  wire [1:0]  button_pio_external_connection_export,          //          button_pio_external_connection.export
+		input  wire        clk_clk,                                        //                                     clk.clk
+		input  wire [3:0]  dipsw_pio_external_connection_export,           //           dipsw_pio_external_connection.export
+		input  wire [5:0]  endstops_external_connection_export,            //            endstops_external_connection.export
+		output wire [1:0]  fans_external_connection_export,                //                fans_external_connection.export
+		input  wire [31:0] flags_in_external_connection_export,            //            flags_in_external_connection.export
+		output wire [31:0] flags_out_external_connection_export,           //           flags_out_external_connection.export
+		output wire [1:0]  heaters_external_connection_export,             //             heaters_external_connection.export
+		input  wire        hps_0_f2h_cold_reset_req_reset_n,               //                hps_0_f2h_cold_reset_req.reset_n
+		input  wire        hps_0_f2h_debug_reset_req_reset_n,              //               hps_0_f2h_debug_reset_req.reset_n
+		input  wire [27:0] hps_0_f2h_stm_hw_events_stm_hwevents,           //                 hps_0_f2h_stm_hw_events.stm_hwevents
+		input  wire        hps_0_f2h_warm_reset_req_reset_n,               //                hps_0_f2h_warm_reset_req.reset_n
+		output wire        hps_0_h2f_reset_reset_n,                        //                         hps_0_h2f_reset.reset_n
+		output wire        hps_0_hps_io_hps_io_emac1_inst_TX_CLK,          //                            hps_0_hps_io.hps_io_emac1_inst_TX_CLK
+		output wire        hps_0_hps_io_hps_io_emac1_inst_TXD0,            //                                        .hps_io_emac1_inst_TXD0
+		output wire        hps_0_hps_io_hps_io_emac1_inst_TXD1,            //                                        .hps_io_emac1_inst_TXD1
+		output wire        hps_0_hps_io_hps_io_emac1_inst_TXD2,            //                                        .hps_io_emac1_inst_TXD2
+		output wire        hps_0_hps_io_hps_io_emac1_inst_TXD3,            //                                        .hps_io_emac1_inst_TXD3
+		input  wire        hps_0_hps_io_hps_io_emac1_inst_RXD0,            //                                        .hps_io_emac1_inst_RXD0
+		inout  wire        hps_0_hps_io_hps_io_emac1_inst_MDIO,            //                                        .hps_io_emac1_inst_MDIO
+		output wire        hps_0_hps_io_hps_io_emac1_inst_MDC,             //                                        .hps_io_emac1_inst_MDC
+		input  wire        hps_0_hps_io_hps_io_emac1_inst_RX_CTL,          //                                        .hps_io_emac1_inst_RX_CTL
+		output wire        hps_0_hps_io_hps_io_emac1_inst_TX_CTL,          //                                        .hps_io_emac1_inst_TX_CTL
+		input  wire        hps_0_hps_io_hps_io_emac1_inst_RX_CLK,          //                                        .hps_io_emac1_inst_RX_CLK
+		input  wire        hps_0_hps_io_hps_io_emac1_inst_RXD1,            //                                        .hps_io_emac1_inst_RXD1
+		input  wire        hps_0_hps_io_hps_io_emac1_inst_RXD2,            //                                        .hps_io_emac1_inst_RXD2
+		input  wire        hps_0_hps_io_hps_io_emac1_inst_RXD3,            //                                        .hps_io_emac1_inst_RXD3
+		inout  wire        hps_0_hps_io_hps_io_sdio_inst_CMD,              //                                        .hps_io_sdio_inst_CMD
+		inout  wire        hps_0_hps_io_hps_io_sdio_inst_D0,               //                                        .hps_io_sdio_inst_D0
+		inout  wire        hps_0_hps_io_hps_io_sdio_inst_D1,               //                                        .hps_io_sdio_inst_D1
+		output wire        hps_0_hps_io_hps_io_sdio_inst_CLK,              //                                        .hps_io_sdio_inst_CLK
+		inout  wire        hps_0_hps_io_hps_io_sdio_inst_D2,               //                                        .hps_io_sdio_inst_D2
+		inout  wire        hps_0_hps_io_hps_io_sdio_inst_D3,               //                                        .hps_io_sdio_inst_D3
+		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D0,               //                                        .hps_io_usb1_inst_D0
+		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D1,               //                                        .hps_io_usb1_inst_D1
+		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D2,               //                                        .hps_io_usb1_inst_D2
+		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D3,               //                                        .hps_io_usb1_inst_D3
+		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D4,               //                                        .hps_io_usb1_inst_D4
+		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D5,               //                                        .hps_io_usb1_inst_D5
+		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D6,               //                                        .hps_io_usb1_inst_D6
+		inout  wire        hps_0_hps_io_hps_io_usb1_inst_D7,               //                                        .hps_io_usb1_inst_D7
+		input  wire        hps_0_hps_io_hps_io_usb1_inst_CLK,              //                                        .hps_io_usb1_inst_CLK
+		output wire        hps_0_hps_io_hps_io_usb1_inst_STP,              //                                        .hps_io_usb1_inst_STP
+		input  wire        hps_0_hps_io_hps_io_usb1_inst_DIR,              //                                        .hps_io_usb1_inst_DIR
+		input  wire        hps_0_hps_io_hps_io_usb1_inst_NXT,              //                                        .hps_io_usb1_inst_NXT
+		output wire        hps_0_hps_io_hps_io_spim1_inst_CLK,             //                                        .hps_io_spim1_inst_CLK
+		output wire        hps_0_hps_io_hps_io_spim1_inst_MOSI,            //                                        .hps_io_spim1_inst_MOSI
+		input  wire        hps_0_hps_io_hps_io_spim1_inst_MISO,            //                                        .hps_io_spim1_inst_MISO
+		output wire        hps_0_hps_io_hps_io_spim1_inst_SS0,             //                                        .hps_io_spim1_inst_SS0
+		input  wire        hps_0_hps_io_hps_io_uart0_inst_RX,              //                                        .hps_io_uart0_inst_RX
+		output wire        hps_0_hps_io_hps_io_uart0_inst_TX,              //                                        .hps_io_uart0_inst_TX
+		inout  wire        hps_0_hps_io_hps_io_i2c0_inst_SDA,              //                                        .hps_io_i2c0_inst_SDA
+		inout  wire        hps_0_hps_io_hps_io_i2c0_inst_SCL,              //                                        .hps_io_i2c0_inst_SCL
+		inout  wire        hps_0_hps_io_hps_io_i2c1_inst_SDA,              //                                        .hps_io_i2c1_inst_SDA
+		inout  wire        hps_0_hps_io_hps_io_i2c1_inst_SCL,              //                                        .hps_io_i2c1_inst_SCL
+		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO09,           //                                        .hps_io_gpio_inst_GPIO09
+		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO35,           //                                        .hps_io_gpio_inst_GPIO35
+		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO40,           //                                        .hps_io_gpio_inst_GPIO40
+		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO53,           //                                        .hps_io_gpio_inst_GPIO53
+		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO54,           //                                        .hps_io_gpio_inst_GPIO54
+		inout  wire        hps_0_hps_io_hps_io_gpio_inst_GPIO61,           //                                        .hps_io_gpio_inst_GPIO61
+		output wire [6:0]  led_pio_external_connection_export,             //             led_pio_external_connection.export
+		output wire [14:0] memory_mem_a,                                   //                                  memory.mem_a
+		output wire [2:0]  memory_mem_ba,                                  //                                        .mem_ba
+		output wire        memory_mem_ck,                                  //                                        .mem_ck
+		output wire        memory_mem_ck_n,                                //                                        .mem_ck_n
+		output wire        memory_mem_cke,                                 //                                        .mem_cke
+		output wire        memory_mem_cs_n,                                //                                        .mem_cs_n
+		output wire        memory_mem_ras_n,                               //                                        .mem_ras_n
+		output wire        memory_mem_cas_n,                               //                                        .mem_cas_n
+		output wire        memory_mem_we_n,                                //                                        .mem_we_n
+		output wire        memory_mem_reset_n,                             //                                        .mem_reset_n
+		inout  wire [31:0] memory_mem_dq,                                  //                                        .mem_dq
+		inout  wire [3:0]  memory_mem_dqs,                                 //                                        .mem_dqs
+		inout  wire [3:0]  memory_mem_dqs_n,                               //                                        .mem_dqs_n
+		output wire        memory_mem_odt,                                 //                                        .mem_odt
+		output wire [3:0]  memory_mem_dm,                                  //                                        .mem_dm
+		input  wire        memory_oct_rzqin,                               //                                        .oct_rzqin
+		output wire        pll_sys_outclk100mhz_clk,                       //                    pll_sys_outclk100mhz.clk
+		output wire        pll_sys_outclk10mhz_clk,                        //                     pll_sys_outclk10mhz.clk
+		output wire        pll_sys_outclk1mhz_clk,                         //                      pll_sys_outclk1mhz.clk
+		output wire        pll_sys_outclk5mhz_clk,                         //                      pll_sys_outclk5mhz.clk
+		input  wire        reset_reset_n,                                  //                                   reset.reset_n
+		output wire [31:0] stepper_1_speed_external_connection_export,     //     stepper_1_speed_external_connection.export
+		input  wire [31:0] stepper_1_steps_in_external_connection_export,  //  stepper_1_steps_in_external_connection.export
+		output wire [31:0] stepper_1_steps_out_external_connection_export, // stepper_1_steps_out_external_connection.export
+		output wire [31:0] stepper_2_speed_external_connection_export,     //     stepper_2_speed_external_connection.export
+		input  wire [31:0] stepper_2_steps_in_external_connection_export,  //  stepper_2_steps_in_external_connection.export
+		output wire [31:0] stepper_2_steps_out_external_connection_export, // stepper_2_steps_out_external_connection.export
+		output wire [31:0] stepper_3_speed_external_connection_export,     //     stepper_3_speed_external_connection.export
+		input  wire [31:0] stepper_3_steps_in_external_connection_export,  //  stepper_3_steps_in_external_connection.export
+		output wire [31:0] stepper_3_steps_out_external_connection_export, // stepper_3_steps_out_external_connection.export
+		output wire [31:0] stepper_4_speed_external_connection_export,     //     stepper_4_speed_external_connection.export
+		input  wire [31:0] stepper_4_steps_in_external_connection_export,  //  stepper_4_steps_in_external_connection.export
+		output wire [31:0] stepper_4_steps_out_external_connection_export, // stepper_4_steps_out_external_connection.export
+		output wire [31:0] stepper_5_speed_external_connection_export,     //     stepper_5_speed_external_connection.export
+		input  wire [31:0] stepper_5_steps_in_external_connection_export,  //  stepper_5_steps_in_external_connection.export
+		output wire [31:0] stepper_5_steps_out_external_connection_export, // stepper_5_steps_out_external_connection.export
+		input  wire [11:0] temp0_external_connection_export,               //               temp0_external_connection.export
+		input  wire [11:0] temp1_external_connection_export,               //               temp1_external_connection.export
+		input  wire [11:0] temp_bed_external_connection_export             //            temp_bed_external_connection.export
 	);
 
 	wire    [1:0] hps_0_h2f_lw_axi_master_awburst;                           // hps_0:h2f_lw_AWBURST -> mm_interconnect_0:hps_0_h2f_lw_axi_master_awburst
@@ -218,61 +218,73 @@ module soc_system (
 	wire    [1:0] mm_interconnect_1_heaters_s1_address;                      // mm_interconnect_1:heaters_s1_address -> heaters:address
 	wire          mm_interconnect_1_heaters_s1_write;                        // mm_interconnect_1:heaters_s1_write -> heaters:write_n
 	wire   [31:0] mm_interconnect_1_heaters_s1_writedata;                    // mm_interconnect_1:heaters_s1_writedata -> heaters:writedata
-	wire          mm_interconnect_1_flags_s1_chipselect;                     // mm_interconnect_1:flags_s1_chipselect -> flags:chipselect
-	wire   [31:0] mm_interconnect_1_flags_s1_readdata;                       // flags:readdata -> mm_interconnect_1:flags_s1_readdata
-	wire    [1:0] mm_interconnect_1_flags_s1_address;                        // mm_interconnect_1:flags_s1_address -> flags:address
-	wire          mm_interconnect_1_flags_s1_write;                          // mm_interconnect_1:flags_s1_write -> flags:write_n
-	wire   [31:0] mm_interconnect_1_flags_s1_writedata;                      // mm_interconnect_1:flags_s1_writedata -> flags:writedata
+	wire   [31:0] mm_interconnect_1_flags_in_s1_readdata;                    // flags_in:readdata -> mm_interconnect_1:flags_in_s1_readdata
+	wire    [1:0] mm_interconnect_1_flags_in_s1_address;                     // mm_interconnect_1:flags_in_s1_address -> flags_in:address
 	wire          mm_interconnect_1_stepper_1_speed_s1_chipselect;           // mm_interconnect_1:stepper_1_speed_s1_chipselect -> stepper_1_speed:chipselect
 	wire   [31:0] mm_interconnect_1_stepper_1_speed_s1_readdata;             // stepper_1_speed:readdata -> mm_interconnect_1:stepper_1_speed_s1_readdata
 	wire    [1:0] mm_interconnect_1_stepper_1_speed_s1_address;              // mm_interconnect_1:stepper_1_speed_s1_address -> stepper_1_speed:address
 	wire          mm_interconnect_1_stepper_1_speed_s1_write;                // mm_interconnect_1:stepper_1_speed_s1_write -> stepper_1_speed:write_n
 	wire   [31:0] mm_interconnect_1_stepper_1_speed_s1_writedata;            // mm_interconnect_1:stepper_1_speed_s1_writedata -> stepper_1_speed:writedata
-	wire          mm_interconnect_1_stepper_1_steps_s1_chipselect;           // mm_interconnect_1:stepper_1_steps_s1_chipselect -> stepper_1_steps:chipselect
-	wire   [31:0] mm_interconnect_1_stepper_1_steps_s1_readdata;             // stepper_1_steps:readdata -> mm_interconnect_1:stepper_1_steps_s1_readdata
-	wire    [1:0] mm_interconnect_1_stepper_1_steps_s1_address;              // mm_interconnect_1:stepper_1_steps_s1_address -> stepper_1_steps:address
-	wire          mm_interconnect_1_stepper_1_steps_s1_write;                // mm_interconnect_1:stepper_1_steps_s1_write -> stepper_1_steps:write_n
-	wire   [31:0] mm_interconnect_1_stepper_1_steps_s1_writedata;            // mm_interconnect_1:stepper_1_steps_s1_writedata -> stepper_1_steps:writedata
+	wire   [31:0] mm_interconnect_1_stepper_1_steps_in_s1_readdata;          // stepper_1_steps_in:readdata -> mm_interconnect_1:stepper_1_steps_in_s1_readdata
+	wire    [1:0] mm_interconnect_1_stepper_1_steps_in_s1_address;           // mm_interconnect_1:stepper_1_steps_in_s1_address -> stepper_1_steps_in:address
 	wire          mm_interconnect_1_stepper_2_speed_s1_chipselect;           // mm_interconnect_1:stepper_2_speed_s1_chipselect -> stepper_2_speed:chipselect
 	wire   [31:0] mm_interconnect_1_stepper_2_speed_s1_readdata;             // stepper_2_speed:readdata -> mm_interconnect_1:stepper_2_speed_s1_readdata
 	wire    [1:0] mm_interconnect_1_stepper_2_speed_s1_address;              // mm_interconnect_1:stepper_2_speed_s1_address -> stepper_2_speed:address
 	wire          mm_interconnect_1_stepper_2_speed_s1_write;                // mm_interconnect_1:stepper_2_speed_s1_write -> stepper_2_speed:write_n
 	wire   [31:0] mm_interconnect_1_stepper_2_speed_s1_writedata;            // mm_interconnect_1:stepper_2_speed_s1_writedata -> stepper_2_speed:writedata
-	wire          mm_interconnect_1_stepper_2_steps_s1_chipselect;           // mm_interconnect_1:stepper_2_steps_s1_chipselect -> stepper_2_steps:chipselect
-	wire   [31:0] mm_interconnect_1_stepper_2_steps_s1_readdata;             // stepper_2_steps:readdata -> mm_interconnect_1:stepper_2_steps_s1_readdata
-	wire    [1:0] mm_interconnect_1_stepper_2_steps_s1_address;              // mm_interconnect_1:stepper_2_steps_s1_address -> stepper_2_steps:address
-	wire          mm_interconnect_1_stepper_2_steps_s1_write;                // mm_interconnect_1:stepper_2_steps_s1_write -> stepper_2_steps:write_n
-	wire   [31:0] mm_interconnect_1_stepper_2_steps_s1_writedata;            // mm_interconnect_1:stepper_2_steps_s1_writedata -> stepper_2_steps:writedata
+	wire   [31:0] mm_interconnect_1_stepper_2_steps_in_s1_readdata;          // stepper_2_steps_in:readdata -> mm_interconnect_1:stepper_2_steps_in_s1_readdata
+	wire    [1:0] mm_interconnect_1_stepper_2_steps_in_s1_address;           // mm_interconnect_1:stepper_2_steps_in_s1_address -> stepper_2_steps_in:address
 	wire          mm_interconnect_1_stepper_3_speed_s1_chipselect;           // mm_interconnect_1:stepper_3_speed_s1_chipselect -> stepper_3_speed:chipselect
 	wire   [31:0] mm_interconnect_1_stepper_3_speed_s1_readdata;             // stepper_3_speed:readdata -> mm_interconnect_1:stepper_3_speed_s1_readdata
 	wire    [1:0] mm_interconnect_1_stepper_3_speed_s1_address;              // mm_interconnect_1:stepper_3_speed_s1_address -> stepper_3_speed:address
 	wire          mm_interconnect_1_stepper_3_speed_s1_write;                // mm_interconnect_1:stepper_3_speed_s1_write -> stepper_3_speed:write_n
 	wire   [31:0] mm_interconnect_1_stepper_3_speed_s1_writedata;            // mm_interconnect_1:stepper_3_speed_s1_writedata -> stepper_3_speed:writedata
-	wire          mm_interconnect_1_stepper_3_steps_s1_chipselect;           // mm_interconnect_1:stepper_3_steps_s1_chipselect -> stepper_3_steps:chipselect
-	wire   [31:0] mm_interconnect_1_stepper_3_steps_s1_readdata;             // stepper_3_steps:readdata -> mm_interconnect_1:stepper_3_steps_s1_readdata
-	wire    [1:0] mm_interconnect_1_stepper_3_steps_s1_address;              // mm_interconnect_1:stepper_3_steps_s1_address -> stepper_3_steps:address
-	wire          mm_interconnect_1_stepper_3_steps_s1_write;                // mm_interconnect_1:stepper_3_steps_s1_write -> stepper_3_steps:write_n
-	wire   [31:0] mm_interconnect_1_stepper_3_steps_s1_writedata;            // mm_interconnect_1:stepper_3_steps_s1_writedata -> stepper_3_steps:writedata
+	wire   [31:0] mm_interconnect_1_stepper_3_steps_in_s1_readdata;          // stepper_3_steps_in:readdata -> mm_interconnect_1:stepper_3_steps_in_s1_readdata
+	wire    [1:0] mm_interconnect_1_stepper_3_steps_in_s1_address;           // mm_interconnect_1:stepper_3_steps_in_s1_address -> stepper_3_steps_in:address
 	wire          mm_interconnect_1_stepper_4_speed_s1_chipselect;           // mm_interconnect_1:stepper_4_speed_s1_chipselect -> stepper_4_speed:chipselect
 	wire   [31:0] mm_interconnect_1_stepper_4_speed_s1_readdata;             // stepper_4_speed:readdata -> mm_interconnect_1:stepper_4_speed_s1_readdata
 	wire    [1:0] mm_interconnect_1_stepper_4_speed_s1_address;              // mm_interconnect_1:stepper_4_speed_s1_address -> stepper_4_speed:address
 	wire          mm_interconnect_1_stepper_4_speed_s1_write;                // mm_interconnect_1:stepper_4_speed_s1_write -> stepper_4_speed:write_n
 	wire   [31:0] mm_interconnect_1_stepper_4_speed_s1_writedata;            // mm_interconnect_1:stepper_4_speed_s1_writedata -> stepper_4_speed:writedata
-	wire          mm_interconnect_1_stepper_4_steps_s1_chipselect;           // mm_interconnect_1:stepper_4_steps_s1_chipselect -> stepper_4_steps:chipselect
-	wire   [31:0] mm_interconnect_1_stepper_4_steps_s1_readdata;             // stepper_4_steps:readdata -> mm_interconnect_1:stepper_4_steps_s1_readdata
-	wire    [1:0] mm_interconnect_1_stepper_4_steps_s1_address;              // mm_interconnect_1:stepper_4_steps_s1_address -> stepper_4_steps:address
-	wire          mm_interconnect_1_stepper_4_steps_s1_write;                // mm_interconnect_1:stepper_4_steps_s1_write -> stepper_4_steps:write_n
-	wire   [31:0] mm_interconnect_1_stepper_4_steps_s1_writedata;            // mm_interconnect_1:stepper_4_steps_s1_writedata -> stepper_4_steps:writedata
+	wire   [31:0] mm_interconnect_1_stepper_4_steps_in_s1_readdata;          // stepper_4_steps_in:readdata -> mm_interconnect_1:stepper_4_steps_in_s1_readdata
+	wire    [1:0] mm_interconnect_1_stepper_4_steps_in_s1_address;           // mm_interconnect_1:stepper_4_steps_in_s1_address -> stepper_4_steps_in:address
 	wire          mm_interconnect_1_stepper_5_speed_s1_chipselect;           // mm_interconnect_1:stepper_5_speed_s1_chipselect -> stepper_5_speed:chipselect
 	wire   [31:0] mm_interconnect_1_stepper_5_speed_s1_readdata;             // stepper_5_speed:readdata -> mm_interconnect_1:stepper_5_speed_s1_readdata
 	wire    [1:0] mm_interconnect_1_stepper_5_speed_s1_address;              // mm_interconnect_1:stepper_5_speed_s1_address -> stepper_5_speed:address
 	wire          mm_interconnect_1_stepper_5_speed_s1_write;                // mm_interconnect_1:stepper_5_speed_s1_write -> stepper_5_speed:write_n
 	wire   [31:0] mm_interconnect_1_stepper_5_speed_s1_writedata;            // mm_interconnect_1:stepper_5_speed_s1_writedata -> stepper_5_speed:writedata
-	wire          mm_interconnect_1_stepper_5_steps_s1_chipselect;           // mm_interconnect_1:stepper_5_steps_s1_chipselect -> stepper_5_steps:chipselect
-	wire   [31:0] mm_interconnect_1_stepper_5_steps_s1_readdata;             // stepper_5_steps:readdata -> mm_interconnect_1:stepper_5_steps_s1_readdata
-	wire    [1:0] mm_interconnect_1_stepper_5_steps_s1_address;              // mm_interconnect_1:stepper_5_steps_s1_address -> stepper_5_steps:address
-	wire          mm_interconnect_1_stepper_5_steps_s1_write;                // mm_interconnect_1:stepper_5_steps_s1_write -> stepper_5_steps:write_n
-	wire   [31:0] mm_interconnect_1_stepper_5_steps_s1_writedata;            // mm_interconnect_1:stepper_5_steps_s1_writedata -> stepper_5_steps:writedata
+	wire   [31:0] mm_interconnect_1_stepper_5_steps_in_s1_readdata;          // stepper_5_steps_in:readdata -> mm_interconnect_1:stepper_5_steps_in_s1_readdata
+	wire    [1:0] mm_interconnect_1_stepper_5_steps_in_s1_address;           // mm_interconnect_1:stepper_5_steps_in_s1_address -> stepper_5_steps_in:address
+	wire          mm_interconnect_1_stepper_1_steps_out_s1_chipselect;       // mm_interconnect_1:stepper_1_steps_out_s1_chipselect -> stepper_1_steps_out:chipselect
+	wire   [31:0] mm_interconnect_1_stepper_1_steps_out_s1_readdata;         // stepper_1_steps_out:readdata -> mm_interconnect_1:stepper_1_steps_out_s1_readdata
+	wire    [1:0] mm_interconnect_1_stepper_1_steps_out_s1_address;          // mm_interconnect_1:stepper_1_steps_out_s1_address -> stepper_1_steps_out:address
+	wire          mm_interconnect_1_stepper_1_steps_out_s1_write;            // mm_interconnect_1:stepper_1_steps_out_s1_write -> stepper_1_steps_out:write_n
+	wire   [31:0] mm_interconnect_1_stepper_1_steps_out_s1_writedata;        // mm_interconnect_1:stepper_1_steps_out_s1_writedata -> stepper_1_steps_out:writedata
+	wire          mm_interconnect_1_stepper_2_steps_out_s1_chipselect;       // mm_interconnect_1:stepper_2_steps_out_s1_chipselect -> stepper_2_steps_out:chipselect
+	wire   [31:0] mm_interconnect_1_stepper_2_steps_out_s1_readdata;         // stepper_2_steps_out:readdata -> mm_interconnect_1:stepper_2_steps_out_s1_readdata
+	wire    [1:0] mm_interconnect_1_stepper_2_steps_out_s1_address;          // mm_interconnect_1:stepper_2_steps_out_s1_address -> stepper_2_steps_out:address
+	wire          mm_interconnect_1_stepper_2_steps_out_s1_write;            // mm_interconnect_1:stepper_2_steps_out_s1_write -> stepper_2_steps_out:write_n
+	wire   [31:0] mm_interconnect_1_stepper_2_steps_out_s1_writedata;        // mm_interconnect_1:stepper_2_steps_out_s1_writedata -> stepper_2_steps_out:writedata
+	wire          mm_interconnect_1_stepper_3_steps_out_s1_chipselect;       // mm_interconnect_1:stepper_3_steps_out_s1_chipselect -> stepper_3_steps_out:chipselect
+	wire   [31:0] mm_interconnect_1_stepper_3_steps_out_s1_readdata;         // stepper_3_steps_out:readdata -> mm_interconnect_1:stepper_3_steps_out_s1_readdata
+	wire    [1:0] mm_interconnect_1_stepper_3_steps_out_s1_address;          // mm_interconnect_1:stepper_3_steps_out_s1_address -> stepper_3_steps_out:address
+	wire          mm_interconnect_1_stepper_3_steps_out_s1_write;            // mm_interconnect_1:stepper_3_steps_out_s1_write -> stepper_3_steps_out:write_n
+	wire   [31:0] mm_interconnect_1_stepper_3_steps_out_s1_writedata;        // mm_interconnect_1:stepper_3_steps_out_s1_writedata -> stepper_3_steps_out:writedata
+	wire          mm_interconnect_1_stepper_4_steps_out_s1_chipselect;       // mm_interconnect_1:stepper_4_steps_out_s1_chipselect -> stepper_4_steps_out:chipselect
+	wire   [31:0] mm_interconnect_1_stepper_4_steps_out_s1_readdata;         // stepper_4_steps_out:readdata -> mm_interconnect_1:stepper_4_steps_out_s1_readdata
+	wire    [1:0] mm_interconnect_1_stepper_4_steps_out_s1_address;          // mm_interconnect_1:stepper_4_steps_out_s1_address -> stepper_4_steps_out:address
+	wire          mm_interconnect_1_stepper_4_steps_out_s1_write;            // mm_interconnect_1:stepper_4_steps_out_s1_write -> stepper_4_steps_out:write_n
+	wire   [31:0] mm_interconnect_1_stepper_4_steps_out_s1_writedata;        // mm_interconnect_1:stepper_4_steps_out_s1_writedata -> stepper_4_steps_out:writedata
+	wire          mm_interconnect_1_stepper_5_steps_out_s1_chipselect;       // mm_interconnect_1:stepper_5_steps_out_s1_chipselect -> stepper_5_steps_out:chipselect
+	wire   [31:0] mm_interconnect_1_stepper_5_steps_out_s1_readdata;         // stepper_5_steps_out:readdata -> mm_interconnect_1:stepper_5_steps_out_s1_readdata
+	wire    [1:0] mm_interconnect_1_stepper_5_steps_out_s1_address;          // mm_interconnect_1:stepper_5_steps_out_s1_address -> stepper_5_steps_out:address
+	wire          mm_interconnect_1_stepper_5_steps_out_s1_write;            // mm_interconnect_1:stepper_5_steps_out_s1_write -> stepper_5_steps_out:write_n
+	wire   [31:0] mm_interconnect_1_stepper_5_steps_out_s1_writedata;        // mm_interconnect_1:stepper_5_steps_out_s1_writedata -> stepper_5_steps_out:writedata
+	wire          mm_interconnect_1_flags_out_s1_chipselect;                 // mm_interconnect_1:flags_out_s1_chipselect -> flags_out:chipselect
+	wire   [31:0] mm_interconnect_1_flags_out_s1_readdata;                   // flags_out:readdata -> mm_interconnect_1:flags_out_s1_readdata
+	wire    [1:0] mm_interconnect_1_flags_out_s1_address;                    // mm_interconnect_1:flags_out_s1_address -> flags_out:address
+	wire          mm_interconnect_1_flags_out_s1_write;                      // mm_interconnect_1:flags_out_s1_write -> flags_out:write_n
+	wire   [31:0] mm_interconnect_1_flags_out_s1_writedata;                  // mm_interconnect_1:flags_out_s1_writedata -> flags_out:writedata
 	wire   [31:0] hps_only_master_master_readdata;                           // mm_interconnect_2:hps_only_master_master_readdata -> hps_only_master:master_readdata
 	wire          hps_only_master_master_waitrequest;                        // mm_interconnect_2:hps_only_master_master_waitrequest -> hps_only_master:master_waitrequest
 	wire   [31:0] hps_only_master_master_address;                            // hps_only_master:master_address -> mm_interconnect_2:hps_only_master_master_address
@@ -342,7 +354,7 @@ module soc_system (
 	wire          irq_mapper_receiver1_irq;                                  // button_pio:irq -> [irq_mapper:receiver1_irq, irq_mapper_001:receiver1_irq]
 	wire          irq_mapper_receiver2_irq;                                  // dipsw_pio:irq -> [irq_mapper:receiver2_irq, irq_mapper_001:receiver2_irq]
 	wire          irq_mapper_receiver0_irq;                                  // jtag_uart:av_irq -> [irq_mapper:receiver0_irq, irq_mapper_001:receiver0_irq]
-	wire          rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [ILC:reset_n, button_pio:reset_n, dipsw_pio:reset_n, endstops:reset_n, fans:reset_n, flags:reset_n, heaters:reset_n, irq_mapper:reset, jtag_uart:rst_n, led_pio:reset_n, mm_bridge_0:reset, mm_interconnect_0:mm_bridge_0_reset_reset_bridge_in_reset_reset, mm_interconnect_1:fpga_only_master_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_1:mm_bridge_0_reset_reset_bridge_in_reset_reset, mm_interconnect_2:hps_only_master_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_2:hps_only_master_master_translator_reset_reset_bridge_in_reset_reset, mm_interconnect_3:f2sdram_only_master_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_3:f2sdram_only_master_master_translator_reset_reset_bridge_in_reset_reset, stepper_1_speed:reset_n, stepper_1_steps:reset_n, stepper_2_speed:reset_n, stepper_2_steps:reset_n, stepper_3_speed:reset_n, stepper_3_steps:reset_n, stepper_4_speed:reset_n, stepper_4_steps:reset_n, stepper_5_speed:reset_n, stepper_5_steps:reset_n, sysid_qsys:reset_n, temp0:reset_n, temp1:reset_n, temp_bed:reset_n]
+	wire          rst_controller_reset_out_reset;                            // rst_controller:reset_out -> [ILC:reset_n, button_pio:reset_n, dipsw_pio:reset_n, endstops:reset_n, fans:reset_n, flags_in:reset_n, flags_out:reset_n, heaters:reset_n, irq_mapper:reset, jtag_uart:rst_n, led_pio:reset_n, mm_bridge_0:reset, mm_interconnect_0:mm_bridge_0_reset_reset_bridge_in_reset_reset, mm_interconnect_1:fpga_only_master_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_1:mm_bridge_0_reset_reset_bridge_in_reset_reset, mm_interconnect_2:hps_only_master_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_2:hps_only_master_master_translator_reset_reset_bridge_in_reset_reset, mm_interconnect_3:f2sdram_only_master_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_3:f2sdram_only_master_master_translator_reset_reset_bridge_in_reset_reset, stepper_1_speed:reset_n, stepper_1_steps_in:reset_n, stepper_1_steps_out:reset_n, stepper_2_speed:reset_n, stepper_2_steps_in:reset_n, stepper_2_steps_out:reset_n, stepper_3_speed:reset_n, stepper_3_steps_in:reset_n, stepper_3_steps_out:reset_n, stepper_4_speed:reset_n, stepper_4_steps_in:reset_n, stepper_4_steps_out:reset_n, stepper_5_speed:reset_n, stepper_5_steps_in:reset_n, stepper_5_steps_out:reset_n, sysid_qsys:reset_n, temp0:reset_n, temp1:reset_n, temp_bed:reset_n]
 	wire          rst_controller_001_reset_out_reset;                        // rst_controller_001:reset_out -> [mm_interconnect_0:hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_2:hps_0_f2h_axi_slave_agent_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_3:hps_0_f2h_sdram0_data_translator_reset_reset_bridge_in_reset_reset]
 
 	interrupt_latency_counter #(
@@ -421,16 +433,23 @@ module soc_system (
 		.out_port   (fans_external_connection_export)       // external_connection.export
 	);
 
-	soc_system_flags flags (
-		.clk        (clk_clk),                               //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),       //               reset.reset_n
-		.address    (mm_interconnect_1_flags_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_1_flags_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_1_flags_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_1_flags_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_1_flags_s1_readdata),   //                    .readdata
-		.in_port    (flags_external_connection_in_port),     // external_connection.export
-		.out_port   (flags_external_connection_out_port)     //                    .export
+	soc_system_flags_in flags_in (
+		.clk      (clk_clk),                                //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),        //               reset.reset_n
+		.address  (mm_interconnect_1_flags_in_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_1_flags_in_s1_readdata), //                    .readdata
+		.in_port  (flags_in_external_connection_export)     // external_connection.export
+	);
+
+	soc_system_flags_out flags_out (
+		.clk        (clk_clk),                                   //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),           //               reset.reset_n
+		.address    (mm_interconnect_1_flags_out_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_1_flags_out_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_1_flags_out_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_1_flags_out_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_1_flags_out_s1_readdata),   //                    .readdata
+		.out_port   (flags_out_external_connection_export)       // external_connection.export
 	);
 
 	soc_system_f2sdram_only_master #(
@@ -748,7 +767,7 @@ module soc_system (
 		.locked   ()                          //  locked.export
 	);
 
-	soc_system_stepper_1_speed stepper_1_speed (
+	soc_system_flags_out stepper_1_speed (
 		.clk        (clk_clk),                                         //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
 		.address    (mm_interconnect_1_stepper_1_speed_s1_address),    //                  s1.address
@@ -759,19 +778,26 @@ module soc_system (
 		.out_port   (stepper_1_speed_external_connection_export)       // external_connection.export
 	);
 
-	soc_system_flags stepper_1_steps (
-		.clk        (clk_clk),                                         //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
-		.address    (mm_interconnect_1_stepper_1_steps_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_1_stepper_1_steps_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_1_stepper_1_steps_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_1_stepper_1_steps_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_1_stepper_1_steps_s1_readdata),   //                    .readdata
-		.in_port    (stepper_1_steps_external_connection_in_port),     // external_connection.export
-		.out_port   (stepper_1_steps_external_connection_out_port)     //                    .export
+	soc_system_flags_in stepper_1_steps_in (
+		.clk      (clk_clk),                                          //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),                  //               reset.reset_n
+		.address  (mm_interconnect_1_stepper_1_steps_in_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_1_stepper_1_steps_in_s1_readdata), //                    .readdata
+		.in_port  (stepper_1_steps_in_external_connection_export)     // external_connection.export
 	);
 
-	soc_system_stepper_1_speed stepper_2_speed (
+	soc_system_flags_out stepper_1_steps_out (
+		.clk        (clk_clk),                                             //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),                     //               reset.reset_n
+		.address    (mm_interconnect_1_stepper_1_steps_out_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_1_stepper_1_steps_out_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_1_stepper_1_steps_out_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_1_stepper_1_steps_out_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_1_stepper_1_steps_out_s1_readdata),   //                    .readdata
+		.out_port   (stepper_1_steps_out_external_connection_export)       // external_connection.export
+	);
+
+	soc_system_flags_out stepper_2_speed (
 		.clk        (clk_clk),                                         //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
 		.address    (mm_interconnect_1_stepper_2_speed_s1_address),    //                  s1.address
@@ -782,19 +808,26 @@ module soc_system (
 		.out_port   (stepper_2_speed_external_connection_export)       // external_connection.export
 	);
 
-	soc_system_flags stepper_2_steps (
-		.clk        (clk_clk),                                         //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
-		.address    (mm_interconnect_1_stepper_2_steps_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_1_stepper_2_steps_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_1_stepper_2_steps_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_1_stepper_2_steps_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_1_stepper_2_steps_s1_readdata),   //                    .readdata
-		.in_port    (stepper_2_steps_external_connection_in_port),     // external_connection.export
-		.out_port   (stepper_2_steps_external_connection_out_port)     //                    .export
+	soc_system_flags_in stepper_2_steps_in (
+		.clk      (clk_clk),                                          //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),                  //               reset.reset_n
+		.address  (mm_interconnect_1_stepper_2_steps_in_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_1_stepper_2_steps_in_s1_readdata), //                    .readdata
+		.in_port  (stepper_2_steps_in_external_connection_export)     // external_connection.export
 	);
 
-	soc_system_stepper_1_speed stepper_3_speed (
+	soc_system_flags_out stepper_2_steps_out (
+		.clk        (clk_clk),                                             //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),                     //               reset.reset_n
+		.address    (mm_interconnect_1_stepper_2_steps_out_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_1_stepper_2_steps_out_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_1_stepper_2_steps_out_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_1_stepper_2_steps_out_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_1_stepper_2_steps_out_s1_readdata),   //                    .readdata
+		.out_port   (stepper_2_steps_out_external_connection_export)       // external_connection.export
+	);
+
+	soc_system_flags_out stepper_3_speed (
 		.clk        (clk_clk),                                         //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
 		.address    (mm_interconnect_1_stepper_3_speed_s1_address),    //                  s1.address
@@ -805,19 +838,26 @@ module soc_system (
 		.out_port   (stepper_3_speed_external_connection_export)       // external_connection.export
 	);
 
-	soc_system_flags stepper_3_steps (
-		.clk        (clk_clk),                                         //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
-		.address    (mm_interconnect_1_stepper_3_steps_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_1_stepper_3_steps_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_1_stepper_3_steps_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_1_stepper_3_steps_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_1_stepper_3_steps_s1_readdata),   //                    .readdata
-		.in_port    (stepper_3_steps_external_connection_in_port),     // external_connection.export
-		.out_port   (stepper_3_steps_external_connection_out_port)     //                    .export
+	soc_system_flags_in stepper_3_steps_in (
+		.clk      (clk_clk),                                          //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),                  //               reset.reset_n
+		.address  (mm_interconnect_1_stepper_3_steps_in_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_1_stepper_3_steps_in_s1_readdata), //                    .readdata
+		.in_port  (stepper_3_steps_in_external_connection_export)     // external_connection.export
 	);
 
-	soc_system_stepper_1_speed stepper_4_speed (
+	soc_system_flags_out stepper_3_steps_out (
+		.clk        (clk_clk),                                             //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),                     //               reset.reset_n
+		.address    (mm_interconnect_1_stepper_3_steps_out_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_1_stepper_3_steps_out_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_1_stepper_3_steps_out_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_1_stepper_3_steps_out_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_1_stepper_3_steps_out_s1_readdata),   //                    .readdata
+		.out_port   (stepper_3_steps_out_external_connection_export)       // external_connection.export
+	);
+
+	soc_system_flags_out stepper_4_speed (
 		.clk        (clk_clk),                                         //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
 		.address    (mm_interconnect_1_stepper_4_speed_s1_address),    //                  s1.address
@@ -828,19 +868,26 @@ module soc_system (
 		.out_port   (stepper_4_speed_external_connection_export)       // external_connection.export
 	);
 
-	soc_system_flags stepper_4_steps (
-		.clk        (clk_clk),                                         //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
-		.address    (mm_interconnect_1_stepper_4_steps_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_1_stepper_4_steps_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_1_stepper_4_steps_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_1_stepper_4_steps_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_1_stepper_4_steps_s1_readdata),   //                    .readdata
-		.in_port    (stepper_4_steps_external_connection_in_port),     // external_connection.export
-		.out_port   (stepper_4_steps_external_connection_out_port)     //                    .export
+	soc_system_flags_in stepper_4_steps_in (
+		.clk      (clk_clk),                                          //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),                  //               reset.reset_n
+		.address  (mm_interconnect_1_stepper_4_steps_in_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_1_stepper_4_steps_in_s1_readdata), //                    .readdata
+		.in_port  (stepper_4_steps_in_external_connection_export)     // external_connection.export
 	);
 
-	soc_system_stepper_1_speed stepper_5_speed (
+	soc_system_flags_out stepper_4_steps_out (
+		.clk        (clk_clk),                                             //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),                     //               reset.reset_n
+		.address    (mm_interconnect_1_stepper_4_steps_out_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_1_stepper_4_steps_out_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_1_stepper_4_steps_out_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_1_stepper_4_steps_out_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_1_stepper_4_steps_out_s1_readdata),   //                    .readdata
+		.out_port   (stepper_4_steps_out_external_connection_export)       // external_connection.export
+	);
+
+	soc_system_flags_out stepper_5_speed (
 		.clk        (clk_clk),                                         //                 clk.clk
 		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
 		.address    (mm_interconnect_1_stepper_5_speed_s1_address),    //                  s1.address
@@ -851,16 +898,23 @@ module soc_system (
 		.out_port   (stepper_5_speed_external_connection_export)       // external_connection.export
 	);
 
-	soc_system_flags stepper_5_steps (
-		.clk        (clk_clk),                                         //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),                 //               reset.reset_n
-		.address    (mm_interconnect_1_stepper_5_steps_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_1_stepper_5_steps_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_1_stepper_5_steps_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_1_stepper_5_steps_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_1_stepper_5_steps_s1_readdata),   //                    .readdata
-		.in_port    (stepper_5_steps_external_connection_in_port),     // external_connection.export
-		.out_port   (stepper_5_steps_external_connection_out_port)     //                    .export
+	soc_system_flags_in stepper_5_steps_in (
+		.clk      (clk_clk),                                          //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),                  //               reset.reset_n
+		.address  (mm_interconnect_1_stepper_5_steps_in_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_1_stepper_5_steps_in_s1_readdata), //                    .readdata
+		.in_port  (stepper_5_steps_in_external_connection_export)     // external_connection.export
+	);
+
+	soc_system_flags_out stepper_5_steps_out (
+		.clk        (clk_clk),                                             //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),                     //               reset.reset_n
+		.address    (mm_interconnect_1_stepper_5_steps_out_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_1_stepper_5_steps_out_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_1_stepper_5_steps_out_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_1_stepper_5_steps_out_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_1_stepper_5_steps_out_s1_readdata),   //                    .readdata
+		.out_port   (stepper_5_steps_out_external_connection_export)       // external_connection.export
 	);
 
 	soc_system_sysid_qsys sysid_qsys (
@@ -985,11 +1039,13 @@ module soc_system (
 		.fans_s1_readdata                                       (mm_interconnect_1_fans_s1_readdata),                        //                                                 .readdata
 		.fans_s1_writedata                                      (mm_interconnect_1_fans_s1_writedata),                       //                                                 .writedata
 		.fans_s1_chipselect                                     (mm_interconnect_1_fans_s1_chipselect),                      //                                                 .chipselect
-		.flags_s1_address                                       (mm_interconnect_1_flags_s1_address),                        //                                         flags_s1.address
-		.flags_s1_write                                         (mm_interconnect_1_flags_s1_write),                          //                                                 .write
-		.flags_s1_readdata                                      (mm_interconnect_1_flags_s1_readdata),                       //                                                 .readdata
-		.flags_s1_writedata                                     (mm_interconnect_1_flags_s1_writedata),                      //                                                 .writedata
-		.flags_s1_chipselect                                    (mm_interconnect_1_flags_s1_chipselect),                     //                                                 .chipselect
+		.flags_in_s1_address                                    (mm_interconnect_1_flags_in_s1_address),                     //                                      flags_in_s1.address
+		.flags_in_s1_readdata                                   (mm_interconnect_1_flags_in_s1_readdata),                    //                                                 .readdata
+		.flags_out_s1_address                                   (mm_interconnect_1_flags_out_s1_address),                    //                                     flags_out_s1.address
+		.flags_out_s1_write                                     (mm_interconnect_1_flags_out_s1_write),                      //                                                 .write
+		.flags_out_s1_readdata                                  (mm_interconnect_1_flags_out_s1_readdata),                   //                                                 .readdata
+		.flags_out_s1_writedata                                 (mm_interconnect_1_flags_out_s1_writedata),                  //                                                 .writedata
+		.flags_out_s1_chipselect                                (mm_interconnect_1_flags_out_s1_chipselect),                 //                                                 .chipselect
 		.heaters_s1_address                                     (mm_interconnect_1_heaters_s1_address),                      //                                       heaters_s1.address
 		.heaters_s1_write                                       (mm_interconnect_1_heaters_s1_write),                        //                                                 .write
 		.heaters_s1_readdata                                    (mm_interconnect_1_heaters_s1_readdata),                     //                                                 .readdata
@@ -1017,51 +1073,61 @@ module soc_system (
 		.stepper_1_speed_s1_readdata                            (mm_interconnect_1_stepper_1_speed_s1_readdata),             //                                                 .readdata
 		.stepper_1_speed_s1_writedata                           (mm_interconnect_1_stepper_1_speed_s1_writedata),            //                                                 .writedata
 		.stepper_1_speed_s1_chipselect                          (mm_interconnect_1_stepper_1_speed_s1_chipselect),           //                                                 .chipselect
-		.stepper_1_steps_s1_address                             (mm_interconnect_1_stepper_1_steps_s1_address),              //                               stepper_1_steps_s1.address
-		.stepper_1_steps_s1_write                               (mm_interconnect_1_stepper_1_steps_s1_write),                //                                                 .write
-		.stepper_1_steps_s1_readdata                            (mm_interconnect_1_stepper_1_steps_s1_readdata),             //                                                 .readdata
-		.stepper_1_steps_s1_writedata                           (mm_interconnect_1_stepper_1_steps_s1_writedata),            //                                                 .writedata
-		.stepper_1_steps_s1_chipselect                          (mm_interconnect_1_stepper_1_steps_s1_chipselect),           //                                                 .chipselect
+		.stepper_1_steps_in_s1_address                          (mm_interconnect_1_stepper_1_steps_in_s1_address),           //                            stepper_1_steps_in_s1.address
+		.stepper_1_steps_in_s1_readdata                         (mm_interconnect_1_stepper_1_steps_in_s1_readdata),          //                                                 .readdata
+		.stepper_1_steps_out_s1_address                         (mm_interconnect_1_stepper_1_steps_out_s1_address),          //                           stepper_1_steps_out_s1.address
+		.stepper_1_steps_out_s1_write                           (mm_interconnect_1_stepper_1_steps_out_s1_write),            //                                                 .write
+		.stepper_1_steps_out_s1_readdata                        (mm_interconnect_1_stepper_1_steps_out_s1_readdata),         //                                                 .readdata
+		.stepper_1_steps_out_s1_writedata                       (mm_interconnect_1_stepper_1_steps_out_s1_writedata),        //                                                 .writedata
+		.stepper_1_steps_out_s1_chipselect                      (mm_interconnect_1_stepper_1_steps_out_s1_chipselect),       //                                                 .chipselect
 		.stepper_2_speed_s1_address                             (mm_interconnect_1_stepper_2_speed_s1_address),              //                               stepper_2_speed_s1.address
 		.stepper_2_speed_s1_write                               (mm_interconnect_1_stepper_2_speed_s1_write),                //                                                 .write
 		.stepper_2_speed_s1_readdata                            (mm_interconnect_1_stepper_2_speed_s1_readdata),             //                                                 .readdata
 		.stepper_2_speed_s1_writedata                           (mm_interconnect_1_stepper_2_speed_s1_writedata),            //                                                 .writedata
 		.stepper_2_speed_s1_chipselect                          (mm_interconnect_1_stepper_2_speed_s1_chipselect),           //                                                 .chipselect
-		.stepper_2_steps_s1_address                             (mm_interconnect_1_stepper_2_steps_s1_address),              //                               stepper_2_steps_s1.address
-		.stepper_2_steps_s1_write                               (mm_interconnect_1_stepper_2_steps_s1_write),                //                                                 .write
-		.stepper_2_steps_s1_readdata                            (mm_interconnect_1_stepper_2_steps_s1_readdata),             //                                                 .readdata
-		.stepper_2_steps_s1_writedata                           (mm_interconnect_1_stepper_2_steps_s1_writedata),            //                                                 .writedata
-		.stepper_2_steps_s1_chipselect                          (mm_interconnect_1_stepper_2_steps_s1_chipselect),           //                                                 .chipselect
+		.stepper_2_steps_in_s1_address                          (mm_interconnect_1_stepper_2_steps_in_s1_address),           //                            stepper_2_steps_in_s1.address
+		.stepper_2_steps_in_s1_readdata                         (mm_interconnect_1_stepper_2_steps_in_s1_readdata),          //                                                 .readdata
+		.stepper_2_steps_out_s1_address                         (mm_interconnect_1_stepper_2_steps_out_s1_address),          //                           stepper_2_steps_out_s1.address
+		.stepper_2_steps_out_s1_write                           (mm_interconnect_1_stepper_2_steps_out_s1_write),            //                                                 .write
+		.stepper_2_steps_out_s1_readdata                        (mm_interconnect_1_stepper_2_steps_out_s1_readdata),         //                                                 .readdata
+		.stepper_2_steps_out_s1_writedata                       (mm_interconnect_1_stepper_2_steps_out_s1_writedata),        //                                                 .writedata
+		.stepper_2_steps_out_s1_chipselect                      (mm_interconnect_1_stepper_2_steps_out_s1_chipselect),       //                                                 .chipselect
 		.stepper_3_speed_s1_address                             (mm_interconnect_1_stepper_3_speed_s1_address),              //                               stepper_3_speed_s1.address
 		.stepper_3_speed_s1_write                               (mm_interconnect_1_stepper_3_speed_s1_write),                //                                                 .write
 		.stepper_3_speed_s1_readdata                            (mm_interconnect_1_stepper_3_speed_s1_readdata),             //                                                 .readdata
 		.stepper_3_speed_s1_writedata                           (mm_interconnect_1_stepper_3_speed_s1_writedata),            //                                                 .writedata
 		.stepper_3_speed_s1_chipselect                          (mm_interconnect_1_stepper_3_speed_s1_chipselect),           //                                                 .chipselect
-		.stepper_3_steps_s1_address                             (mm_interconnect_1_stepper_3_steps_s1_address),              //                               stepper_3_steps_s1.address
-		.stepper_3_steps_s1_write                               (mm_interconnect_1_stepper_3_steps_s1_write),                //                                                 .write
-		.stepper_3_steps_s1_readdata                            (mm_interconnect_1_stepper_3_steps_s1_readdata),             //                                                 .readdata
-		.stepper_3_steps_s1_writedata                           (mm_interconnect_1_stepper_3_steps_s1_writedata),            //                                                 .writedata
-		.stepper_3_steps_s1_chipselect                          (mm_interconnect_1_stepper_3_steps_s1_chipselect),           //                                                 .chipselect
+		.stepper_3_steps_in_s1_address                          (mm_interconnect_1_stepper_3_steps_in_s1_address),           //                            stepper_3_steps_in_s1.address
+		.stepper_3_steps_in_s1_readdata                         (mm_interconnect_1_stepper_3_steps_in_s1_readdata),          //                                                 .readdata
+		.stepper_3_steps_out_s1_address                         (mm_interconnect_1_stepper_3_steps_out_s1_address),          //                           stepper_3_steps_out_s1.address
+		.stepper_3_steps_out_s1_write                           (mm_interconnect_1_stepper_3_steps_out_s1_write),            //                                                 .write
+		.stepper_3_steps_out_s1_readdata                        (mm_interconnect_1_stepper_3_steps_out_s1_readdata),         //                                                 .readdata
+		.stepper_3_steps_out_s1_writedata                       (mm_interconnect_1_stepper_3_steps_out_s1_writedata),        //                                                 .writedata
+		.stepper_3_steps_out_s1_chipselect                      (mm_interconnect_1_stepper_3_steps_out_s1_chipselect),       //                                                 .chipselect
 		.stepper_4_speed_s1_address                             (mm_interconnect_1_stepper_4_speed_s1_address),              //                               stepper_4_speed_s1.address
 		.stepper_4_speed_s1_write                               (mm_interconnect_1_stepper_4_speed_s1_write),                //                                                 .write
 		.stepper_4_speed_s1_readdata                            (mm_interconnect_1_stepper_4_speed_s1_readdata),             //                                                 .readdata
 		.stepper_4_speed_s1_writedata                           (mm_interconnect_1_stepper_4_speed_s1_writedata),            //                                                 .writedata
 		.stepper_4_speed_s1_chipselect                          (mm_interconnect_1_stepper_4_speed_s1_chipselect),           //                                                 .chipselect
-		.stepper_4_steps_s1_address                             (mm_interconnect_1_stepper_4_steps_s1_address),              //                               stepper_4_steps_s1.address
-		.stepper_4_steps_s1_write                               (mm_interconnect_1_stepper_4_steps_s1_write),                //                                                 .write
-		.stepper_4_steps_s1_readdata                            (mm_interconnect_1_stepper_4_steps_s1_readdata),             //                                                 .readdata
-		.stepper_4_steps_s1_writedata                           (mm_interconnect_1_stepper_4_steps_s1_writedata),            //                                                 .writedata
-		.stepper_4_steps_s1_chipselect                          (mm_interconnect_1_stepper_4_steps_s1_chipselect),           //                                                 .chipselect
+		.stepper_4_steps_in_s1_address                          (mm_interconnect_1_stepper_4_steps_in_s1_address),           //                            stepper_4_steps_in_s1.address
+		.stepper_4_steps_in_s1_readdata                         (mm_interconnect_1_stepper_4_steps_in_s1_readdata),          //                                                 .readdata
+		.stepper_4_steps_out_s1_address                         (mm_interconnect_1_stepper_4_steps_out_s1_address),          //                           stepper_4_steps_out_s1.address
+		.stepper_4_steps_out_s1_write                           (mm_interconnect_1_stepper_4_steps_out_s1_write),            //                                                 .write
+		.stepper_4_steps_out_s1_readdata                        (mm_interconnect_1_stepper_4_steps_out_s1_readdata),         //                                                 .readdata
+		.stepper_4_steps_out_s1_writedata                       (mm_interconnect_1_stepper_4_steps_out_s1_writedata),        //                                                 .writedata
+		.stepper_4_steps_out_s1_chipselect                      (mm_interconnect_1_stepper_4_steps_out_s1_chipselect),       //                                                 .chipselect
 		.stepper_5_speed_s1_address                             (mm_interconnect_1_stepper_5_speed_s1_address),              //                               stepper_5_speed_s1.address
 		.stepper_5_speed_s1_write                               (mm_interconnect_1_stepper_5_speed_s1_write),                //                                                 .write
 		.stepper_5_speed_s1_readdata                            (mm_interconnect_1_stepper_5_speed_s1_readdata),             //                                                 .readdata
 		.stepper_5_speed_s1_writedata                           (mm_interconnect_1_stepper_5_speed_s1_writedata),            //                                                 .writedata
 		.stepper_5_speed_s1_chipselect                          (mm_interconnect_1_stepper_5_speed_s1_chipselect),           //                                                 .chipselect
-		.stepper_5_steps_s1_address                             (mm_interconnect_1_stepper_5_steps_s1_address),              //                               stepper_5_steps_s1.address
-		.stepper_5_steps_s1_write                               (mm_interconnect_1_stepper_5_steps_s1_write),                //                                                 .write
-		.stepper_5_steps_s1_readdata                            (mm_interconnect_1_stepper_5_steps_s1_readdata),             //                                                 .readdata
-		.stepper_5_steps_s1_writedata                           (mm_interconnect_1_stepper_5_steps_s1_writedata),            //                                                 .writedata
-		.stepper_5_steps_s1_chipselect                          (mm_interconnect_1_stepper_5_steps_s1_chipselect),           //                                                 .chipselect
+		.stepper_5_steps_in_s1_address                          (mm_interconnect_1_stepper_5_steps_in_s1_address),           //                            stepper_5_steps_in_s1.address
+		.stepper_5_steps_in_s1_readdata                         (mm_interconnect_1_stepper_5_steps_in_s1_readdata),          //                                                 .readdata
+		.stepper_5_steps_out_s1_address                         (mm_interconnect_1_stepper_5_steps_out_s1_address),          //                           stepper_5_steps_out_s1.address
+		.stepper_5_steps_out_s1_write                           (mm_interconnect_1_stepper_5_steps_out_s1_write),            //                                                 .write
+		.stepper_5_steps_out_s1_readdata                        (mm_interconnect_1_stepper_5_steps_out_s1_readdata),         //                                                 .readdata
+		.stepper_5_steps_out_s1_writedata                       (mm_interconnect_1_stepper_5_steps_out_s1_writedata),        //                                                 .writedata
+		.stepper_5_steps_out_s1_chipselect                      (mm_interconnect_1_stepper_5_steps_out_s1_chipselect),       //                                                 .chipselect
 		.sysid_qsys_control_slave_address                       (mm_interconnect_1_sysid_qsys_control_slave_address),        //                         sysid_qsys_control_slave.address
 		.sysid_qsys_control_slave_readdata                      (mm_interconnect_1_sysid_qsys_control_slave_readdata),       //                                                 .readdata
 		.temp0_s1_address                                       (mm_interconnect_1_temp0_s1_address),                        //                                         temp0_s1.address

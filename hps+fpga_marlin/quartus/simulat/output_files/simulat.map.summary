@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Jan 22 22:05:26 2019
+Analysis & Synthesis Status : Successful - Sun Feb 24 09:37:45 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : simulat
-Top-level Entity Name : driver_stepper
+Top-level Entity Name : stepper_corexy
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 99
-Total pins : 108
+Total registers : 263
+Total pins : 208
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

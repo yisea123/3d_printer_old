@@ -1,5 +1,5 @@
 Flow report for printer
-Sat Feb 02 22:16:33 2019
+Sun Feb 24 19:41:18 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Feb 02 22:16:33 2019       ;
+; Flow Status                     ; Successful - Sun Feb 24 19:41:18 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; printer                                     ;
 ; Top-level Entity Name           ; printer                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 3,674 / 41,910 ( 9 % )                      ;
-; Total registers                 ; 5227                                        ;
+; Logic utilization (in ALMs)     ; 5,826 / 41,910 ( 14 % )                     ;
+; Total registers                 ; 6531                                        ;
 ; Total pins                      ; 265 / 314 ( 84 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,816 / 5,662,720 ( < 1 % )                 ;
@@ -57,7 +57,7 @@ refer to the applicable agreement for further details.
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 1 / 6 ( 17 % )                              ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
 ; Total DLLs                      ; 1 / 4 ( 25 % )                              ;
 +---------------------------------+---------------------------------------------+
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/02/2019 21:46:36 ;
+; Start date & time ; 02/24/2019 19:18:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; printer             ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+--------------------------------------------------------------------------+---------------+--------------------------------+----------------+
 ; Assignment Name                       ; Value                                                                    ; Default Value ; Entity Name                    ; Section Id     ;
 +---------------------------------------+--------------------------------------------------------------------------+---------------+--------------------------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 53447161791564.154913317017696                                           ; --            ; --                             ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 53447161791564.155102511327172                                           ; --            ; --                             ; --             ;
 ; ECO_REGENERATE_REPORT                 ; On                                                                       ; Off           ; --                             ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST       ; On                                                                       ; --            ; --                             ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR         ; simulation                                                               ; --            ; --                             ; eda_simulation ;
@@ -130,7 +130,7 @@ refer to the applicable agreement for further details.
 ; SLD_FILE                              ; soc_system/synthesis/soc_system.regmap                                   ; --            ; --                             ; --             ;
 ; SLD_FILE                              ; soc_system/synthesis/soc_system.debuginfo                                ; --            ; --                             ; --             ;
 ; SLD_INFO                              ; QSYS_NAME adc_control HAS_SOPCINFO 1 GENERATION_ID 1549124366            ; --            ; adc_control                    ; --             ;
-; SLD_INFO                              ; QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1549127603             ; --            ; soc_system                     ; --             ;
+; SLD_INFO                              ; QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1550063582             ; --            ; soc_system                     ; --             ;
 ; SOPCINFO_FILE                         ; adc_control/synthesis/../../adc_control.sopcinfo                         ; --            ; --                             ; --             ;
 ; SOPCINFO_FILE                         ; soc_system/synthesis/../../soc_system.sopcinfo                           ; --            ; --                             ; --             ;
 ; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --            ; --                             ; --             ;
@@ -144,12 +144,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:11:42     ; 1.3                     ; 5411 MB             ; 00:17:28                           ;
-; Fitter               ; 00:10:12     ; 1.2                     ; 7534 MB             ; 00:15:44                           ;
-; Assembler            ; 00:01:38     ; 1.0                     ; 4982 MB             ; 00:00:50                           ;
-; Timing Analyzer      ; 00:04:57     ; 1.3                     ; 6120 MB             ; 00:05:12                           ;
-; EDA Netlist Writer   ; 00:00:27     ; 1.0                     ; 4955 MB             ; 00:00:25                           ;
-; Total                ; 00:28:56     ; --                      ; --                  ; 00:39:39                           ;
+; Analysis & Synthesis ; 00:07:59     ; 1.3                     ; 5442 MB             ; 00:14:22                           ;
+; Fitter               ; 00:09:07     ; 1.3                     ; 7527 MB             ; 00:19:04                           ;
+; Assembler            ; 00:00:53     ; 1.0                     ; 5013 MB             ; 00:00:42                           ;
+; Timing Analyzer      ; 00:03:36     ; 1.4                     ; 6131 MB             ; 00:04:54                           ;
+; EDA Netlist Writer   ; 00:00:22     ; 1.0                     ; 4877 MB             ; 00:00:22                           ;
+; Total                ; 00:21:57     ; --                      ; --                  ; 00:39:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
