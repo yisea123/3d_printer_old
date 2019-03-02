@@ -1,5 +1,5 @@
 #
-TARGET = main
+TARGET = printer
 
 #
 ALT_DEVICE_FAMILY ?= soc_cv_av
