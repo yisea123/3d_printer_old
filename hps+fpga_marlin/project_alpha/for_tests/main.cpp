@@ -6,9 +6,11 @@ using namespace std;
 
 int main()
 {
-	printf("main\n");
+	printf("start\n\n");
 	addresses addr;
+	printf("object addr created\n");
 	int f = addr.init();
+	printf("object addr init\n\n");
 	if (f == 1)
 		return 1;
 
@@ -124,7 +126,7 @@ int main()
 	//scanf("%" SCNx32, &speednum); //uint32_t
 	//scanf("%" SCNd32, &stepsnum); //int32_t
 	
-	printf("main end\n");
+	printf("\nfinish\n");
 
 	return 0;
 }
