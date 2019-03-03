@@ -351,7 +351,7 @@
     <sld_info hpath="soc_system:u0" name="u0">
       <assignment_values>
         <assignment_value text="QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1550063582"/>
-        <assignment_value text="QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1551025205"/>
+        <assignment_value text="QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1551633532"/>
       </assignment_values>
       <parameters/>
     </sld_info>

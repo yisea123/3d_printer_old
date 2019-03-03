@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Feb 24 19:26:40 2019
+Analysis & Synthesis Status : Successful - Sun Mar 03 20:25:24 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : printer
 Top-level Entity Name : printer
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 6244
+Total registers : 6241
 Total pins : 265
 Total virtual pins : 0
 Total block memory bits : 2,816

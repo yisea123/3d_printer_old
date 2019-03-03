@@ -147,10 +147,7 @@ wire [11:0] analog [7:0];
 //	flags_out[5]:  инверсия концевика zmin (0 - нет инверсии, 1 - есть инверсия)
 //	flags_out[6]:  инверсия концевика zmax (0 - нет инверсии, 1 - есть инверсия)
 //	
-//	flags_out[7]:  выполнить движение corexy (0 - игнорировать количество шагов, 1 - выполнить движение по количеству шагов)
-//	flags_out[8]:  выполнить движение оси z (0 - игнорировать количество шагов, 1 - выполнить движение по количеству шагов)
-//	flags_out[9]:  выполнить движение экструдера 1 (0 - игнорировать количество шагов, 1 - выполнить движение по количеству шагов)
-//	flags_out[10]: выполнить движение экструдера 2 (0 - игнорировать количество шагов, 1 - выполнить движение по количеству шагов)
+//	flags_out[7]:  выполнить движение corexy, оси z и экструдера (0 - игнорировать количество шагов, 1 - выполнить движение по количеству шагов)
 //	
 //	flags_in[1]:   работа stepper1,2 (0 - двигатель стоит, 1 - выполняется повор)
 //	flags_in[2]:   работа stepper3 (0 - двигатель стоит, 1 - выполняется повор)
@@ -445,7 +442,7 @@ stepper_z axis_z(
 					.stepper_enable		(flags_read[0]),
 					.zmin						(end_stop[4]),
 					.zmax						(end_stop[5]),
-					.start_driving			(flags_read[8]),
+					.start_driving			(flags_read[7]),
 					
 					.step_signal			(stepper3[1]), 
 					.enable					(stepper3[0]),
@@ -459,7 +456,7 @@ stepper_extruder extruder1(
 						.stepper_step_in	(stepper_4_step_out),						
 						.stepper_speed		(stepper_4_speed),
 						.stepper_enable	(flags_read[0]),
-						.start_driving		(flags_read[9]),
+						.start_driving		(flags_read[7]),
 						
 						.step_signal		(stepper4[1]),
 						.enable				(stepper4[0]),
@@ -473,7 +470,7 @@ stepper_extruder extruder2(
 						.stepper_step_in	(stepper_5_step_out),						
 						.stepper_speed		(stepper_5_speed),
 						.stepper_enable	(flags_read[0]),
-						.start_driving		(flags_read[10]),
+						.start_driving		(flags_read[7]),
 						
 						.step_signal		(stepper5[1]),
 						.enable				(stepper5[0]),
