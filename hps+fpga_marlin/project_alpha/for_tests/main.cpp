@@ -44,6 +44,13 @@ int main()
 	printf("%" SCNx32 "\n", v);
 	printf("Значение после изменения: ");
 	printf("%" SCNx32 "\n", heaters);
+	v = 1;
+	addr.set_heaters(v);
+	heaters = addr.get_heaters();
+	printf("Присвоим значение: ");
+	printf("%" SCNx32 "\n", v);
+	printf("Значение после изменения: ");
+	printf("%" SCNx32 "\n\n", heaters);
 
 
 
@@ -57,7 +64,7 @@ int main()
 	printf("Присвоим значение: ");
 	printf("%" SCNx32 "\n", v);
 	printf("Значение после изменения: ");
-	printf("%" SCNx32 "\n", flags_in);
+	printf("%" SCNx32 "\n\n", flags_in);
 
 
 
@@ -78,7 +85,7 @@ int main()
 	printf("Присвоим значение: ");
 	printf("%" SCNx32 "\n", v);
 	printf("Значение после изменения: ");
-	printf("%" SCNx32 "\n", stepper_1_speed);
+	printf("%" SCNx32 "\n\n", stepper_1_speed);
 
 
 
@@ -87,19 +94,19 @@ int main()
 	printf("Начальное значение: ");
 	printf("%" SCNd32 "\n", stepper_1_steps_in);
 	v1 = 65413689;
-	addr.set_stepper_1_steps_in(v);
+	addr.set_stepper_1_steps_in(v1);
 	stepper_1_steps_in = addr.get_stepper_1_steps_in();
 	printf("Присвоим значение: ");
 	printf("%" SCNd32 "\n", v1);
 	printf("Значение после изменения: ");
 	printf("%" SCNd32 "\n", stepper_1_steps_in);
 	v1 = -68496132;
-	addr.set_stepper_1_steps_in(v);
+	addr.set_stepper_1_steps_in(v1);
 	stepper_1_steps_in = addr.get_stepper_1_steps_in();
 	printf("Присвоим значение: ");
 	printf("%" SCNd32 "\n", v1);
 	printf("Значение после изменения: ");
-	printf("%" SCNd32 "\n", stepper_1_steps_in);
+	printf("%" SCNd32 "\n\n", stepper_1_steps_in);
 
 
 
@@ -108,14 +115,14 @@ int main()
 	printf("Начальное значение: ");
 	printf("%" SCNd32 "\n", stepper_1_steps_out);
 	v1 = -651620;
-	addr.set_stepper_1_steps_out(v);
+	addr.set_stepper_1_steps_out(v1);
 	stepper_1_steps_out = addr.get_stepper_1_steps_out();
 	printf("Присвоим значение: ");
 	printf("%" SCNd32 "\n", v1);
 	printf("Значение после изменения: ");
 	printf("%" SCNd32 "\n", stepper_1_steps_out);
 	v1 = 6896895;
-	addr.set_stepper_1_steps_out(v);
+	addr.set_stepper_1_steps_out(v1);
 	stepper_1_steps_out = addr.get_stepper_1_steps_out();
 	printf("Присвоим значение: ");
 	printf("%" SCNd32 "\n", v1);

@@ -347,7 +347,7 @@ int addresses::set_fans(uint32_t fanss)
 {
 	uint32_t a = zeroing(fanss, bit_count_uint32 - FANS_DATA_WIDTH, 1);
 	uint32_t b = zeroing(*(uint32_t *)fans, FANS_DATA_WIDTH, 0);
-	*(int32_t *)leds = (b | a);
+	*(int32_t *)fans = (b | a);
 	return 0;
 };
 
@@ -355,7 +355,8 @@ int addresses::set_heaters(uint32_t heaterss)
 {
 	uint32_t a = zeroing(heaterss, bit_count_uint32 - HEATERS_DATA_WIDTH, 1);
 	uint32_t b = zeroing(*(uint32_t *)heaters, HEATERS_DATA_WIDTH, 0);
-	*(int32_t *)leds = (b | a);
+
+	*(int32_t *)heaters = (b | a);
 	return 0;
 };
 
