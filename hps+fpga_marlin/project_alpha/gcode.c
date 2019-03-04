@@ -10,7 +10,6 @@ int gcode::stepcounter(float х, float у, float х1, float х2, float speed)
 * Метод рассчитывает необходимые для движения двигателей количество микрошагов и время импульса на один микрошаг 
 * и передает эти параметры в верилог
 */
-    float a, b;
     float diag; //гипотенуза, относительно которой высчитывается общее время
     float dx = х1-х;
     float dy = у1-у;
@@ -31,11 +30,11 @@ int gcode::stepcounter(float х, float у, float х1, float х2, float speed)
     float b_speed = *b_numofmicrosteps/t;
 
     //передача колИчества микрошагов в верилог с инверсией направления двигателя при необходимости
-    *a_numofmicrosteps = da;
+    //*a_numofmicrosteps = da;
     if X_STEPPER_INVERTING
         *a_numofmicrosteps = - *a_numofmicrosteps;
 
-    *b_numofmicrosteps = db;
+    //*b_numofmicrosteps = db;
     if X_STEPPER_INVERTING
         *b_numofmicrosteps = - *b_numofmicrosteps;
 
