@@ -8,208 +8,302 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim
-Eclk_gen
-Z1 w1548094149
-Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
-Z3 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
-Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
-Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z6 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
-Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z10 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+vclk_gen
+Z1 !s110 1550242823
+!i10b 1
+!s100 oV5hfbVT_K_7eO@l<G1kf3
+IJ_=ja6Edb49NXS4Cba;e13
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z11 8simulat.vho
-Z12 Fsimulat.vho
-l0
-L38
-VLeDSVge>c4:Hh<Q0Ql6:23
-!s100 59jzbb^6`HN1ilc>mfFY<3
-Z13 OV;C;10.5b;63
-32
-Z14 !s110 1548094151
-!i10b 1
-Z15 !s108 1548094151.000000
-Z16 !s90 -work|work|simulat.vho|
-Z17 !s107 simulat.vho|
+w1550242821
+Z3 8simulat.vo
+Z4 Fsimulat.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1550242823.000000
+Z8 !s107 simulat.vo|
+Z9 !s90 -work|work|simulat.vo|
 !i113 1
-Z18 o-work work
-Z19 tExplicit 1 CvgOpt 0
-Astructure
-R2
-R3
-R4
-R5
-R6
-R7
-R8
-R9
-R10
-DEx4 work 7 clk_gen 0 22 LeDSVge>c4:Hh<Q0Ql6:23
-l397
-L49
-VOWPiU;9j>``B=NO835c9W1
-!s100 ng3;03C[]`?SVDEnHH3IW1
-R13
-32
-R14
-!i10b 1
-R15
-R16
-R17
-!i113 1
-R18
-R19
+Z10 o-work work
+Z11 tCvgOpt 0
 Eclk_gen_vhd_vec_tst
-Z20 w1548094146
-R8
-R9
+Z12 w1550241414
+Z13 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z14 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z21 8printer.vwf.vht
-Z22 Fprinter.vwf.vht
+Z15 8printer.vwf.vht
+Z16 Fprinter.vwf.vht
 l0
 L31
 V2UW4MjN2gDKIZ<6Zhb7Me2
 !s100 TXIicYUDkDQFEMMERjG]W1
-R13
+Z17 OV;C;10.5b;63
 32
-R14
+Z18 !s110 1550241422
 !i10b 1
-R15
-Z23 !s90 -work|work|printer.vwf.vht|
-Z24 !s107 printer.vwf.vht|
+Z19 !s108 1550241422.000000
+Z20 !s90 -work|work|printer.vwf.vht|
+Z21 !s107 printer.vwf.vht|
 !i113 1
-R18
-R19
+R10
+Z22 tExplicit 1 CvgOpt 0
 Aclk_gen_arch
-R8
-R9
+R13
+R14
 DEx4 work 19 clk_gen_vhd_vec_tst 0 22 2UW4MjN2gDKIZ<6Zhb7Me2
 l52
 L33
-V=H7z5DBdOO@gA<8dc2WNJ0
-!s100 JRnT6:azTbh^MAYHzAb=L2
-R13
+V5S3FDoLFc>:kn9fB1BLfW1
+!s100 U9@F0JGKYV=9?ca8;`UQ93
+R17
 32
-R14
-!i10b 1
-R15
-R23
-R24
-!i113 1
 R18
-R19
-vclk_gen_vlg_vec_tst
-!s110 1548093392
 !i10b 1
-!s100 CW:gg?O2zYkX>n;lAQBeS0
-IUM>7?dENA<2jSL79m^cn12
-VDg1SIo80bB@j0V0VzS_@n1
+R19
+R20
+R21
+!i113 1
+R10
+R22
+vclk_gen_vlg_vec_tst
+R1
+!i10b 1
+!s100 gPgL]^VLcMi?A[404XVR01
+IW_=nJQ841z46a[66mUNI=0
+R2
 R0
-w1548093387
+w1550242818
 8printer.vwf.vt
 Fprinter.vwf.vt
-L0 29
-OV;L;10.5b;63
+Z23 L0 29
+R6
 r1
 !s85 0
 31
-!s108 1548093392.000000
+R7
 !s107 printer.vwf.vt|
 !s90 -work|work|printer.vwf.vt|
 !i113 1
-R18
-tCvgOpt 0
-Edriver_stepper
-Z25 w1548183980
-R2
-R3
-R4
-R5
-R6
-R7
-R8
-R9
 R10
-R0
 R11
-R12
+Edriver_stepper
+Z24 w1548183980
+Z25 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z26 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z27 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+Z28 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z29 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z30 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R13
+R14
+Z31 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z32 8simulat.vho
+Z33 Fsimulat.vho
 l0
 L38
 V]eM?^8`RA49lNhYLe_69D2
 !s100 b3d9G8@JA8PG?7_0NoY7Y3
-R13
-32
-Z26 !s110 1548183982
-!i10b 1
-Z27 !s108 1548183982.000000
-R16
 R17
+32
+Z34 !s110 1548183982
+!i10b 1
+Z35 !s108 1548183982.000000
+Z36 !s90 -work|work|simulat.vho|
+Z37 !s107 simulat.vho|
 !i113 1
-R18
-R19
-Astructure
-R2
-R3
-R4
-R5
-R6
-R7
-R8
-R9
 R10
+R22
+Astructure
+R25
+R26
+R27
+R28
+R29
+R30
+R13
+R14
+R31
 DEx4 work 14 driver_stepper 0 22 ]eM?^8`RA49lNhYLe_69D2
 l521
 L51
 V62TJ[957P`IjNEi?5o;1`0
 !s100 9`2`m[oU8mW=9Non3J3fU2
-R13
-32
-R26
-!i10b 1
-R27
-R16
 R17
+32
+R34
+!i10b 1
+R35
+R36
+R37
 !i113 1
-R18
-R19
+R10
+R22
 Edriver_stepper_vhd_vec_tst
-Z28 w1548183977
-R8
-R9
+Z38 w1548183977
+R13
+R14
 R0
-Z29 8driver_stepper.vwf.vht
-Z30 Fdriver_stepper.vwf.vht
+Z39 8driver_stepper.vwf.vht
+Z40 Fdriver_stepper.vwf.vht
 l0
 L31
 VaaNc^Tg[b;LBjZQ>XWn1K0
 !s100 n8nd@fZJUd;cSn?eG?le?1
-R13
+R17
 32
-R26
+R34
 !i10b 1
-R27
-Z31 !s90 -work|work|driver_stepper.vwf.vht|
-Z32 !s107 driver_stepper.vwf.vht|
+R35
+Z41 !s90 -work|work|driver_stepper.vwf.vht|
+Z42 !s107 driver_stepper.vwf.vht|
 !i113 1
-R18
-R19
+R10
+R22
 Adriver_stepper_arch
-R8
-R9
-Z33 DEx4 work 26 driver_stepper_vhd_vec_tst 0 22 aaNc^Tg[b;LBjZQ>XWn1K0
+R13
+R14
+DEx4 work 26 driver_stepper_vhd_vec_tst 0 22 aaNc^Tg[b;LBjZQ>XWn1K0
 l56
 L33
 Vol7gJH=f0Fh?@mG[Vmi>=2
 !s100 lY0>[JnIaTX>Si4U?3ge71
-R13
+R17
 32
-R26
+R34
 !i10b 1
-R27
-R31
-R32
+R35
+R41
+R42
 !i113 1
-R18
-R19
+R10
+R22
+vstepper_corexy
+Z43 !s110 1551628219
+!i10b 1
+!s100 T^HDFi0aaoJFYMM82o;073
+IK4g_VH^LoXBDD4WC:lHn=1
+R2
+R0
+w1551628212
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1551628217.000000
+R8
+R9
+!i113 1
+R10
+R11
+vstepper_corexy_vlg_vec_tst
+R43
+!i10b 1
+!s100 87JKek6;CDB7>S]GkPb=F3
+I=8N0fkVE^BR;BeBHD6_TF1
+R2
+R0
+w1551628207
+8stepper_corexy.vwf.vt
+Fstepper_corexy.vwf.vt
+R23
+R6
+r1
+!s85 0
+31
+!s108 1551628219.000000
+!s107 stepper_corexy.vwf.vt|
+!s90 -work|work|stepper_corexy.vwf.vt|
+!i113 1
+R10
+R11
+vstepper_extruder
+!s110 1550929889
+!i10b 1
+!s100 Ag>o[m]G;[IJogNUE[?XL2
+IdCY1`2ScG9N@T9M:VDb]i2
+R2
+R0
+w1550929887
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z44 !s108 1550929889.000000
+R8
+R9
+!i113 1
+R10
+R11
+vstepper_extruder_vlg_vec_tst
+!s110 1550929890
+!i10b 1
+!s100 QC2Z4nGMb0=ioZHkU3hZC3
+I:A5R4;ffJ?eAU]S8J:M4U3
+R2
+R0
+w1550929884
+8stepper_extruder.vwf.vt
+Fstepper_extruder.vwf.vt
+R23
+R6
+r1
+!s85 0
+31
+R44
+!s107 stepper_extruder.vwf.vt|
+!s90 -work|work|stepper_extruder.vwf.vt|
+!i113 1
+R10
+R11
+vstepper_z
+!s110 1550929601
+!i10b 1
+!s100 >I>>2@Jd2cLib5n?Pf>a=1
+I[E=lgNHM9;l`MZBPFkUA50
+R2
+R0
+w1550929599
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z45 !s108 1550929601.000000
+R8
+R9
+!i113 1
+R10
+R11
+vstepper_z_vlg_vec_tst
+!s110 1550929602
+!i10b 1
+!s100 PTMaZbK4WLYZNh9C8OfPO1
+IYK;Lo<]VWC>?gcG4VnamJ2
+R2
+R0
+w1550929596
+8stepper_z.vwf.vt
+Fstepper_z.vwf.vt
+R23
+R6
+r1
+!s85 0
+31
+R45
+!s107 stepper_z.vwf.vt|
+!s90 -work|work|stepper_z.vwf.vt|
+!i113 1
+R10
+R11

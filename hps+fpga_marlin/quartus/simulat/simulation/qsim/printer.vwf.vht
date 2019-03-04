@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "01/21/2019 21:09:06"
+-- Generated on "02/15/2019 17:36:54"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          clk_gen
 -- 
@@ -69,7 +69,7 @@ LOOP
 	WAIT FOR 10000 ps;
 	clk <= '1';
 	WAIT FOR 10000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+	IF (NOW >= 10000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
 -- count[30]
@@ -237,13 +237,13 @@ END PROCESS t_prcs_count_4;
 -- count[3]
 t_prcs_count_3: PROCESS
 BEGIN
-	count(3) <= '1';
+	count(3) <= '0';
 WAIT;
 END PROCESS t_prcs_count_3;
 -- count[2]
 t_prcs_count_2: PROCESS
 BEGIN
-	count(2) <= '0';
+	count(2) <= '1';
 WAIT;
 END PROCESS t_prcs_count_2;
 -- count[1]
@@ -441,13 +441,13 @@ END PROCESS t_prcs_reduction_2;
 -- reduction[1]
 t_prcs_reduction_1: PROCESS
 BEGIN
-	reduction(1) <= '1';
+	reduction(1) <= '0';
 WAIT;
 END PROCESS t_prcs_reduction_1;
 -- reduction[0]
 t_prcs_reduction_0: PROCESS
 BEGIN
-	reduction(0) <= '0';
+	reduction(0) <= '1';
 WAIT;
 END PROCESS t_prcs_reduction_0;
 
@@ -455,6 +455,15 @@ END PROCESS t_prcs_reduction_0;
 t_prcs_reset: PROCESS
 BEGIN
 	reset <= '1';
+	WAIT FOR 300000 ps;
+	FOR i IN 1 TO 16
+	LOOP
+		reset <= '0';
+		WAIT FOR 300000 ps;
+		reset <= '1';
+		WAIT FOR 300000 ps;
+	END LOOP;
+	reset <= '0';
 WAIT;
 END PROCESS t_prcs_reset;
 END clk_gen_arch;

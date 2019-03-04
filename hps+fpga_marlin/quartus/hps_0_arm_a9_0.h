@@ -47,7 +47,7 @@
 #define SYSID_QSYS_SPAN 8
 #define SYSID_QSYS_END 0xff201007
 #define SYSID_QSYS_ID 4294906626
-#define SYSID_QSYS_TIMESTAMP 1549133333
+#define SYSID_QSYS_TIMESTAMP 1550063582
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -185,28 +185,52 @@
 #define HEATERS_RESET_VALUE 0
 
 /*
- * Macros for device 'flags', class 'altera_avalon_pio'
- * The macros are prefixed with 'FLAGS_'.
+ * Macros for device 'flags_in', class 'altera_avalon_pio'
+ * The macros are prefixed with 'FLAGS_IN_'.
  * The prefix is the slave descriptor.
  */
-#define FLAGS_COMPONENT_TYPE altera_avalon_pio
-#define FLAGS_COMPONENT_NAME flags
-#define FLAGS_BASE 0xff2040e0
-#define FLAGS_SPAN 16
-#define FLAGS_END 0xff2040ef
-#define FLAGS_BIT_CLEARING_EDGE_REGISTER 0
-#define FLAGS_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define FLAGS_CAPTURE 0
-#define FLAGS_DATA_WIDTH 32
-#define FLAGS_DO_TEST_BENCH_WIRING 0
-#define FLAGS_DRIVEN_SIM_VALUE 0
-#define FLAGS_EDGE_TYPE NONE
-#define FLAGS_FREQ 50000000
-#define FLAGS_HAS_IN 1
-#define FLAGS_HAS_OUT 1
-#define FLAGS_HAS_TRI 0
-#define FLAGS_IRQ_TYPE NONE
-#define FLAGS_RESET_VALUE 0
+#define FLAGS_IN_COMPONENT_TYPE altera_avalon_pio
+#define FLAGS_IN_COMPONENT_NAME flags_in
+#define FLAGS_IN_BASE 0xff2040e0
+#define FLAGS_IN_SPAN 16
+#define FLAGS_IN_END 0xff2040ef
+#define FLAGS_IN_BIT_CLEARING_EDGE_REGISTER 0
+#define FLAGS_IN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define FLAGS_IN_CAPTURE 0
+#define FLAGS_IN_DATA_WIDTH 32
+#define FLAGS_IN_DO_TEST_BENCH_WIRING 0
+#define FLAGS_IN_DRIVEN_SIM_VALUE 0
+#define FLAGS_IN_EDGE_TYPE NONE
+#define FLAGS_IN_FREQ 50000000
+#define FLAGS_IN_HAS_IN 1
+#define FLAGS_IN_HAS_OUT 0
+#define FLAGS_IN_HAS_TRI 0
+#define FLAGS_IN_IRQ_TYPE NONE
+#define FLAGS_IN_RESET_VALUE 0
+
+/*
+ * Macros for device 'flags_out', class 'altera_avalon_pio'
+ * The macros are prefixed with 'FLAGS_OUT_'.
+ * The prefix is the slave descriptor.
+ */
+#define FLAGS_OUT_COMPONENT_TYPE altera_avalon_pio
+#define FLAGS_OUT_COMPONENT_NAME flags_out
+#define FLAGS_OUT_BASE 0xff204100
+#define FLAGS_OUT_SPAN 16
+#define FLAGS_OUT_END 0xff20410f
+#define FLAGS_OUT_BIT_CLEARING_EDGE_REGISTER 0
+#define FLAGS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define FLAGS_OUT_CAPTURE 0
+#define FLAGS_OUT_DATA_WIDTH 32
+#define FLAGS_OUT_DO_TEST_BENCH_WIRING 0
+#define FLAGS_OUT_DRIVEN_SIM_VALUE 0
+#define FLAGS_OUT_EDGE_TYPE NONE
+#define FLAGS_OUT_FREQ 50000000
+#define FLAGS_OUT_HAS_IN 0
+#define FLAGS_OUT_HAS_OUT 1
+#define FLAGS_OUT_HAS_TRI 0
+#define FLAGS_OUT_IRQ_TYPE NONE
+#define FLAGS_OUT_RESET_VALUE 0
 
 /*
  * Macros for device 'stepper_1_speed', class 'altera_avalon_pio'
@@ -233,28 +257,28 @@
 #define STEPPER_1_SPEED_RESET_VALUE 0
 
 /*
- * Macros for device 'stepper_1_steps', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEPPER_1_STEPS_'.
+ * Macros for device 'stepper_1_steps_in', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_1_STEPS_IN_'.
  * The prefix is the slave descriptor.
  */
-#define STEPPER_1_STEPS_COMPONENT_TYPE altera_avalon_pio
-#define STEPPER_1_STEPS_COMPONENT_NAME stepper_1_steps
-#define STEPPER_1_STEPS_BASE 0xff205020
-#define STEPPER_1_STEPS_SPAN 16
-#define STEPPER_1_STEPS_END 0xff20502f
-#define STEPPER_1_STEPS_BIT_CLEARING_EDGE_REGISTER 0
-#define STEPPER_1_STEPS_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEPPER_1_STEPS_CAPTURE 0
-#define STEPPER_1_STEPS_DATA_WIDTH 32
-#define STEPPER_1_STEPS_DO_TEST_BENCH_WIRING 0
-#define STEPPER_1_STEPS_DRIVEN_SIM_VALUE 0
-#define STEPPER_1_STEPS_EDGE_TYPE NONE
-#define STEPPER_1_STEPS_FREQ 50000000
-#define STEPPER_1_STEPS_HAS_IN 1
-#define STEPPER_1_STEPS_HAS_OUT 1
-#define STEPPER_1_STEPS_HAS_TRI 0
-#define STEPPER_1_STEPS_IRQ_TYPE NONE
-#define STEPPER_1_STEPS_RESET_VALUE 0
+#define STEPPER_1_STEPS_IN_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_1_STEPS_IN_COMPONENT_NAME stepper_1_steps_in
+#define STEPPER_1_STEPS_IN_BASE 0xff205020
+#define STEPPER_1_STEPS_IN_SPAN 16
+#define STEPPER_1_STEPS_IN_END 0xff20502f
+#define STEPPER_1_STEPS_IN_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_1_STEPS_IN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_1_STEPS_IN_CAPTURE 0
+#define STEPPER_1_STEPS_IN_DATA_WIDTH 32
+#define STEPPER_1_STEPS_IN_DO_TEST_BENCH_WIRING 0
+#define STEPPER_1_STEPS_IN_DRIVEN_SIM_VALUE 0
+#define STEPPER_1_STEPS_IN_EDGE_TYPE NONE
+#define STEPPER_1_STEPS_IN_FREQ 50000000
+#define STEPPER_1_STEPS_IN_HAS_IN 1
+#define STEPPER_1_STEPS_IN_HAS_OUT 0
+#define STEPPER_1_STEPS_IN_HAS_TRI 0
+#define STEPPER_1_STEPS_IN_IRQ_TYPE NONE
+#define STEPPER_1_STEPS_IN_RESET_VALUE 0
 
 /*
  * Macros for device 'stepper_2_speed', class 'altera_avalon_pio'
@@ -281,28 +305,28 @@
 #define STEPPER_2_SPEED_RESET_VALUE 0
 
 /*
- * Macros for device 'stepper_2_steps', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEPPER_2_STEPS_'.
+ * Macros for device 'stepper_2_steps_in', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_2_STEPS_IN_'.
  * The prefix is the slave descriptor.
  */
-#define STEPPER_2_STEPS_COMPONENT_TYPE altera_avalon_pio
-#define STEPPER_2_STEPS_COMPONENT_NAME stepper_2_steps
-#define STEPPER_2_STEPS_BASE 0xff205060
-#define STEPPER_2_STEPS_SPAN 16
-#define STEPPER_2_STEPS_END 0xff20506f
-#define STEPPER_2_STEPS_BIT_CLEARING_EDGE_REGISTER 0
-#define STEPPER_2_STEPS_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEPPER_2_STEPS_CAPTURE 0
-#define STEPPER_2_STEPS_DATA_WIDTH 32
-#define STEPPER_2_STEPS_DO_TEST_BENCH_WIRING 0
-#define STEPPER_2_STEPS_DRIVEN_SIM_VALUE 0
-#define STEPPER_2_STEPS_EDGE_TYPE NONE
-#define STEPPER_2_STEPS_FREQ 50000000
-#define STEPPER_2_STEPS_HAS_IN 1
-#define STEPPER_2_STEPS_HAS_OUT 1
-#define STEPPER_2_STEPS_HAS_TRI 0
-#define STEPPER_2_STEPS_IRQ_TYPE NONE
-#define STEPPER_2_STEPS_RESET_VALUE 0
+#define STEPPER_2_STEPS_IN_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_2_STEPS_IN_COMPONENT_NAME stepper_2_steps_in
+#define STEPPER_2_STEPS_IN_BASE 0xff205060
+#define STEPPER_2_STEPS_IN_SPAN 16
+#define STEPPER_2_STEPS_IN_END 0xff20506f
+#define STEPPER_2_STEPS_IN_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_2_STEPS_IN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_2_STEPS_IN_CAPTURE 0
+#define STEPPER_2_STEPS_IN_DATA_WIDTH 32
+#define STEPPER_2_STEPS_IN_DO_TEST_BENCH_WIRING 0
+#define STEPPER_2_STEPS_IN_DRIVEN_SIM_VALUE 0
+#define STEPPER_2_STEPS_IN_EDGE_TYPE NONE
+#define STEPPER_2_STEPS_IN_FREQ 50000000
+#define STEPPER_2_STEPS_IN_HAS_IN 1
+#define STEPPER_2_STEPS_IN_HAS_OUT 0
+#define STEPPER_2_STEPS_IN_HAS_TRI 0
+#define STEPPER_2_STEPS_IN_IRQ_TYPE NONE
+#define STEPPER_2_STEPS_IN_RESET_VALUE 0
 
 /*
  * Macros for device 'stepper_3_speed', class 'altera_avalon_pio'
@@ -329,28 +353,28 @@
 #define STEPPER_3_SPEED_RESET_VALUE 0
 
 /*
- * Macros for device 'stepper_3_steps', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEPPER_3_STEPS_'.
+ * Macros for device 'stepper_3_steps_in', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_3_STEPS_IN_'.
  * The prefix is the slave descriptor.
  */
-#define STEPPER_3_STEPS_COMPONENT_TYPE altera_avalon_pio
-#define STEPPER_3_STEPS_COMPONENT_NAME stepper_3_steps
-#define STEPPER_3_STEPS_BASE 0xff2050a0
-#define STEPPER_3_STEPS_SPAN 16
-#define STEPPER_3_STEPS_END 0xff2050af
-#define STEPPER_3_STEPS_BIT_CLEARING_EDGE_REGISTER 0
-#define STEPPER_3_STEPS_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEPPER_3_STEPS_CAPTURE 0
-#define STEPPER_3_STEPS_DATA_WIDTH 32
-#define STEPPER_3_STEPS_DO_TEST_BENCH_WIRING 0
-#define STEPPER_3_STEPS_DRIVEN_SIM_VALUE 0
-#define STEPPER_3_STEPS_EDGE_TYPE NONE
-#define STEPPER_3_STEPS_FREQ 50000000
-#define STEPPER_3_STEPS_HAS_IN 1
-#define STEPPER_3_STEPS_HAS_OUT 1
-#define STEPPER_3_STEPS_HAS_TRI 0
-#define STEPPER_3_STEPS_IRQ_TYPE NONE
-#define STEPPER_3_STEPS_RESET_VALUE 0
+#define STEPPER_3_STEPS_IN_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_3_STEPS_IN_COMPONENT_NAME stepper_3_steps_in
+#define STEPPER_3_STEPS_IN_BASE 0xff2050a0
+#define STEPPER_3_STEPS_IN_SPAN 16
+#define STEPPER_3_STEPS_IN_END 0xff2050af
+#define STEPPER_3_STEPS_IN_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_3_STEPS_IN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_3_STEPS_IN_CAPTURE 0
+#define STEPPER_3_STEPS_IN_DATA_WIDTH 32
+#define STEPPER_3_STEPS_IN_DO_TEST_BENCH_WIRING 0
+#define STEPPER_3_STEPS_IN_DRIVEN_SIM_VALUE 0
+#define STEPPER_3_STEPS_IN_EDGE_TYPE NONE
+#define STEPPER_3_STEPS_IN_FREQ 50000000
+#define STEPPER_3_STEPS_IN_HAS_IN 1
+#define STEPPER_3_STEPS_IN_HAS_OUT 0
+#define STEPPER_3_STEPS_IN_HAS_TRI 0
+#define STEPPER_3_STEPS_IN_IRQ_TYPE NONE
+#define STEPPER_3_STEPS_IN_RESET_VALUE 0
 
 /*
  * Macros for device 'stepper_4_speed', class 'altera_avalon_pio'
@@ -377,28 +401,28 @@
 #define STEPPER_4_SPEED_RESET_VALUE 0
 
 /*
- * Macros for device 'stepper_4_steps', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEPPER_4_STEPS_'.
+ * Macros for device 'stepper_4_steps_in', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_4_STEPS_IN_'.
  * The prefix is the slave descriptor.
  */
-#define STEPPER_4_STEPS_COMPONENT_TYPE altera_avalon_pio
-#define STEPPER_4_STEPS_COMPONENT_NAME stepper_4_steps
-#define STEPPER_4_STEPS_BASE 0xff2050e0
-#define STEPPER_4_STEPS_SPAN 16
-#define STEPPER_4_STEPS_END 0xff2050ef
-#define STEPPER_4_STEPS_BIT_CLEARING_EDGE_REGISTER 0
-#define STEPPER_4_STEPS_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEPPER_4_STEPS_CAPTURE 0
-#define STEPPER_4_STEPS_DATA_WIDTH 32
-#define STEPPER_4_STEPS_DO_TEST_BENCH_WIRING 0
-#define STEPPER_4_STEPS_DRIVEN_SIM_VALUE 0
-#define STEPPER_4_STEPS_EDGE_TYPE NONE
-#define STEPPER_4_STEPS_FREQ 50000000
-#define STEPPER_4_STEPS_HAS_IN 1
-#define STEPPER_4_STEPS_HAS_OUT 1
-#define STEPPER_4_STEPS_HAS_TRI 0
-#define STEPPER_4_STEPS_IRQ_TYPE NONE
-#define STEPPER_4_STEPS_RESET_VALUE 0
+#define STEPPER_4_STEPS_IN_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_4_STEPS_IN_COMPONENT_NAME stepper_4_steps_in
+#define STEPPER_4_STEPS_IN_BASE 0xff2050e0
+#define STEPPER_4_STEPS_IN_SPAN 16
+#define STEPPER_4_STEPS_IN_END 0xff2050ef
+#define STEPPER_4_STEPS_IN_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_4_STEPS_IN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_4_STEPS_IN_CAPTURE 0
+#define STEPPER_4_STEPS_IN_DATA_WIDTH 32
+#define STEPPER_4_STEPS_IN_DO_TEST_BENCH_WIRING 0
+#define STEPPER_4_STEPS_IN_DRIVEN_SIM_VALUE 0
+#define STEPPER_4_STEPS_IN_EDGE_TYPE NONE
+#define STEPPER_4_STEPS_IN_FREQ 50000000
+#define STEPPER_4_STEPS_IN_HAS_IN 1
+#define STEPPER_4_STEPS_IN_HAS_OUT 0
+#define STEPPER_4_STEPS_IN_HAS_TRI 0
+#define STEPPER_4_STEPS_IN_IRQ_TYPE NONE
+#define STEPPER_4_STEPS_IN_RESET_VALUE 0
 
 /*
  * Macros for device 'stepper_5_speed', class 'altera_avalon_pio'
@@ -425,28 +449,148 @@
 #define STEPPER_5_SPEED_RESET_VALUE 0
 
 /*
- * Macros for device 'stepper_5_steps', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEPPER_5_STEPS_'.
+ * Macros for device 'stepper_5_steps_in', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_5_STEPS_IN_'.
  * The prefix is the slave descriptor.
  */
-#define STEPPER_5_STEPS_COMPONENT_TYPE altera_avalon_pio
-#define STEPPER_5_STEPS_COMPONENT_NAME stepper_5_steps
-#define STEPPER_5_STEPS_BASE 0xff205120
-#define STEPPER_5_STEPS_SPAN 16
-#define STEPPER_5_STEPS_END 0xff20512f
-#define STEPPER_5_STEPS_BIT_CLEARING_EDGE_REGISTER 0
-#define STEPPER_5_STEPS_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEPPER_5_STEPS_CAPTURE 0
-#define STEPPER_5_STEPS_DATA_WIDTH 32
-#define STEPPER_5_STEPS_DO_TEST_BENCH_WIRING 0
-#define STEPPER_5_STEPS_DRIVEN_SIM_VALUE 0
-#define STEPPER_5_STEPS_EDGE_TYPE NONE
-#define STEPPER_5_STEPS_FREQ 50000000
-#define STEPPER_5_STEPS_HAS_IN 1
-#define STEPPER_5_STEPS_HAS_OUT 1
-#define STEPPER_5_STEPS_HAS_TRI 0
-#define STEPPER_5_STEPS_IRQ_TYPE NONE
-#define STEPPER_5_STEPS_RESET_VALUE 0
+#define STEPPER_5_STEPS_IN_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_5_STEPS_IN_COMPONENT_NAME stepper_5_steps_in
+#define STEPPER_5_STEPS_IN_BASE 0xff205120
+#define STEPPER_5_STEPS_IN_SPAN 16
+#define STEPPER_5_STEPS_IN_END 0xff20512f
+#define STEPPER_5_STEPS_IN_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_5_STEPS_IN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_5_STEPS_IN_CAPTURE 0
+#define STEPPER_5_STEPS_IN_DATA_WIDTH 32
+#define STEPPER_5_STEPS_IN_DO_TEST_BENCH_WIRING 0
+#define STEPPER_5_STEPS_IN_DRIVEN_SIM_VALUE 0
+#define STEPPER_5_STEPS_IN_EDGE_TYPE NONE
+#define STEPPER_5_STEPS_IN_FREQ 50000000
+#define STEPPER_5_STEPS_IN_HAS_IN 1
+#define STEPPER_5_STEPS_IN_HAS_OUT 0
+#define STEPPER_5_STEPS_IN_HAS_TRI 0
+#define STEPPER_5_STEPS_IN_IRQ_TYPE NONE
+#define STEPPER_5_STEPS_IN_RESET_VALUE 0
+
+/*
+ * Macros for device 'stepper_1_steps_out', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_1_STEPS_OUT_'.
+ * The prefix is the slave descriptor.
+ */
+#define STEPPER_1_STEPS_OUT_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_1_STEPS_OUT_COMPONENT_NAME stepper_1_steps_out
+#define STEPPER_1_STEPS_OUT_BASE 0xff205140
+#define STEPPER_1_STEPS_OUT_SPAN 16
+#define STEPPER_1_STEPS_OUT_END 0xff20514f
+#define STEPPER_1_STEPS_OUT_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_1_STEPS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_1_STEPS_OUT_CAPTURE 0
+#define STEPPER_1_STEPS_OUT_DATA_WIDTH 32
+#define STEPPER_1_STEPS_OUT_DO_TEST_BENCH_WIRING 0
+#define STEPPER_1_STEPS_OUT_DRIVEN_SIM_VALUE 0
+#define STEPPER_1_STEPS_OUT_EDGE_TYPE NONE
+#define STEPPER_1_STEPS_OUT_FREQ 50000000
+#define STEPPER_1_STEPS_OUT_HAS_IN 0
+#define STEPPER_1_STEPS_OUT_HAS_OUT 1
+#define STEPPER_1_STEPS_OUT_HAS_TRI 0
+#define STEPPER_1_STEPS_OUT_IRQ_TYPE NONE
+#define STEPPER_1_STEPS_OUT_RESET_VALUE 0
+
+/*
+ * Macros for device 'stepper_2_steps_out', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_2_STEPS_OUT_'.
+ * The prefix is the slave descriptor.
+ */
+#define STEPPER_2_STEPS_OUT_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_2_STEPS_OUT_COMPONENT_NAME stepper_2_steps_out
+#define STEPPER_2_STEPS_OUT_BASE 0xff205160
+#define STEPPER_2_STEPS_OUT_SPAN 16
+#define STEPPER_2_STEPS_OUT_END 0xff20516f
+#define STEPPER_2_STEPS_OUT_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_2_STEPS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_2_STEPS_OUT_CAPTURE 0
+#define STEPPER_2_STEPS_OUT_DATA_WIDTH 32
+#define STEPPER_2_STEPS_OUT_DO_TEST_BENCH_WIRING 0
+#define STEPPER_2_STEPS_OUT_DRIVEN_SIM_VALUE 0
+#define STEPPER_2_STEPS_OUT_EDGE_TYPE NONE
+#define STEPPER_2_STEPS_OUT_FREQ 50000000
+#define STEPPER_2_STEPS_OUT_HAS_IN 0
+#define STEPPER_2_STEPS_OUT_HAS_OUT 1
+#define STEPPER_2_STEPS_OUT_HAS_TRI 0
+#define STEPPER_2_STEPS_OUT_IRQ_TYPE NONE
+#define STEPPER_2_STEPS_OUT_RESET_VALUE 0
+
+/*
+ * Macros for device 'stepper_3_steps_out', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_3_STEPS_OUT_'.
+ * The prefix is the slave descriptor.
+ */
+#define STEPPER_3_STEPS_OUT_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_3_STEPS_OUT_COMPONENT_NAME stepper_3_steps_out
+#define STEPPER_3_STEPS_OUT_BASE 0xff205180
+#define STEPPER_3_STEPS_OUT_SPAN 16
+#define STEPPER_3_STEPS_OUT_END 0xff20518f
+#define STEPPER_3_STEPS_OUT_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_3_STEPS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_3_STEPS_OUT_CAPTURE 0
+#define STEPPER_3_STEPS_OUT_DATA_WIDTH 32
+#define STEPPER_3_STEPS_OUT_DO_TEST_BENCH_WIRING 0
+#define STEPPER_3_STEPS_OUT_DRIVEN_SIM_VALUE 0
+#define STEPPER_3_STEPS_OUT_EDGE_TYPE NONE
+#define STEPPER_3_STEPS_OUT_FREQ 50000000
+#define STEPPER_3_STEPS_OUT_HAS_IN 0
+#define STEPPER_3_STEPS_OUT_HAS_OUT 1
+#define STEPPER_3_STEPS_OUT_HAS_TRI 0
+#define STEPPER_3_STEPS_OUT_IRQ_TYPE NONE
+#define STEPPER_3_STEPS_OUT_RESET_VALUE 0
+
+/*
+ * Macros for device 'stepper_4_steps_out', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_4_STEPS_OUT_'.
+ * The prefix is the slave descriptor.
+ */
+#define STEPPER_4_STEPS_OUT_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_4_STEPS_OUT_COMPONENT_NAME stepper_4_steps_out
+#define STEPPER_4_STEPS_OUT_BASE 0xff2051a0
+#define STEPPER_4_STEPS_OUT_SPAN 16
+#define STEPPER_4_STEPS_OUT_END 0xff2051af
+#define STEPPER_4_STEPS_OUT_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_4_STEPS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_4_STEPS_OUT_CAPTURE 0
+#define STEPPER_4_STEPS_OUT_DATA_WIDTH 32
+#define STEPPER_4_STEPS_OUT_DO_TEST_BENCH_WIRING 0
+#define STEPPER_4_STEPS_OUT_DRIVEN_SIM_VALUE 0
+#define STEPPER_4_STEPS_OUT_EDGE_TYPE NONE
+#define STEPPER_4_STEPS_OUT_FREQ 50000000
+#define STEPPER_4_STEPS_OUT_HAS_IN 0
+#define STEPPER_4_STEPS_OUT_HAS_OUT 1
+#define STEPPER_4_STEPS_OUT_HAS_TRI 0
+#define STEPPER_4_STEPS_OUT_IRQ_TYPE NONE
+#define STEPPER_4_STEPS_OUT_RESET_VALUE 0
+
+/*
+ * Macros for device 'stepper_5_steps_out', class 'altera_avalon_pio'
+ * The macros are prefixed with 'STEPPER_5_STEPS_OUT_'.
+ * The prefix is the slave descriptor.
+ */
+#define STEPPER_5_STEPS_OUT_COMPONENT_TYPE altera_avalon_pio
+#define STEPPER_5_STEPS_OUT_COMPONENT_NAME stepper_5_steps_out
+#define STEPPER_5_STEPS_OUT_BASE 0xff2051c0
+#define STEPPER_5_STEPS_OUT_SPAN 16
+#define STEPPER_5_STEPS_OUT_END 0xff2051cf
+#define STEPPER_5_STEPS_OUT_BIT_CLEARING_EDGE_REGISTER 0
+#define STEPPER_5_STEPS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define STEPPER_5_STEPS_OUT_CAPTURE 0
+#define STEPPER_5_STEPS_OUT_DATA_WIDTH 32
+#define STEPPER_5_STEPS_OUT_DO_TEST_BENCH_WIRING 0
+#define STEPPER_5_STEPS_OUT_DRIVEN_SIM_VALUE 0
+#define STEPPER_5_STEPS_OUT_EDGE_TYPE NONE
+#define STEPPER_5_STEPS_OUT_FREQ 50000000
+#define STEPPER_5_STEPS_OUT_HAS_IN 0
+#define STEPPER_5_STEPS_OUT_HAS_OUT 1
+#define STEPPER_5_STEPS_OUT_HAS_TRI 0
+#define STEPPER_5_STEPS_OUT_IRQ_TYPE NONE
+#define STEPPER_5_STEPS_OUT_RESET_VALUE 0
 
 /*
  * Macros for device 'endstops', class 'altera_avalon_pio'

@@ -1,7 +1,7 @@
  module driver_stepper(
-								input wire FPGA_CLK1_50,
-								input wire [31:0] stepper_1_step_out,
-								input wire 	[31:0] 	stepper_1_speed,
+								input wire 	FPGA_CLK1_50,
+								input wire 	[31:0] stepper_1_step_out,
+								input wire 	[31:0] stepper_1_speed,
 								
 								output wire [31:0] stepper_1_step_in,
 								output wire [2:0] flags1,
