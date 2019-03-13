@@ -24,10 +24,8 @@ int gcode::correction(int a_numofmicrosteps, int b_numofmicrosteps, int z_numofm
     dl = z_numofmicrosteps*rotlength/stepsperrot/microsteps;
     dz = dl*h/circlelength;
 
-    if debug
-    {
-        printf("dx = %f\ndy = %f\ndz = %f\nde = %f\n", dx, dy, dz, de);
-    }
+    if debug printf("dx = %f\ndy = %f\ndz = %f\nde = %f\n", dx, dy, dz, de);
+
 return 0;
 }
 
@@ -49,16 +47,14 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     //за пройденное расстояние принимается гипотенуза 
 
     if debug
-    {
-        printf("dx = %.4f\n",dx);
+    {   printf("dx = %.4f\n",dx);
         printf("dy = %.4f\n",dy);
         printf("diag = %.4f\n",diag);
         printf("da = %.4f\n",da);
         printf("db = %.4f\n",db);
         printf("de = %.4f\n",de);
         printf("dz = %.4f\n",dz);
-        printf("dl = %.4f\n\n",dl); 
-    }
+        printf("dl = %.4f\n\n",dl);}
     
 
     //Необходимое для движения количество микрошагов = число оборотов * количество микрошагов за оборот
@@ -98,30 +94,25 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     *a_microsteppulse = ceil(abs(frequency/a_speed));// коэффициент коррекции тактовой частоты по модулю, равный количеству необходимых для движения импульсов  
     float a_new_speed = 0, a_new_t = 0;
     if (da != 0) 
-    {
-        a_new_speed = frequency/(*a_microsteppulse); // частота после коррекции
-        a_new_t = abs((*a_numofmicrosteps)/a_new_speed); // ранее за время принималась рассчитанная для диагонали величина
-    }
-    
+    {   a_new_speed = frequency/(*a_microsteppulse); // частота после коррекции
+        a_new_t = abs((*a_numofmicrosteps)/a_new_speed);} // ранее за время принималась рассчитанная для диагонали величина
+
     //подсчет параметров коррекции для двигателя b  
     *b_microsteppulse = ceil(abs(frequency/b_speed)); // коэффициент коррекции тактовой частоты по модулю, равный количеству необходимых для движения импульсов 
     float b_new_speed = 0, b_new_t = 0;
     if (db != 0) 
-    {
-        b_new_speed = frequency/(*b_microsteppulse); // частота после коррекции
-        b_new_t = abs((*b_numofmicrosteps)/b_new_speed); // ранее за время принималась рассчитанная для диагонали величина
-    }
+    {   b_new_speed = frequency/(*b_microsteppulse); // частота после коррекции
+        b_new_t = abs((*b_numofmicrosteps)/b_new_speed);} // ранее за время принималась рассчитанная для диагонали величина
+    
 
     //на экран подавать нецелые координаты + координаты должны быть правильными
     //+ выводить новые координаты с учетом округления
     if debug
-    {
-        printf("initial t = %f\n", t);
+    {   printf("initial t = %f\n", t);
         printf("a_new_speed = %f\n",a_new_speed);
         printf("a_new_t = %f\n",a_new_t);
         printf("b_new_speed = %f\n",b_new_speed);
-        printf("b_new_t = %f\n",b_new_t);
-    }
+        printf("b_new_t = %f\n",b_new_t);}
 
     //скорость в микрошагах/с (a_speed, b_speed)
     float e_speed = (*e_numofmicrosteps)/t;
@@ -134,20 +125,15 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     *e_microsteppulse = ceil(abs(frequency/e_speed)); // коэффициент коррекции тактовой частоты по модулю, равный количеству необходимых для движения импульсов 
     float e_new_speed = 0, e_new_t = 0;
     if (de != 0) 
-    {
-        e_new_speed = frequency/(*e_microsteppulse); // частота после коррекции
-        e_new_t = abs((*e_numofmicrosteps)/e_new_speed); // ранее за время принималась рассчитанная для диагонали величина
-    }
+    {   e_new_speed = frequency/(*e_microsteppulse); // частота после коррекции
+        e_new_t = abs((*e_numofmicrosteps)/e_new_speed);} // ранее за время принималась рассчитанная для диагонали величина
     
     if debug
-    {
-        printf("e_numofmicrosteps = %ld\n", (long)(*e_numofmicrosteps));//выводится количество микрошагов, необходимых для движения
+    {   printf("e_numofmicrosteps = %ld\n", (long)(*e_numofmicrosteps));//выводится количество микрошагов, необходимых для движения
         printf("e_microsteppulse = %lu\n\n", (unsigned long)(*e_microsteppulse));//выводится количество 20нс импульсов, необходимых для движения
         printf("e_new_speed = %f\n",e_new_speed);
-        printf("e_new_t = %f\n",e_new_t);
-    }
-        //ROTLENGTH ДЛЯ ДВИГАТЕЛЯ НА ЗЭД ВРОДЕ БОЛЬШЕ 40 ММ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+        printf("e_new_t = %f\n",e_new_t);}
+        
     //скорость в микрошагах/с (a_speed, b_speed)
     float z_speed = (*z_numofmicrosteps)/t;
 
@@ -159,17 +145,14 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     *z_microsteppulse = ceil(abs(frequency/z_speed)); // коэффициент коррекции тактовой частоты по модулю, равный количеству необходимых для движения импульсов 
     float z_new_speed = 0, z_new_t = 0;
     if (dz != 0) 
-    {
-        z_new_speed = frequency/(*z_microsteppulse); // частота после коррекции
-        z_new_t = abs((*z_numofmicrosteps)/z_new_speed); // ранее за время принималась рассчитанная для диагонали величина
-    }
+    {   z_new_speed = frequency/(*z_microsteppulse); // частота после коррекции
+        z_new_t = abs((*z_numofmicrosteps)/z_new_speed);} // ранее за время принималась рассчитанная для диагонали величина
+    
     if debug
-    {
-        printf("z_numofmicrosteps = %ld\n", (long)(*z_numofmicrosteps));//выводится количество микрошагов, необходимых для движения
+    {   printf("z_numofmicrosteps = %ld\n", (long)(*z_numofmicrosteps));//выводится количество микрошагов, необходимых для движения
         printf("z_microsteppulse = %lu\n\n", (unsigned long)(*z_microsteppulse));//выводится количество 20нс импульсов, необходимых для движения
         printf("z_new_speed = %f\n",z_new_speed);
-        printf("z_new_t = %f\n",z_new_t);
-    }
+        printf("z_new_t = %f\n",z_new_t);}
     
     return 0;
 }
