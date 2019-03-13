@@ -12,9 +12,9 @@ int gcode::correction(int a_numofmicrosteps, int b_numofmicrosteps, int z_numofm
     float &dx, float &dy, float &dz, float &de)
 //метод, который переносит кол-во микрошагов в мм'ы для движков с сохранением знака
 {
-    float da = dx + dy; //first stepper work in mm 
-    float db = dx - dy; //second stepper work in mm
-    float dl;
+    float da = dx + dy; //расстояние, которое должен обработать двигатель a системы core xy
+    float db = dx - dy; //расстояние, которое должен обработать двигатель b системы core xy
+    float dl; //расстояние, которое должен обработать двигатель на оси z
 
     da = a_numofmicrosteps*rotlength/stepsperrot/microsteps;
     db = b_numofmicrosteps*rotlength/stepsperrot/microsteps;
@@ -39,12 +39,10 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
 * и передает эти параметры в верилог
 */
     float diag; //гипотенуза, относительно которой высчитывается общее время для x и y
-    float da = dx + dу; //first stepper work in mm 
-    float db = dx - dу; //second stepper work in mm
-
+    float da = dx + dу; //расстояние, которое должен обработать двигатель a системы core xy
+    float db = dx - dу; //расстояние, которое должен обработать двигатель b системы core xy
     diag = sqrt(dx*dx + dy*dy);
     float dl = dz/h*circlelength; //расстояние, которое должен обработать двигатель на оси z
-    //за пройденное расстояние принимается гипотенуза 
 
     if debug
     {   printf("dx = %.4f\n",dx);
@@ -56,14 +54,13 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
         printf("dz = %.4f\n",dz);
         printf("dl = %.4f\n\n",dl);}
     
-
-    //Необходимое для движения количество микрошагов = число оборотов * количество микрошагов за оборот
+    //необходимое для движения количество микрошагов = число оборотов * количество микрошагов за оборот
     *a_numofmicrosteps = trunc(da/rotlength*stepsperrot*microsteps);
     *b_numofmicrosteps = trunc(db/rotlength*stepsperrot*microsteps);
     *e_numofmicrosteps = trunc(de/rotlength*stepsperrot*microsteps);
     *z_numofmicrosteps = trunc(dl/rotlength*stepsperrot*microsteps);
     
-    //выводится количество микрошагов, необходимых для движения
+    //вывод количества микрошагов, необходимых для движения
     if debug
     {   printf("a_numofmicrosteps = %ld\n", (long)(*a_numofmicrosteps));
         printf("b_numofmicrosteps = %ld\n", (long)(*b_numofmicrosteps));
@@ -103,12 +100,13 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     *e_microsteppulse = ceil(abs(frequency/e_speed)); 
     *z_microsteppulse = ceil(abs(frequency/z_speed)); 
 
-    //выводится количество 20нс импульсов, необходимых для движения
+    //вывод количества 20нс импульсов, необходимых для движения
     if debug
     {   printf("a_microsteppulse = %lu\n\n", (unsigned long)(*a_microsteppulse));
         printf("b_microsteppulse = %lu\n\n", (unsigned long)(*b_microsteppulse));
         printf("e_microsteppulse = %lu\n\n", (unsigned long)(*e_microsteppulse));
         printf("z_microsteppulse = %lu\n\n", (unsigned long)(*z_microsteppulse));}
+
     //подсчет параметров коррекции
     float a_new_speed = 0,  b_new_speed = 0, e_new_speed = 0, z_new_speed = 0;//частота после коррекции
     float  a_new_t = 0, b_new_t = 0, e_new_t = 0, z_new_t = 0;//время движения после коррекции
@@ -128,13 +126,14 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     if debug
     {   printf("initial t = %f\n", t);
         printf("a_new_speed = %f\n",a_new_speed);
-        printf("a_new_t = %f\n",a_new_t);
         printf("b_new_speed = %f\n",b_new_speed);
-        printf("b_new_t = %f\n",b_new_t);
         printf("e_new_speed = %f\n",e_new_speed);
+        printf("z_new_speed = %f\n\n",z_new_speed);
+
+        printf("a_new_t = %f\n",a_new_t);
+        printf("b_new_t = %f\n",b_new_t);
         printf("e_new_t = %f\n",e_new_t);
-        printf("z_new_speed = %f\n",z_new_speed);
-        printf("z_new_t = %f\n",z_new_t);}
+        printf("z_new_t = %f\n\n",z_new_t);}
     
     return 0;
 }
