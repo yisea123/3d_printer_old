@@ -1,6 +1,9 @@
 #ifndef gcode_H
 #define gcode_H
 #include <addresses.h>
+#include <unistd.h>
+#include <cmath>
+#include <inttypes.h>
 
 class gcode
 {
@@ -12,10 +15,17 @@ private:
     uint32_t *b_microsteppulse;
     addresses addr;
     bool debug;
+    float dх;
+    float dу; 
+    float dz;
+    float de;
 
 public:
-    int stepcounter(float x, float y, float x1, float y1, float speed);
-
+    int calc_steps_speed(float dх, float dу, float dz, float de, 
+    uint32_t* a_microsteppulse, uint32_t* b_microsteppulse, uint32_t* z_microsteppulse, uint32_t* e_microsteppulse, 
+    int32_t* a_numofmicrosteps, int32_t* b_numofmicrosteps, int32_t* z_numofmicrosteps, int32_t* e_numofmicrosteps);
+    int correction(int a_numofmicrosteps, int b_numofmicrosteps, int z_numofmicrosteps, int e_numofmicrosteps,
+    float &dx, float &dy, float &dz, float &de);
     gcode(bool debug, addresses addr);
 
     bool gcode_G0(float x, float y, float z, float e);
