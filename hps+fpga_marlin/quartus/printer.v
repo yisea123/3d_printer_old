@@ -220,19 +220,17 @@ assign temp3 = analog[2];
 
 
 //Heaters
-wire	heater1 = 0;
-wire	heater2 = 0;
+wire	[1:0] heaters;
 
-assign gpio0GPIO[15] = heater1;
-assign gpio0GPIO[16] = heater2;
+assign gpio0GPIO[15] = heaters[0]; //bed
+assign gpio0GPIO[16] = heaters[1]; //extruder
 
 
 //Fans
-wire fan1 = 0;
-wire fan2 = 0;
+wire fans;
 
-assign gpio0GPIO[17] = fan1;
-assign gpio0GPIO[18] = fan2;
+assign gpio0GPIO[17] = fans[0];
+assign gpio0GPIO[18] = fans[1];
 
 
 //End stops
@@ -405,7 +403,7 @@ assign end_stop[5] = gpio0GPIO[24] ^ flags_out[6];
 
 //=======================================================  
 stepper_corexy corexy(
-					.clk						(FPGA_CLK1_50), 
+					.clk						(CLK_1), 
 					.stepper_step_in_1	(stepper_1_step_out),						
 					.stepper_speed_1		(stepper_1_speed),
 					.stepper_step_in_2	(stepper_2_step_out),						
@@ -436,7 +434,7 @@ stepper_corexy corexy(
 					);  
 
 stepper_z axis_z(
-					.clk						(FPGA_CLK1_50), 
+					.clk						(CLK_1), 
 					.stepper_step_in		(stepper_3_step_out),						
 					.stepper_speed			(stepper_3_speed),
 					.stepper_enable		(flags_read[0]),
@@ -452,7 +450,7 @@ stepper_z axis_z(
 					);
   
 stepper_extruder extruder1(
-						.clk					(FPGA_CLK1_50), 
+						.clk					(CLK_1), 
 						.stepper_step_in	(stepper_4_step_out),						
 						.stepper_speed		(stepper_4_speed),
 						.stepper_enable	(flags_read[0]),
@@ -466,7 +464,7 @@ stepper_extruder extruder1(
 						);
 						
 stepper_extruder extruder2(
-						.clk					(FPGA_CLK1_50), 
+						.clk					(CLK_1), 
 						.stepper_step_in	(stepper_5_step_out),						
 						.stepper_speed		(stepper_5_speed),
 						.stepper_enable	(flags_read[0]),

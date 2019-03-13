@@ -160,7 +160,7 @@ bool flags::set_inversion_zmax(bool invert)
 		return ((addr->set_flags_in((a & flags_in))) == 0); 
 };
 
-bool flags::set_start_driving_state(bool flags::state)
+bool flags::set_start_driving_state(bool state)
 {
 	flags_in = addr->get_flags_in();
 	uint32_t a = create_number(state, flags_in_position_start_driving_state);

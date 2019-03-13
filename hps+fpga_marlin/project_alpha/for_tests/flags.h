@@ -60,31 +60,31 @@ class flags
 
 
 		//flags_in
-		bool get_stepper_enabled();
-		bool get_inversion_xmin();
-		bool get_inversion_xmax();
-		bool get_inversion_ymin();
-		bool get_inversion_ymax();
-		bool get_inversion_zmin();
-		bool get_inversion_zmax();
-		bool get_start_driving_state();
+		bool get_flags_in_stepper_enabled();
+		bool get_flags_in_inversion_xmin();
+		bool get_flags_in_inversion_xmax();
+		bool get_flags_in_inversion_ymin();
+		bool get_flags_in_inversion_ymax();
+		bool get_flags_in_inversion_zmin();
+		bool get_flags_in_inversion_zmax();
+		bool get_flags_in_start_driving_state();
 
-		bool set_stepper_enabled(bool state);
-		bool set_inversion_xmin(bool invert);
-		bool set_inversion_xmax(bool invert);
-		bool set_inversion_ymin(bool invert);
-		bool set_inversion_ymax(bool invert);
-		bool set_inversion_zmin(bool invert);
-		bool set_inversion_zmax(bool invert);
-		bool set_start_driving_state(bool state);
+		bool set_flags_in_stepper_enabled(bool state);
+		bool set_flags_in_inversion_xmin(bool invert);
+		bool set_flags_in_inversion_xmax(bool invert);
+		bool set_flags_in_inversion_ymin(bool invert);
+		bool set_flags_in_inversion_ymax(bool invert);
+		bool set_flags_in_inversion_zmin(bool invert);
+		bool set_flags_in_inversion_zmax(bool invert);
+		bool set_flags_in_start_driving_state(bool state);
 
 
 		//flagsa_out
-		bool get_stepper_state_xy();
-		bool get_stepper_state_z();
-		bool get_stepper_state_e();
-		bool get_correction_x();
-		bool get_correction_y();
+		bool get_flags_out_stepper_state_xy();
+		bool get_flags_out_stepper_state_z();
+		bool get_flags_out_stepper_state_e();
+		bool get_flags_out_correction_x();
+		bool get_flags_out_correction_y();
 
 
 }

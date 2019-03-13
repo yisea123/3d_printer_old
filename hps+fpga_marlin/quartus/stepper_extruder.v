@@ -65,12 +65,8 @@
 					stepper_step = {stepper_step[31], n};
 				else
 					stepper_step = {stepper_step[31], ~n + 1};
-			end
-			
-		end
-
-
-	
+			end			
+		end	
 	end
 	
 	

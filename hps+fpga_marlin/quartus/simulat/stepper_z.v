@@ -7,14 +7,14 @@
 						input		wire				zmax,
 						input		wire 				start_driving,
 						
-						output 	wire 				step_signal, //Максимально 25 MHz при reduction = 1
+						output 	wire 				step_signal, //Максимально 25 MHz при reduction = 1 при clk = 50 MHz
 						output 	wire 				enable,
-						output	wire				dir,
+						output	wire				direction,
 						output	wire				stepper_driving,
 						output 	wire 	[31:0] 	stepper_step_out);
 		
 	
-	reg [31:0] 	m		 					= 0;
+	reg [31:0] 	m		 					= 0;	
 	reg 			signal 					= 0;	
 	reg [30:0] 	n		 					= 0;	
 	reg			stepper_driving_reg 	= 0; 
@@ -23,7 +23,7 @@
 	assign stepper_driving = stepper_driving_reg;	
 	assign step_signal = signal;	
 	assign enable = ~stepper_enable;	
-	assign dir = stepper_step[31];	
+	assign direction = stepper_step[31];	
 	assign stepper_step_out = stepper_step;
 	
 	

@@ -21,4 +21,4 @@ $(TARGET): main.o addresses.o
 
 .PHONY: clean
 clean:
-	rm -f $(TARGET) *.a *.o *~ 
+	rm -f $(TARGET) *.a *.o *~

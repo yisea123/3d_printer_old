@@ -4,6 +4,7 @@
 #include "position.h"
 #include "configuration.h"
 #include "flags.h"
+#include <string>
 
 class gcode
 {
@@ -16,13 +17,15 @@ class gcode
     addresses* addr;
     position* pos;
     flags fl;
-    int debug = false;
+    bool debug = false;
 
 	public:
     int stepcounter(float x, float y, float x1, float y1, float speed);
 
     gcode(bool debug_new, addresses* addr_new, position* pos_new);
 
+    int str_to_gcode(string s);
+    
     int gcode_G0(float x, float y, float z, float e, float speed);
     int gcode_G1(float x, float y, float z, float e, float speed);
     int gcode_G4(unsigned int s, char c);
@@ -89,7 +92,7 @@ class gcode
     int gcode_M85();
     int gcode_M92();
     int gcode_M100();
-    int gcode_M104();
+    int gcode_M104(); //нагрев до указанной температуры
     int gcode_M105();
     int gcode_M106();
     int gcode_M107();

@@ -15,9 +15,9 @@
 		
 	
 	reg [31:0] 	m		 					= 0;
-	reg 			signal 					= 0;	
-	reg [30:0] 	n		 					= 0;	
-	reg			stepper_driving_reg 	= 0; 
+	reg 			signal 					= 0;
+	reg [30:0] 	n		 					= 0;
+	reg			stepper_driving_reg 	= 0;
 	reg [31:0]	stepper_step			= 0;
 	
 	assign stepper_driving = stepper_driving_reg;	
