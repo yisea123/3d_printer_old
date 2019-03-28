@@ -70,7 +70,7 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     //подсчет макс расстояния в микрошагах для опреодоления общего времени 
     //позволяет настроить скорость и время для единовременного завершения работы двигателей
     float max = abs(*z_numofmicrosteps);
-    float speed = min(maxspeed, pos.get_pos_speed());
+    float speed = min(maxspeed, pos->get_pos_speed());
     float t = abs(dl/speed); //t - общее время при макс скорости в секундах
     if (abs(*a_numofmicrosteps) > max)
     {   max = abs(*a_numofmicrosteps);
