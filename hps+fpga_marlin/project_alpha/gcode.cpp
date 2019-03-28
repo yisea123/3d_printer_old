@@ -20,7 +20,7 @@ int gcode::correction(int a_numofmicrosteps, int b_numofmicrosteps, int z_numofm
     db = b_numofmicrosteps*rotlength/stepsperrot/microsteps;
     dx = (da + db)/2;
     dy = (da - db)/2;
-    de = e_numofmicrosteps*rotlength/stepsperrot/microsteps;
+    de = e_numofmicrosteps*rotlength/stepsperrot/microsteps; 
     dl = z_numofmicrosteps*rotlength/stepsperrot/microsteps;
     dz = dl*h/circlelength;
 
@@ -70,16 +70,17 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     //подсчет макс расстояния в микрошагах для опреодоления общего времени 
     //позволяет настроить скорость и время для единовременного завершения работы двигателей
     float max = abs(*z_numofmicrosteps);
-    float t = abs(dl/maxspeed); //t - общее время при макс скорости в секундах
+    float speed = min(maxspeed, pos.get_pos_speed());
+    float t = abs(dl/speed); //t - общее время при макс скорости в секундах
     if (abs(*a_numofmicrosteps) > max)
     {   max = abs(*a_numofmicrosteps);
-        t = abs(da/maxspeed);}
+        t = abs(da/speed);}
     if (abs(*b_numofmicrosteps) > max)
     {   max = abs(*b_numofmicrosteps);
-        t = abs(db/maxspeed);}
+        t = abs(db/speed);}
     if (abs(*e_numofmicrosteps) >= max)
     {   max = abs(*e_numofmicrosteps);      
-        t = abs(de/maxspeed);}
+        t = abs(de/speed);}
     if debug printf("microsteps_max = %f, t = %f\n", max,t);
 
     //скорость в микрошагах/с 
