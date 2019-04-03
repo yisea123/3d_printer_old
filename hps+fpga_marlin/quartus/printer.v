@@ -94,10 +94,10 @@ module printer(
 	input 		     [3:0]		SW,
 
 	//////////// GPIO_0, GPIO connect to GPIO Default //////////
-	inout 		    [35:0]		gpio0GPIO, //переделать на in или Out
+	output 		    [35:0]		gpio0GPIO, //переделать на in или Out
 
 	//////////// GPIO_1, GPIO connect to GPIO Default //////////
-	inout 		    [35:0]		gpio1GPIO
+	input 		    [35:0]		gpio1GPIO
 );
 
 
@@ -115,7 +115,7 @@ wire                hps_debug_reset;
 wire     [27: 0]    stm_hw_events;
 wire                fpga_clk_50;
 // connection of internal logics
-assign LED[7: 6] = fpga_led_internal;
+//assign LED[7: 6] = fpga_led_internal;
 assign fpga_clk_50 = FPGA_CLK1_50;
 assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_buttons};
 
@@ -209,6 +209,8 @@ assign LED[1] = stepper1[1];
 assign LED[2] = stepper2[1];
 assign LED[3] = stepper3[1];
 assign LED[4] = stepper4[1];
+assign LED[5] = heater_bed;
+assign LED[6] = heater_e1;
 
 assign gpio0GPIO[2:0] 	= stepper1;
 assign gpio0GPIO[5:3] 	= stepper2;
@@ -253,12 +255,12 @@ assign gpio0GPIO[18] = fans[1];
 //End stops
 wire	[0:5] end_stop; //Сигнал с концевиков (0 - xmin, 1 - xmax, 2 - ymin, 3 - ymax, 4 - zmin, 5 - zmax)
 
-assign end_stop[0] = gpio0GPIO[19] ^ configuration_1[0];
-assign end_stop[1] = gpio0GPIO[20] ^ configuration_1[1];
-assign end_stop[2] = gpio0GPIO[21] ^ configuration_1[2];
-assign end_stop[3] = gpio0GPIO[22] ^ configuration_1[3];
-assign end_stop[4] = gpio0GPIO[23] ^ configuration_1[4];
-assign end_stop[5] = gpio0GPIO[24] ^ configuration_1[5];
+assign end_stop[0] = gpio1GPIO[19] ^ configuration_1[0];
+assign end_stop[1] = gpio1GPIO[20] ^ configuration_1[1];
+assign end_stop[2] = gpio1GPIO[21] ^ configuration_1[2];
+assign end_stop[3] = gpio1GPIO[22] ^ configuration_1[3];
+assign end_stop[4] = gpio1GPIO[23] ^ configuration_1[4];
+assign end_stop[5] = gpio1GPIO[24] ^ configuration_1[5];
 
 //=======================================================
 //  Structural coding

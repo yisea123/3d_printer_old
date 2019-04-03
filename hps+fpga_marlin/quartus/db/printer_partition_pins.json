@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "gpio0GPIO[6]",
+					"strict" : false
+				},
+				{
 					"name" : "LED[1]",
 					"strict" : false
 				},
@@ -20,31 +24,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ADC_CONVST",
-					"strict" : false
-				},
-				{
-					"name" : "ADC_SCK",
-					"strict" : false
-				},
-				{
-					"name" : "ADC_SDI",
-					"strict" : false
-				},
-				{
-					"name" : "LED[0]",
+					"name" : "LED[5]",
 					"strict" : false
 				},
 				{
 					"name" : "LED[6]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[7]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[6]",
 					"strict" : false
 				},
 				{
@@ -84,15 +68,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[19]",
+					"name" : "ADC_CONVST",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[21]",
+					"name" : "ADC_SCK",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[23]",
+					"name" : "ADC_SDI",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
 					"strict" : false
 				},
 				{
@@ -120,18 +108,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[20]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[22]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[24]",
-					"strict" : false
-				},
-				{
 					"name" : "FPGA_CLK1_50",
 					"strict" : false
 				},
@@ -149,6 +125,30 @@
 				},
 				{
 					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[23]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[24]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[22]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[21]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[19]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[20]",
 					"strict" : false
 				},
 				{
