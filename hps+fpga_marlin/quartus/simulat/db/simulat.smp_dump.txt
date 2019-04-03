@@ -1,0 +1,6 @@
+
+State Machine - |home_g28|f
+Name f.00 f.10 f.01 
+f.00 0 0 0 
+f.01 1 0 1 
+f.10 1 1 0 

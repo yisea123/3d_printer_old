@@ -15,17 +15,14 @@ int main()
 		return 1;
 
 
-	uint32_t heaters;
-	uint32_t flags_in;
 	uint32_t stepper_1_speed;
 	int32_t stepper_1_steps_in;
-	int32_t stepper_2_steps_out;
 
 	uint32_t v;
 	int32_t v1;
 
 
-
+/*
 	printf("Тестирование для heaters\n");
 	heaters = addr.get_heaters();
 	printf("Начальное значение: ");
@@ -50,10 +47,10 @@ int main()
 	printf("Присвоим значение: ");
 	printf("%" SCNx32 "\n", v);
 	printf("Значение после изменения: ");
-	printf("%" SCNx32 "\n\n", heaters);
+	printf("%" SCNx32 "\n\n", heaters);*/
 
 
-
+/*
 	printf("Тестирование для flags_in\n");
 	flags_in = addr.get_flags_in();
 	printf("Начальное значение: ");
@@ -65,7 +62,7 @@ int main()
 	printf("%" SCNx32 "\n", v);
 	printf("Значение после изменения: ");
 	printf("%" SCNx32 "\n\n", flags_in);
-
+*/
 
 
 	printf("Тестирование для stepper_1_speed\n");
@@ -109,25 +106,6 @@ int main()
 	printf("%" SCNd32 "\n\n", stepper_1_steps_in);
 
 
-
-	printf("Тестирование для stepper_2_steps_out\n");
-	stepper_2_steps_out = addr.get_stepper_2_steps_out();
-	printf("Начальное значение: ");
-	printf("%" SCNd32 "\n", stepper_2_steps_out);
-	v1 = -651620;
-	addr.set_stepper_2_steps_out(v1);
-	stepper_2_steps_out = addr.get_stepper_2_steps_out();
-	printf("Присвоим значение: ");
-	printf("%" SCNd32 "\n", v1);
-	printf("Значение после изменения: ");
-	printf("%" SCNd32 "\n", stepper_2_steps_out);
-	v1 = 6896895;
-	addr.set_stepper_2_steps_out(v1);
-	stepper_2_steps_out = addr.get_stepper_2_steps_out();
-	printf("Присвоим значение: ");
-	printf("%" SCNd32 "\n", v1);
-	printf("Значение после изменения: ");
-	printf("%" SCNd32 "\n", stepper_2_steps_out);
 
 
 	//scanf("%" SCNx32, &speednum); //uint32_t

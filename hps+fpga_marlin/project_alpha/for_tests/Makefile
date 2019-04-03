@@ -12,7 +12,7 @@ CC = $(CROSS_COMPILE)gcc
 ARCH= arm
 
 build: $(TARGET)
-$(TARGET): main.o addresses.o
+$(TARGET): main.o addresses.o gcode.o
 	$(CC) $(LDFLAGS)  $^ -o $@  
 
 %.o : %.cpp

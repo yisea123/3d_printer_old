@@ -1,13 +1,13 @@
-Fitter Status : Successful - Fri Feb 15 17:36:27 2019
+Fitter Status : Successful - Thu Apr 04 00:08:06 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : simulat
-Top-level Entity Name : clk_gen
+Top-level Entity Name : analog_filter
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 105 / 56,480 ( < 1 % )
-Total registers : 72
-Total pins : 67 / 268 ( 25 % )
+Logic utilization (in ALMs) : 113 / 56,480 ( < 1 % )
+Total registers : 108
+Total pins : 42 / 268 ( 16 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total RAM Blocks : 0 / 686 ( 0 % )

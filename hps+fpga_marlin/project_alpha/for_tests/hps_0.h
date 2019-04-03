@@ -31,7 +31,7 @@
 #define SYSID_QSYS_SPAN 8
 #define SYSID_QSYS_END 0x1007
 #define SYSID_QSYS_ID 4294906626
-#define SYSID_QSYS_TIMESTAMP 1550063582
+#define SYSID_QSYS_TIMESTAMP 1553717928
 
 /*
  * Macros for device 'jtag_uart', class 'altera_avalon_jtag_uart'
@@ -124,6 +124,78 @@
 #define DIPSW_PIO_RESET_VALUE 0
 
 /*
+ * Macros for device 'flags_in', class 'altera_avalon_pio'
+ * The macros are prefixed with 'FLAGS_IN_'.
+ * The prefix is the slave descriptor.
+ */
+#define FLAGS_IN_COMPONENT_TYPE altera_avalon_pio
+#define FLAGS_IN_COMPONENT_NAME flags_in
+#define FLAGS_IN_BASE 0x4000
+#define FLAGS_IN_SPAN 16
+#define FLAGS_IN_END 0x400f
+#define FLAGS_IN_BIT_CLEARING_EDGE_REGISTER 0
+#define FLAGS_IN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define FLAGS_IN_CAPTURE 0
+#define FLAGS_IN_DATA_WIDTH 32
+#define FLAGS_IN_DO_TEST_BENCH_WIRING 0
+#define FLAGS_IN_DRIVEN_SIM_VALUE 0
+#define FLAGS_IN_EDGE_TYPE NONE
+#define FLAGS_IN_FREQ 50000000
+#define FLAGS_IN_HAS_IN 1
+#define FLAGS_IN_HAS_OUT 0
+#define FLAGS_IN_HAS_TRI 0
+#define FLAGS_IN_IRQ_TYPE NONE
+#define FLAGS_IN_RESET_VALUE 0
+
+/*
+ * Macros for device 'flags_out', class 'altera_avalon_pio'
+ * The macros are prefixed with 'FLAGS_OUT_'.
+ * The prefix is the slave descriptor.
+ */
+#define FLAGS_OUT_COMPONENT_TYPE altera_avalon_pio
+#define FLAGS_OUT_COMPONENT_NAME flags_out
+#define FLAGS_OUT_BASE 0x4020
+#define FLAGS_OUT_SPAN 16
+#define FLAGS_OUT_END 0x402f
+#define FLAGS_OUT_BIT_CLEARING_EDGE_REGISTER 0
+#define FLAGS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define FLAGS_OUT_CAPTURE 0
+#define FLAGS_OUT_DATA_WIDTH 32
+#define FLAGS_OUT_DO_TEST_BENCH_WIRING 0
+#define FLAGS_OUT_DRIVEN_SIM_VALUE 0
+#define FLAGS_OUT_EDGE_TYPE NONE
+#define FLAGS_OUT_FREQ 50000000
+#define FLAGS_OUT_HAS_IN 0
+#define FLAGS_OUT_HAS_OUT 1
+#define FLAGS_OUT_HAS_TRI 0
+#define FLAGS_OUT_IRQ_TYPE NONE
+#define FLAGS_OUT_RESET_VALUE 0
+
+/*
+ * Macros for device 'configuration_1', class 'altera_avalon_pio'
+ * The macros are prefixed with 'CONFIGURATION_1_'.
+ * The prefix is the slave descriptor.
+ */
+#define CONFIGURATION_1_COMPONENT_TYPE altera_avalon_pio
+#define CONFIGURATION_1_COMPONENT_NAME configuration_1
+#define CONFIGURATION_1_BASE 0x4040
+#define CONFIGURATION_1_SPAN 16
+#define CONFIGURATION_1_END 0x404f
+#define CONFIGURATION_1_BIT_CLEARING_EDGE_REGISTER 0
+#define CONFIGURATION_1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define CONFIGURATION_1_CAPTURE 0
+#define CONFIGURATION_1_DATA_WIDTH 32
+#define CONFIGURATION_1_DO_TEST_BENCH_WIRING 0
+#define CONFIGURATION_1_DRIVEN_SIM_VALUE 0
+#define CONFIGURATION_1_EDGE_TYPE NONE
+#define CONFIGURATION_1_FREQ 50000000
+#define CONFIGURATION_1_HAS_IN 0
+#define CONFIGURATION_1_HAS_OUT 1
+#define CONFIGURATION_1_HAS_TRI 0
+#define CONFIGURATION_1_IRQ_TYPE NONE
+#define CONFIGURATION_1_RESET_VALUE 0
+
+/*
  * Macros for device 'fans', class 'altera_avalon_pio'
  * The macros are prefixed with 'FANS_'.
  * The prefix is the slave descriptor.
@@ -146,78 +218,6 @@
 #define FANS_HAS_TRI 0
 #define FANS_IRQ_TYPE NONE
 #define FANS_RESET_VALUE 0
-
-/*
- * Macros for device 'heaters', class 'altera_avalon_pio'
- * The macros are prefixed with 'HEATERS_'.
- * The prefix is the slave descriptor.
- */
-#define HEATERS_COMPONENT_TYPE altera_avalon_pio
-#define HEATERS_COMPONENT_NAME heaters
-#define HEATERS_BASE 0x40c0
-#define HEATERS_SPAN 16
-#define HEATERS_END 0x40cf
-#define HEATERS_BIT_CLEARING_EDGE_REGISTER 0
-#define HEATERS_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define HEATERS_CAPTURE 0
-#define HEATERS_DATA_WIDTH 2
-#define HEATERS_DO_TEST_BENCH_WIRING 0
-#define HEATERS_DRIVEN_SIM_VALUE 0
-#define HEATERS_EDGE_TYPE NONE
-#define HEATERS_FREQ 50000000
-#define HEATERS_HAS_IN 0
-#define HEATERS_HAS_OUT 1
-#define HEATERS_HAS_TRI 0
-#define HEATERS_IRQ_TYPE NONE
-#define HEATERS_RESET_VALUE 0
-
-/*
- * Macros for device 'flags_in', class 'altera_avalon_pio'
- * The macros are prefixed with 'FLAGS_IN_'.
- * The prefix is the slave descriptor.
- */
-#define FLAGS_IN_COMPONENT_TYPE altera_avalon_pio
-#define FLAGS_IN_COMPONENT_NAME flags_in
-#define FLAGS_IN_BASE 0x40e0
-#define FLAGS_IN_SPAN 16
-#define FLAGS_IN_END 0x40ef
-#define FLAGS_IN_BIT_CLEARING_EDGE_REGISTER 0
-#define FLAGS_IN_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define FLAGS_IN_CAPTURE 0
-#define FLAGS_IN_DATA_WIDTH 32
-#define FLAGS_IN_DO_TEST_BENCH_WIRING 0
-#define FLAGS_IN_DRIVEN_SIM_VALUE 0
-#define FLAGS_IN_EDGE_TYPE NONE
-#define FLAGS_IN_FREQ 50000000
-#define FLAGS_IN_HAS_IN 1
-#define FLAGS_IN_HAS_OUT 0
-#define FLAGS_IN_HAS_TRI 0
-#define FLAGS_IN_IRQ_TYPE NONE
-#define FLAGS_IN_RESET_VALUE 0
-
-/*
- * Macros for device 'flags_out', class 'altera_avalon_pio'
- * The macros are prefixed with 'FLAGS_OUT_'.
- * The prefix is the slave descriptor.
- */
-#define FLAGS_OUT_COMPONENT_TYPE altera_avalon_pio
-#define FLAGS_OUT_COMPONENT_NAME flags_out
-#define FLAGS_OUT_BASE 0x4100
-#define FLAGS_OUT_SPAN 16
-#define FLAGS_OUT_END 0x410f
-#define FLAGS_OUT_BIT_CLEARING_EDGE_REGISTER 0
-#define FLAGS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define FLAGS_OUT_CAPTURE 0
-#define FLAGS_OUT_DATA_WIDTH 32
-#define FLAGS_OUT_DO_TEST_BENCH_WIRING 0
-#define FLAGS_OUT_DRIVEN_SIM_VALUE 0
-#define FLAGS_OUT_EDGE_TYPE NONE
-#define FLAGS_OUT_FREQ 50000000
-#define FLAGS_OUT_HAS_IN 0
-#define FLAGS_OUT_HAS_OUT 1
-#define FLAGS_OUT_HAS_TRI 0
-#define FLAGS_OUT_IRQ_TYPE NONE
-#define FLAGS_OUT_RESET_VALUE 0
 
 /*
  * Macros for device 'stepper_1_speed', class 'altera_avalon_pio'
@@ -412,63 +412,15 @@
 #define STEPPER_4_STEPS_IN_RESET_VALUE 0
 
 /*
- * Macros for device 'stepper_5_speed', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEPPER_5_SPEED_'.
- * The prefix is the slave descriptor.
- */
-#define STEPPER_5_SPEED_COMPONENT_TYPE altera_avalon_pio
-#define STEPPER_5_SPEED_COMPONENT_NAME stepper_5_speed
-#define STEPPER_5_SPEED_BASE 0x5100
-#define STEPPER_5_SPEED_SPAN 16
-#define STEPPER_5_SPEED_END 0x510f
-#define STEPPER_5_SPEED_BIT_CLEARING_EDGE_REGISTER 0
-#define STEPPER_5_SPEED_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEPPER_5_SPEED_CAPTURE 0
-#define STEPPER_5_SPEED_DATA_WIDTH 32
-#define STEPPER_5_SPEED_DO_TEST_BENCH_WIRING 0
-#define STEPPER_5_SPEED_DRIVEN_SIM_VALUE 0
-#define STEPPER_5_SPEED_EDGE_TYPE NONE
-#define STEPPER_5_SPEED_FREQ 50000000
-#define STEPPER_5_SPEED_HAS_IN 0
-#define STEPPER_5_SPEED_HAS_OUT 1
-#define STEPPER_5_SPEED_HAS_TRI 0
-#define STEPPER_5_SPEED_IRQ_TYPE NONE
-#define STEPPER_5_SPEED_RESET_VALUE 0
-
-/*
- * Macros for device 'stepper_5_steps_in', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEPPER_5_STEPS_IN_'.
- * The prefix is the slave descriptor.
- */
-#define STEPPER_5_STEPS_IN_COMPONENT_TYPE altera_avalon_pio
-#define STEPPER_5_STEPS_IN_COMPONENT_NAME stepper_5_steps_in
-#define STEPPER_5_STEPS_IN_BASE 0x5120
-#define STEPPER_5_STEPS_IN_SPAN 16
-#define STEPPER_5_STEPS_IN_END 0x512f
-#define STEPPER_5_STEPS_IN_BIT_CLEARING_EDGE_REGISTER 0
-#define STEPPER_5_STEPS_IN_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEPPER_5_STEPS_IN_CAPTURE 0
-#define STEPPER_5_STEPS_IN_DATA_WIDTH 32
-#define STEPPER_5_STEPS_IN_DO_TEST_BENCH_WIRING 0
-#define STEPPER_5_STEPS_IN_DRIVEN_SIM_VALUE 0
-#define STEPPER_5_STEPS_IN_EDGE_TYPE NONE
-#define STEPPER_5_STEPS_IN_FREQ 50000000
-#define STEPPER_5_STEPS_IN_HAS_IN 1
-#define STEPPER_5_STEPS_IN_HAS_OUT 0
-#define STEPPER_5_STEPS_IN_HAS_TRI 0
-#define STEPPER_5_STEPS_IN_IRQ_TYPE NONE
-#define STEPPER_5_STEPS_IN_RESET_VALUE 0
-
-/*
  * Macros for device 'stepper_1_steps_out', class 'altera_avalon_pio'
  * The macros are prefixed with 'STEPPER_1_STEPS_OUT_'.
  * The prefix is the slave descriptor.
  */
 #define STEPPER_1_STEPS_OUT_COMPONENT_TYPE altera_avalon_pio
 #define STEPPER_1_STEPS_OUT_COMPONENT_NAME stepper_1_steps_out
-#define STEPPER_1_STEPS_OUT_BASE 0x5140
+#define STEPPER_1_STEPS_OUT_BASE 0x5100
 #define STEPPER_1_STEPS_OUT_SPAN 16
-#define STEPPER_1_STEPS_OUT_END 0x514f
+#define STEPPER_1_STEPS_OUT_END 0x510f
 #define STEPPER_1_STEPS_OUT_BIT_CLEARING_EDGE_REGISTER 0
 #define STEPPER_1_STEPS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define STEPPER_1_STEPS_OUT_CAPTURE 0
@@ -490,9 +442,9 @@
  */
 #define STEPPER_2_STEPS_OUT_COMPONENT_TYPE altera_avalon_pio
 #define STEPPER_2_STEPS_OUT_COMPONENT_NAME stepper_2_steps_out
-#define STEPPER_2_STEPS_OUT_BASE 0x5160
+#define STEPPER_2_STEPS_OUT_BASE 0x5120
 #define STEPPER_2_STEPS_OUT_SPAN 16
-#define STEPPER_2_STEPS_OUT_END 0x516f
+#define STEPPER_2_STEPS_OUT_END 0x512f
 #define STEPPER_2_STEPS_OUT_BIT_CLEARING_EDGE_REGISTER 0
 #define STEPPER_2_STEPS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define STEPPER_2_STEPS_OUT_CAPTURE 0
@@ -514,9 +466,9 @@
  */
 #define STEPPER_3_STEPS_OUT_COMPONENT_TYPE altera_avalon_pio
 #define STEPPER_3_STEPS_OUT_COMPONENT_NAME stepper_3_steps_out
-#define STEPPER_3_STEPS_OUT_BASE 0x5180
+#define STEPPER_3_STEPS_OUT_BASE 0x5140
 #define STEPPER_3_STEPS_OUT_SPAN 16
-#define STEPPER_3_STEPS_OUT_END 0x518f
+#define STEPPER_3_STEPS_OUT_END 0x514f
 #define STEPPER_3_STEPS_OUT_BIT_CLEARING_EDGE_REGISTER 0
 #define STEPPER_3_STEPS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define STEPPER_3_STEPS_OUT_CAPTURE 0
@@ -538,9 +490,9 @@
  */
 #define STEPPER_4_STEPS_OUT_COMPONENT_TYPE altera_avalon_pio
 #define STEPPER_4_STEPS_OUT_COMPONENT_NAME stepper_4_steps_out
-#define STEPPER_4_STEPS_OUT_BASE 0x51a0
+#define STEPPER_4_STEPS_OUT_BASE 0x5160
 #define STEPPER_4_STEPS_OUT_SPAN 16
-#define STEPPER_4_STEPS_OUT_END 0x51af
+#define STEPPER_4_STEPS_OUT_END 0x516f
 #define STEPPER_4_STEPS_OUT_BIT_CLEARING_EDGE_REGISTER 0
 #define STEPPER_4_STEPS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define STEPPER_4_STEPS_OUT_CAPTURE 0
@@ -554,30 +506,6 @@
 #define STEPPER_4_STEPS_OUT_HAS_TRI 0
 #define STEPPER_4_STEPS_OUT_IRQ_TYPE NONE
 #define STEPPER_4_STEPS_OUT_RESET_VALUE 0
-
-/*
- * Macros for device 'stepper_5_steps_out', class 'altera_avalon_pio'
- * The macros are prefixed with 'STEPPER_5_STEPS_OUT_'.
- * The prefix is the slave descriptor.
- */
-#define STEPPER_5_STEPS_OUT_COMPONENT_TYPE altera_avalon_pio
-#define STEPPER_5_STEPS_OUT_COMPONENT_NAME stepper_5_steps_out
-#define STEPPER_5_STEPS_OUT_BASE 0x51c0
-#define STEPPER_5_STEPS_OUT_SPAN 16
-#define STEPPER_5_STEPS_OUT_END 0x51cf
-#define STEPPER_5_STEPS_OUT_BIT_CLEARING_EDGE_REGISTER 0
-#define STEPPER_5_STEPS_OUT_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define STEPPER_5_STEPS_OUT_CAPTURE 0
-#define STEPPER_5_STEPS_OUT_DATA_WIDTH 32
-#define STEPPER_5_STEPS_OUT_DO_TEST_BENCH_WIRING 0
-#define STEPPER_5_STEPS_OUT_DRIVEN_SIM_VALUE 0
-#define STEPPER_5_STEPS_OUT_EDGE_TYPE NONE
-#define STEPPER_5_STEPS_OUT_FREQ 50000000
-#define STEPPER_5_STEPS_OUT_HAS_IN 0
-#define STEPPER_5_STEPS_OUT_HAS_OUT 1
-#define STEPPER_5_STEPS_OUT_HAS_TRI 0
-#define STEPPER_5_STEPS_OUT_IRQ_TYPE NONE
-#define STEPPER_5_STEPS_OUT_RESET_VALUE 0
 
 /*
  * Macros for device 'endstops', class 'altera_avalon_pio'
@@ -674,6 +602,102 @@
 #define TEMP1_HAS_TRI 0
 #define TEMP1_IRQ_TYPE NONE
 #define TEMP1_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp_bed_bottom', class 'altera_avalon_pio'
+ * The macros are prefixed with 'TEMP_BED_BOTTOM_'.
+ * The prefix is the slave descriptor.
+ */
+#define TEMP_BED_BOTTOM_COMPONENT_TYPE altera_avalon_pio
+#define TEMP_BED_BOTTOM_COMPONENT_NAME temp_bed_bottom
+#define TEMP_BED_BOTTOM_BASE 0x6060
+#define TEMP_BED_BOTTOM_SPAN 16
+#define TEMP_BED_BOTTOM_END 0x606f
+#define TEMP_BED_BOTTOM_BIT_CLEARING_EDGE_REGISTER 0
+#define TEMP_BED_BOTTOM_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define TEMP_BED_BOTTOM_CAPTURE 0
+#define TEMP_BED_BOTTOM_DATA_WIDTH 12
+#define TEMP_BED_BOTTOM_DO_TEST_BENCH_WIRING 0
+#define TEMP_BED_BOTTOM_DRIVEN_SIM_VALUE 0
+#define TEMP_BED_BOTTOM_EDGE_TYPE NONE
+#define TEMP_BED_BOTTOM_FREQ 50000000
+#define TEMP_BED_BOTTOM_HAS_IN 0
+#define TEMP_BED_BOTTOM_HAS_OUT 1
+#define TEMP_BED_BOTTOM_HAS_TRI 0
+#define TEMP_BED_BOTTOM_IRQ_TYPE NONE
+#define TEMP_BED_BOTTOM_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp_bed_upper', class 'altera_avalon_pio'
+ * The macros are prefixed with 'TEMP_BED_UPPER_'.
+ * The prefix is the slave descriptor.
+ */
+#define TEMP_BED_UPPER_COMPONENT_TYPE altera_avalon_pio
+#define TEMP_BED_UPPER_COMPONENT_NAME temp_bed_upper
+#define TEMP_BED_UPPER_BASE 0x6080
+#define TEMP_BED_UPPER_SPAN 16
+#define TEMP_BED_UPPER_END 0x608f
+#define TEMP_BED_UPPER_BIT_CLEARING_EDGE_REGISTER 0
+#define TEMP_BED_UPPER_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define TEMP_BED_UPPER_CAPTURE 0
+#define TEMP_BED_UPPER_DATA_WIDTH 12
+#define TEMP_BED_UPPER_DO_TEST_BENCH_WIRING 0
+#define TEMP_BED_UPPER_DRIVEN_SIM_VALUE 0
+#define TEMP_BED_UPPER_EDGE_TYPE NONE
+#define TEMP_BED_UPPER_FREQ 50000000
+#define TEMP_BED_UPPER_HAS_IN 0
+#define TEMP_BED_UPPER_HAS_OUT 1
+#define TEMP_BED_UPPER_HAS_TRI 0
+#define TEMP_BED_UPPER_IRQ_TYPE NONE
+#define TEMP_BED_UPPER_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp_e1_bottom', class 'altera_avalon_pio'
+ * The macros are prefixed with 'TEMP_E1_BOTTOM_'.
+ * The prefix is the slave descriptor.
+ */
+#define TEMP_E1_BOTTOM_COMPONENT_TYPE altera_avalon_pio
+#define TEMP_E1_BOTTOM_COMPONENT_NAME temp_e1_bottom
+#define TEMP_E1_BOTTOM_BASE 0x60a0
+#define TEMP_E1_BOTTOM_SPAN 16
+#define TEMP_E1_BOTTOM_END 0x60af
+#define TEMP_E1_BOTTOM_BIT_CLEARING_EDGE_REGISTER 0
+#define TEMP_E1_BOTTOM_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define TEMP_E1_BOTTOM_CAPTURE 0
+#define TEMP_E1_BOTTOM_DATA_WIDTH 12
+#define TEMP_E1_BOTTOM_DO_TEST_BENCH_WIRING 0
+#define TEMP_E1_BOTTOM_DRIVEN_SIM_VALUE 0
+#define TEMP_E1_BOTTOM_EDGE_TYPE NONE
+#define TEMP_E1_BOTTOM_FREQ 50000000
+#define TEMP_E1_BOTTOM_HAS_IN 0
+#define TEMP_E1_BOTTOM_HAS_OUT 1
+#define TEMP_E1_BOTTOM_HAS_TRI 0
+#define TEMP_E1_BOTTOM_IRQ_TYPE NONE
+#define TEMP_E1_BOTTOM_RESET_VALUE 0
+
+/*
+ * Macros for device 'temp_e1_upper', class 'altera_avalon_pio'
+ * The macros are prefixed with 'TEMP_E1_UPPER_'.
+ * The prefix is the slave descriptor.
+ */
+#define TEMP_E1_UPPER_COMPONENT_TYPE altera_avalon_pio
+#define TEMP_E1_UPPER_COMPONENT_NAME temp_e1_upper
+#define TEMP_E1_UPPER_BASE 0x60c0
+#define TEMP_E1_UPPER_SPAN 16
+#define TEMP_E1_UPPER_END 0x60cf
+#define TEMP_E1_UPPER_BIT_CLEARING_EDGE_REGISTER 0
+#define TEMP_E1_UPPER_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define TEMP_E1_UPPER_CAPTURE 0
+#define TEMP_E1_UPPER_DATA_WIDTH 12
+#define TEMP_E1_UPPER_DO_TEST_BENCH_WIRING 0
+#define TEMP_E1_UPPER_DRIVEN_SIM_VALUE 0
+#define TEMP_E1_UPPER_EDGE_TYPE NONE
+#define TEMP_E1_UPPER_FREQ 50000000
+#define TEMP_E1_UPPER_HAS_IN 0
+#define TEMP_E1_UPPER_HAS_OUT 1
+#define TEMP_E1_UPPER_HAS_TRI 0
+#define TEMP_E1_UPPER_IRQ_TYPE NONE
+#define TEMP_E1_UPPER_RESET_VALUE 0
 
 /*
  * Macros for device 'ILC', class 'interrupt_latency_counter'

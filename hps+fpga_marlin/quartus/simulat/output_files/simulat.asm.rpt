@@ -1,5 +1,5 @@
 Assembler report for simulat
-Wed Feb 13 20:12:51 2019
+Thu Apr 04 00:08:47 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Feb 13 20:12:50 2019 ;
+; Assembler Status      ; Successful - Thu Apr 04 00:08:47 2019 ;
 ; Revision Name         ; simulat                               ;
-; Top-level Entity Name ; clk_gen                               ;
+; Top-level Entity Name ; analog_filter                         ;
 ; Family                ; Cyclone V                             ;
 ; Device                ; 5CGXFC7C7F23C8                        ;
 +-----------------------+---------------------------------------+
@@ -66,8 +66,8 @@ refer to the applicable agreement for further details.
 +----------------+----------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                ;
 +----------------+----------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00EFD424                                                                             ;
-; Checksum       ; 0x00EFD424                                                                             ;
+; JTAG usercode  ; 0x00EF9729                                                                             ;
+; Checksum       ; 0x00EF9729                                                                             ;
 +----------------+----------------------------------------------------------------------------------------+
 
 
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 13 20:12:28 2019
+    Info: Processing started: Thu Apr 04 00:08:13 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off simulat -c simulat
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Wed Feb 13 20:12:51 2019
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Thu Apr 04 00:08:47 2019
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:21
 
 

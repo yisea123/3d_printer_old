@@ -1,0 +1,48 @@
+module stepper_controller(
+						input 	wire 				clk, 
+						input		wire	[31:0]	stepper_step_in_1,						
+						input		wire	[31:0]	stepper_speed_1,
+						input		wire	[31:0]	stepper_step_in_2,						
+						input		wire	[31:0]	stepper_speed_2,
+						input		wire	[31:0]	stepper_step_in_3,						
+						input		wire	[31:0]	stepper_speed_3,
+						input		wire	[31:0]	stepper_step_in_4,						
+						input		wire	[31:0]	stepper_speed_4,
+						input		wire				stepper_enable,
+						input		wire				xmin,
+						input		wire				xmax,
+						input		wire				ymin,
+						input		wire				ymax,
+						input		wire				zmin,
+						input		wire				zmax,
+						input		wire 				start_driving,
+						input		wire 				start_homing,
+						
+						
+						output 	wire 				step_signal_1, //Максимально 25 MHz при reduction = 1
+						output 	wire 				enable_1,
+						output	wire				dir_1,
+						
+						output 	wire 				step_signal_2, //Максимально 25 MHz при reduction = 1
+						output 	wire 				enable_2,
+						output	wire				dir_2,
+						
+						output 	wire 				step_signal_3, //Максимально 25 MHz при reduction = 1
+						output 	wire 				enable_3,
+						output	wire				dir_3,
+						
+						output 	wire 				step_signal_4, //Максимально 25 MHz при reduction = 1
+						output 	wire 				enable_4,
+						output	wire				dir_4,
+						
+						output	wire				steppers_driving,
+						
+						output 	wire 	[31:0] 	stepper_step_out_1,
+						output 	wire 	[31:0] 	stepper_step_out_2,);
+
+
+
+
+
+
+endmodule

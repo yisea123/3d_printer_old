@@ -56,6 +56,12 @@ float position::get_pos_e()
 	return e;
 };
 
+float position::get_pos_speed()
+{
+	return speed;
+};
+
+
 
 
 
@@ -111,5 +117,11 @@ int position::set_pos_z(float z_new)
 int position::set_pos_e(float e_new)
 {
 	e = e_new;
+	return 0;
+};
+
+int position::set_pos_speed(float speed_new)
+{
+	speed = speed_new;
 	return 0;
 };

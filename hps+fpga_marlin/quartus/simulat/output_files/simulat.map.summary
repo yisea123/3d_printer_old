@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Feb 24 09:37:45 2019
+Analysis & Synthesis Status : Successful - Thu Apr 04 00:05:49 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : simulat
-Top-level Entity Name : stepper_corexy
+Top-level Entity Name : analog_filter
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 263
-Total pins : 208
+Total registers : 103
+Total pins : 42
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
