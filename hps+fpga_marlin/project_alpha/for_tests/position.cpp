@@ -1,7 +1,6 @@
-position()
-{
+#include "position.h"
 
-};
+position::position(){};
 
 
 int position::init()
@@ -11,7 +10,8 @@ int position::init()
 	z = 0;
 	e = 0;
 	pos_type_driving = POSITION_TYPE_ABSOLUTE;
-	pos_type_extruder = POSITION_TYPE_ABSOLUTE;
+	pos_type_extruders = POSITION_TYPE_ABSOLUTE;
+	return 0;
 };
 
 
@@ -56,7 +56,7 @@ float position::get_pos_e()
 	return e;
 };
 
-float position::get_pos_speed()
+int position::get_pos_speed()
 {
 	return speed;
 };
@@ -120,7 +120,7 @@ int position::set_pos_e(float e_new)
 	return 0;
 };
 
-int position::set_pos_speed(float speed_new)
+int position::set_pos_speed(int speed_new)
 {
 	speed = speed_new;
 	return 0;

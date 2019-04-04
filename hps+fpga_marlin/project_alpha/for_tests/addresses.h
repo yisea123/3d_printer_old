@@ -9,7 +9,7 @@
 
 #include "inttypes.h"
 #include "configuration.h"
-#include <temp_11.h>
+#include "temp_11.h"
 #include <iostream>
 #include <cmath>
 
@@ -122,8 +122,6 @@ class addresses{
 		uint32_t fans;
 		uint32_t leds;
 		uint32_t btns;
-
-		int32_t temp_bed_
 
 		uint32_t zeroing(uint32_t number, uint32_t count, uint32_t direction);
 		uint32_t create_number(bool state, uint32_t count);

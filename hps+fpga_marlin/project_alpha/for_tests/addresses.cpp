@@ -573,7 +573,7 @@ bool addresses::set_flags_in_start_driving_state(bool state)
 		return ((set_flags_in((a & flags_in))) == 0); 
 };
 
-bool set_flags_in_homex(bool state)
+bool addresses::set_flags_in_homex(bool state)
 {
 	flags_in = get_flags_in();
 	uint32_t a = create_number(state, flags_in_home_x);
@@ -583,7 +583,7 @@ bool set_flags_in_homex(bool state)
 		return ((set_flags_in((a & flags_in))) == 0); 
 };
 
-bool set_flags_in_homey(bool state)
+bool addresses::set_flags_in_homey(bool state)
 {
 	flags_in = get_flags_in();
 	uint32_t a = create_number(state, flags_in_home_y);
@@ -593,7 +593,7 @@ bool set_flags_in_homey(bool state)
 		return ((set_flags_in((a & flags_in))) == 0); 
 };
 
-bool set_flags_in_homez(bool state)
+bool addresses::set_flags_in_homez(bool state)
 {
 	flags_in = get_flags_in();
 	uint32_t a = create_number(state, flags_in_home_z);

@@ -7,9 +7,10 @@
 class position 
 {
 	private:
-		float x, y, z, e, speed; //скорость в мм/мин
+		float x, y, z, e; //скорость в мм/мин
+		int speed;
 		int pos_type_driving;
-		int pos_type_extruder;
+		int pos_type_extruders;
 
 	protected:
 
@@ -25,7 +26,7 @@ class position
 		float get_pos_y();
 		float get_pos_z();
 		float get_pos_e();
-		float get_pos_speed();
+		int get_pos_speed();
 
 		int set_pos_type_driving(int pos_type);
 		int set_pos_type_extruders(int pos_type);
@@ -34,7 +35,7 @@ class position
 		int set_pos_y(float y_new);
 		int set_pos_z(float z_new);
 		int set_pos_e(float e_new);
-		int set_pos_speed(float speed);
+		int set_pos_speed(int speed);
 };
 
 

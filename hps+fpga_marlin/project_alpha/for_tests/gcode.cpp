@@ -24,24 +24,24 @@ int gcode::correction(int a_numofmicrosteps, int b_numofmicrosteps, int z_numofm
 return 0;
 }
 
-int gcode::calc_steps_speed(float dx, float dy, float dz, float de, 
-    //передача скорректированной частоты (скорости):
-    uint32_t* a_microsteppulse, uint32_t* b_microsteppulse, 
-    uint32_t* z_microsteppulse, uint32_t* e_microsteppulse, 
-    //передача количества микрошагов с учетом знака
-    int32_t* a_numofmicrosteps, int32_t* b_numofmicrosteps, 
-    int32_t* z_numofmicrosteps, int32_t* e_numofmicrosteps)
+int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
+                            //передача скорректированной частоты (скорости):
+                            uint32_t* a_microsteppulse, uint32_t* b_microsteppulse,
+                            uint32_t* z_microsteppulse, uint32_t* e_microsteppulse,
+                            //передача количества микрошагов с учетом знака
+                            int32_t* a_numofmicrosteps, int32_t* b_numofmicrosteps,
+                            int32_t* z_numofmicrosteps, int32_t* e_numofmicrosteps)
 {/*
 * Метод рассчитывает необходимые для движения двигателей количество микрошагов и время импульса на один микрошаг 
 * и передает эти параметры в верилог
 */
     float diag; //гипотенуза, относительно которой высчитывается общее время для x и y
-    float da = dx + dу; //расстояние, которое должен обработать двигатель a системы core xy
-    float db = dx - dу; //расстояние, которое должен обработать двигатель b системы core xy
+    float da = dx + dy; //расстояние, которое должен обработать двигатель a системы core xy
+    float db = dx - dy; //расстояние, которое должен обработать двигатель b системы core xy
     diag = sqrt(dx*dx + dy*dy);
     float dl = dz/h*circlelength; //расстояние, которое должен обработать двигатель на оси z
 
-    if debug
+    if (debug)
     {   printf("dx = %.4f\n",dx);
         printf("dy = %.4f\n",dy);
         printf("diag = %.4f\n",diag);
@@ -58,7 +58,7 @@ int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
     *z_numofmicrosteps = trunc(dl/rotlength*stepsperrot*microsteps);
     
     //вывод количества микрошагов, необходимых для движения
-    if debug
+    if (debug)
     {   printf("a_numofmicrosteps = %ld\n", (long)(*a_numofmicrosteps));
         printf("b_numofmicrosteps = %ld\n", (long)(*b_numofmicrosteps));
         printf("e_numofmicrosteps = %ld\n", (long)(*e_numofmicrosteps));
@@ -79,7 +79,7 @@ int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
     if (abs(*e_numofmicrosteps) >= max)
     {   max = abs(*e_numofmicrosteps);      
         t = abs(de/speed);}
-    if debug printf("microsteps_max = %f, t = %f\n", max,t);
+    if (debug) printf("microsteps_max = %f, t = %f\n", max,t);
 
     //скорость в микрошагах/с 
     float a_speed = (*a_numofmicrosteps)/t; 
@@ -90,7 +90,7 @@ int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
     //проверка флага инверсии направления двигателей
     if (X_STEPPER_INVERTING) (*a_numofmicrosteps) = - (*a_numofmicrosteps);
     if (Y_STEPPER_INVERTING) (*b_numofmicrosteps) = - (*b_numofmicrosteps);
-    if (E_STEPPER_INVERTING) (*e_numofmicrosteps) = - (*e_numofmicrosteps);
+    if (E1_STEPPER_INVERTING) (*e_numofmicrosteps) = - (*e_numofmicrosteps);
     if (Z_STEPPER_INVERTING) (*z_numofmicrosteps) = - (*z_numofmicrosteps);
     
     //коэффициент коррекции тактовой частоты по модулю, равный количеству необходимых для движения импульсов 
@@ -100,7 +100,7 @@ int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
     *z_microsteppulse = ceil(abs(frequency/z_speed)); 
 
     //вывод количества 20нс импульсов, необходимых для движения
-    if debug
+    if (debug)
     {   printf("a_microsteppulse = %lu\n\n", (unsigned long)(*a_microsteppulse));
         printf("b_microsteppulse = %lu\n\n", (unsigned long)(*b_microsteppulse));
         printf("e_microsteppulse = %lu\n\n", (unsigned long)(*e_microsteppulse));
@@ -122,7 +122,7 @@ int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
     {   z_new_speed = frequency/(*z_microsteppulse);
         z_new_t = abs((*z_numofmicrosteps)/z_new_speed);}
     
-    if debug
+    if (debug)
     {   printf("initial t = %f\n", t);
         printf("a_new_speed = %f\n",a_new_speed);
         printf("b_new_speed = %f\n",b_new_speed);
@@ -138,7 +138,7 @@ int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
 }
 
 
-uint32_t voltage_adc(int32_t temp)
+uint32_t gcode::voltage_adc(int32_t temp)
 {
     if (temp >= 0 and temp <= 300)
     {
@@ -157,7 +157,7 @@ uint32_t voltage_adc(int32_t temp)
     return 0;
 }
 
-int32_t temperature_adc(uint32_t volt)
+int32_t gcode::temperature_adc(uint32_t volt)
 {
     if (volt >= 110*oversampling_rate and volt <= 3255*oversampling_rate)
     {
@@ -356,7 +356,7 @@ int gcode::gcode_G4(unsigned int s, char c)
         return 0;
 }
 
-int gcode::gcode_G28(variable_used<float> x, variable_used<float> y, variable_used<float> z, variable_used<float> e, variable_used<int> speed)
+int gcode::gcode_G28(variable_used<float> x, variable_used<float> y, variable_used<float> z, variable_used<int> speed)
 //Команда Home - паркуем головку
 {//home для трех осей
         #if debug
@@ -381,6 +381,9 @@ int gcode::gcode_G28(variable_used<float> x, variable_used<float> y, variable_us
         else
           addr->set_flags_in_homez(false);
 
+        addr->set_stepper_1_speed(((min(maxspeed, pos->get_pos_speed()))*stepsperrot*microsteps/rotlength)/60);
+        addr->set_stepper_2_speed(((min(maxspeed, pos->get_pos_speed()))*stepsperrot*microsteps/rotlength)/60);
+        addr->set_stepper_3_speed(((min(maxspeed, pos->get_pos_speed()))*stepsperrot*microsteps/rotlength)/60);
 
         bool f = addr->set_flags_in_start_homing_state(true);
 
@@ -404,6 +407,10 @@ int gcode::gcode_G28(variable_used<float> x, variable_used<float> y, variable_us
 
         if (z.is_used)
           pos->set_pos_z(0);
+
+        addr->set_stepper_1_speed(0);
+        addr->set_stepper_2_speed(0);
+        addr->set_stepper_3_speed(0);
 
         return 0;
 }
@@ -508,13 +515,13 @@ int gcode::gcode_M104(int32_t temp)
             printf("gcode M104 is running\n");
         #endif
 
-        set_flags_in_heat_e1_hold(false);
-        set_flags_in_heat_e1(false);
-        set_temp_e1_upper(voltage_adc(temp));
-        set_flags_in_heat_e1(true);
+        addr->set_flags_in_heat_extruder_hold(false);
+        addr->set_flags_in_heat_extruder(false);
+        addr->set_temp_e1_upper(voltage_adc(temp));
+        addr->set_flags_in_heat_extruder(true);
         usleep(1);
-        while (get_flags_out_heating_e1());
-        set_flags_in_heat_e1(false);
+        while (addr->get_flags_out_heating_extruder());
+        addr->set_flags_in_heat_extruder(false);
         return 0;
 }
 
@@ -526,11 +533,11 @@ int gcode::gcode_M109(int32_t temp)
             printf("gcode M109 is running\n");
         #endif
 
-        set_flags_in_heat_e1(false);
-        set_flags_in_heat_e1_hold(false);
-        set_temp_e1_bottom(voltage_adc(temp - TEMP_DELTA));
-        set_temp_e1_upper(voltage_adc(temp + TEMP_DELTA));
-        set_flags_in_heat_e1_hold(true);
+        addr->set_flags_in_heat_extruder(false);
+        addr->set_flags_in_heat_extruder_hold(false);
+        addr->set_temp_e1_bottom(voltage_adc(temp - TEMP_DELTA));
+        addr->set_temp_e1_upper(voltage_adc(temp + TEMP_DELTA));
+        addr->set_flags_in_heat_extruder_hold(true);
         return 0;
 }
 
@@ -542,11 +549,11 @@ int32_t gcode::gcode_M105(int num_e)
             printf("gcode M105 is running\n");
         #endif
         if (num_e == 0)
-          return temperature_adc(get_temp_bed());
+          return temperature_adc(addr->get_temp_bed());
         if (num_e == 1)
-          return temperature_adc(get_temp0());
+          return temperature_adc(addr->get_temp0());
         if (num_e == 2)
-          return temperature_adc(get_temp1());
+          return temperature_adc(addr->get_temp1());
 
         return 0;
 }
@@ -559,13 +566,13 @@ int gcode::gcode_M140(int32_t temp)
             printf("gcode M140 is running\n");
         #endif
 
-        set_flags_in_heat_bed_hold(false);
-        set_flags_in_heat_bed(false);
-        set_temp_bed_upper(voltage_adc(temp));
-        set_flags_in_heat_bed(true);
+        addr->set_flags_in_heat_bed_hold(false);
+        addr->set_flags_in_heat_bed(false);
+        addr->set_temp_bed_upper(voltage_adc(temp));
+        addr->set_flags_in_heat_bed(true);
         usleep(1);
-        while (get_flags_out_heating_bed());
-        set_flags_in_heat_bed(false);
+        while (addr->get_flags_out_heating_bed());
+        addr->set_flags_in_heat_bed(false);
         
         return 0;
 }
@@ -577,11 +584,11 @@ int gcode::gcode_M190(int32_t temp)
             printf("gcode M190 is running\n");
         #endif
 
-        set_flags_in_heat_bed(false);
-        set_flags_in_heat_bed_hold(false);
-        set_temp_bed_bottom(voltage_adc(temp - TEMP_DELTA));
-        set_temp_bed_upper(voltage_adc(temp + TEMP_DELTA));
-        set_flags_in_heat_bed_hold(true);
+        addr->set_flags_in_heat_bed(false);
+        addr->set_flags_in_heat_bed_hold(false);
+        addr->set_temp_bed_bottom(voltage_adc(temp - TEMP_DELTA));
+        addr->set_temp_bed_upper(voltage_adc(temp + TEMP_DELTA));
+        addr->set_flags_in_heat_bed_hold(true);
 
         return 0;
 }
