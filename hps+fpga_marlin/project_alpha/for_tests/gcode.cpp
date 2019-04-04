@@ -143,11 +143,11 @@ uint32_t gcode::voltage_adc(int32_t temp)
     if (temp >= 0 and temp <= 300)
     {
         int i = -1;
-        while (temptable_11[++i][1] > temp);
+        while (temptable_11[++i][1] > temp); 
         if (temp != temptable_11[i][1])
             {
                 float k = (float)(temp - temptable_11[i][1])/(temptable_11[i-1][1] - temptable_11[i][1]);
-                return (round(temptable_11[i][0] + (temptable_11[i-1][0] - temptable_11[i][0])*k));
+                return (round((int)temptable_11[i][0] + (int)(temptable_11[i-1][0] - temptable_11[i][0])*k));
             }
         else
             return temptable_11[i][0];
@@ -165,7 +165,7 @@ int32_t gcode::temperature_adc(uint32_t volt)
         while (temptable_11[++i][0] < volt);
         if (volt != temptable_11[i][0])
             {
-                float k = (float)(volt - temptable_11[i][0])/(temptable_11[i-1][0] - temptable_11[i][0]);
+                float k = (float)((int)(volt - temptable_11[i][0]))/(int)((temptable_11[i-1][0] - temptable_11[i][0]));
                 return (round(temptable_11[i][1] + (temptable_11[i-1][1] - temptable_11[i][1])*k));
             }
         else return temptable_11[i][1];
