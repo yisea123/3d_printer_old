@@ -94,10 +94,10 @@ module printer(
 	input 		     [3:0]		SW,
 
 	//////////// GPIO_0, GPIO connect to GPIO Default //////////
-	inout 		    [35:0]		gpio0GPIO,
+	output 		    [35:0]		gpio0GPIO, //переделать на in или Out
 
 	//////////// GPIO_1, GPIO connect to GPIO Default //////////
-	inout 		    [35:0]		gpio1GPIO
+	input 		    [35:0]		gpio1GPIO
 );
 
 
@@ -115,7 +115,7 @@ wire                hps_debug_reset;
 wire     [27: 0]    stm_hw_events;
 wire                fpga_clk_50;
 // connection of internal logics
-assign LED[7: 6] = fpga_led_internal;
+//assign LED[7: 6] = fpga_led_internal;
 assign fpga_clk_50 = FPGA_CLK1_50;
 assign stm_hw_events = {{15{1'b0}}, SW, fpga_led_internal, fpga_debounced_buttons};
 
@@ -136,26 +136,23 @@ wire [11:0] analog [7:0];
 
 //Flags
 //=======================================================
-//	Описание битов флагов
-//	flags_out[0]:  вкл/выкл stepper (0 - двигатель выключен, 1 - двигатель включен)
+// Описание битов флагов
+// flags_out[0]:  вкл/выкл stepper (0 - двигатель выключен, 1 - двигатель включен)
+// flags_out[1]:  выполнить движение corexy, оси z и экструдера (0 - игнорировать количество шагов, 1 - выполнить движение по количеству шагов)
+// flags_out[2]:  команда HOME по оси x
+// flags_out[3]:  команда HOME по оси y
+// flags_out[4]:  команда HOME по оси z
+// flags_out[5]:  выполнить команду HOME (0 - игнорировать количество шагов, 1 - выполнить команду HOME)
 
+// flags_out[6]:	нагреть стол до указанной температуры
+// flags_out[7]:	нагреть стол до указанной температуры и ее удержание
 //
-//	flags_out[1]:  инверсия концевика xmin (0 - нет инверсии, 1 - есть инверсия)
-//	flags_out[2]:  инверсия концевика xmax (0 - нет инверсии, 1 - есть инверсия)
-//	flags_out[3]:  инверсия концевика ymin (0 - нет инверсии, 1 - есть инверсия)
-//	flags_out[4]:  инверсия концевика ymax (0 - нет инверсии, 1 - есть инверсия)
-//	flags_out[5]:  инверсия концевика zmin (0 - нет инверсии, 1 - есть инверсия)
-//	flags_out[6]:  инверсия концевика zmax (0 - нет инверсии, 1 - есть инверсия)
-//	
-//	flags_out[7]:  выполнить движение corexy, оси z и экструдера (0 - игнорировать количество шагов, 1 - выполнить движение по количеству шагов)
-//	
-//	flags_in[1]:   работа stepper1,2 (0 - двигатель стоит, 1 - выполняется повор)
-//	flags_in[2]:   работа stepper3 (0 - двигатель стоит, 1 - выполняется повор)
-//	flags_in[3]:   работа stepper4 (0 - двигатель стоит, 1 - выполняется повор)
-//	flags_in[4]:   работа stepper5 (0 - двигатель стоит, 1 - выполняется повор)
-//
-// flags_in[5]:   коррекция по оси x (0 - нет коррекции, 1 - есть коррекция)
-// flags_in[6]:   коррекция по оси y (0 - нет коррекции, 1 - есть коррекция)
+// flags_out[8]:	нагреть экструдер до указанной температуры
+// flags_out[9]:	нагреть экструдер до указанной температуры и ее удержание
+// -------------
+// flags_in[0]:   выполняется движение по осям или экструдеру (0 - двигатель стоит, 1 - выполняется повор)
+// flags_in[1]:	происходит нагрев стола
+// flags_in[2]:	происходит нагрев экструдера
 //=======================================================
 wire	[31:0]	flags_in;
 wire	[31:0]	flags_out; //flags_read
@@ -168,7 +165,6 @@ wire	[0:2]	stepper1; //{enable, step, dir}
 wire	[0:2]	stepper2; //{enable, step, dir}
 wire	[0:2]	stepper3; //{enable, step, dir}
 wire	[0:2]	stepper4; //{enable, step, dir}
-wire	[0:2]	stepper5; //{enable, step, dir}
 
 wire 	[4:0] step_signal;
 
@@ -177,7 +173,6 @@ wire 	[31:0] 	stepper_1_speed;
 wire 	[31:0] 	stepper_2_speed;
 wire 	[31:0] 	stepper_3_speed;
 wire 	[31:0] 	stepper_4_speed;
-wire 	[31:0] 	stepper_5_speed;
 
 
 wire 	[31:0] 	stepper_1_step_in;
@@ -188,46 +183,70 @@ wire 	[31:0] 	stepper_3_step_in;
 wire 	[31:0] 	stepper_3_step_out;
 wire 	[31:0] 	stepper_4_step_in;
 wire 	[31:0] 	stepper_4_step_out;
-wire 	[31:0] 	stepper_5_step_in;
-wire 	[31:0] 	stepper_5_step_out;
+wire	[30:0]	stepper_remainder [3:0];
 
-wire	[30:0]	stepper_remainder [4:0];
+reg 	[31:0] 	stepper_step_in [3:0];
+reg 	[31:0] 	stepper_step_out [3:0];
 
-reg 	[31:0] 	stepper_step_in [4:0];
-reg 	[31:0] 	stepper_step_out [4:0];
+//configuration_1
+//=======================================================
+//	[0]:  инверсия концевика xmin (0 - нет инверсии, 1 - есть инверсия)
+//	[1]:  инверсия концевика xmax (0 - нет инверсии, 1 - есть инверсия)
+//	[2]:  инверсия концевика ymin (0 - нет инверсии, 1 - есть инверсия)
+//	[3]:  инверсия концевика ymax (0 - нет инверсии, 1 - есть инверсия)
+//	[4]:  инверсия концевика zmin (0 - нет инверсии, 1 - есть инверсия)
+//	[5]:  инверсия концевика zmax (0 - нет инверсии, 1 - есть инверсия)
+//
+//	[6]:	инверсия двигателя 1 (corexy)
+//	[7]:	инверсия двигателя 2 (corexy)
+//	[8]:	инверсия двигателя оси z
+//	[9]:	инверсия двигателя экструдера
+//=======================================================
+wire 	[31:0] 	configuration_1; // Начальные данные
 
 
 assign LED[1] = stepper1[1];
 assign LED[2] = stepper2[1];
 assign LED[3] = stepper3[1];
 assign LED[4] = stepper4[1];
+assign LED[5] = heater_bed;
+assign LED[6] = heater_e1;
 
 assign gpio0GPIO[2:0] 	= stepper1;
 assign gpio0GPIO[5:3] 	= stepper2;
 assign gpio0GPIO[8:6] 	= stepper3;
 assign gpio0GPIO[11:9] 	= stepper4;
-assign gpio0GPIO[14:12] = stepper5;
 
 
-//Tempersature sensors
-wire	[11:0]	temp1; //bed
+//Temperature sensors
+wire	[11:0]	temp1;
 wire	[11:0]	temp2;
-wire	[11:0]	temp3;
+wire	[11:0]	temp_bed;
 
-assign temp1 = analog[0];
-assign temp2 = analog[1];
-assign temp3 = analog[2];
+wire 	[11:0]	temp_bed_bottom;
+wire 	[11:0]	temp_bed_upper;
+wire 	[11:0]	temp_e1_bottom;
+wire 	[11:0]	temp_e1_upper;
+
+
+assign temp1 		= analog[0];
+assign temp2 		= analog[1];
+assign temp_bed 	= analog[2];
 
 
 //Heaters
-wire	[1:0] heaters;
+wire			heater_bed;
+wire			heater_e1;
 
-assign gpio0GPIO[15] = heaters[0]; //bed
-assign gpio0GPIO[16] = heaters[1]; //extruder
+assign gpio0GPIO[15] = heater_bed; //bed
+assign gpio0GPIO[16] = heater_e1; //extruder
+
+assign flags_in[1] = heater_bed;
+assign flags_in[2] = heater_e1;
 
 
 //Fans
-wire fans;
+wire 	[1:0]	fans;
 
 assign gpio0GPIO[17] = fans[0];
 assign gpio0GPIO[18] = fans[1];
@@ -236,12 +255,12 @@ assign gpio0GPIO[18] = fans[1];
 //End stops
 wire	[0:5] end_stop; //Сигнал с концевиков (0 - xmin, 1 - xmax, 2 - ymin, 3 - ymax, 4 - zmin, 5 - zmax)
 
-assign end_stop[0] = gpio0GPIO[19] ^ flags_out[1];
-assign end_stop[1] = gpio0GPIO[20] ^ flags_out[2];
-assign end_stop[2] = gpio0GPIO[21] ^ flags_out[3];
-assign end_stop[3] = gpio0GPIO[22] ^ flags_out[4];
-assign end_stop[4] = gpio0GPIO[23] ^ flags_out[5];
-assign end_stop[5] = gpio0GPIO[24] ^ flags_out[6];
+assign end_stop[0] = gpio1GPIO[19] ^ configuration_1[0];
+assign end_stop[1] = gpio1GPIO[20] ^ configuration_1[1];
+assign end_stop[2] = gpio1GPIO[21] ^ configuration_1[2];
+assign end_stop[3] = gpio1GPIO[22] ^ configuration_1[3];
+assign end_stop[4] = gpio1GPIO[23] ^ configuration_1[4];
+assign end_stop[5] = gpio1GPIO[24] ^ configuration_1[5];
 
 //=======================================================
 //  Structural coding
@@ -249,7 +268,7 @@ assign end_stop[5] = gpio0GPIO[24] ^ flags_out[6];
 
 
  adc_control adc0(
-		.CLOCK		(FPGA_CLK1_50),    //                clk.clk
+		.CLOCK		(CLK_10),    //                clk.clk
 		.ADC_SCLK	(ADC_SCK), // external_interface.SCLK
 		.ADC_CS_N	(ADC_CONVST), //                   .CS_N
 		.ADC_DOUT	(ADC_SDO), //                   .DOUT
@@ -370,21 +389,18 @@ assign end_stop[5] = gpio0GPIO[24] ^ flags_out[6];
 	.dipsw_pio_external_connection_export(SW),                   //  dipsw_pio_external_connection.export
 	.button_pio_external_connection_export(fpga_debounced_buttons),
 
-	.temp0_external_connection_export      (temp2),         //         temp0_external_connection.export
-	.temp1_external_connection_export      (temp3),         //         temp1_external_connection.export
-	.temp_bed_external_connection_export   (temp1),      //      temp_bed_external_connection.export
+	.temp0_external_connection_export      (temp1),         //         temp0_external_connection.export
+	.temp1_external_connection_export      (temp2),         //         temp1_external_connection.export
+	.temp_bed_external_connection_export   (temp_bed),      //      temp_bed_external_connection.export
 
 	.endstops_external_connection_export   (end_stop),   //   endstops_external_connection.export
 	.fans_external_connection_export       (fans),       //       fans_external_connection.export
-	.heaters_external_connection_export    (heaters),     //    heaters_external_connection.export
 
-	.stepper_5_speed_external_connection_export 			 (stepper_5_speed),  // stepper_5_speed_external_connection
 	.stepper_4_speed_external_connection_export 			 (stepper_4_speed),  // stepper_4_speed_external_connection
 	.stepper_3_speed_external_connection_export 			 (stepper_3_speed),  // stepper_3_speed_external_connection
 	.stepper_2_speed_external_connection_export			 (stepper_2_speed),  // stepper_2_speed_external_connection	
 	.stepper_1_speed_external_connection_export 			 (stepper_1_speed),  // stepper_1_speed_external_connection	
 	
-	.stepper_5_steps_out_external_connection_export (stepper_5_step_out), // stepper_5_steps_out_external_connection.export
 	.stepper_4_steps_out_external_connection_export (stepper_4_step_out), // stepper_4_steps_out_external_connection.export
 	.stepper_3_steps_out_external_connection_export (stepper_3_step_out), // stepper_3_steps_out_external_connection.export
 	.stepper_2_steps_out_external_connection_export (stepper_2_step_out), // stepper_2_steps_out_external_connection.export
@@ -394,89 +410,83 @@ assign end_stop[5] = gpio0GPIO[24] ^ flags_out[6];
 	.stepper_2_steps_in_external_connection_export  (stepper_2_step_in),  //  stepper_2_steps_in_external_connection.export
 	.stepper_3_steps_in_external_connection_export  (stepper_3_step_in),  //  stepper_3_steps_in_external_connection.export
 	.stepper_4_steps_in_external_connection_export  (stepper_4_step_in),   //  stepper_4_steps_in_external_connection.export
-	.stepper_5_steps_in_external_connection_export  (stepper_5_step_in),  //  stepper_5_steps_in_external_connection.export
 	
 	.flags_out_external_connection_export           (flags_out),           //           flags_out_external_connection.export
-   .flags_in_external_connection_export            (flags_in)             //            flags_in_external_connection.export
- );
+   .flags_in_external_connection_export            (flags_in),            //            flags_in_external_connection.export
+	
+	.configuration_1_external_connection_export		(configuration_1),
+	
+	.temp_bed_bottom_external_connection_export     (temp_bed_bottom),     //     temp_bed_bottom_external_connection.export
+   .temp_bed_upper_external_connection_export      (temp_bed_upper),      //      temp_bed_upper_external_connection.export
+   .temp_e1_bottom_external_connection_export      (temp_e1_bottom),      //      temp_e1_bottom_external_connection.export
+   .temp_e1_upper_external_connection_export       (temp_e1_upper)        //       temp_e1_upper_external_connection.export
+);
 
 
 //=======================================================  
-stepper_corexy corexy(
-					.clk						(CLK_1), 
-					.stepper_step_in_1	(stepper_1_step_out),						
-					.stepper_speed_1		(stepper_1_speed),
-					.stepper_step_in_2	(stepper_2_step_out),						
-					.stepper_speed_2		(stepper_2_speed),
-					.stepper_enable		(flags_read[0]),
-					.xmin						(end_stop[0]),
-					.xmax						(end_stop[1]),
-					.ymin						(end_stop[2]),
-					.ymax						(end_stop[3]),
-					.start_driving			(flags_read[7]),
-					
-					
-					.step_signal_1			(stepper1[1]),
-					.enable_1				(stepper1[0]),
-					.dir_1					(stepper1[2]),
-					
-					.step_signal_2			(stepper2[1]), 
-					.enable_2				(stepper2[0]),
-					.dir_2					(stepper2[2]),
-					
-					.steppers_driving		(flags_in[1]),
-					
-					.correction_x			(flags_in[5]),
-					.correction_y			(flags_in[6]),
-					
-					.stepper_step_out_1	(stepper_1_step_in),
-					.stepper_step_out_2	(stepper_2_step_in)
-					);  
+stepper_controller stepper_controller1(
+														.clk(CLK_1), 
+														.stepper_step_in_1({stepper_1_step_out[31] ^ configuration_1[6], stepper_1_step_out[30:0]}),						
+														.stepper_speed_1(stepper_1_speed),
+														.stepper_step_in_2({stepper_2_step_out[31] ^ configuration_1[7], stepper_2_step_out[30:0]}),						
+														.stepper_speed_2(stepper_2_speed),
+														.stepper_step_in_3({stepper_3_step_out[31] ^ configuration_1[8], stepper_3_step_out[30:0]}),						
+														.stepper_speed_3(stepper_3_speed),
+														.stepper_step_in_4({stepper_4_step_out[31] ^ configuration_1[9], stepper_4_step_out[30:0]}),						
+														.stepper_speed_4(stepper_4_speed),
+														.stepper_enable(flags_read[0]),
+														.xmin(end_stop[0]),
+														.xmax(end_stop[1]),
+														.ymin(end_stop[2]),
+														.ymax(end_stop[3]),
+														.zmin(end_stop[4]),
+														.zmax(end_stop[5]),
+														.homex(flags_read[2]),
+														.homey(flags_read[3]),
+														.homez(flags_read[4]),
+														.start_driving(flags_read[1]),
+														.start_homing(flags_read[5]),
+														
+														
+														.step_signal_1(stepper1[1]),
+														.enable_1(stepper1[0]),
+														.dir_1(stepper1[2]),
+														
+														.step_signal_2(stepper2[1]),
+														.enable_2(stepper2[0]),
+														.dir_2(stepper2[2]),
+														
+														.step_signal_3(stepper3[1]),
+														.enable_3(stepper3[0]),
+														.dir_3(stepper3[2]),
+														
+														.step_signal_4(stepper4[1]),
+														.enable_4(stepper4[0]),
+														.dir_4(stepper4[2]),
+														
+														.steppers_driving(flags_in[0]),
+														
+														.stepper_step_out_1(stepper_1_step_in),
+														.stepper_step_out_2(stepper_2_step_in),
+														.stepper_step_out_3(stepper_3_step_in),
+														.stepper_step_out_4(stepper_4_step_in));
+						
+						
 
-stepper_z axis_z(
-					.clk						(CLK_1), 
-					.stepper_step_in		(stepper_3_step_out),						
-					.stepper_speed			(stepper_3_speed),
-					.stepper_enable		(flags_read[0]),
-					.zmin						(end_stop[4]),
-					.zmax						(end_stop[5]),
-					.start_driving			(flags_read[7]),
-					
-					.step_signal			(stepper3[1]), 
-					.enable					(stepper3[0]),
-					.dir						(stepper3[2]),
-					.stepper_driving		(flags_in[2]),
-					.stepper_step_out		(stepper_3_step_in)
-					);
-  
-stepper_extruder extruder1(
-						.clk					(CLK_1), 
-						.stepper_step_in	(stepper_4_step_out),						
-						.stepper_speed		(stepper_4_speed),
-						.stepper_enable	(flags_read[0]),
-						.start_driving		(flags_read[7]),
+heater_control heater_bed_control(  .clk(CLK_1),
+												.temp(temp_bed),
+												.temp_bottom(temp_bed_bottom),
+												.temp_upper(temp_bed_upper),
+												.control(flags_read[7:6]),
+												.enable_heater(heater_bed));
+												
+heater_control heater_e1_control(  .clk(CLK_1),
+												.temp(temp1),
+												.temp_bottom(temp_e1_bottom),
+												.temp_upper(temp_e1_upper),
+												.control(flags_read[9:8]),
+												.enable_heater(heater_e1));
 						
-						.step_signal		(stepper4[1]),
-						.enable				(stepper4[0]),
-						.dir					(stepper4[2]),
-						.stepper_driving	(flags_in[3]),
-						.stepper_step_out	(stepper_4_step_in)
-						);
-						
-stepper_extruder extruder2(
-						.clk					(CLK_1), 
-						.stepper_step_in	(stepper_5_step_out),						
-						.stepper_speed		(stepper_5_speed),
-						.stepper_enable	(flags_read[0]),
-						.start_driving		(flags_read[7]),
-						
-						.step_signal		(stepper5[1]),
-						.enable				(stepper5[0]),
-						.dir					(stepper5[2]),
-						.stepper_driving	(flags_in[4]),
-						.stepper_step_out	(stepper_5_step_in)
-						);
-
 always @(posedge FPGA_CLK1_50)
 begin
 	flags_read = flags_out;

@@ -1,10 +1,12 @@
 	soc_system u0 (
 		.button_pio_external_connection_export          (<connected-to-button_pio_external_connection_export>),          //          button_pio_external_connection.export
 		.clk_clk                                        (<connected-to-clk_clk>),                                        //                                     clk.clk
+		.configuration_1_external_connection_export     (<connected-to-configuration_1_external_connection_export>),     //     configuration_1_external_connection.export
 		.dipsw_pio_external_connection_export           (<connected-to-dipsw_pio_external_connection_export>),           //           dipsw_pio_external_connection.export
 		.endstops_external_connection_export            (<connected-to-endstops_external_connection_export>),            //            endstops_external_connection.export
 		.fans_external_connection_export                (<connected-to-fans_external_connection_export>),                //                fans_external_connection.export
-		.heaters_external_connection_export             (<connected-to-heaters_external_connection_export>),             //             heaters_external_connection.export
+		.flags_in_external_connection_export            (<connected-to-flags_in_external_connection_export>),            //            flags_in_external_connection.export
+		.flags_out_external_connection_export           (<connected-to-flags_out_external_connection_export>),           //           flags_out_external_connection.export
 		.hps_0_f2h_cold_reset_req_reset_n               (<connected-to-hps_0_f2h_cold_reset_req_reset_n>),               //                hps_0_f2h_cold_reset_req.reset_n
 		.hps_0_f2h_debug_reset_req_reset_n              (<connected-to-hps_0_f2h_debug_reset_req_reset_n>),              //               hps_0_f2h_debug_reset_req.reset_n
 		.hps_0_f2h_stm_hw_events_stm_hwevents           (<connected-to-hps_0_f2h_stm_hw_events_stm_hwevents>),           //                 hps_0_f2h_stm_hw_events.stm_hwevents
@@ -92,13 +94,12 @@
 		.stepper_4_speed_external_connection_export     (<connected-to-stepper_4_speed_external_connection_export>),     //     stepper_4_speed_external_connection.export
 		.stepper_4_steps_in_external_connection_export  (<connected-to-stepper_4_steps_in_external_connection_export>),  //  stepper_4_steps_in_external_connection.export
 		.stepper_4_steps_out_external_connection_export (<connected-to-stepper_4_steps_out_external_connection_export>), // stepper_4_steps_out_external_connection.export
-		.stepper_5_speed_external_connection_export     (<connected-to-stepper_5_speed_external_connection_export>),     //     stepper_5_speed_external_connection.export
-		.stepper_5_steps_in_external_connection_export  (<connected-to-stepper_5_steps_in_external_connection_export>),  //  stepper_5_steps_in_external_connection.export
-		.stepper_5_steps_out_external_connection_export (<connected-to-stepper_5_steps_out_external_connection_export>), // stepper_5_steps_out_external_connection.export
 		.temp0_external_connection_export               (<connected-to-temp0_external_connection_export>),               //               temp0_external_connection.export
 		.temp1_external_connection_export               (<connected-to-temp1_external_connection_export>),               //               temp1_external_connection.export
+		.temp_bed_bottom_external_connection_export     (<connected-to-temp_bed_bottom_external_connection_export>),     //     temp_bed_bottom_external_connection.export
 		.temp_bed_external_connection_export            (<connected-to-temp_bed_external_connection_export>),            //            temp_bed_external_connection.export
-		.flags_out_external_connection_export           (<connected-to-flags_out_external_connection_export>),           //           flags_out_external_connection.export
-		.flags_in_external_connection_export            (<connected-to-flags_in_external_connection_export>)             //            flags_in_external_connection.export
+		.temp_bed_upper_external_connection_export      (<connected-to-temp_bed_upper_external_connection_export>),      //      temp_bed_upper_external_connection.export
+		.temp_e1_bottom_external_connection_export      (<connected-to-temp_e1_bottom_external_connection_export>),      //      temp_e1_bottom_external_connection.export
+		.temp_e1_upper_external_connection_export       (<connected-to-temp_e1_upper_external_connection_export>)        //       temp_e1_upper_external_connection.export
 	);
 

@@ -8,14 +8,14 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim
-vclk_gen
-Z1 !s110 1550242823
+vanalog_filter
+Z1 !s110 1554325792
 !i10b 1
-!s100 oV5hfbVT_K_7eO@l<G1kf3
-IJ_=ja6Edb49NXS4Cba;e13
+!s100 WZa_YbRM0nZERL5Zh8Eel3
+IzEPY74C=eheeRRbeW4[OE0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1550242821
+w1554325789
 Z3 8simulat.vo
 Z4 Fsimulat.vo
 Z5 L0 31
@@ -23,53 +23,95 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1550242823.000000
+Z7 !s108 1554325792.000000
 Z8 !s107 simulat.vo|
 Z9 !s90 -work|work|simulat.vo|
 !i113 1
 Z10 o-work work
 Z11 tCvgOpt 0
-Eclk_gen_vhd_vec_tst
-Z12 w1550241414
-Z13 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z14 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+vanalog_filter_vlg_vec_tst
+R1
+!i10b 1
+!s100 nzRJM1a=fi<SjUJz=2ZWZ1
+IRRe;MW46RE<^obT3n:[`Y2
+R2
 R0
-Z15 8printer.vwf.vht
-Z16 Fprinter.vwf.vht
+w1554325785
+8analog_filter.vwf.vt
+Fanalog_filter.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 analog_filter.vwf.vt|
+!s90 -work|work|analog_filter.vwf.vt|
+!i113 1
+R10
+R11
+vclk_gen
+Z13 !s110 1550242823
+!i10b 1
+!s100 oV5hfbVT_K_7eO@l<G1kf3
+IJ_=ja6Edb49NXS4Cba;e13
+R2
+R0
+w1550242821
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z14 !s108 1550242823.000000
+R8
+R9
+!i113 1
+R10
+R11
+Eclk_gen_vhd_vec_tst
+Z15 w1550241414
+Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z17 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z18 8printer.vwf.vht
+Z19 Fprinter.vwf.vht
 l0
 L31
 V2UW4MjN2gDKIZ<6Zhb7Me2
 !s100 TXIicYUDkDQFEMMERjG]W1
-Z17 OV;C;10.5b;63
+Z20 OV;C;10.5b;63
 32
-Z18 !s110 1550241422
+Z21 !s110 1550241422
 !i10b 1
-Z19 !s108 1550241422.000000
-Z20 !s90 -work|work|printer.vwf.vht|
-Z21 !s107 printer.vwf.vht|
+Z22 !s108 1550241422.000000
+Z23 !s90 -work|work|printer.vwf.vht|
+Z24 !s107 printer.vwf.vht|
 !i113 1
 R10
-Z22 tExplicit 1 CvgOpt 0
+Z25 tExplicit 1 CvgOpt 0
 Aclk_gen_arch
-R13
-R14
+R16
+R17
 DEx4 work 19 clk_gen_vhd_vec_tst 0 22 2UW4MjN2gDKIZ<6Zhb7Me2
 l52
 L33
 V5S3FDoLFc>:kn9fB1BLfW1
 !s100 U9@F0JGKYV=9?ca8;`UQ93
-R17
-32
-R18
-!i10b 1
-R19
 R20
+32
 R21
+!i10b 1
+R22
+R23
+R24
 !i113 1
 R10
-R22
+R25
 vclk_gen_vlg_vec_tst
-R1
+R13
 !i10b 1
 !s100 gPgL]^VLcMi?A[404XVR01
 IW_=nJQ841z46a[66mUNI=0
@@ -78,111 +120,237 @@ R0
 w1550242818
 8printer.vwf.vt
 Fprinter.vwf.vt
-Z23 L0 29
+R12
 R6
 r1
 !s85 0
 31
-R7
+R14
 !s107 printer.vwf.vt|
 !s90 -work|work|printer.vwf.vt|
 !i113 1
 R10
 R11
 Edriver_stepper
-Z24 w1548183980
-Z25 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
-Z26 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
-Z27 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
-Z28 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z29 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
-Z30 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-R13
-R14
-Z31 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+Z26 w1548183980
+Z27 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z28 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z29 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+Z30 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z31 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z32 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R16
+R17
+Z33 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
 R0
-Z32 8simulat.vho
-Z33 Fsimulat.vho
+Z34 8simulat.vho
+Z35 Fsimulat.vho
 l0
 L38
 V]eM?^8`RA49lNhYLe_69D2
 !s100 b3d9G8@JA8PG?7_0NoY7Y3
-R17
+R20
 32
-Z34 !s110 1548183982
+Z36 !s110 1548183982
 !i10b 1
-Z35 !s108 1548183982.000000
-Z36 !s90 -work|work|simulat.vho|
-Z37 !s107 simulat.vho|
+Z37 !s108 1548183982.000000
+Z38 !s90 -work|work|simulat.vho|
+Z39 !s107 simulat.vho|
 !i113 1
 R10
-R22
-Astructure
 R25
-R26
+Astructure
 R27
 R28
 R29
 R30
-R13
-R14
 R31
+R32
+R16
+R17
+R33
 DEx4 work 14 driver_stepper 0 22 ]eM?^8`RA49lNhYLe_69D2
 l521
 L51
 V62TJ[957P`IjNEi?5o;1`0
 !s100 9`2`m[oU8mW=9Non3J3fU2
-R17
+R20
 32
-R34
-!i10b 1
-R35
 R36
+!i10b 1
 R37
+R38
+R39
 !i113 1
 R10
-R22
+R25
 Edriver_stepper_vhd_vec_tst
-Z38 w1548183977
-R13
-R14
+Z40 w1548183977
+R16
+R17
 R0
-Z39 8driver_stepper.vwf.vht
-Z40 Fdriver_stepper.vwf.vht
+Z41 8driver_stepper.vwf.vht
+Z42 Fdriver_stepper.vwf.vht
 l0
 L31
 VaaNc^Tg[b;LBjZQ>XWn1K0
 !s100 n8nd@fZJUd;cSn?eG?le?1
-R17
+R20
 32
-R34
+R36
 !i10b 1
-R35
-Z41 !s90 -work|work|driver_stepper.vwf.vht|
-Z42 !s107 driver_stepper.vwf.vht|
+R37
+Z43 !s90 -work|work|driver_stepper.vwf.vht|
+Z44 !s107 driver_stepper.vwf.vht|
 !i113 1
 R10
-R22
+R25
 Adriver_stepper_arch
-R13
-R14
+R16
+R17
 DEx4 work 26 driver_stepper_vhd_vec_tst 0 22 aaNc^Tg[b;LBjZQ>XWn1K0
 l56
 L33
 Vol7gJH=f0Fh?@mG[Vmi>=2
 !s100 lY0>[JnIaTX>Si4U?3ge71
-R17
+R20
 32
-R34
+R36
 !i10b 1
-R35
-R41
-R42
+R37
+R43
+R44
 !i113 1
 R10
-R22
+R25
+vheater_control
+Z45 !s110 1553610804
+!i10b 1
+!s100 T3JjjSUk6lg;F;BR8;YjL3
+Ie[8JPZOXkgiPg1ZiGbT`R2
+R2
+R0
+w1553610801
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z46 !s108 1553610804.000000
+R8
+R9
+!i113 1
+R10
+R11
+vheater_control_vlg_vec_tst
+R45
+!i10b 1
+!s100 R:0>oiWb=GnCMKA[;36^^0
+Im@<lLb@EddHA^<B8Jj?F00
+R2
+R0
+w1553610798
+8heater_control.vwf.vt
+Fheater_control.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R46
+!s107 heater_control.vwf.vt|
+!s90 -work|work|heater_control.vwf.vt|
+!i113 1
+R10
+R11
+vhome_g28
+!s110 1554316535
+!i10b 1
+!s100 J77X8d46^XN=M=1QOW96M0
+I?XNknh>3a1e4<W]7OaJ5j2
+R2
+R0
+w1554316533
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1554316535.000000
+R8
+R9
+!i113 1
+R10
+R11
+vhome_g28_vlg_vec_tst
+!s110 1554316536
+!i10b 1
+!s100 m7;T7mX7YAn;[N4SHdn0L0
+IIV7g>0bGakOPTB`K0NdE^3
+R2
+R0
+w1554316530
+8home_g28.vwf.vt
+Fhome_g28.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+!s108 1554316536.000000
+!s107 home_g28.vwf.vt|
+!s90 -work|work|home_g28.vwf.vt|
+!i113 1
+R10
+R11
+vstepper_controller
+Z47 !s110 1553779104
+!i10b 1
+!s100 ?gW3iJ46TF=WEaBV^lM4]0
+IYO<`nWR95=WUY;F@oNHVU2
+R2
+R0
+w1553779100
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1553779103.000000
+R8
+R9
+!i113 1
+R10
+R11
+vstepper_controller_vlg_vec_tst
+R47
+!i10b 1
+!s100 @[ah?bF1_N982dXaF:I=a0
+IkJM9W_PmzJ81GcWJVgNgM3
+R2
+R0
+w1553779097
+8stepper_controller.vwf.vt
+Fstepper_controller.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+!s108 1553779104.000000
+!s107 stepper_controller.vwf.vt|
+!s90 -work|work|stepper_controller.vwf.vt|
+!i113 1
+R10
+R11
 vstepper_corexy
-Z43 !s110 1551628219
+Z48 !s110 1551628219
 !i10b 1
 !s100 T^HDFi0aaoJFYMM82o;073
 IK4g_VH^LoXBDD4WC:lHn=1
@@ -202,8 +370,50 @@ R9
 !i113 1
 R10
 R11
+vstepper_corexy_new
+Z49 !s110 1553709549
+!i10b 1
+!s100 ngoTRn`4_KbcM7I_fgDS72
+I6lIifBW?>a:WSOm;>2M>93
+R2
+R0
+w1553709546
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1553709548.000000
+R8
+R9
+!i113 1
+R10
+R11
+vstepper_corexy_new_vlg_vec_tst
+R49
+!i10b 1
+!s100 2Vah7g_oPjzM47aSdg3>A0
+I<;:7[nCg=k7hffZcn`=Ei2
+R2
+R0
+w1553709542
+8stepper_corexy_new.vwf.vt
+Fstepper_corexy_new.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+!s108 1553709549.000000
+!s107 stepper_corexy_new.vwf.vt|
+!s90 -work|work|stepper_corexy_new.vwf.vt|
+!i113 1
+R10
+R11
 vstepper_corexy_vlg_vec_tst
-R43
+R48
 !i10b 1
 !s100 87JKek6;CDB7>S]GkPb=F3
 I=8N0fkVE^BR;BeBHD6_TF1
@@ -212,7 +422,7 @@ R0
 w1551628207
 8stepper_corexy.vwf.vt
 Fstepper_corexy.vwf.vt
-R23
+R12
 R6
 r1
 !s85 0
@@ -224,13 +434,13 @@ r1
 R10
 R11
 vstepper_extruder
-!s110 1550929889
+Z50 !s110 1553710021
 !i10b 1
 !s100 Ag>o[m]G;[IJogNUE[?XL2
 IdCY1`2ScG9N@T9M:VDb]i2
 R2
 R0
-w1550929887
+w1553710018
 R3
 R4
 R5
@@ -238,28 +448,28 @@ R6
 r1
 !s85 0
 31
-Z44 !s108 1550929889.000000
+Z51 !s108 1553710021.000000
 R8
 R9
 !i113 1
 R10
 R11
 vstepper_extruder_vlg_vec_tst
-!s110 1550929890
+R50
 !i10b 1
-!s100 QC2Z4nGMb0=ioZHkU3hZC3
-I:A5R4;ffJ?eAU]S8J:M4U3
+!s100 JjfEIa>VD`L0>Y0E:dk612
+IaQ8`SUUzXBVd7maX:dLiH2
 R2
 R0
-w1550929884
+w1553710015
 8stepper_extruder.vwf.vt
 Fstepper_extruder.vwf.vt
-R23
+R12
 R6
 r1
 !s85 0
 31
-R44
+R51
 !s107 stepper_extruder.vwf.vt|
 !s90 -work|work|stepper_extruder.vwf.vt|
 !i113 1
@@ -280,7 +490,7 @@ R6
 r1
 !s85 0
 31
-Z45 !s108 1550929601.000000
+Z52 !s108 1550929601.000000
 R8
 R9
 !i113 1
@@ -296,12 +506,12 @@ R0
 w1550929596
 8stepper_z.vwf.vt
 Fstepper_z.vwf.vt
-R23
+R12
 R6
 r1
 !s85 0
 31
-R45
+R52
 !s107 stepper_z.vwf.vt|
 !s90 -work|work|stepper_z.vwf.vt|
 !i113 1

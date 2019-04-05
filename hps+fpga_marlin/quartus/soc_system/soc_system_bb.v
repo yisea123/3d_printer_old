@@ -2,10 +2,12 @@
 module soc_system (
 	button_pio_external_connection_export,
 	clk_clk,
+	configuration_1_external_connection_export,
 	dipsw_pio_external_connection_export,
 	endstops_external_connection_export,
 	fans_external_connection_export,
-	heaters_external_connection_export,
+	flags_in_external_connection_export,
+	flags_out_external_connection_export,
 	hps_0_f2h_cold_reset_req_reset_n,
 	hps_0_f2h_debug_reset_req_reset_n,
 	hps_0_f2h_stm_hw_events_stm_hwevents,
@@ -93,21 +95,22 @@ module soc_system (
 	stepper_4_speed_external_connection_export,
 	stepper_4_steps_in_external_connection_export,
 	stepper_4_steps_out_external_connection_export,
-	stepper_5_speed_external_connection_export,
-	stepper_5_steps_in_external_connection_export,
-	stepper_5_steps_out_external_connection_export,
 	temp0_external_connection_export,
 	temp1_external_connection_export,
+	temp_bed_bottom_external_connection_export,
 	temp_bed_external_connection_export,
-	flags_out_external_connection_export,
-	flags_in_external_connection_export);	
+	temp_bed_upper_external_connection_export,
+	temp_e1_bottom_external_connection_export,
+	temp_e1_upper_external_connection_export);	
 
 	input	[1:0]	button_pio_external_connection_export;
 	input		clk_clk;
+	output	[31:0]	configuration_1_external_connection_export;
 	input	[3:0]	dipsw_pio_external_connection_export;
 	input	[5:0]	endstops_external_connection_export;
 	output	[1:0]	fans_external_connection_export;
-	output	[1:0]	heaters_external_connection_export;
+	input	[31:0]	flags_in_external_connection_export;
+	output	[31:0]	flags_out_external_connection_export;
 	input		hps_0_f2h_cold_reset_req_reset_n;
 	input		hps_0_f2h_debug_reset_req_reset_n;
 	input	[27:0]	hps_0_f2h_stm_hw_events_stm_hwevents;
@@ -195,12 +198,11 @@ module soc_system (
 	output	[31:0]	stepper_4_speed_external_connection_export;
 	input	[31:0]	stepper_4_steps_in_external_connection_export;
 	output	[31:0]	stepper_4_steps_out_external_connection_export;
-	output	[31:0]	stepper_5_speed_external_connection_export;
-	input	[31:0]	stepper_5_steps_in_external_connection_export;
-	output	[31:0]	stepper_5_steps_out_external_connection_export;
 	input	[11:0]	temp0_external_connection_export;
 	input	[11:0]	temp1_external_connection_export;
+	output	[11:0]	temp_bed_bottom_external_connection_export;
 	input	[11:0]	temp_bed_external_connection_export;
-	output	[31:0]	flags_out_external_connection_export;
-	input	[31:0]	flags_in_external_connection_export;
+	output	[11:0]	temp_bed_upper_external_connection_export;
+	output	[11:0]	temp_e1_bottom_external_connection_export;
+	output	[11:0]	temp_e1_upper_external_connection_export;
 endmodule

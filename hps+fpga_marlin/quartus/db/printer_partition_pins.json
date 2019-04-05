@@ -4,27 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "LED[6]",
-					"strict" : false
-				},
-				{
-					"name" : "ADC_CONVST",
-					"strict" : false
-				},
-				{
-					"name" : "ADC_SCK",
-					"strict" : false
-				},
-				{
-					"name" : "ADC_SDI",
-					"strict" : false
-				},
-				{
-					"name" : "LED[0]",
-					"strict" : false
-				},
-				{
-					"name" : "LED[4]",
+					"name" : "gpio0GPIO[6]",
 					"strict" : false
 				},
 				{
@@ -40,27 +20,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "LED[7]",
+					"name" : "LED[4]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[24]",
+					"name" : "LED[5]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[2]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[5]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[8]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[23]",
+					"name" : "LED[6]",
 					"strict" : false
 				},
 				{
@@ -80,35 +48,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[6]",
-					"strict" : false
-				},
-				{
 					"name" : "gpio0GPIO[7]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[11]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[14]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[19]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[20]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[21]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[22]",
 					"strict" : false
 				},
 				{
@@ -120,11 +60,55 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[12]",
+					"name" : "gpio0GPIO[15]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[13]",
+					"name" : "gpio0GPIO[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_CONVST",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SCK",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDI",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio0GPIO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio0GPIO[5]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio0GPIO[8]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio0GPIO[11]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio0GPIO[17]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio0GPIO[18]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_CLK1_50",
 					"strict" : false
 				},
 				{
@@ -144,7 +128,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_CLK1_50",
+					"name" : "gpio1GPIO[23]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[24]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[22]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[21]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[19]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio1GPIO[20]",
 					"strict" : false
 				},
 				{

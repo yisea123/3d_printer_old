@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy.vwf" --testbench_file="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/stepper_corexy.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/analog_filter.vwf" --testbench_file="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/analog_filter.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -25,20 +25,19 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sun Mar 03 18:50:03 2019
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/stepper_corexy.vwf.vt
-Info (119006): Selected device 5CGXFC7C7F23C8 for design "simulat"
+    Info: Processing started: Thu Apr 04 00:09:41 2019
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/analog_filter.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/analog_filter.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-ning (201005): Ignoring output pin "stepper_step_out_2[10]" in vector source file when writing test bench files
+1005): Ignoring output pin "outt[7]" in vector source file when writing test bench files
 
 Completed successfully. 
 
 Completed successfully. 
 
-**** Generating the functional simulation netlist ****
+**** Generating the timing simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/" simulat -c simulat
+quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/" simulat -c simulat
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -56,16 +55,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sun Mar 03 18:50:08 2019
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
-Info (119006): Selected device 5CGXFC7C7F23C8 for design "simulat"
+    Info: Processing started: Thu Apr 04 00:09:45 2019
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
 Info (204019): Generated file simulat.vo in folder "D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4748 megabytes
-    Info: Processing ended: Sun Mar 03 18:50:12 2019
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Thu Apr 04 00:09:49 2019
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 Completed successfully. 
 
@@ -89,60 +88,55 @@ Reading D:/Programms/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:50:17 on Mar 03,2019
-
+# Start time: 00:09:52 on Apr 04,2019
 # vlog -work work simulat.vo 
-
-# -- Compiling module stepper_corexy
+# -- Compiling module analog_filter
 
 # 
 # Top level modules:
-# 	stepper_corexy
-# End time: 18:50:19 on Mar 03,2019, Elapsed time: 0:00:02
+# 	analog_filter
+# End time: 00:09:52 on Apr 04,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:50:19 on Mar 03,2019
-# vlog -work work stepper_corexy.vwf.vt 
+# Start time: 00:09:52 on Apr 04,2019
+# vlog -work work analog_filter.vwf.vt 
 
-# -- Compiling module stepper_corexy_vlg_vec_tst
+# -- Compiling module analog_filter_vlg_vec_tst
 # 
 # Top level modules:
-# 	stepper_corexy_vlg_vec_tst
-# End time: 18:50:19 on Mar 03,2019, Elapsed time: 0:00:00
+# 	analog_filter_vlg_vec_tst
+# End time: 00:09:52 on Apr 04,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.stepper_corexy_vlg_vec_tst 
-# Start time: 18:50:19 on Mar 03,2019
-# Loading work.stepper_corexy_vlg_vec_tst
-# Loading work.stepper_corexy
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.analog_filter_vlg_vec_tst 
+# Start time: 00:09:53 on Apr 04,2019
+# Loading work.analog_filter_vlg_vec_tst
+# Loading work.analog_filter
 # Loading cyclonev_ver.cyclonev_io_obuf
 # Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_clkena
 # Loading cyclonev_ver.cyclonev_lcell_comb
 # Loading altera_ver.dffeas
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 14629 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
 # after#25
 
-# Simulation time: 0 ps
-
-# ** Note: $finish    : stepper_corexy.vwf.vt(84)
-#    Time: 3 us  Iteration: 0  Instance: /stepper_corexy_vlg_vec_tst
-# End time: 18:50:27 on Mar 03,2019, Elapsed time: 0:00:08
-# Errors: 0, Warnings: 1
+# ** Note: $finish    : analog_filter.vwf.vt(48)
+#    Time: 10 us  Iteration: 0  Instance: /analog_filter_vlg_vec_tst
+# End time: 00:09:54 on Apr 04,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy.vwf...
+Reading D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/analog_filter.vwf...
 
 Reading D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/simulat.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/simulat_20190303185027.sim.vwf
+Writing the resulting VWF to D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/simulat_20190404000954.sim.vwf
 
 Finished VCD to VWF conversion.
 
