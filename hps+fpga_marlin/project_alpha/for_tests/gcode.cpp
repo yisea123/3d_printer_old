@@ -31,11 +31,22 @@ int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
                             //передача количества микрошагов с учетом знака
                             int32_t* a_numofmicrosteps, int32_t* b_numofmicrosteps,
                             int32_t* z_numofmicrosteps, int32_t* e_numofmicrosteps)
-{/*
+{
+    *a_microsteppulse = pos->get_pos_speed();
+    *b_microsteppulse = pos->get_pos_speed(); 
+    *e_microsteppulse = pos->get_pos_speed(); 
+    *z_microsteppulse = pos->get_pos_speed(); 
+
+    *a_numofmicrosteps = ceil(dx);
+    *b_numofmicrosteps = ceil(dy);
+    *e_numofmicrosteps = ceil(de);
+    *z_numofmicrosteps = ceil(dz);
+
+/*
 * Метод рассчитывает необходимые для движения двигателей количество микрошагов и время импульса на один микрошаг 
 * и передает эти параметры в верилог
 */
-    float diag; //гипотенуза, относительно которой высчитывается общее время для x и y
+    /*float diag; //гипотенуза, относительно которой высчитывается общее время для x и y
     float da = dx + dy; //расстояние, которое должен обработать двигатель a системы core xy
     float db = dx - dy; //расстояние, которое должен обработать двигатель b системы core xy
     diag = sqrt(dx*dx + dy*dy);
@@ -132,7 +143,8 @@ int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
         printf("a_new_t = %f\n",a_new_t);
         printf("b_new_t = %f\n",b_new_t);
         printf("e_new_t = %f\n",e_new_t);
-        printf("z_new_t = %f\n\n",z_new_t);}
+        printf("z_new_t = %f\n\n",z_new_t);}*/
+
     
     return 0;
 }
@@ -195,7 +207,7 @@ int gcode::gcode_G0(variable_used<float> x, variable_used<float> y, variable_use
 int gcode::gcode_G1(variable_used<float> x, variable_used<float> y, variable_used<float> z, variable_used<float> e, variable_used<int> speed)
 //Координированное движение по осям X Y Z E
 {
-        #if debug
+        #if DEBUG
             printf("gcode G1 is running\n");
         #endif
         
@@ -209,7 +221,7 @@ int gcode::gcode_G1(variable_used<float> x, variable_used<float> y, variable_use
         float de;  
         uint32_t speed1, speed2, speed3, speed4;
         int32_t steps_count1, steps_count2, steps_count3, steps_count4;
-
+        
         if (speed.is_used)
           pos->set_pos_speed(speed.num);
 
@@ -285,11 +297,16 @@ int gcode::gcode_G1(variable_used<float> x, variable_used<float> y, variable_use
                               &steps_count1, &steps_count2, &steps_count3, &steps_count4) != 0)
           return 2;
 
+        #if DEBUG
+            printf("speed1 = %lu\nspeed2 = %lu\nspeed3 = %lu\nspeed4 = %lu\n", speed1, speed2, speed3, speed4);
+        #endif
         addr->set_stepper_1_speed(speed1);
         addr->set_stepper_2_speed(speed2);
       	addr->set_stepper_3_speed(speed3);
       	addr->set_stepper_4_speed(speed4);
-
+        #if DEBUG
+            printf("steps_count1 = %d\nsteps_count2 = %d\nsteps_count3 = %d\nsteps_count4 = %d\n", steps_count1,steps_count2,steps_count3,steps_count4);
+        #endif
       	addr->set_stepper_1_steps_in(steps_count1);
       	addr->set_stepper_2_steps_in(steps_count2);
       	addr->set_stepper_3_steps_in(steps_count3);
@@ -300,16 +317,25 @@ int gcode::gcode_G1(variable_used<float> x, variable_used<float> y, variable_use
       	if (!f)
       		return 1;
 
-      	usleep(2);
+      	usleep(10000000);
         //while (addr->get_flags_out_stepper_state() == false);
-      	
-      	while (addr->get_flags_out_stepper_state() == true);
+      	#if DEBUG
+            printf("while step is to be succeded\n");
+        #endif
 
         f = addr->set_flags_in_start_driving_state(false);
         
         if (!f)
           return 2;
 
+      	while (addr->get_flags_out_stepper_state() == true);
+        #if DEBUG
+            printf("while step has been succeded\n");
+        #endif
+        
+        #if DEBUG
+            printf("if step has been succeded\n");
+        #endif
       	//перевод остаток координат в мм
       	//корриктировка за счет остатка
       	correction(  addr->get_stepper_1_steps_out(), addr->get_stepper_2_steps_out(), 
