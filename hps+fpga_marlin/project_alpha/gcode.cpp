@@ -8,12 +8,12 @@
 #include <iostream>
 using namespace std;
 
-int gcode::correction(int a_numofmicrosteps, int b_numofmicrosteps, int z_numofmicrosteps, int e_numofmicrosteps,
+int gcode::correction(int32_t a_numofmicrosteps, int32_t b_numofmicrosteps, int32_t z_numofmicrosteps, int32_t e_numofmicrosteps,
     float &dx, float &dy, float &dz, float &de)
 //метод, который переносит кол-во микрошагов в мм'ы для движков с сохранением знака
 {
-    float da = dx + dy; //расстояние, которое должен обработать двигатель a системы core xy
-    float db = dx - dy; //расстояние, которое должен обработать двигатель b системы core xy
+    float da; //расстояние, которое должен обработать двигатель a системы core xy
+    float db; //расстояние, которое должен обработать двигатель b системы core xy
     float dl; //расстояние, которое должен обработать двигатель на оси z
 
     da = a_numofmicrosteps*rotlength/stepsperrot/microsteps;
@@ -24,7 +24,8 @@ int gcode::correction(int a_numofmicrosteps, int b_numofmicrosteps, int z_numofm
     dl = z_numofmicrosteps*rotlength/stepsperrot/microsteps;
     dz = dl*h/circlelength;
 
-    if debug printf("dx = %f\ndy = %f\ndz = %f\nde = %f\n", dx, dy, dz, de);
+    #if debug printf("dx = %f\ndy = %f\ndz = %f\nde = %f\n", dx, dy, dz, de); 
+    #endif
 
 return 0;
 }
@@ -44,7 +45,7 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     diag = sqrt(dx*dx + dy*dy);
     float dl = dz/h*circlelength; //расстояние, которое должен обработать двигатель на оси z
 
-    if debug
+    #if debug
     {   printf("dx = %.4f\n",dx);
         printf("dy = %.4f\n",dy);
         printf("diag = %.4f\n",diag);
@@ -53,7 +54,7 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
         printf("de = %.4f\n",de);
         printf("dz = %.4f\n",dz);
         printf("dl = %.4f\n\n",dl);}
-    
+    #endif
     //необходимое для движения количество микрошагов = число оборотов * количество микрошагов за оборот
     *a_numofmicrosteps = trunc(da/rotlength*stepsperrot*microsteps);
     *b_numofmicrosteps = trunc(db/rotlength*stepsperrot*microsteps);
@@ -61,11 +62,12 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     *z_numofmicrosteps = trunc(dl/rotlength*stepsperrot*microsteps);
     
     //вывод количества микрошагов, необходимых для движения
-    if debug
+    #if debug
     {   printf("a_numofmicrosteps = %ld\n", (long)(*a_numofmicrosteps));
         printf("b_numofmicrosteps = %ld\n", (long)(*b_numofmicrosteps));
         printf("e_numofmicrosteps = %ld\n", (long)(*e_numofmicrosteps));
         printf("z_numofmicrosteps = %ld\n\n", (long)(*z_numofmicrosteps));}
+    #endif
 
     //подсчет макс расстояния в микрошагах для опреодоления общего времени 
     //позволяет настроить скорость и время для единовременного завершения работы двигателей
@@ -103,11 +105,12 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     *z_microsteppulse = ceil(abs(frequency/z_speed)); 
 
     //вывод количества 20нс импульсов, необходимых для движения
-    if debug
+    #if debug
     {   printf("a_microsteppulse = %lu\n\n", (unsigned long)(*a_microsteppulse));
         printf("b_microsteppulse = %lu\n\n", (unsigned long)(*b_microsteppulse));
         printf("e_microsteppulse = %lu\n\n", (unsigned long)(*e_microsteppulse));
         printf("z_microsteppulse = %lu\n\n", (unsigned long)(*z_microsteppulse));}
+    #endif
 
     //подсчет параметров коррекции
     float a_new_speed = 0,  b_new_speed = 0, e_new_speed = 0, z_new_speed = 0;//частота после коррекции
@@ -125,7 +128,7 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
     {   z_new_speed = frequency/(*z_microsteppulse);
         z_new_t = abs((*z_numofmicrosteps)/z_new_speed);}
     
-    if debug
+    #if debug
     {   printf("initial t = %f\n", t);
         printf("a_new_speed = %f\n",a_new_speed);
         printf("b_new_speed = %f\n",b_new_speed);
@@ -136,7 +139,7 @@ int gcode::calc_steps_speed(float dх, float dу, float dz, float de,
         printf("b_new_t = %f\n",b_new_t);
         printf("e_new_t = %f\n",e_new_t);
         printf("z_new_t = %f\n\n",z_new_t);}
-    
+    #endif
     return 0;
 }
 
