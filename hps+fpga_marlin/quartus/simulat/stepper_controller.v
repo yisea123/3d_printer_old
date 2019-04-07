@@ -101,6 +101,9 @@ module stepper_controller(
 						.xmin(xmin),
 						.ymin(ymin),
 						.zmin(zmin),
+						.homex(homex),
+						.homey(homey),
+						.homez(homez),
 						.start_driving(start_homing),
 						
 						
@@ -125,9 +128,6 @@ module stepper_controller(
 										.xmax(xmax),
 										.ymin(ymin),
 										.ymax(ymax),
-										.homex(homex),
-										.homey(homey),
-										.homez(homez),
 										.start_driving(start_driving),
 										
 										

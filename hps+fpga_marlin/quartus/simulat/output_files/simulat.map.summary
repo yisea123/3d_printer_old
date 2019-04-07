@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Apr 04 00:05:49 2019
+Analysis & Synthesis Status : Successful - Sun Apr 07 00:29:39 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : simulat
-Top-level Entity Name : analog_filter
+Top-level Entity Name : stepper_controller
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 103
-Total pins : 42
+Total registers : 660
+Total pins : 410
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

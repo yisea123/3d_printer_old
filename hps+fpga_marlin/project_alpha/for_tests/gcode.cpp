@@ -316,26 +316,27 @@ int gcode::gcode_G1(variable_used<float> x, variable_used<float> y, variable_use
 
       	if (!f)
       		return 1;
-
-      	usleep(10000000);
-        //while (addr->get_flags_out_stepper_state() == false);
+        
       	#if DEBUG
             printf("while step is to be succeded\n");
-        #endif
-
-        f = addr->set_flags_in_start_driving_state(false);
+        #endif     
         
-        if (!f)
-          return 2;
-
       	while (addr->get_flags_out_stepper_state() == true);
+
         #if DEBUG
             printf("while step has been succeded\n");
         #endif
-        
+
+        f = addr->set_flags_in_start_driving_state(false);
+
+        if (!f)
+          return 2;
+
         #if DEBUG
             printf("if step has been succeded\n");
         #endif
+
+        usleep(2);
       	//перевод остаток координат в мм
       	//корриктировка за счет остатка
       	correction(  addr->get_stepper_1_steps_out(), addr->get_stepper_2_steps_out(), 
