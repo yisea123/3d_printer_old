@@ -220,7 +220,6 @@ set_global_assignment -name VERILOG_FILE stepper_controller.v
 set_global_assignment -name VERILOG_FILE home_g28.v
 set_global_assignment -name VERILOG_FILE heater_control.v
 set_global_assignment -name VERILOG_FILE clk_gen.v
-set_global_assignment -name VERILOG_FILE stepper_corexy.v
 set_global_assignment -name QIP_FILE adc_control/synthesis/adc_control.qip
 set_global_assignment -name QIP_FILE hps_reset.qip
 set_global_assignment -name VERILOG_FILE debounce.v
