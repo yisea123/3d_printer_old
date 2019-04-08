@@ -1,5 +1,5 @@
 Flow report for simulat
-Sun Apr 07 00:32:59 2019
+Mon Apr 08 20:54:05 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Apr 07 00:32:59 2019       ;
+; Flow Status                     ; Successful - Mon Apr 08 20:54:05 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; simulat                                     ;
 ; Top-level Entity Name           ; stepper_controller                          ;
@@ -106,7 +106,15 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4749 MB             ; 00:00:03                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4741 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4749 MB             ; 00:00:03                           ;
-; Total                ; 00:00:45     ; --                      ; --                  ; 00:01:16                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4741 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4749 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4741 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4749 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4741 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4749 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4741 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4749 MB             ; 00:00:03                           ;
+; Total                ; 00:01:08     ; --                      ; --                  ; 00:01:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -122,6 +130,14 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -129,6 +145,14 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off simulat -c simulat
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/stepper_controller.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/stepper_controller.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/stepper_controller.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/stepper_controller.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/stepper_controller.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/ simulat -c simulat
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.vwf --testbench_file=D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/stepper_controller.vwf.vt
