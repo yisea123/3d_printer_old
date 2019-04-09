@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simulat
-Sun Apr 07 00:29:39 2019
+Mon Apr 08 10:56:13 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Apr 07 00:29:39 2019       ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr 08 10:56:13 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; simulat                                     ;
 ; Top-level Entity Name           ; stepper_controller                          ;
@@ -159,31 +159,29 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                            ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
-; stepper_z.v                      ; yes             ; User Verilog HDL File  ; D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_z.v          ;         ;
-; stepper_extruder.v               ; yes             ; User Verilog HDL File  ; D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_extruder.v   ;         ;
-; home_g28.v                       ; yes             ; User Verilog HDL File  ; D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/home_g28.v           ;         ;
-; stepper_corexy_new.v             ; yes             ; User Verilog HDL File  ; D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v ;         ;
-; stepper_controller.v             ; yes             ; User Verilog HDL File  ; D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                            ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; stepper_z.v                      ; yes             ; User Verilog HDL File  ; C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v          ;         ;
+; stepper_extruder.v               ; yes             ; User Verilog HDL File  ; C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v   ;         ;
+; home_g28.v                       ; yes             ; User Verilog HDL File  ; C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/home_g28.v           ;         ;
+; stepper_corexy_new.v             ; yes             ; User Verilog HDL File  ; C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v ;         ;
+; stepper_controller.v             ; yes             ; User Verilog HDL File  ; C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -357,7 +355,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -367,61 +365,61 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 07 00:29:06 2019
+    Info: Processing started: Mon Apr 08 10:55:33 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simulat -c simulat
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file analog_filter.v
-    Info (12023): Found entity 1: analog_filter File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/analog_filter.v Line: 1
+    Info (12023): Found entity 1: analog_filter File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/analog_filter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file stepper_z.v
-    Info (12023): Found entity 1: stepper_z File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 1
+    Info (12023): Found entity 1: stepper_z File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file stepper_extruder.v
-    Info (12023): Found entity 1: stepper_extruder File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 1
+    Info (12023): Found entity 1: stepper_extruder File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clk_gen.v
-    Info (12023): Found entity 1: clk_gen File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/clk_gen.v Line: 1
+    Info (12023): Found entity 1: clk_gen File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/clk_gen.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file driver_stepper.v
-    Info (12023): Found entity 1: driver_stepper File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 1
+    Info (12023): Found entity 1: driver_stepper File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/driver_stepper.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file stepper_corexy.v
-    Info (12023): Found entity 1: stepper_corexy File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy.v Line: 1
+    Info (12023): Found entity 1: stepper_corexy File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file home_g28.v
-    Info (12023): Found entity 1: home_g28 File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/home_g28.v Line: 1
+    Info (12023): Found entity 1: home_g28 File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/home_g28.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file heater_control.v
-    Info (12023): Found entity 1: heater_control File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/heater_control.v Line: 1
+    Info (12023): Found entity 1: heater_control File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/heater_control.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file stepper_corexy_new.v
-    Info (12023): Found entity 1: stepper_corexy_new File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 1
+    Info (12023): Found entity 1: stepper_corexy_new File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file stepper_controller.v
-    Info (12023): Found entity 1: stepper_controller File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at stepper_controller.v(167): instance has no name File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 167
+    Info (12023): Found entity 1: stepper_controller File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at stepper_controller.v(167): instance has no name File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 167
 Info (12127): Elaborating entity "stepper_controller" for the top level hierarchy
-Info (12128): Elaborating entity "home_g28" for hierarchy "home_g28:home" File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 119
-Info (12128): Elaborating entity "stepper_corexy_new" for hierarchy "stepper_corexy_new:corexy" File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 143
-Warning (10036): Verilog HDL or VHDL warning at stepper_corexy_new.v(48): object "step_changed" assigned a value but never read File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 48
-Warning (10036): Verilog HDL or VHDL warning at stepper_corexy_new.v(50): object "recount" assigned a value but never read File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 50
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(96): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 96
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(100): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 100
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(181): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 181
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(185): truncated value with size 33 to match size of target (32) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 185
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(191): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 191
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(197): truncated value with size 33 to match size of target (32) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 197
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(212): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 212
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(216): truncated value with size 33 to match size of target (32) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 216
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(223): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 223
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(229): truncated value with size 33 to match size of target (32) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 229
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(236): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 236
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(242): truncated value with size 33 to match size of target (32) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 242
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(245): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 245
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(251): truncated value with size 33 to match size of target (32) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 251
-Info (12128): Elaborating entity "stepper_z" for hierarchy "stepper_z:z" File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 156
-Warning (10230): Verilog HDL assignment warning at stepper_z.v(41): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 41
-Warning (10230): Verilog HDL assignment warning at stepper_z.v(57): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 57
-Warning (10230): Verilog HDL assignment warning at stepper_z.v(61): truncated value with size 33 to match size of target (32) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 61
-Warning (10230): Verilog HDL assignment warning at stepper_z.v(67): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 67
-Warning (10230): Verilog HDL assignment warning at stepper_z.v(73): truncated value with size 33 to match size of target (32) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 73
-Info (12128): Elaborating entity "stepper_extruder" for hierarchy "stepper_extruder:comb_50" File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 167
-Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(39): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 39
-Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(55): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 55
-Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(61): truncated value with size 32 to match size of target (31) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 61
-Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(67): truncated value with size 33 to match size of target (32) File: D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 67
+Info (12128): Elaborating entity "home_g28" for hierarchy "home_g28:home" File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 119
+Info (12128): Elaborating entity "stepper_corexy_new" for hierarchy "stepper_corexy_new:corexy" File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 143
+Warning (10036): Verilog HDL or VHDL warning at stepper_corexy_new.v(48): object "step_changed" assigned a value but never read File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 48
+Warning (10036): Verilog HDL or VHDL warning at stepper_corexy_new.v(50): object "recount" assigned a value but never read File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 50
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(96): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 96
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(100): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 100
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(181): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 181
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(185): truncated value with size 33 to match size of target (32) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 185
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(191): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 191
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(197): truncated value with size 33 to match size of target (32) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 197
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(212): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 212
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(216): truncated value with size 33 to match size of target (32) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 216
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(223): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 223
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(229): truncated value with size 33 to match size of target (32) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 229
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(236): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 236
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(242): truncated value with size 33 to match size of target (32) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 242
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(245): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 245
+Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(251): truncated value with size 33 to match size of target (32) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 251
+Info (12128): Elaborating entity "stepper_z" for hierarchy "stepper_z:z" File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 156
+Warning (10230): Verilog HDL assignment warning at stepper_z.v(41): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 41
+Warning (10230): Verilog HDL assignment warning at stepper_z.v(57): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 57
+Warning (10230): Verilog HDL assignment warning at stepper_z.v(61): truncated value with size 33 to match size of target (32) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 61
+Warning (10230): Verilog HDL assignment warning at stepper_z.v(67): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 67
+Warning (10230): Verilog HDL assignment warning at stepper_z.v(73): truncated value with size 33 to match size of target (32) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 73
+Info (12128): Elaborating entity "stepper_extruder" for hierarchy "stepper_extruder:comb_50" File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 167
+Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(39): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 39
+Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(55): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 55
+Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(61): truncated value with size 32 to match size of target (31) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 61
+Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(67): truncated value with size 33 to match size of target (32) File: C:/Users/reconnect/Documents/GitHub/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 67
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -431,9 +429,9 @@ Info (21057): Implemented 2251 device resources after synthesis - the final reso
     Info (21059): Implemented 141 output pins
     Info (21061): Implemented 1841 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Sun Apr 07 00:29:39 2019
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:01:02
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Mon Apr 08 10:56:13 2019
+    Info: Elapsed time: 00:00:40
+    Info: Total CPU time (on all processors): 00:01:07
 
 
