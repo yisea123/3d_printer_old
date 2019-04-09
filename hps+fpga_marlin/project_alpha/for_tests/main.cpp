@@ -47,13 +47,14 @@ int main()
 	z.num = 10;
 	e.num = 10;
 	speed.num = 500000;
-	//gc.gcode_G1(x, y, z, e, speed);/*
+	gc.gcode_G1(x, y, z, e, speed);/*
 	//x, y, z, e, speed
+	/*
 	cout << pos.get_pos_type_driving() << endl;
 	gc.gcode_G90();
 	cout << "abs " << pos.get_pos_type_driving() << endl;
 	gc.gcode_G91();
-	cout << "rel " << pos.get_pos_type_driving() << endl;
+	cout << "rel " << pos.get_pos_type_driving() << endl;*/
 	//scanf("%" SCNx32, &speednum); //uint32_t
 	//scanf("%" SCNd32, &stepsnum); //int32_t*/
 
