@@ -3,7 +3,7 @@ $comment
 		vcd file simulat.msim.vcd -direction
 $end
 $date
-	Mon Apr 08 20:54:13 2019
+	Tue Apr 09 20:28:07 2019
 $end
 $version
 	ModelSim Version 10.5b

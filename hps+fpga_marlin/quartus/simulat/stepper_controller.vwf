@@ -25,6 +25,7 @@ quit -f
 
 
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -43,6 +44,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 
 
@@ -5000,7 +5002,7 @@ TRANSITION_LIST("stepper_speed_2[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 100000.0;
+		LEVEL 1 FOR 100000.0;
 	}
 }
 
@@ -5009,7 +5011,7 @@ TRANSITION_LIST("stepper_speed_2[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -5594,7 +5596,7 @@ TRANSITION_LIST("stepper_step_in_1[31]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 100000.0;
+		LEVEL 1 FOR 100000.0;
 	}
 }
 
@@ -5891,7 +5893,7 @@ TRANSITION_LIST("stepper_step_in_2[30]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 100000.0;
+		LEVEL 1 FOR 100000.0;
 	}
 }
 
@@ -5909,7 +5911,7 @@ TRANSITION_LIST("stepper_step_in_2[28]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 100000.0;
+		LEVEL 1 FOR 100000.0;
 	}
 }
 
@@ -6134,7 +6136,7 @@ TRANSITION_LIST("stepper_step_in_2[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6152,7 +6154,7 @@ TRANSITION_LIST("stepper_step_in_2[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6170,7 +6172,7 @@ TRANSITION_LIST("stepper_step_in_3[31]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6179,7 +6181,7 @@ TRANSITION_LIST("stepper_step_in_3[30]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6188,7 +6190,7 @@ TRANSITION_LIST("stepper_step_in_3[29]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6197,7 +6199,7 @@ TRANSITION_LIST("stepper_step_in_3[28]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6206,7 +6208,7 @@ TRANSITION_LIST("stepper_step_in_3[27]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6215,7 +6217,7 @@ TRANSITION_LIST("stepper_step_in_3[26]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6224,7 +6226,7 @@ TRANSITION_LIST("stepper_step_in_3[25]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6233,7 +6235,7 @@ TRANSITION_LIST("stepper_step_in_3[24]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6242,7 +6244,7 @@ TRANSITION_LIST("stepper_step_in_3[23]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6251,7 +6253,7 @@ TRANSITION_LIST("stepper_step_in_3[22]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6260,7 +6262,7 @@ TRANSITION_LIST("stepper_step_in_3[21]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6269,7 +6271,7 @@ TRANSITION_LIST("stepper_step_in_3[20]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6278,7 +6280,7 @@ TRANSITION_LIST("stepper_step_in_3[19]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6287,7 +6289,7 @@ TRANSITION_LIST("stepper_step_in_3[18]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6296,7 +6298,7 @@ TRANSITION_LIST("stepper_step_in_3[17]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6305,7 +6307,7 @@ TRANSITION_LIST("stepper_step_in_3[16]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6314,7 +6316,7 @@ TRANSITION_LIST("stepper_step_in_3[15]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6323,7 +6325,7 @@ TRANSITION_LIST("stepper_step_in_3[14]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6332,7 +6334,7 @@ TRANSITION_LIST("stepper_step_in_3[13]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6341,7 +6343,7 @@ TRANSITION_LIST("stepper_step_in_3[12]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6350,7 +6352,7 @@ TRANSITION_LIST("stepper_step_in_3[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6359,7 +6361,7 @@ TRANSITION_LIST("stepper_step_in_3[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6368,7 +6370,7 @@ TRANSITION_LIST("stepper_step_in_3[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6377,7 +6379,7 @@ TRANSITION_LIST("stepper_step_in_3[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6386,7 +6388,7 @@ TRANSITION_LIST("stepper_step_in_3[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6395,7 +6397,7 @@ TRANSITION_LIST("stepper_step_in_3[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6404,7 +6406,7 @@ TRANSITION_LIST("stepper_step_in_3[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6413,7 +6415,7 @@ TRANSITION_LIST("stepper_step_in_3[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6422,7 +6424,7 @@ TRANSITION_LIST("stepper_step_in_3[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 100000.0;
+		LEVEL 1 FOR 100000.0;
 	}
 }
 
@@ -6431,7 +6433,7 @@ TRANSITION_LIST("stepper_step_in_3[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6440,7 +6442,7 @@ TRANSITION_LIST("stepper_step_in_3[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 100000.0;
+		LEVEL 1 FOR 100000.0;
 	}
 }
 
@@ -6449,7 +6451,7 @@ TRANSITION_LIST("stepper_step_in_3[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6458,7 +6460,7 @@ TRANSITION_LIST("stepper_step_in_4[31]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6476,7 +6478,7 @@ TRANSITION_LIST("stepper_step_in_4[29]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6494,7 +6496,7 @@ TRANSITION_LIST("stepper_step_in_4[27]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6503,7 +6505,7 @@ TRANSITION_LIST("stepper_step_in_4[26]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6512,7 +6514,7 @@ TRANSITION_LIST("stepper_step_in_4[25]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6521,7 +6523,7 @@ TRANSITION_LIST("stepper_step_in_4[24]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6530,7 +6532,7 @@ TRANSITION_LIST("stepper_step_in_4[23]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6539,7 +6541,7 @@ TRANSITION_LIST("stepper_step_in_4[22]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6548,7 +6550,7 @@ TRANSITION_LIST("stepper_step_in_4[21]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6557,7 +6559,7 @@ TRANSITION_LIST("stepper_step_in_4[20]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6566,7 +6568,7 @@ TRANSITION_LIST("stepper_step_in_4[19]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6575,7 +6577,7 @@ TRANSITION_LIST("stepper_step_in_4[18]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6584,7 +6586,7 @@ TRANSITION_LIST("stepper_step_in_4[17]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6593,7 +6595,7 @@ TRANSITION_LIST("stepper_step_in_4[16]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6602,7 +6604,7 @@ TRANSITION_LIST("stepper_step_in_4[15]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6611,7 +6613,7 @@ TRANSITION_LIST("stepper_step_in_4[14]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6620,7 +6622,7 @@ TRANSITION_LIST("stepper_step_in_4[13]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6629,7 +6631,7 @@ TRANSITION_LIST("stepper_step_in_4[12]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6638,7 +6640,7 @@ TRANSITION_LIST("stepper_step_in_4[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6647,7 +6649,7 @@ TRANSITION_LIST("stepper_step_in_4[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6656,7 +6658,7 @@ TRANSITION_LIST("stepper_step_in_4[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6665,7 +6667,7 @@ TRANSITION_LIST("stepper_step_in_4[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6674,7 +6676,7 @@ TRANSITION_LIST("stepper_step_in_4[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6683,7 +6685,7 @@ TRANSITION_LIST("stepper_step_in_4[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6692,7 +6694,7 @@ TRANSITION_LIST("stepper_step_in_4[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6701,7 +6703,7 @@ TRANSITION_LIST("stepper_step_in_4[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6719,7 +6721,7 @@ TRANSITION_LIST("stepper_step_in_4[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -6737,7 +6739,7 @@ TRANSITION_LIST("stepper_step_in_4[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 

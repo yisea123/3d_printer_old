@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Mon Apr 08 23:43:19 2019
+Analysis & Synthesis Status : Successful - Tue Apr 09 22:21:46 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : printer
 Top-level Entity Name : printer
@@ -8,7 +8,7 @@ Total registers : 6757
 Total pins : 265
 Total virtual pins : 0
 Total block memory bits : 2,816
-Total DSP Blocks : 0
+Total DSP Blocks : 16
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

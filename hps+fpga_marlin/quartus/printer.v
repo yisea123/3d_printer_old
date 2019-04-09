@@ -422,17 +422,16 @@ assign end_stop[5] = gpio1GPIO[24] ^ configuration_1[5];
    .temp_e1_upper_external_connection_export       (temp_e1_upper)        //       temp_e1_upper_external_connection.export
 );
 
-
 //=======================================================  
 stepper_controller stepper_controller1(
 														.clk(CLK_1), 
-														.stepper_step_in_1({stepper_1_step_out[31] ^ configuration_1[6], stepper_1_step_out[30:0]}),						
+														.stepper_step_in_1(((-1)*configuration_1[6])*a + (1 - configuration_1[6])*stepper_1_step_out),						
 														.stepper_speed_1(stepper_1_speed),
-														.stepper_step_in_2({stepper_2_step_out[31] ^ configuration_1[7], stepper_2_step_out[30:0]}),						
+														.stepper_step_in_2(((-1)*configuration_1[7])*a + (1 - configuration_1[7])*stepper_2_step_out),						
 														.stepper_speed_2(stepper_2_speed),
-														.stepper_step_in_3({stepper_3_step_out[31] ^ configuration_1[8], stepper_3_step_out[30:0]}),						
+														.stepper_step_in_3(((-1)*configuration_1[8])*a + (1 - configuration_1[8])*stepper_3_step_out),						
 														.stepper_speed_3(stepper_3_speed),
-														.stepper_step_in_4({stepper_4_step_out[31] ^ configuration_1[9], stepper_4_step_out[30:0]}),						
+														.stepper_step_in_4(((-1)*configuration_1[9])*a + (1 - configuration_1[9])*stepper_4_step_out),						
 														.stepper_speed_4(stepper_4_speed),
 														.stepper_enable(flags_read[0]),
 														.xmin(end_stop[0]),
