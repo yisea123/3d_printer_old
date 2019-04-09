@@ -423,25 +423,25 @@ int addresses::set_configuration_1()
 
 int addresses::set_stepper_1_speed(uint32_t speeds)
 {
-	*(int32_t *)addr_stepper_1_speed = speeds;
+	*(uint32_t *)addr_stepper_1_speed = speeds;
 	return 0;
 };
 
 int addresses::set_stepper_2_speed(uint32_t speeds)
 {
-	*(int32_t *)addr_stepper_2_speed = speeds;
+	*(uint32_t *)addr_stepper_2_speed = speeds;
 	return 0;
 };
 
 int addresses::set_stepper_3_speed(uint32_t speeds)
 {
-	*(int32_t *)addr_stepper_3_speed = speeds;
+	*(uint32_t *)addr_stepper_3_speed = speeds;
 	return 0;
 };
 
 int addresses::set_stepper_4_speed(uint32_t speeds)
 {
-	*(int32_t *)addr_stepper_4_speed = speeds;
+	*(uint32_t *)addr_stepper_4_speed = speeds;
 	return 0;
 };
 

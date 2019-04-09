@@ -31,6 +31,7 @@
 			if (start_driving == 1'b1)
 				if (stepper_step_in[30:0] != 0)
 				begin
+					stepper_step = 0;
 					stepper_step = stepper_step_in;
 					stepper_driving_reg = 1'b1;
 					signal = 1'b1;					
