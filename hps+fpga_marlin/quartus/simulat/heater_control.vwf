@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/heater_control.vwf" --testbench_file="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/heater_control.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/heater_control.vwf" --testbench_file="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/heater_control.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/" simulat -c simulat</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="D:/GitHub/3d_printer/hps+fpga_marlin/quartus/simulat/simulation/qsim/" simulat -c simulat</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source="D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/heater_control.vwf" --testbench_file="D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/simulation/qsim/heater_control.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off simulat -c simulat --vector_source="D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/heater_control.vwf" --testbench_file="D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/simulation/qsim/heater_control.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/simulation/qsim/" simulat -c simulat</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/simulation/qsim/" simulat -c simulat</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work simulat.vo
@@ -534,7 +534,7 @@ TRANSITION_LIST("control[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 

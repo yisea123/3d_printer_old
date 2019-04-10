@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simulat
-Tue Apr 09 20:25:35 2019
+Wed Apr 10 22:16:42 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,15 +13,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |stepper_controller|stepper_corexy_new:corexy|y
-  9. State Machine - |stepper_controller|stepper_corexy_new:corexy|x
- 10. State Machine - |stepper_controller|home_g28:home|f
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -47,14 +43,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 09 20:25:35 2019       ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 10 22:16:41 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; simulat                                     ;
-; Top-level Entity Name           ; stepper_controller                          ;
+; Top-level Entity Name           ; heater_control                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 660                                         ;
-; Total pins                      ; 410                                         ;
+; Total registers                 ; 2                                           ;
+; Total pins                      ; 40                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -73,7 +69,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; stepper_controller ; simulat            ;
+; Top-level entity name                                                           ; heater_control     ; simulat            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -162,118 +158,59 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
-; stepper_z.v                      ; yes             ; User Verilog HDL File  ; D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v          ;         ;
-; stepper_extruder.v               ; yes             ; User Verilog HDL File  ; D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v   ;         ;
-; home_g28.v                       ; yes             ; User Verilog HDL File  ; D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/home_g28.v           ;         ;
-; stepper_corexy_new.v             ; yes             ; User Verilog HDL File  ; D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v ;         ;
-; stepper_controller.v             ; yes             ; User Verilog HDL File  ; D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+; heater_control.v                 ; yes             ; User Verilog HDL File  ; D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/heater_control.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 964       ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1648      ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 210       ;
-;     -- 5 input functions                    ; 131       ;
-;     -- 4 input functions                    ; 42        ;
-;     -- <=3 input functions                  ; 1265      ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 660       ;
-;                                             ;           ;
-; I/O pins                                    ; 410       ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 660       ;
-; Total fan-out                               ; 8937      ;
-; Average fan-out                             ; 2.86      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 17            ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 25            ;
+;     -- 7 input functions                    ; 0             ;
+;     -- 6 input functions                    ; 8             ;
+;     -- 5 input functions                    ; 6             ;
+;     -- 4 input functions                    ; 11            ;
+;     -- <=3 input functions                  ; 0             ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 2             ;
+;                                             ;               ;
+; I/O pins                                    ; 40            ;
+;                                             ;               ;
+; Total DSP Blocks                            ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; temp[4]~input ;
+; Maximum fan-out                             ; 4             ;
+; Total fan-out                               ; 167           ;
+; Average fan-out                             ; 1.56          ;
++---------------------------------------------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name        ; Library Name ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+--------------------+--------------+
-; |stepper_controller            ; 1648 (10)           ; 660 (0)                   ; 0                 ; 0          ; 410  ; 0            ; |stepper_controller                           ; stepper_controller ; work         ;
-;    |home_g28:home|             ; 433 (433)           ; 200 (200)                 ; 0                 ; 0          ; 0    ; 0            ; |stepper_controller|home_g28:home             ; home_g28           ; work         ;
-;    |stepper_corexy_new:corexy| ; 706 (706)           ; 264 (264)                 ; 0                 ; 0          ; 0    ; 0            ; |stepper_controller|stepper_corexy_new:corexy ; stepper_corexy_new ; work         ;
-;    |stepper_extruder:comb_50|  ; 248 (248)           ; 98 (98)                   ; 0                 ; 0          ; 0    ; 0            ; |stepper_controller|stepper_extruder:comb_50  ; stepper_extruder   ; work         ;
-;    |stepper_z:z|               ; 251 (251)           ; 98 (98)                   ; 0                 ; 0          ; 0    ; 0            ; |stepper_controller|stepper_z:z               ; stepper_z          ; work         ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+--------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
+; |heater_control            ; 25 (25)             ; 2 (2)                     ; 0                 ; 0          ; 40   ; 0            ; |heater_control     ; heater_control ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------+
-; State Machine - |stepper_controller|stepper_corexy_new:corexy|y ;
-+------+------+------+--------------------------------------------+
-; Name ; y.00 ; y.10 ; y.01                                       ;
-+------+------+------+--------------------------------------------+
-; y.00 ; 0    ; 0    ; 0                                          ;
-; y.01 ; 1    ; 0    ; 1                                          ;
-; y.10 ; 1    ; 1    ; 0                                          ;
-+------+------+------+--------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------+
-; State Machine - |stepper_controller|stepper_corexy_new:corexy|x ;
-+------+------+------+--------------------------------------------+
-; Name ; x.00 ; x.10 ; x.01                                       ;
-+------+------+------+--------------------------------------------+
-; x.00 ; 0    ; 0    ; 0                                          ;
-; x.01 ; 1    ; 0    ; 1                                          ;
-; x.10 ; 1    ; 1    ; 0                                          ;
-+------+------+------+--------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------+
-; State Machine - |stepper_controller|home_g28:home|f ;
-+------+------+------+--------------------------------+
-; Name ; f.00 ; f.10 ; f.01                           ;
-+------+------+------+--------------------------------+
-; f.00 ; 0    ; 0    ; 0                              ;
-; f.01 ; 1    ; 0    ; 1                              ;
-; f.10 ; 1    ; 1    ; 0                              ;
-+------+------+------+--------------------------------+
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; home_g28:home|dir3                    ; Stuck at GND due to stuck port data_in ;
-; stepper_corexy_new:corexy|y.10        ; Lost fanout                            ;
-; stepper_corexy_new:corexy|y.00        ; Lost fanout                            ;
-; stepper_corexy_new:corexy|x.00        ; Lost fanout                            ;
-; Total Number of Removed Registers = 4 ;                                        ;
-+---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -281,42 +218,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 660   ;
-; Number of registers using Synchronous Clear  ; 192   ;
-; Number of registers using Synchronous Load   ; 443   ;
+; Total registers                              ; 2     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 644   ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |stepper_controller|stepper_corexy_new:corexy|n_1[18]            ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |stepper_controller|stepper_corexy_new:corexy|n_2[3]             ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |stepper_controller|stepper_z:z|n[18]                            ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |stepper_controller|home_g28:home|m3[16]                         ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |stepper_controller|stepper_extruder:comb_50|n[20]               ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |stepper_controller|home_g28:home|n3[28]                         ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |stepper_controller|stepper_corexy_new:corexy|stepper_step_1[10] ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |stepper_controller|stepper_corexy_new:corexy|stepper_step_2[1]  ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |stepper_controller|stepper_z:z|stepper_step[11]                 ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |stepper_controller|stepper_extruder:comb_50|stepper_step[11]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |stepper_controller|stepper_corexy_new:corexy|m_1[11]            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |stepper_controller|stepper_corexy_new:corexy|m_2[7]             ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |stepper_controller|stepper_z:z|m[25]                            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |stepper_controller|stepper_extruder:comb_50|m[28]               ;
-; 5:1                ; 31 bits   ; 93 LEs        ; 0 LEs                ; 93 LEs                 ; Yes        ; |stepper_controller|home_g28:home|n2[28]                         ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |stepper_controller|home_g28:home|m1[15]                         ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |stepper_controller|home_g28:home|m2[17]                         ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 0 LEs                ; 124 LEs                ; Yes        ; |stepper_controller|home_g28:home|n1[30]                         ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |stepper_controller|stepper_corexy_new:corexy|x                  ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |stepper_controller|stepper_corexy_new:corexy|y                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; f                                      ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -324,31 +243,17 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 660                         ;
-;     ENA               ; 139                         ;
-;     ENA SCLR          ; 64                          ;
-;     ENA SCLR SLD      ; 125                         ;
-;     ENA SLD           ; 316                         ;
-;     SCLR              ; 3                           ;
-;     SLD               ; 2                           ;
-;     plain             ; 11                          ;
-; arriav_lcell_comb     ; 1652                        ;
-;     arith             ; 984                         ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 572                         ;
-;         2 data inputs ; 284                         ;
-;         3 data inputs ; 124                         ;
-;     normal            ; 668                         ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 46                          ;
-;         3 data inputs ; 235                         ;
-;         4 data inputs ; 42                          ;
-;         5 data inputs ; 131                         ;
-;         6 data inputs ; 210                         ;
-; boundary_port         ; 410                         ;
+; arriav_ff             ; 2                           ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 25                          ;
+;     normal            ; 25                          ;
+;         4 data inputs ; 11                          ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.80                        ;
-; Average LUT depth     ; 4.33                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -357,7 +262,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -367,7 +272,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 09 20:25:00 2019
+    Info: Processing started: Wed Apr 10 22:16:08 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simulat -c simulat
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -392,48 +297,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file stepper
 Info (12021): Found 1 design units, including 1 entities, in source file stepper_controller.v
     Info (12023): Found entity 1: stepper_controller File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 1
 Critical Warning (10846): Verilog HDL Instantiation warning at stepper_controller.v(167): instance has no name File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 167
-Info (12127): Elaborating entity "stepper_controller" for the top level hierarchy
-Info (12128): Elaborating entity "home_g28" for hierarchy "home_g28:home" File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 119
-Info (12128): Elaborating entity "stepper_corexy_new" for hierarchy "stepper_corexy_new:corexy" File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 143
-Warning (10036): Verilog HDL or VHDL warning at stepper_corexy_new.v(48): object "step_changed" assigned a value but never read File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 48
-Warning (10036): Verilog HDL or VHDL warning at stepper_corexy_new.v(50): object "recount" assigned a value but never read File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 50
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(96): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 96
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(100): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 100
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(181): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 181
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(185): truncated value with size 33 to match size of target (32) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 185
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(191): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 191
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(197): truncated value with size 33 to match size of target (32) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 197
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(212): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 212
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(216): truncated value with size 33 to match size of target (32) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 216
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(223): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 223
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(229): truncated value with size 33 to match size of target (32) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 229
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(236): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 236
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(242): truncated value with size 33 to match size of target (32) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 242
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(245): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 245
-Warning (10230): Verilog HDL assignment warning at stepper_corexy_new.v(251): truncated value with size 33 to match size of target (32) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_corexy_new.v Line: 251
-Info (12128): Elaborating entity "stepper_z" for hierarchy "stepper_z:z" File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 156
-Warning (10230): Verilog HDL assignment warning at stepper_z.v(41): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 41
-Warning (10230): Verilog HDL assignment warning at stepper_z.v(57): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 57
-Warning (10230): Verilog HDL assignment warning at stepper_z.v(61): truncated value with size 33 to match size of target (32) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 61
-Warning (10230): Verilog HDL assignment warning at stepper_z.v(67): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 67
-Warning (10230): Verilog HDL assignment warning at stepper_z.v(73): truncated value with size 33 to match size of target (32) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_z.v Line: 73
-Info (12128): Elaborating entity "stepper_extruder" for hierarchy "stepper_extruder:comb_50" File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_controller.v Line: 167
-Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(39): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 39
-Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(55): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 55
-Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(61): truncated value with size 32 to match size of target (31) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 61
-Warning (10230): Verilog HDL assignment warning at stepper_extruder.v(67): truncated value with size 33 to match size of target (32) File: D:/CLion_projects/3d_printer_old/hps+fpga_marlin/quartus/simulat/stepper_extruder.v Line: 67
+Info (12127): Elaborating entity "heater_control" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2251 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 269 input pins
-    Info (21059): Implemented 141 output pins
-    Info (21061): Implemented 1841 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Tue Apr 09 20:25:35 2019
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:01:02
+Info (21057): Implemented 65 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 39 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 25 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Wed Apr 10 22:16:42 2019
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:01:09
 
 
