@@ -320,6 +320,7 @@ int gcode::gcode_G1(variable_used<float> x, variable_used<float> y, variable_use
       	#if DEBUG
             printf("while step is to be succeded\n");
         #endif     
+        usleep(3000000);
         
       	while (addr->get_flags_out_stepper_state());
 

@@ -65,12 +65,12 @@ int main()
 	e.num = 16;
 	gc.gcode_G92(x,y,z,e);
 	cout << pos.get_pos_x() << endl << pos.get_pos_y() << endl << pos.get_pos_z() << endl << pos.get_pos_e() << endl;*/
-
+/*
 	cout << "extr pos: " << pos.get_pos_type_extruders() << endl;
 	gc.gcode_M82();
 	cout << "abs " << pos.get_pos_type_extruders() << endl;
 	gc.gcode_M83();
-	cout << "rel " << pos.get_pos_type_extruders() << endl;
+	cout << "rel " << pos.get_pos_type_extruders() << endl;*/
 
 	addr.set_flags_in_start_driving_state(false);
 	
