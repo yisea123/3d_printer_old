@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/26/2019 17:33:18"
+// Generated on "04/10/2019 22:19:28"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          heater_control
 // 
@@ -62,7 +62,7 @@ end
 // control[ 1 ]
 initial
 begin
-	control[1] = 1'b0;
+	control[1] = 1'b1;
 end 
 // control[ 0 ]
 initial

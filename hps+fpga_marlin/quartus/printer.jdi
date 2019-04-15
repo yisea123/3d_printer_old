@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="12e74c5e49ed15bd0a38"/>
+    <hash md5_digest_80b="a28b9cd88998859441cc"/>
   </project>
   <file_info>
     <file device="5CSEBA6U23I7" path="printer.sof" usercode="0xFFFFFFFF"/>
@@ -350,7 +350,8 @@
     </sld_info>
     <sld_info hpath="soc_system:u0" name="u0">
       <assignment_values>
-        <assignment_value text="QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1554837245"/>
+        <assignment_value text="QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1554925209"/>
+        <assignment_value text="QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1555354104"/>
       </assignment_values>
       <parameters/>
     </sld_info>

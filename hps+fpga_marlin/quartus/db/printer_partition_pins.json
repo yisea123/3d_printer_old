@@ -4,7 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "gpio0GPIO[6]",
+					"name" : "gpio0GPIO[30]",
 					"strict" : false
 				},
 				{
@@ -32,11 +32,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[0]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[1]",
+					"name" : "gpio0GPIO[2]",
 					"strict" : false
 				},
 				{
@@ -48,23 +44,27 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpio0GPIO[5]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio0GPIO[6]",
+					"strict" : false
+				},
+				{
 					"name" : "gpio0GPIO[7]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[9]",
+					"name" : "gpio0GPIO[31]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[10]",
+					"name" : "gpio0GPIO[32]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[15]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio0GPIO[16]",
+					"name" : "gpio0GPIO[33]",
 					"strict" : false
 				},
 				{
@@ -84,11 +84,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[2]",
+					"name" : "gpio0GPIO[0]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[5]",
+					"name" : "gpio0GPIO[1]",
 					"strict" : false
 				},
 				{
@@ -96,15 +96,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[11]",
+					"name" : "gpio0GPIO[9]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[17]",
+					"name" : "gpio0GPIO[34]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio0GPIO[18]",
+					"name" : "gpio0GPIO[35]",
 					"strict" : false
 				},
 				{
@@ -128,27 +128,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[23]",
+					"name" : "gpio1GPIO[4]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[24]",
+					"name" : "gpio1GPIO[5]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[22]",
+					"name" : "gpio1GPIO[3]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[21]",
+					"name" : "gpio1GPIO[2]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[19]",
+					"name" : "gpio1GPIO[0]",
 					"strict" : false
 				},
 				{
-					"name" : "gpio1GPIO[20]",
+					"name" : "gpio1GPIO[1]",
 					"strict" : false
 				},
 				{

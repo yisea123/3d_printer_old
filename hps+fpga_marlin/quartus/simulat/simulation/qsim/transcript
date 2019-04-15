@@ -1,38 +1,34 @@
 # do simulat.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:28:04 on Apr 09,2019
+# Start time: 22:19:34 on Apr 10,2019
 # vlog -work work simulat.vo 
-# -- Compiling module stepper_controller
+# -- Compiling module heater_control
 # 
 # Top level modules:
-# 	stepper_controller
-# End time: 20:28:05 on Apr 09,2019, Elapsed time: 0:00:01
+# 	heater_control
+# End time: 22:19:34 on Apr 10,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:28:05 on Apr 09,2019
-# vlog -work work stepper_controller.vwf.vt 
-# -- Compiling module stepper_controller_vlg_vec_tst
+# Start time: 22:19:34 on Apr 10,2019
+# vlog -work work heater_control.vwf.vt 
+# -- Compiling module heater_control_vlg_vec_tst
 # 
 # Top level modules:
-# 	stepper_controller_vlg_vec_tst
-# End time: 20:28:05 on Apr 09,2019, Elapsed time: 0:00:00
+# 	heater_control_vlg_vec_tst
+# End time: 22:19:34 on Apr 10,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.stepper_controller_vlg_vec_tst 
-# Start time: 20:28:06 on Apr 09,2019
-# Loading work.stepper_controller_vlg_vec_tst
-# Loading work.stepper_controller
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.heater_control_vlg_vec_tst 
+# Start time: 22:19:34 on Apr 10,2019
+# Loading work.heater_control_vlg_vec_tst
+# Loading work.heater_control
 # Loading cyclonev_ver.cyclonev_io_obuf
 # Loading cyclonev_ver.cyclonev_io_ibuf
 # Loading cyclonev_ver.cyclonev_lcell_comb
 # Loading altera_ver.dffeas
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 12676 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
 # after#25
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# ** Note: $finish    : stepper_controller.vwf.vt(116)
-#    Time: 100 us  Iteration: 0  Instance: /stepper_controller_vlg_vec_tst
-# End time: 20:28:14 on Apr 09,2019, Elapsed time: 0:00:08
-# Errors: 0, Warnings: 1
+# ** Note: $finish    : heater_control.vwf.vt(52)
+#    Time: 1 us  Iteration: 0  Instance: /heater_control_vlg_vec_tst
+# End time: 22:19:35 on Apr 10,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

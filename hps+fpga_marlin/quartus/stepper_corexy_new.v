@@ -74,8 +74,6 @@
 			if (start_driving == 1'b1)
 				if ((stepper_step_in_1[30:0] != 0) | (stepper_step_in_2[30:0] != 0))
 				begin
-					stepper_step_1 = 0;
-					stepper_step_2 = 0;
 					stepper_step_1 = stepper_step_in_1;
 					stepper_step_2 = stepper_step_in_2;
 					

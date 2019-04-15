@@ -212,10 +212,10 @@ assign LED[4] = stepper4[1];
 assign LED[5] = heater_bed;
 assign LED[6] = heater_e1;
 
-assign gpio0GPIO[2:0] 	= stepper1;
-assign gpio0GPIO[5:3] 	= stepper2;
-assign gpio0GPIO[8:6] 	= stepper3;
-assign gpio0GPIO[11:9] 	= stepper4;
+assign {gpio0GPIO[0], gpio0GPIO[2], gpio0GPIO[4]} 	= stepper1;
+assign {gpio0GPIO[1], gpio0GPIO[3], gpio0GPIO[5]} 	= stepper2;
+assign {gpio0GPIO[34], gpio0GPIO[32], gpio0GPIO[30]} 	= stepper3;
+assign {gpio0GPIO[35], gpio0GPIO[33], gpio0GPIO[31]} 	= stepper4;
 
 
 //Temperature sensors
@@ -230,16 +230,16 @@ wire 	[11:0]	temp_e1_upper;
 
 
 assign temp1 		= analog[0];
-assign temp2 		= analog[1];
-assign temp_bed 	= analog[2];
+assign temp2 		= analog[2];
+assign temp_bed 	= analog[4];
 
 
 //Heaters
 wire			heater_bed;
 wire			heater_e1;
 
-assign gpio0GPIO[15] = heater_bed; //bed
-assign gpio0GPIO[16] = heater_e1; //extruder
+assign gpio0GPIO[6] = heater_bed; //bed
+assign gpio0GPIO[7] = heater_e1; //extruder
 
 assign flags_in[1] = heater_bed;
 assign flags_in[2] = heater_e1;
@@ -248,19 +248,19 @@ assign flags_in[2] = heater_e1;
 //Fans
 wire 	[1:0]	fans;
 
-assign gpio0GPIO[17] = fans[0];
-assign gpio0GPIO[18] = fans[1];
+assign gpio0GPIO[8] = fans[0];
+assign gpio0GPIO[9] = fans[1];
 
 
 //End stops
 wire	[0:5] end_stop; //Сигнал с концевиков (0 - xmin, 1 - xmax, 2 - ymin, 3 - ymax, 4 - zmin, 5 - zmax)
 
-assign end_stop[0] = gpio1GPIO[19] ^ configuration_1[0];
-assign end_stop[1] = gpio1GPIO[20] ^ configuration_1[1];
-assign end_stop[2] = gpio1GPIO[21] ^ configuration_1[2];
-assign end_stop[3] = gpio1GPIO[22] ^ configuration_1[3];
-assign end_stop[4] = gpio1GPIO[23] ^ configuration_1[4];
-assign end_stop[5] = gpio1GPIO[24] ^ configuration_1[5];
+assign end_stop[0] = gpio1GPIO[0] ^ configuration_1[0];
+assign end_stop[1] = gpio1GPIO[1] ^ configuration_1[1];
+assign end_stop[2] = gpio1GPIO[2] ^ configuration_1[2];
+assign end_stop[3] = gpio1GPIO[3] ^ configuration_1[3];
+assign end_stop[4] = gpio1GPIO[4] ^ configuration_1[4];
+assign end_stop[5] = gpio1GPIO[5] ^ configuration_1[5];
 
 //=======================================================
 //  Structural coding
