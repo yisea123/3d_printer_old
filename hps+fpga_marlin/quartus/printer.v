@@ -212,10 +212,10 @@ assign LED[4] = stepper4[1];
 assign LED[5] = heater_bed;
 assign LED[6] = heater_e1;
 
-assign {gpio0GPIO[0], gpio0GPIO[2], gpio0GPIO[4]} 	= stepper1;
-assign {gpio0GPIO[1], gpio0GPIO[3], gpio0GPIO[5]} 	= stepper2;
-assign {gpio0GPIO[34], gpio0GPIO[32], gpio0GPIO[30]} 	= stepper3;
-assign {gpio0GPIO[35], gpio0GPIO[33], gpio0GPIO[31]} 	= stepper4;
+assign {gpio0GPIO[0], gpio0GPIO[2], gpio0GPIO[4]} 	= stepper1; //{enable, step, dir}
+assign {gpio0GPIO[1], gpio0GPIO[3], gpio0GPIO[5]} 	= stepper2; //{enable, step, dir}
+assign {gpio0GPIO[34], gpio0GPIO[32], gpio0GPIO[30]} 	= stepper3; //{enable, step, dir}
+assign {gpio0GPIO[35], gpio0GPIO[33], gpio0GPIO[31]} 	= stepper4; //{enable, step, dir}
 
 
 //Temperature sensors
