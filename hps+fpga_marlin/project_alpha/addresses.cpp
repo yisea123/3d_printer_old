@@ -102,125 +102,6 @@ uint32_t addresses::pow(uint32_t a, uint32_t p)
 
 
 
-//Запрос адреса
-/*
-void* addresses::get_addr_leds()
-{
-	return addr_leds;
-}
-
-void* addresses::get_addr_btns()
-{
-	return addr_btns;
-}
-
-void* addresses::get_addr_fans()
-{
-	return addr_fans;
-}
-
-void* addresses::get_addr_heaters()
-{
-	return addr_heaters;
-}
-
-void* addresses::get_addr_flags_in()
-{
-	return addr_flags_in;
-}
-
-void* addresses::get_addr_flags_out()
-{
-	return addr_flags_out;
-}
-
-void* addresses::get_addr_endstops()
-{
-	return addr_endstops;
-}
-
-void* addresses::get_addr_temp_bed()
-{
-	return addr_temp_bed;
-}
-
-void* addresses::get_addr_temp0()
-{
-	return addr_temp0;
-}
-
-void* addresses::get_addr_temp1()
-{
-	return addr_temp1;
-}
-
-void* addresses::get_addr_stepper_1_speed()
-{
-	return addr_stepper_1_speed;
-}
-
-void* addresses::get_addr_stepper_2_speed()
-{
-	return addr_stepper_2_speed;
-}
-
-void* addresses::get_addr_stepper_3_speed()
-{
-	return addr_stepper_3_speed;
-}
-
-void* addresses::get_addr_stepper_4_speed()
-{
-	return addr_stepper_4_speed;
-}
-
-void* addresses::get_addr_stepper_5_speed()
-{
-	return addr_stepper_5_speed;
-}
-
-void* addresses::get_addr_stepper_1_steps_in()
-{
-	return addr_stepper_1_steps_in;
-}
-
-void* addresses::get_addr_stepper_2_steps_in()
-{
-	return addr_stepper_2_steps_in;
-}
-
-void* addresses::get_addr_stepper_3_steps_in()
-{
-	return addr_stepper_3_steps_in;
-}
-
-void* addresses::get_addr_stepper_4_steps_in()
-{
-	return addr_stepper_4_steps_in;
-}
-
-void* addresses::get_addr_stepper_1_steps_out()
-{
-	return addr_stepper_1_steps_out;
-}
-
-void* addresses::get_addr_stepper_2_steps_out()
-{
-	return addr_stepper_2_steps_out;
-}
-
-void* addresses::get_addr_stepper_3_steps_out()
-{
-	return addr_stepper_3_steps_out;
-}
-
-void* addresses::get_addr_stepper_4_steps_out()
-{
-	return addr_stepper_4_steps_out;
-}
-*/
-
-
 uint32_t addresses::get_leds()
 {
 	return zeroing(*(uint32_t *)addr_leds, bit_count_uint32 - LED_PIO_DATA_WIDTH, 1);
@@ -251,42 +132,42 @@ uint32_t addresses::get_endstops()
 	return zeroing(*(uint32_t *)addr_endstops, bit_count_uint32 - ENDSTOPS_DATA_WIDTH, 1);
 };
 
-uint32_t addresses::get_temp_bed()
+int32_t addresses::get_temp_bed()
 {
 	return zeroing(*(uint32_t *)addr_temp_bed, bit_count_uint32 - TEMP_BED_DATA_WIDTH, 1);
 };
 
-uint32_t addresses::get_temp0()
+int32_t addresses::get_temp0()
 {
 	return zeroing(*(uint32_t *)addr_temp0, bit_count_uint32 - TEMP0_DATA_WIDTH, 1);
 };
 
-uint32_t addresses::get_temp1()
+int32_t addresses::get_temp1()
 {
 	return zeroing(*(uint32_t *)addr_temp1, bit_count_uint32 - TEMP1_DATA_WIDTH, 1);
 };
 
-uint32_t addresses::get_temp_bed_bottom()
+int32_t addresses::get_temp_bed_bottom()
 {
 	return zeroing(*(uint32_t *)addr_temp_bed_bottom, bit_count_uint32 - TEMP_BED_BOTTOM_DATA_WIDTH, 1);
 };
 
-uint32_t addresses::get_temp_bed_upper()
+int32_t addresses::get_temp_bed_upper()
 {
 	return zeroing(*(uint32_t *)addr_temp_bed_upper, bit_count_uint32 - TEMP_BED_UPPER_DATA_WIDTH, 1);
 };
 
-uint32_t addresses::get_temp_e1_bottom()
+int32_t addresses::get_temp_e1_bottom()
 {
 	return zeroing(*(uint32_t *)addr_temp_e1_bottom, bit_count_uint32 - TEMP_E1_BOTTOM_DATA_WIDTH, 1);
 };
 
-uint32_t addresses::get_temp_e1_upper()
+int32_t addresses::get_temp_e1_upper()
 {
 	return zeroing(*(uint32_t *)addr_temp_e1_upper, bit_count_uint32 - TEMP_E1_UPPER_DATA_WIDTH, 1);
 };
 
-int addresses::set_temp_bed_bottom(uint32_t temp)
+int addresses::set_temp_bed_bottom(int32_t temp)
 {
 	uint32_t a = zeroing(temp, bit_count_uint32 - (TEMP_BED_BOTTOM_DATA_WIDTH - 1), 1);
 	uint32_t b = zeroing(*(uint32_t *)addr_temp_bed_bottom, TEMP_BED_BOTTOM_DATA_WIDTH - 1, 0);
@@ -294,7 +175,7 @@ int addresses::set_temp_bed_bottom(uint32_t temp)
 	return 0;
 };
 
-int addresses::set_temp_bed_upper(uint32_t temp)
+int addresses::set_temp_bed_upper(int32_t temp)
 {
 	uint32_t a = zeroing(temp, bit_count_uint32 - (TEMP_BED_UPPER_DATA_WIDTH - 1), 1);
 	uint32_t b = zeroing(*(uint32_t *)addr_temp_bed_upper, TEMP_BED_UPPER_DATA_WIDTH - 1, 0);
@@ -302,7 +183,7 @@ int addresses::set_temp_bed_upper(uint32_t temp)
 	return 0;
 };
 
-int addresses::set_temp_e1_bottom(uint32_t temp)
+int addresses::set_temp_e1_bottom(int32_t temp)
 {
 	uint32_t a = zeroing(temp, bit_count_uint32 - (TEMP_E1_BOTTOM_DATA_WIDTH - 1), 1);
 	uint32_t b = zeroing(*(uint32_t *)addr_temp_e1_bottom, TEMP_E1_BOTTOM_DATA_WIDTH - 1, 0);
@@ -310,7 +191,7 @@ int addresses::set_temp_e1_bottom(uint32_t temp)
 	return 0;
 };
 
-int addresses::set_temp_e1_upper(uint32_t temp)
+int addresses::set_temp_e1_upper(int32_t temp)
 {
 	uint32_t a = zeroing(temp, bit_count_uint32 - (TEMP_E1_UPPER_DATA_WIDTH - 1), 1);
 	uint32_t b = zeroing(*(uint32_t *)addr_temp_e1_upper, TEMP_E1_UPPER_DATA_WIDTH - 1, 0);

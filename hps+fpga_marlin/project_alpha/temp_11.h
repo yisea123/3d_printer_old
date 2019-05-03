@@ -3,7 +3,7 @@
 
 #define oversampling_rate 1
 
-const uint32_t temptable_11[][2] = {
+const int32_t temptable_11[][2] = {
 {  110*oversampling_rate ,  300 },
 {  117*oversampling_rate ,  295 },
 {  124*oversampling_rate ,  290 },

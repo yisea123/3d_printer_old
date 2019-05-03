@@ -6,22 +6,18 @@ int gcode::correction(int a_numofmicrosteps, int b_numofmicrosteps, int z_numofm
     float *dx, float *dy, float *dz, float *de)
 //метод, который переносит кол-во микрошагов в мм'ы для движков с сохранением знака
 {
-    float da = *dx + *dy; //расстояние, которое должен обработать двигатель a системы core xy
-    float db = *dx - *dy; //расстояние, которое должен обработать двигатель b системы core xy
-    float dl; //расстояние, которое должен обработать двигатель на оси z
-
-    da = a_numofmicrosteps*rotlength/stepsperrot/microsteps;
-    db = b_numofmicrosteps*rotlength/stepsperrot/microsteps;
+    float da = a_numofmicrosteps*rotlength/stepsperrot/microsteps;
+    float db = b_numofmicrosteps*rotlength/stepsperrot/microsteps;
     *dx = (da + db)/2;
     *dy = (da - db)/2;
     *de = e_numofmicrosteps*rotlength/stepsperrot/microsteps; 
-    dl = z_numofmicrosteps*rotlength/stepsperrot/microsteps;
+    float dl = z_numofmicrosteps*rotlength/stepsperrot/microsteps;
     *dz = dl*h/circlelength;
 
     if (debug)
       printf("dx = %f\ndy = %f\ndz = %f\nde = %f\n", dx, dy, dz, de);
 
-return 0;
+    return 0;
 }
 
 int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
@@ -97,12 +93,6 @@ int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
     float b_speed = (*b_numofmicrosteps)/t;
     float e_speed = (*e_numofmicrosteps)/t;
     float z_speed = (*z_numofmicrosteps)/t;
-
-    //проверка флага инверсии направления двигателей
-    if (X_STEPPER_INVERTING) (*a_numofmicrosteps) = - (*a_numofmicrosteps);
-    if (Y_STEPPER_INVERTING) (*b_numofmicrosteps) = - (*b_numofmicrosteps);
-    if (E1_STEPPER_INVERTING) (*e_numofmicrosteps) = - (*e_numofmicrosteps);
-    if (Z_STEPPER_INVERTING) (*z_numofmicrosteps) = - (*z_numofmicrosteps);
     
     //коэффициент коррекции тактовой частоты по модулю, равный количеству необходимых для движения импульсов 
     *a_microsteppulse = ceil(abs(frequency/a_speed));
@@ -150,9 +140,9 @@ int gcode::calc_steps_speed(float dx, float dy, float dz, float de,
 }
 
 
-uint32_t gcode::voltage_adc(int32_t temp)
+int32_t gcode::voltage_adc(int32_t temp)
 {
-    if (temp >= 0 and temp <= 300)
+    if (temp >= 0 and temp <= MAX_TEMP)
     {
         int i = -1;
         while (temptable_11[++i][1] > temp); 
@@ -166,12 +156,12 @@ uint32_t gcode::voltage_adc(int32_t temp)
     }
     else 
         cout << "error: invalid temp" << endl;
-    return 0;
+    return 3255;
 }
 
-int32_t gcode::temperature_adc(uint32_t volt)
+int32_t gcode::temperature_adc(int32_t volt)
 {
-    if (volt >= 110*oversampling_rate and volt <= 3255*oversampling_rate)
+    if (volt >= temptable_11[0][0] and volt <= 3255*oversampling_rate)
     {
         int i = -1;
         while (temptable_11[++i][0] < volt);
@@ -300,6 +290,8 @@ int gcode::gcode_G1(variable_used<float> x, variable_used<float> y, variable_use
         #if DEBUG
             printf("speed1 = %lu\nspeed2 = %lu\nspeed3 = %lu\nspeed4 = %lu\n", speed1, speed2, speed3, speed4);
         #endif
+
+            //move_extrude
         addr->set_stepper_1_speed(speed1);
         addr->set_stepper_2_speed(speed2);
       	addr->set_stepper_3_speed(speed3);
@@ -319,8 +311,7 @@ int gcode::gcode_G1(variable_used<float> x, variable_used<float> y, variable_use
         
       	#if DEBUG
             printf("while step is to be succeded\n");
-        #endif     
-        usleep(3000000);
+        #endif
         
       	while (addr->get_flags_out_stepper_state());
 
@@ -337,7 +328,11 @@ int gcode::gcode_G1(variable_used<float> x, variable_used<float> y, variable_use
             printf("if step has been succeded\n");
         #endif
 
+            //move_extrude ended
         usleep(2);
+
+
+
       	//перевод остаток координат в мм
       	//корриктировка за счет остатка
       	correction(  addr->get_stepper_1_steps_out(), addr->get_stepper_2_steps_out(), 
@@ -536,7 +531,7 @@ int gcode::gcode_M83()
 }
 
 int gcode::gcode_M104(int32_t temp)
-//Ожидание нагрева экструдера до определенной температуры
+//Поставить нагрев экструдера до определенной температуры
 {
         //Отключить удержание экструдера
         #if debug
@@ -586,7 +581,7 @@ int32_t gcode::gcode_M105(int num_e)
 }
 
 int gcode::gcode_M140(int32_t temp)
-//Ожидание нагрева стола до определенной температуры
+//Поставить нагрев стола до определенной температуры
 { 
         //Отключить нагрев стола
         #if debug

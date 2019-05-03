@@ -145,49 +145,19 @@ class addresses{
 	public:
 		addresses();
 		int init();
-		
-/*
-		void* get_addr_leds();
-		void* get_addr_btns();
-		void* get_addr_fans();
-		void* get_addr_heaters();
-		void* get_addr_flags_in(); //для записи
-		void* get_addr_flags_out(); //для чтения
-		void* get_addr_endstops();
 
-		void* get_addr_temp_bed();
-		void* get_addr_temp0();
-		void* get_addr_temp1();
-
-		void* get_addr_stepper_1_speed();
-		void* get_addr_stepper_2_speed();
-		void* get_addr_stepper_3_speed();
-		void* get_addr_stepper_4_speed();
-		void* get_addr_stepper_5_speed();
-
-		void* get_addr_stepper_1_steps_in();
-		void* get_addr_stepper_2_steps_in();
-		void* get_addr_stepper_3_steps_in();
-		void* get_addr_stepper_4_steps_in();
-		void* get_addr_stepper_5_steps_in();
-
-		void* get_addr_stepper_1_steps_out();
-		void* get_addr_stepper_2_steps_out();
-		void* get_addr_stepper_3_steps_out();
-		void* get_addr_stepper_4_steps_out();
-		void* get_addr_stepper_5_steps_out();*/
 
 
 
 		
-		uint32_t get_temp_bed();
-		uint32_t get_temp0();
-		uint32_t get_temp1();
+		int32_t get_temp_bed();
+		int32_t get_temp0();
+		int32_t get_temp1();
 
-		uint32_t get_temp_bed_bottom();
-		uint32_t get_temp_bed_upper();
-		uint32_t get_temp_e1_bottom();
-		uint32_t get_temp_e1_upper();
+		int32_t get_temp_bed_bottom();
+		int32_t get_temp_bed_upper();
+		int32_t get_temp_e1_bottom();
+		int32_t get_temp_e1_upper();
 
 		int set_temp_bed_bottom(uint32_t temp);
 		int set_temp_bed_upper(uint32_t temp);

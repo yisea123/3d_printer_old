@@ -29,12 +29,13 @@ struct variable_used
 #define Y_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 
-#define X_STEPPER_INVERTING false // set to true to invert the logic of the stepper.
-#define Y_STEPPER_INVERTING false // set to true to invert the logic of the stepper.
-#define Z_STEPPER_INVERTING false // set to true to invert the logic of the stepper.
-#define E1_STEPPER_INVERTING false // set to true to invert the logic of the stepper.
+#define X_STEPPER_INVERTING true // set to true to invert the logic of the stepper.
+#define Y_STEPPER_INVERTING true // set to true to invert the logic of the stepper.
+#define Z_STEPPER_INVERTING true // set to true to invert the logic of the stepper.
+#define E1_STEPPER_INVERTING true // set to true to invert the logic of the stepper.
 
 #define TEMP_DELTA 2
+#define MAX_TEMP 300
 
 /*
 * Default Axis Steps Per Unit (steps/mm) 

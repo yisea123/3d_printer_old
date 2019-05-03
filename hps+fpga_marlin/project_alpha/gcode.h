@@ -21,19 +21,19 @@ class gcode
 
 	public:
     int correction( int a_numofmicrosteps, int b_numofmicrosteps, 
-    								int z_numofmicrosteps, int e_numofmicrosteps,
-    								float *dx, float *dy, float *dz, float *de);
+                    int z_numofmicrosteps, int e_numofmicrosteps,
+                    float *dx, float *dy, float *dz, float *de);
 
-		int calc_steps_speed(float dx, float dy, float dz, float de,
-														//передача скорректированной частоты (скорости):
-														uint32_t* a_microsteppulse, uint32_t* b_microsteppulse,
-														uint32_t* z_microsteppulse, uint32_t* e_microsteppulse,
-														//передача количества микрошагов с учетом знака
-														int32_t* a_numofmicrosteps, int32_t* b_numofmicrosteps,
-														int32_t* z_numofmicrosteps, int32_t* e_numofmicrosteps);
+    int calc_steps_speed(   float dx, float dy, float dz, float de,
+                            //передача скорректированной частоты (скорости):
+                            uint32_t* a_microsteppulse, uint32_t* b_microsteppulse,
+                            uint32_t* z_microsteppulse, uint32_t* e_microsteppulse,
+                            //передача количества микрошагов с учетом знака
+                            int32_t* a_numofmicrosteps, int32_t* b_numofmicrosteps,
+                            int32_t* z_numofmicrosteps, int32_t* e_numofmicrosteps);
 
-    uint32_t voltage_adc(int32_t temp);
-		int32_t temperature_adc(uint32_t volt);
+    int32_t voltage_adc(int32_t temp);
+    int32_t temperature_adc(int32_t volt);
 
     gcode(bool debug_new, addresses* addr_new, position* pos_new);
     
