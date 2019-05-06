@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri May 03 19:40:53 2019
+Fitter Status : Successful - Mon May 06 20:42:19 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : printer
 Top-level Entity Name : printer
 Family : Cyclone V
 Device : 5CSEBA6U23I7
 Timing Models : Final
-Logic utilization (in ALMs) : 5,537 / 41,910 ( 13 % )
-Total registers : 7022
+Logic utilization (in ALMs) : 5,552 / 41,910 ( 13 % )
+Total registers : 7051
 Total pins : 265 / 314 ( 84 % )
 Total virtual pins : 0
 Total block memory bits : 2,816 / 5,662,720 ( < 1 % )
